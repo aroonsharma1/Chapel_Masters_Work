@@ -1,0 +1,9 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+AST_OBJDIR = $(COMPILER_ROOT)/AST/$(OBJ_SUBDIR)
+
+ALL_SRCS += AST/*.cpp
+
+include $(COMPILER_ROOT)/AST/Makefile.share

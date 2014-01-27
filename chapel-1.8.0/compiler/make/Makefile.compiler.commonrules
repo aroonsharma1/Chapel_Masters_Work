@@ -1,0 +1,18 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+
+all: $(PRETARGETS) $(MAKEALLSUBDIRS) echocompilerdir $(TARGETS)
+
+clean: $(CLEANSUBDIRS) echocompilerdir
+	rm -f $(CLEAN_TARGS)
+
+cleanall: $(CLEANALLSUBDIRS) echocompilerdir
+	rm -rf $(CLEANALL_TARGS)
+
+cleandeps: $(CLEANSUBDIRDEPS) echocompilerdir
+	rm -f $(SVN_DEPENDS)
+
+clobber: $(CLOBBERSUBDIRS) echocompilerdir
+	rm -rf ./$(CLOBBER_TARGS)

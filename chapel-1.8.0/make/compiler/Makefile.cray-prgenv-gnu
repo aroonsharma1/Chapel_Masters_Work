@@ -1,0 +1,10 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+# put Cray PE cross-compilation gnu-specific settings here
+
+include $(CHPL_MAKE_HOME)/make/compiler/Makefile.$(CHPL_MAKE_TARGET_PLATFORM)
+
+RUNTIME_CFLAGS += -std=c99
+GEN_CFLAGS += -std=c99

@@ -1,0 +1,79 @@
+FOLDING:
+nl=10
+n=50400
+iterations=10
+
+Block (B)
+message count=3568376
+took 22.2135 (s)
+
+Cyclic (C)
+message count=3349260
+took 20.7506 (s)
+
+Cyclic with modulo unrolling (CM)
+message count=221340
+took 8.40708 (s)
+
+No distribution (NONE)
+took 0.014889 (s)
+
+JACOBI:
+nl=10
+n=400
+epsilon=0.05
+
+Block (B)
+message count=158419
+took 3.06303 (s)
+
+Cyclic (C)
+message count=3373170
+took 14.2363 (s)
+
+Cyclic with modulo unrolling (CM)
+message count=238250
+took 5.15606 (s)
+
+No distribution (NONE)
+took 0.049081 (s)
+
+
+PASCAL:
+nl=10
+n1=100000
+n2=100003
+blocksize=16
+
+Block (B)
+message count=29527
+took 0.691754 (s)
+
+Cyclic (C)
+message count=653839
+took 5.11075 (s)
+
+Cyclic with modulo unrolling (CM)
+message count=59452
+message volume=600003
+took 1.57839 (s)
+
+Block Cyclic (BC) (pascal only)
+message count=982235
+took 10.1771 (s)
+
+Block Cyclic with modulo unrolling (BCM) (pascal only)
+message count=94098
+message volume=37499
+took 2.69846 (s)
+
+No distribution (NONE)
+took 0.009233 (s)
+
+
+Pascal test
+===========
+CM with no communication
+1.58
+BCM with no communication
+2.69

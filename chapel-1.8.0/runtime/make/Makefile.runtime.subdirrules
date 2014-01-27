@@ -1,0 +1,8 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+
+include $(RUNTIME_ROOT)/make/Makefile.runtime.commonrules
+
+depend:

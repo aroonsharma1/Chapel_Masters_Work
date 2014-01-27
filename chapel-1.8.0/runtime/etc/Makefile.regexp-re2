@@ -1,0 +1,8 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+GEN_LFLAGS += -L$(RE2_LIB_DIR) -Wl,-rpath=$(RE2_LIB_DIR)
+LIBS += -lre2
+
+LD=$(CXX)

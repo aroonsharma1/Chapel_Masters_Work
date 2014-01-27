@@ -1,0 +1,9 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+IFA_OBJDIR = $(COMPILER_ROOT)/ifa/$(OBJ_SUBDIR)
+
+ALL_SRCS += ifa/*.h ifa/*.cpp
+
+include $(COMPILER_ROOT)/ifa/Makefile.share

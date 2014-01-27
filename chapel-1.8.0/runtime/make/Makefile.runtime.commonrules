@@ -1,0 +1,20 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+
+all: $(MAKEALLSUBDIRS) echoruntimedir $(TARGETS)
+
+clean: $(CLEANSUBDIRS) echoruntimedir
+	rm -f $(CLEAN_TARGS)
+
+cleanall: $(CLEANALLSUBDIRS) echoruntimedir
+	rm -rf $(CLEANALL_TARGS)
+
+cleandeps: $(CLEANSUBDIRDEPS) echoruntimedir
+	rm -f $(SVN_DEPENDS)
+
+clobber: $(CLOBBERSUBDIRS) echoruntimedir
+	rm -rf ./$(CLOBBER_TARGS)
+
+norecurse: echoruntimedir $(TARGETS)

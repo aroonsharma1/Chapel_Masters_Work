@@ -1,0 +1,10 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+TIMERS_SRCS = timers-$(CHPL_MAKE_TIMERS).c
+
+SVN_SRCS = $(TIMERS_SRCS)
+SRCS = $(SVN_SRCS)
+
+TIMERS_OBJS = $(TIMERS_SRCS:%.c=$(TIMERS_OBJDIR)/%.o)

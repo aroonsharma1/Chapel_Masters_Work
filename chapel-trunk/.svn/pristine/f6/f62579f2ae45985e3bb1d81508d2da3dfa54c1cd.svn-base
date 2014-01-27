@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+. /etc/profile
+echo `date` "" Starting $0 on `hostname`.
+
+LOGFILE=/tmp/nightly.baseline.out
+LOGFILE2=$HOME/tmp/nightly.baseline.out
+echo `date` "" "Testing baseline.  Log files: $LOGFILE and $LOGFILE2"
+rm -f $LOGFILE
+source ~/.chplcron.baseline.bashrc && ~/chapel/util/cron/nightly -cron -baseline -suppress Suppressions/baseline.suppress -no-futures -compopts --inline >& $LOGFILE
+
+cp $LOGFILE $LOGFILE2
+
+echo `date` "" Finished $0.

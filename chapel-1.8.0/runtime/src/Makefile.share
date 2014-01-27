@@ -1,0 +1,55 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+COMMON_LAUNCHER_SRCS = \
+	arg.c \
+	chplcast.c \
+	config.c \
+	error.c \
+	chpltypes.c \
+
+COMMON_NOGEN_SRCS = \
+	$(COMMON_LAUNCHER_SRCS) \
+	chpl-comm.c \
+	chplcopygc.c \
+	chplexit.c \
+	chplio.c \
+	chplgmp.c \
+	chpl-mem.c \
+	chpl-mem-desc.c \
+	chpl-mem-hook.c \
+	chplmemtrack.c \
+	chplsys.c \
+	chpl-tasks.c \
+	chpl-timers.c \
+	gdb.c \
+
+MAIN_SRCS = \
+	main.c \
+
+SVN_SRCS = \
+	$(COMMON_NOGEN_SRCS) \
+	$(MAIN_SRCS) \
+
+COMMON_SRCS = \
+	$(COMMON_NOGEN_SRCS)
+
+MAIN_LAUNCHER_SRCS = \
+	main_launcher.c
+
+SRCS = $(SVN_SRCS) \
+
+COMMON_OBJS = \
+	$(COMMON_SRCS:%.c=$(COMMON_OBJDIR)/%.o)
+
+MAIN_OBJS = \
+	$(MAIN_SRCS:%.c=$(COMMON_OBJDIR)/%.o)
+
+ifneq ($(CHPL_MAKE_LAUNCHER),none)
+COMMON_LAUNCHER_OBJS = \
+	$(COMMON_LAUNCHER_SRCS:%.c=$(COMMON_LAUNCHER_OBJDIR)/%.o)
+
+MAIN_LAUNCHER_OBJS = \
+	$(MAIN_LAUNCHER_SRCS:%.c=$(COMMON_LAUNCHER_OBJDIR)/%.o)
+endif

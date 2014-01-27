@@ -1,0 +1,14 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+ADT_SRCS = \
+	bitVec.cpp \
+	map.cpp \
+	vec.cpp
+
+SVN_SRCS = $(ADT_SRCS)
+SRCS = $(SVN_SRCS)
+
+ADT_OBJS = \
+	$(ADT_SRCS:%.cpp=$(ADT_OBJDIR)/%.$(OBJ_SUFFIX))

@@ -1,0 +1,16 @@
+used berkeley_upc-2.16.0 
+download and install upc with gasnet
+need to enable --enable-pshm in runtime
+in configure: ./configure --enable-pshm
+
+example compile and run use to use udp on single computer for communication between processors:
+
+upcc laplacian.upc -nopthreads -opt -T=4 --network=udp
+upcrun -n 4 -localhost a.out 100
+
+for communication counts:
+in the upcrun use -tracefile out.trace.%
+in the upcc use -g
+
+
+-save-temps #saves c files

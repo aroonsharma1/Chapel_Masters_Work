@@ -1,0 +1,11 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+AUXFS_SUBDIR = src/qio/auxFilesys/none
+
+ALL_SRCS += $(CURDIR)/$(AUXFS_SUBDIR)/*.c
+
+AUXFS_OBJDIR = $(RUNTIME_ROOT)/$(AUXFS_SUBDIR)/$(RUNTIME_OBJDIR)
+
+include $(RUNTIME_ROOT)/$(AUXFS_SUBDIR)/Makefile.share

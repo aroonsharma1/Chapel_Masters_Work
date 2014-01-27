@@ -1,0 +1,9 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+MAIN_OBJDIR = $(COMPILER_ROOT)/main/$(OBJ_SUBDIR)
+
+ALL_SRCS += main/*.h main/*.cpp
+
+include $(COMPILER_ROOT)/main/Makefile.share

@@ -1,0 +1,10 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+THREADS_SRCS =
+
+SVN_SRCS = $(THREADS_SRCS)
+SRCS = $(SVN_SRCS)
+
+THREADS_OBJS = $(THREADS_SRCS:%.c=$(THREADS_OBJDIR)/%.o)

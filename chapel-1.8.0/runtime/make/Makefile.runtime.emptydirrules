@@ -1,0 +1,15 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+all: echoruntimedir $(MAKEALLSUBDIRS)
+
+clean: echoruntimedir $(CLEANSUBDIRS)
+
+cleanall: echoruntimedir $(CLEANALLSUBDIRS)
+
+cleandeps: echoruntimedir $(CLEANSUBDIRDEPS)
+
+clobber: echoruntimedir $(CLOBBERSUBDIRS)
+
+depend:

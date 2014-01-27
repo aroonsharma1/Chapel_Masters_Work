@@ -1,0 +1,209 @@
+make work for strided
+make work for multi-dimensional
+make work for block cyclic
+
+===
+
+Getting multiple locales to work
+
+On bash:
+
+export CHPL_COMM=gasnet
+then remake chapel (to enable chapel to work with multiple locales)
+
+export GASNET_SPAWNFN=L (to run simulating multiple locales)
+then when running do a.out -nl x (where x = number locales)
+
+(for correctness test try setenv CHPL_GASNET_SEGMENT fast
+alternative is everything instead of fast)
+
+
+http://faculty.knox.edu/dbunde/teaching/chapel/
+http://chapel.cray.com/spec/quickReference.pdf
+http://chapel.cray.com/tutorials/SC10/M10-6-DomainMaps.pdf
+http://pgas11.rice.edu/papers/ChamberlainEtAl-Chapel-Iterators-PGAS11.pdf
+
+var Dom: domain(…) dmapped new dmap(new myDMap(…));
+may be written as
+var Dom: domain(…) dmapped myDMap(…);
+
+search for iter in cyclic dist, it creates leaders and followers
+
+note, dist primer uses 100% cpu regardless num locales, num processes = num locales
+
+CyclicSpace._value.dsiDisplayRepresentation();
+
+
+dist
+._value
+distributions1d.chpl:45: error: unresolved call 'CyclicDom(1,int(64),false).asdf()'
+distributions1d.chpl:45: error: unresolved call 'CyclicDom(1,int(64),false).asdf()'
+
+writeln(typeToString(CyclicSpace.type));
+writeln(typeToString(CyclicSpace._value.type));
+writeln(typeToString(CyclicSpace.dist.type));
+
+
+
+iter CyclicDom.these(param tag: iterKind) where tag == iterKind.leader {
+....
+
+iter CyclicDom.these(param tag: iterKind, followThis) where tag == iterKind.follower {
+....
+
+
+iter CyclicArr.these(param tag: iterKind) where tag == iterKind.leader {
+  for followThis in dom.these(tag) do
+    yield followThis;
+}
+
+iter CyclicArr.these(param tag: iterKind, followThis, param fast: bool = false) var where tag == iterKind.follower {
+....
+
+
+///////////////////
+proc CyclicArr.dsiAccess(i:rank*idxType) var {
+
+proc CyclicArr.dsiAccess(i: idxType...rank) var
+  return dsiAccess(i);
+
+grep -r
+
+
+////////////////////
+
+//runs forever why?
+//how pass int type as arg?
+//var n:int = readln(int);
+//var A: [1..n] int = [1,2,3];
+
+//how does this work since 0..20 doesnt
+for (i,j) in zip(1..10, 0..) {
+
+3*int = (int, int, int)
+
+scan how parallel?
+scan/reduce, built in, does it have to be?
+
+////////////////////
+
+local { } executes code faster?
+
+layout = dist on single locale, distributions = dist on mult
+
+//////////////////
+gen c code
+--savec directory
+
+/////////////////////////
+in cyclicarr.these leader
+in cyclicdom.these leader
+in cyclicarr.these follower
+in cyclicarr.these follower
+in cyclicarr.these follower
+in cyclicarr.these follower
+
+////////////////////////
+ssh darren@golgatha
+passwd = this __
+
+source multilocale.bash
+source util regular
+chpl --fast test_yield.chpl && time a.out -nl 4
+
+
+=============
+
+yield uses lvalue (wide pointers)
+
+var at end of function means it is an lvalue
+============================================
+
+Here is an example that prints out communication counts
+
+
+use CommDiagnostics;
+//see https://github.com/deniskin82/chapel/blob/master/doc/technotes/README.comm-diagnostics
+
+class C {
+  var x:int;
+}
+
+config const n = 100000;
+
+proc setloop(ref dst, ref src)
+{
+  var num = src;
+  for i in 1..n {
+    dst = num;
+  }
+}
+
+proc main() {
+  var c = new C(5);
+  var d = new C(4);
+  var x:int;
+
+  resetCommDiagnostics();
+  startCommDiagnostics();
+
+
+  on Locales[1] {
+    setloop(x, c.x);
+  }
+
+  writeln(x);
+
+  stopCommDiagnostics();
+  writeln(getCommDiagnostics());
+}
+
+///////////////////////////////
+
+defaultrect dist: chpl_comm_get_strd
+
+optimization with message aggregation in chapel
+http://www.ac.uma.es/~compilacion/publicaciones/UMA-DAC-12-02.pdf
+
+//////////////////
+
+Search for chpl_comm_get/chpl_comm_put in modules
+modules/internal/DefaultRectangular.chpl:         __primitive("chpl_comm_get_strd",
+modules/internal/DefaultRectangular.chpl:      __primitive("chpl_comm_get",
+
+//////////////////////////////
+
+understanding chpl_comm_get_strd (example in defaultrectangular.chpl)
+expr wraps to c call which wraps to gasnet call
+see:
+expr.cpp : case PRIM_CHPL_COMM_GET_STRD
+comm-gasnet.c : chpl_comm_get_strd
+chpl-comm.h : chpl_comm_put_strd
+http://www.escholarship.org/uc/item/5hg5r5fs?display=all
+
+//////////////////////////////////////////////
+
+valgrind to trace if crashes
+
+/////////////////////////////////
+
+--heterogeneous in block distribution error effects us too?
+
+
+forall inside a forall ? for utilizing
+
+problem due to difference between 1.7 and trunk
+test/optimizations/sunegun/bukl_transer/chpl_comm_get_chpl
+
+//////////////
+
+on lts laptop
+golgatha this__
+cd /home/mppf/chapel/svn_trunk-llvm
+source multilocate.bash
+source util/setchplenv.bash
+cd bench2
+export GASNET_QUIET=1 (warnings are about infinet hardware, doesnt matter)
+
+CHPL_RT_NUM_THREADS_PER_LOCALE=2 command (to run with env variable only for that command)
+--dataParTasksPerLocale=2 (do help on a.out)

@@ -1,0 +1,12 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+COMM_SUBDIR = src/comm/gasnet
+
+COMM_OBJDIR = $(RUNTIME_ROOT)/$(COMM_SUBDIR)/$(RUNTIME_OBJDIR)
+COMM_LAUNCHER_OBJDIR = $(RUNTIME_ROOT)/$(COMM_SUBDIR)/$(LAUNCHER_OBJDIR)
+
+ALL_SRCS += $(CURDIR)/$(COMM_SUBDIR)/*.c
+
+include $(RUNTIME_ROOT)/$(COMM_SUBDIR)/Makefile.share

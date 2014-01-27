@@ -1,0 +1,22 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+#
+# Makefile.static
+#
+
+include $(CHPL_MAKE_HOME)/runtime/etc/Makefile.include
+
+all: $(TMPBINNAME)
+
+$(TMPBINNAME): $(CHPL_CL_OBJS) FORCE
+	$(CC) $(GEN_CFLAGS) $(COMP_GEN_CFLAGS) -c -o $(TMPBINNAME).o $(CHPL_RT_INC_DIR) $(CHPLSRC)
+	$(AR) -r -s $(TMPBINNAME) $(TMPBINNAME).o $(CHPL_CL_OBJS)
+ifneq ($(TMPBINNAME),$(BINNAME))
+	cp $(TMPBINNAME) $(BINNAME)
+	rm $(TMPBINNAME)
+endif
+	$(TAGS_COMMAND)
+
+FORCE:

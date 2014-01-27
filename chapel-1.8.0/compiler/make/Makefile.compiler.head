@@ -1,0 +1,87 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+#
+# settings for the build
+#
+ifdef CHPL_DEVELOPER
+DEBUG=1
+DEPEND=1
+else
+OPTIMIZE=1
+endif
+#PROFILE=1
+
+#
+# include the standard Chapel Makefile.base
+#
+
+include $(CHPL_MAKE_HOME)/make/Makefile.base
+
+INCL_CFLAGS = -I. -I$(COMPILER_ROOT)/include/$(CHPL_MAKE_HOST_PLATFORM) -I$(COMPILER_ROOT)/include $(LLVM_INCLUDES)
+COMP_CFLAGS += $(INCL_CFLAGS)
+
+#
+# add gc-related stuff
+#
+OBJ_SUFFIX=o
+CHPL_MUNGE=
+
+
+ifeq ($(DIR_USES_OFFSETOF), 1)
+ifeq ($(GNU_GCC_MAJOR_VERSION),3)
+ifeq ($(GNU_GCC_MINOR_VERSION),4)
+ONLYCXXFLAGS += -Wno-invalid-offsetof
+endif
+endif
+ifeq ($(GNU_GCC_MAJOR_VERSION),4)
+ifeq ($(GNU_GCC_MINOR_VERSION),0)
+ONLYCXXFLAGS += -Wno-invalid-offsetof
+endif
+endif
+endif
+
+
+COMP_CXXFLAGS := $(COMP_CFLAGS) $(ONLYCXXFLAGS) $(LLVM_CXXFLAGS)
+COMP_CFLAGS := $(COMP_CFLAGS) $(LLVM_CFLAGS)
+
+
+#
+# clean and clobber targets
+#
+CLEAN_TARGS = \
+	./$(OBJ_SUBDIR)/*.o \
+	./$(OBJ_SUBDIR)/*.gcda \
+	./$(OBJ_SUBDIR)/*.gcno \
+	./$(OBJ_SUBDIR)/*.gcov \
+	core \
+	*.core \
+	*.gmon \
+	$(GEN_HEADERS) \
+	$(GEN_SRCS) \
+
+CLEANALL_TARGS = \
+	$(CLEAN_TARGS) \
+	./$(GEN_SUBDIR)
+
+CLOBBER_TARGS = \
+	$(CLEANALL_TARGS) \
+	$(EXECS) \
+	*.a \
+	*~
+
+
+#
+# platform-specific subdirectory targets
+#
+
+SVN_DEPENDS = ./$(OBJ_SUBDIR)/*.d
+
+
+
+MAKEALLSUBDIRS = $(SUBDIRS:%=%.makedir)
+CLEANSUBDIRS = $(SUBDIRS:%=%.cleandir)
+CLEANALLSUBDIRS = $(SUBDIRS:%=%.cleanalldir)
+CLEANSUBDIRDEPS = $(SUBDIRS:%=%.cleandirdeps)
+CLOBBERSUBDIRS = $(SUBDIRS:%=%.clobberdir)

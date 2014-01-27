@@ -1,0 +1,68 @@
+================================================================
+use trunk of latest release, not latest stable 1.7 (because uses .theData instead of .data)
+
+before running (on tcsh)
+
+setenv CHPL_COMM gasnet
+then remake chapel (to enable chapel to work with multiple locales)
+
+setenv GASNET_SPAWNFN L (to run simulating multiple locales)
+then when running do a.out -nl x (where x = number locales)
+
+================================================================
+Some resources
+
+http://faculty.knox.edu/dbunde/teaching/chapel/
+http://chapel.cray.com/spec/quickReference.pdf
+http://chapel.cray.com/tutorials/SC10/M10-6-DomainMaps.pdf
+http://pgas11.rice.edu/papers/ChamberlainEtAl-Chapel-Iterators-PGAS11.pdf
+http://www.ac.uma.es/~compilacion/publicaciones/UMA-DAC-12-02.pdf
+http://www.escholarship.org/uc/item/5hg5r5fs?display=all
+
+
+
+================================================================
+var Dom: domain(…) dmapped myDMap(…);
+is syntactic sugar for:
+var Dom: domain(…) dmapped new dmap(new myDMap(…));
+
+to write the type of an expression, e:
+writeln(typeToString(e.type));
+
+to gen c code (to see if things are ultimately being inline or not):
+chpl --savec directory
+
+================================================================
+on golgatha computer, chapel is at:
+cd /home/mppf/chapel/svn_trunk-llvm
+
+to run code there:
+export GASNET_QUIET=1
+source multilocale.bash
+source util/setchplenv.csh #for tcsh
+chpl --fast test_yield.chpl && time a.out -nl 4
+
+=============
+
+yield uses lvalue (wide pointers)
+
+var at end of function means it is an lvalue and can be assigned to
+============================================
+Search for chpl_comm_get/chpl_comm_put in modules for examples
+grep -r chpl_comm_get modules
+...
+modules/internal/DefaultRectangular.chpl:         __primitive("chpl_comm_get_strd",
+modules/internal/DefaultRectangular.chpl:      __primitive("chpl_comm_get",
+
+//////////////////////////////
+
+understanding chpl_comm_get_strd (example in defaultrectangular.chpl)
+expr wraps to c call which wraps to gasnet call
+see:
+expr.cpp : case PRIM_CHPL_COMM_GET_STRD
+comm-gasnet.c : chpl_comm_get_strd
+chpl-comm.h : chpl_comm_put_strd
+http://www.escholarship.org/uc/item/5hg5r5fs?display=all
+
+problem due to difference between 1.7 and trunk
+test/optimizations/sunegun/bukl_transer/chpl_comm_get_chpl

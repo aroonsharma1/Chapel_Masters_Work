@@ -1,0 +1,12 @@
+#
+# Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
+#
+
+BACKEND_SRCS = \
+	beautify.cpp \
+
+SVN_SRCS = $(BACKEND_SRCS)
+SRCS = $(SVN_SRCS)
+
+BACKEND_OBJS = \
+	$(BACKEND_SRCS:%.cpp=$(BACKEND_OBJDIR)/%.$(OBJ_SUFFIX))

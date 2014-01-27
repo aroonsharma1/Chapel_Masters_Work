@@ -1,0 +1,26 @@
+#!/usr/bin/env tcsh
+echo `date` "" Starting $0 on `hostname`.
+
+set LOGFILE = $HOME/tmp/nightly.testRelease.out
+echo `date` "" "Running testRelease.  Log file: $LOGFILE"
+source ~/.chapelcshrc-cron && ~/chapel/util/buildRelease/testRelease -cron >&! $LOGFILE
+
+set LOGFILE = $HOME/tmp/nightly-perf.linux64.bradc-lnx.out
+echo `date` "" "Testing performance.  Log file: $LOGFILE"
+source ~/.chapelcshrc-cron && setenv CHPL_NIGHTLY_LOGDIR /data/sea/cascade/chapel/NightlyPerformance/bradc-lnx && ~/chapel/util/cron/nightly -cron -performance -numtrials 5 -startdate 02/19/10 >&! $LOGFILE
+
+set LOGFILE = $HOME/tmp/tokctnightly.out
+echo `date` "" "Counting tokens.  Log file: $LOGFILE"
+source ~/.chapelcshrc-cron && ~/chapel/util/tokencount/tokctnightly -cron >&! $LOGFILE
+
+set LOGFILE = $HOME/tmp/tabnightly.out
+echo `date` "" "Running lookForTabs.cron.  Log file: $LOGFILE"
+~/chapel/util/cron/lookForTabs.cron >&! $LOGFILE
+
+#
+# my desktop is no longer 32-bit, so I think this is redundant:
+#
+#source ~bradc/.chapelcshrc-cron && ~bradc/chapel/util/cron/nightly -cron >&! ~bradc/tmp/nightly.linux.out
+#
+
+echo `date` "" Finished $0.

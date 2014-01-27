@@ -1,0 +1,17 @@
+bug: sync and single vars need to be passable to ref-intent generic formals
+
+This extends the following future:
+
+  test/functions/vass/sync-by-ref.future
+
+to single variables.
+
+Currently I get:
+
+type-tests.todo.chpl:10: error: non-lvalue actual passed to ref argument
+type-tests.todo.chpl:10: error: non-lvalue actual passed to ref argument
+
+(note an incorrect line number in the last two messages,
+which should be Lines 6 and 7 instead).
+
+As the issues are fixed, please move the test/.good code into type-tests.chpl.

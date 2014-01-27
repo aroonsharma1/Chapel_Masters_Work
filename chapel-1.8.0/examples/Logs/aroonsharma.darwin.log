@@ -1,0 +1,91 @@
+[Starting Chapel regression tests - 140127.134134]
+[starting directory: "/Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon"]
+[Logs directory: "/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs"]
+[logfile: "/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs/aroonsharma.darwin.log"]
+[CHPL_HOME: /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0]
+[host platform: darwin]
+[target platform: darwin]
+[valgrind: OFF]
+[performance tests: OFF]
+[performance graph generation: OFF]
+[compiler: "/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/bin/darwin/chpl"]
+[compopts: "--cc-warnings"]
+[execopts: ""]
+[launchcmd: ""]
+[comm: "gasnet"]
+[numlocales: "1"]
+[tests: " MemoryBounding.chpl"]
+[directories: ""]
+
+### Chapel Environment ###
+uname -a: Darwin Aroon-Sharmas-MacBook-Pro.local 13.0.0 Darwin Kernel Version 13.0.0: Thu Sep 19 22:22:27 PDT 2013; root:xnu-2422.1.72~6/RELEASE_X86_64 x86_64
+CHPL_HOME: /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0
+script location: /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util
+CHPL_HOST_PLATFORM: darwin
+CHPL_HOST_COMPILER: gnu
+CHPL_TARGET_PLATFORM: darwin
+CHPL_TARGET_COMPILER: gnu
+CHPL_LOCALE_MODEL: flat
+CHPL_COMM: gasnet
+  CHPL_COMM_SUBSTRATE: udp
+  CHPL_GASNET_SEGMENT: everything
+CHPL_TASKS: fifo
+CHPL_THREADS: pthreads
+CHPL_LAUNCHER: amudprun
+CHPL_TIMERS: generic
+CHPL_MEM: default
+CHPL_MAKE: make
+CHPL_ATOMICS: intrinsics
+  CHPL_NETWORK_ATOMICS: none
+CHPL_GMP: none
+CHPL_REGEXP: none
+CHPL_WIDE_POINTERS: struct
+CHPL_LLVM: none
+CHPL_AUX_FILESYS: none
+##########################
+ 
+[Cleaning file MemoryBounding.chpl]
+[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_clean MemoryBounding.chpl Mon Jan 27 13:41:35 EST 2014]
+[Starting sub_clean - Mon Jan 27 13:41:35 EST 2014]
+[pwd: /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon]
+Cleaning test: MemoryBounding
+ 
+[Working on file MemoryBounding.chpl]
+[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_test Mon Jan 27 13:41:35 EST 2014]
+[Starting subtest - Mon Jan 27 13:41:35 EST 2014]
+[test: /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding.chpl]
+[Executing compiler /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/bin/darwin/chpl -o MemoryBounding --cc-warnings --ccflags -Wno-tautological-compare MemoryBounding.chpl < /dev/null]
+[Success compiling /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding]
+[Executing program ./MemoryBounding -nl 1 < /dev/null]
+[Error cannot locate program output comparison file /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding.good]
+[Execution output was as follows:]
+count :
+(1, 4, 7)
+bounded_count :
+(1, 2, 1)
+chunks :
+(1, 2, 7)
+Number of chunks = 14
+srcStride : 
+(1, 15)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 0), offset = 0)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 1), offset = 15)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 2), offset = 30)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 3), offset = 45)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 4), offset = 60)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 5), offset = 75)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 6), offset = 90)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 0), offset = 2)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 1), offset = 17)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 2), offset = 32)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 3), offset = 47)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 4), offset = 62)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 5), offset = 77)
+(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 6), offset = 92)
+[Done with tests - 140127.134145]
+[Log file: /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs/aroonsharma.darwin.log ]
+ 
+[Test Summary - 140127.134134]
+[Error cannot locate program output comparison file /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding.good]
+[Summary: #Successes = 0 | #Failures = 1 | #Futures = 0 | #Warnings = 0 ]
+[END]
