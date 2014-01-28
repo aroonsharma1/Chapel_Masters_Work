@@ -1,5 +1,5 @@
-[Starting Chapel regression tests - 140127.134134]
-[starting directory: "/Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon"]
+[Starting Chapel regression tests - 140128.130203]
+[starting directory: "/Users/aroonsharma/Desktop/CHAPEL/Aroon's Work"]
 [Logs directory: "/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs"]
 [logfile: "/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs/aroonsharma.darwin.log"]
 [CHPL_HOME: /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0]
@@ -45,47 +45,17 @@ CHPL_AUX_FILESYS: none
 ##########################
  
 [Cleaning file MemoryBounding.chpl]
-[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_clean MemoryBounding.chpl Mon Jan 27 13:41:35 EST 2014]
-[Starting sub_clean - Mon Jan 27 13:41:35 EST 2014]
-[pwd: /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon]
+[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_clean MemoryBounding.chpl Tue Jan 28 13:02:03 EST 2014]
+[Starting sub_clean - Tue Jan 28 13:02:03 EST 2014]
+[pwd: /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work]
 Cleaning test: MemoryBounding
  
 [Working on file MemoryBounding.chpl]
-[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_test Mon Jan 27 13:41:35 EST 2014]
-[Starting subtest - Mon Jan 27 13:41:35 EST 2014]
-[test: /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding.chpl]
+[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_test Tue Jan 28 13:02:03 EST 2014]
+[Starting subtest - Tue Jan 28 13:02:03 EST 2014]
+[test: /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding.chpl]
 [Executing compiler /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/bin/darwin/chpl -o MemoryBounding --cc-warnings --ccflags -Wno-tautological-compare MemoryBounding.chpl < /dev/null]
-[Success compiling /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding]
-[Executing program ./MemoryBounding -nl 1 < /dev/null]
-[Error cannot locate program output comparison file /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding.good]
-[Execution output was as follows:]
-count :
-(1, 4, 7)
-bounded_count :
-(1, 2, 1)
-chunks :
-(1, 2, 7)
-Number of chunks = 14
-srcStride : 
-(1, 15)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 0), offset = 0)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 1), offset = 15)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 2), offset = 30)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 3), offset = 45)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 4), offset = 60)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 5), offset = 75)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (0, 6), offset = 90)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 0), offset = 2)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 1), offset = 17)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 2), offset = 32)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 3), offset = 47)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 4), offset = 62)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 5), offset = 77)
-(bounded_chunk_count = (1, 2, 1), chunk_pointer = (1, 6), offset = 92)
-[Done with tests - 140127.134145]
-[Log file: /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs/aroonsharma.darwin.log ]
- 
-[Test Summary - 140127.134134]
-[Error cannot locate program output comparison file /Users/aroonsharma/Desktop/CHAPEL/CyclicZipOpt_Aroon/MemoryBounding.good]
-[Summary: #Successes = 0 | #Failures = 1 | #Futures = 0 | #Warnings = 0 ]
-[END]
+[Success compiling /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding]
+[Executing program ./MemoryBounding -nl 4 -nl 1 < /dev/null]
+[Executing diff MemoryBounding.good MemoryBounding.exec.out.tmp]
+[Success matching program output for /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding]
