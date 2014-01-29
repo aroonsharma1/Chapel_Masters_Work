@@ -1,0 +1,1 @@
+--ccflags -Wno-tautological-compare

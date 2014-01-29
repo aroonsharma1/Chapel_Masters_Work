@@ -1,0 +1,15 @@
+count :
+(1, 8, 5)
+bounded_count :
+(1, 3, 4)
+chunks_tuple :
+(1, 3, 2)
+Number of chunks = 6
+srcStride : 
+(1, 10)
+{rank = 2, bounded_chunk_count = (1, 3, 4), chunk_pointer = (0, 0), offset = 0}
+{rank = 2, bounded_chunk_count = (1, 3, 1), chunk_pointer = (0, 1), offset = 40}
+{rank = 2, bounded_chunk_count = (1, 3, 4), chunk_pointer = (1, 0), offset = 3}
+{rank = 2, bounded_chunk_count = (1, 3, 1), chunk_pointer = (1, 1), offset = 43}
+{rank = 2, bounded_chunk_count = (1, 2, 4), chunk_pointer = (2, 0), offset = 6}
+{rank = 2, bounded_chunk_count = (1, 2, 1), chunk_pointer = (2, 1), offset = 46}

@@ -1,4 +1,4 @@
-[Starting Chapel regression tests - 140128.162804]
+[Starting Chapel regression tests - 140129.143923]
 [starting directory: "/Users/aroonsharma/Desktop/CHAPEL/Aroon's Work"]
 [Logs directory: "/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs"]
 [logfile: "/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/examples/Logs/aroonsharma.darwin.log"]
@@ -14,7 +14,7 @@
 [launchcmd: ""]
 [comm: "gasnet"]
 [numlocales: "1"]
-[tests: " MemoryBounding1DTest.chpl"]
+[tests: " MemoryBounding3DTest.chpl"]
 [directories: ""]
 
 ### Chapel Environment ###
@@ -44,18 +44,18 @@ CHPL_LLVM: none
 CHPL_AUX_FILESYS: none
 ##########################
  
-[Cleaning file MemoryBounding1DTest.chpl]
-[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_clean MemoryBounding1DTest.chpl Tue Jan 28 16:28:05 EST 2014]
-[Starting sub_clean - Tue Jan 28 16:28:05 EST 2014]
+[Cleaning file MemoryBounding3DTest.chpl]
+[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_clean MemoryBounding3DTest.chpl Wed Jan 29 14:39:24 EST 2014]
+[Starting sub_clean - Wed Jan 29 14:39:24 EST 2014]
 [pwd: /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work]
-Cleaning test: MemoryBounding1DTest
+Cleaning test: MemoryBounding3DTest
  
-[Working on file MemoryBounding1DTest.chpl]
-[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_test Tue Jan 28 16:28:05 EST 2014]
-[Starting subtest - Tue Jan 28 16:28:05 EST 2014]
-[test: /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding1DTest.chpl]
-[Executing compiler /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/bin/darwin/chpl -o MemoryBounding1DTest --cc-warnings --ccflags -Wno-tautological-compare MemoryBounding1DTest.chpl < /dev/null]
-[Success compiling /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding1DTest]
-[Executing program ./MemoryBounding1DTest -nl 4 -nl 1 < /dev/null]
-[Executing diff MemoryBounding1DTest.good MemoryBounding1DTest.exec.out.tmp]
-[Success matching program output for /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding1DTest]
+[Working on file MemoryBounding3DTest.chpl]
+[Starting /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/util/test/sub_test Wed Jan 29 14:39:24 EST 2014]
+[Starting subtest - Wed Jan 29 14:39:24 EST 2014]
+[test: /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding3DTest.chpl]
+[Executing compiler /Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/bin/darwin/chpl -o MemoryBounding3DTest --cc-warnings --ccflags -Wno-tautological-compare MemoryBounding3DTest.chpl < /dev/null]
+[Success compiling /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding3DTest]
+[Executing program ./MemoryBounding3DTest -nl 4 -nl 1 < /dev/null]
+[Executing diff MemoryBounding3DTest.good MemoryBounding3DTest.exec.out.tmp]
+[Success matching program output for /Users/aroonsharma/Desktop/CHAPEL/Aroon's Work/MemoryBounding3DTest]

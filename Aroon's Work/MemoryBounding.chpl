@@ -3,16 +3,21 @@ and put communication calls. It is a module that splits up a block
 of memory of dimension "rank" into smaller blocks of memory such that 
 each smaller block contains a bounded number of elements. It is used 
 so that a strided get or put message will not flood any single locale 
-with an unbounded amount of memory. The large block of memory is 
-specified by a two parameters: a tuple specifying the number of 
-elements in each dimension of the block and a tuple specifying the 
-strides in each dimension. Passing in a memory bound at compile time 
-will split the large block of memory into a number of “chunks.” 
-Each chunk has a tuple specifying the number of elements in each 
-dimension and a tuple containing array-like indices that tell where
- in the larger block that chunk starts. For detailed examples of how 
-MemoryBounding is used, see MemoryBounding1DTest.chpl, 
-MemoryBounding2DTest.chpl, and MemoryBounding3DTest.chpl. */
+with an unbounded amount of memory. This module solves the problem
+of chunking up an arbitrary sized multi-dimensional block into smaller 
+blocks that contain a number of elements smaller than a specified 
+memory bound. 
+
+The large block of memory is specified by a two parameters: a tuple 
+specifying the number of elements in each dimension of the block and 
+a tuple specifying the strides in each dimension. Passing in a memory 
+bound at compile time will split the large block of memory into a 
+number of “chunks.” Each chunk has a tuple specifying the number of 
+elements in each dimension and a tuple containing array-like indices 
+that tell where in the larger block that chunk starts. 
+For detailed examples of how MemoryBounding is used, see 
+MemoryBounding1DTest.chpl, MemoryBounding2DTest.chpl, and 
+MemoryBounding3DTest.chpl. */
 
 module MemoryBounding {
 	
@@ -86,7 +91,7 @@ module MemoryBounding {
 		return product;
 	}
 
-	//Iterator that yields Chunk objects that make up the original       //large block of data. chunks_tuple is the tuple that is passed      //from create_number_of_cuts().
+	//Iterator that yields Chunk objects that make up the original         //large block of data. chunks_tuple is the tuple that is               //passed from create_number_of_cuts().
 	iter go_through_chunks(param rank: int, chunks_tuple: (rank + 1)*int, count: (rank + 1)*int, bounded_count: (rank + 1)*int) {
 		var i: rank*int;
 		var done = false;
@@ -131,7 +136,7 @@ module MemoryBounding {
 		}
 	}
 
-	//Function that uses a Chunk's chunk_pointer to determine the 	     //offset into the original block of data. Not sure if this is        //correct.
+	//Function that uses a Chunk's chunk_pointer to determine the 	       //offset into the original block of data. Not sure if this is          //correct.
 	proc calculate_offset(param rank: int, myChunk: Chunk, source_stride: rank*int, bounded_count: (rank+1)*int) {
 		var offset: int = 0;
 		for i in 1..rank {
