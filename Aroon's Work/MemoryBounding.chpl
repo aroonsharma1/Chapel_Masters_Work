@@ -36,7 +36,7 @@ module MemoryBounding {
 		while(totalNumElements > bound) {
 			totalNumElements = 1;
 		
-			//find the maximum dimension in count and divide by 2
+			//find the maximum dimension in count and subtract by 1
 			var max: int = 1;
 			for i in 1..rank+1 {
 				if(count[i] > count[max]) {
@@ -98,6 +98,10 @@ module MemoryBounding {
 	
 		while(!done) {
 			var myChunk = new Chunk(rank);
+			var bounded_count_without_first_entry: rank*int;
+			for i in 1..rank {
+				bounded_count_without_first_entry(i) = bounded_count(i+1);
+			}
 			myChunk.chunk_pointer = i;
 		
 			//temporary tuple created to make the following loop 
@@ -116,6 +120,7 @@ module MemoryBounding {
 					myChunk.bounded_chunk_count(i) = min(bounded_count(i), count(i) - bounded_count(i)*temp(i));				
 				}
 			}
+			myChunk.chunk_pointer = i * bounded_count_without_first_entry;
 			yield myChunk;
 		
 			var d = rank;

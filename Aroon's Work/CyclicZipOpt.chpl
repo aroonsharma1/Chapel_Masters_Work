@@ -919,6 +919,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		var srcstr=srcStride._value.theData;
 		var cnt=count._value.theData;
 				
+		//writeln(myFollowThis);
 		//copy remote data to local buffer (todo don't do if not used, need to modify chapel compiler to check)
 		__primitive("chpl_comm_get_strd",
 			__primitive("array_get", dest, buf._value.getDataIndex(1)),
@@ -933,11 +934,11 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 
 		//writeln("rank");
 		//writeln(rank);
-		writeln("srcStrides");
-		writeln(srcStride);
+		//writeln("srcStrides");
+		//writeln(srcStride);
 		//writeln(dstStride);
-		writeln("counts");
-		writeln(count);
+		//writeln("counts");
+		//writeln(count);
 		//writeln(buf);
 		//if debugzipopt then writeln(buf);
 		//do debug / test if correct value for each, slow
