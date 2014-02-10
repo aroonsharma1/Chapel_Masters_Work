@@ -1,4 +1,5 @@
 use CyclicZipOptAroon;
+use MyBlockCyclic;
 use BlockDist;
 use Time;
 use CommDiagnostics;
@@ -14,6 +15,10 @@ if dist_string == "CM" {
 }
 else if dist_string == "C" {
 	var mydist = mydom dmapped Cyclic(startIdx=mydom.low);
+	kernel_2mm(mydist);
+}
+else if dist_string == "BC" {
+	var mydist = mydom dmapped MyBlockCyclic(startIdx=mydom.low);
 	kernel_2mm(mydist);
 }
 
