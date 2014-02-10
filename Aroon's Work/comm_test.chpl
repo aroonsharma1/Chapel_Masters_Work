@@ -68,6 +68,7 @@ proc BlockArr.TestGetsPuts(B)
   	      var buf: [1..bufsize] int;
 		  var dest = buf._value.theData;
 	      //var dest = locArr[0].myElems._value.theData; // can this be myLocArr?
+		  writeln(B._value.locArr[1]);
 	      var srcl = B._value.locArr[lid].myElems._value.theData;
 	      var srcr = B._value.locArr[rid].myElems._value.theData;
 	      var dststr=dststrides._value.theData;
@@ -82,7 +83,7 @@ proc BlockArr.TestGetsPuts(B)
 	      		  rid,
 	      		  __primitive("array_get",srcr,
 	      			      B._value.locArr[rid].myElems._value.getDataIndex(100)),
-	      		  __primitive("array_get",srcstr,srcstrides._value.getDataIndex(58)),
+	      		  __primitive("array_get",srcstr,srcstrides._value.getDataIndex(1)),
 	      		  __primitive("array_get",cnt, count._value.getDataIndex(1)),
 	      		  stridelevels);
 			  

@@ -965,10 +965,11 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 			var srcstr=srcStride._value.theData;
 			var cnt=bounded_count._value.theData;
 			
+			writeln(srcStride);
 			//writeln(arrSection.myElems._value.getDataIndex(myFollowThis.low));
 			//writeln(arrSection.myElems._value.getDataIndex(myFollowThis.low + 4));
 			
-			writeln(myFollowThis.stride);
+			//writeln(myFollowThis.low);
 			//writeln(myFollowThis.low+4);
 			//copy remote data to local buffer (todo don't do if not used, need to modify chapel compiler to check)
 			//startVerboseComm();

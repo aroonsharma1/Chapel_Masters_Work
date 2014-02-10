@@ -172,7 +172,7 @@ class LocBlockDom {
 // idxType: generic array index type
 // stridable: generic array stridable parameter
 // dom: reference to domain class
-// locArr: a non-distributed array of local array classes
+// : a non-distributed array of local array classes
 // myLocArr: optimized reference to here's local array class (or nil)
 //
 class BlockArr: BaseArr {

@@ -935,10 +935,9 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		//writeln("rank");
 		//writeln(rank);
 		//writeln("srcStrides");
-		//writeln(srcStride);
+		writeln(srcStride);
 		//writeln(dstStride);
-		//writeln("counts");
-		//writeln(count);
+		writeln(count);
 		//writeln(buf);
 		//if debugzipopt then writeln(buf);
 		//do debug / test if correct value for each, slow

@@ -442,8 +442,7 @@ iter CyclicZipOptDom.these(param tag: iterKind) where tag == iterKind.leader {
 	const ignoreRunning = dist.dataParIgnoreRunningTasks;
 	const minSize = dist.dataParMinGranularity;
 	const wholeLow = whole.low;
-	//Changed this from coforall to for for debugging purposes
-	for locDom in locDoms do on locDom {
+	coforall locDom in locDoms do on locDom {
 		const (numTasks, parDim) = _computeChunkStuff(maxTasks, ignoreRunning,
 																									minSize,
 																									locDom.myBlock.dims());																								
@@ -471,8 +470,8 @@ iter CyclicZipOptDom.these(param tag: iterKind) where tag == iterKind.leader {
 												 " myblock: ", locDom.myBlock);
 			yield result;
 		} else {
-	//Changed this from coforall to for for debugging purposes
-			for taskid in 0..#numTasks {
+
+			coforall taskid in 0..#numTasks {
 				var splitRanges: rank*range(idxType=idxType, stridable=true) = result;
 				const low = result(parDim).first, high = result(parDim).high;
 				const (lo,hi) = _computeBlock(high - low + 1, numTasks, taskid,
@@ -836,10 +835,8 @@ proc CyclicZipOptArr.dsiDynamicFastFollowCheck(lead: domain)
 	return lead._value == this.dom;
 
 iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = false) var where tag == iterKind.follower {	
-    //extern proc printf(fmt: string, vals...?numvals): int;
 	extern proc sizeof(type t): size_t;
 	extern proc memcmp(ref a, ref b, n:size_t):c_int;
-    extern proc printf(fmt: string, vals...?numvals): int;
 	var t: rank*range(idxType=idxType, stridable=true);
 	for param i in 1..rank {
 		// NOTE: unsigned idxType with negative stride will not work
@@ -847,7 +844,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		t(i) = ((followThis(i).low*wholestride):idxType..(followThis(i).high*wholestride):idxType by (followThis(i).stride*wholestride)) + dom.whole.dim(i).low;
 	}
 	const myFollowThis = {(...t)};
-		
+	
 	//define only for debug purposes
 	proc accessHelper(i) var {
       if myLocArr then local {
@@ -864,6 +861,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 	
 		//pattern size of dimension i is dom.dist.targetLocDom.dim(i).size
 		if followThis(i).stride * dom.whole.dim(i).stride % dom.dist.targetLocDom.dim(i).size != 0 {
+			//writeln("In CyclicZipOpt follower not using optimization");
 			if debugzipopt then writeln("not doing cyclic opt ", here.id, " ", t);
 			//this.original_follower(followThis);
 			for i in myFollowThis {
@@ -876,8 +874,6 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 	// slice of this array is compatible with followthis, so do modulo unrolling
 	
 	const arrSection = locArr(dom.dist.targetLocsIdx(myFollowThis.low));
-	//printf("%d\n", arrSection);
-	//writeln(arrSection);
 
 	if arrSection.locale.id == here.id { //if mem is local
 		if debugzipopt then writeln("mem is local ", here.id, " ", t);
@@ -887,6 +883,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		}
 	} else { //else mem is non local
 		if debugzipopt then writeln("mem non local ", here.id, " ", t);
+		
 		var nslice:rank*int;
 		var bufsize=1;
 		
@@ -895,7 +892,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 			bufsize*=nslice(i);
 			//writeln('i ', i, ', patternsize(i)=', patternsize(i), ', followThis(i).stride=',followThis(i).stride, ', dom.whole.dim(i).stride=',dom.whole.dim(i).stride);
 		}
-		
+
 		//initialize 
 					
 		//chpl_comm_get/put_strd copies ((cnt[0], then steps strd[0]) cnt[1] times then steps strd[1]) cnt[2] times ... etc
@@ -913,170 +910,81 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 			srcStride(i)=(v.blk(rank-i+1)*dom.whole.dim(i).stride):int(32);
 			count(i+1)=nslice(rank-i+1):int(32);
 		}
-		
-		//Code that Aroon added
-		//check if the measured buffer size is bigger than 10 (mem bound)
-		if(bufsize > 10) {
-			var total_buffersize = bufsize;
-			var remainder = total_buffersize % 10;
-			var i = 0;
-			while(total_buffersize > 0) {
-				if(total_buffersize < 10) {
-					bufsize = remainder;
-				}
-				else {
-					bufsize = 10;
-				}
+		//writeln(count);
+		var buf: [1..bufsize] this.eltType;
+		var dest = buf._value.theData;
+		const src = arrSection.myElems._value.theData;
+		const rid=arrSection.locale.id;
+		var dststr=dstStride._value.theData;
+		var srcstr=srcStride._value.theData;
+		var cnt=count._value.theData;
 				
-				var buf: [1..bufsize] this.eltType;
-				//writeln("Buf = ", buf);
-				var dest = buf._value.theData;
-				const src = arrSection.myElems._value.theData;
-				const rid=arrSection.locale.id;
-				var dststr=dstStride._value.theData;
-				var srcstr=srcStride._value.theData;
-				var cnt=count._value.theData;
-				
-				printf("dest = %p, node = %d\n", dest, rid);
-				
-				//copy remote data to local buffer (todo don't do if not used, need to modify chapel compiler to check)
-				__primitive("chpl_comm_get_strd",
-					__primitive("array_get", dest, buf._value.getDataIndex(1)),
-					__primitive("array_get",dststr,dstStride._value.getDataIndex(1)), 
-					rid,
-					__primitive("array_get", src, arrSection.myElems._value.getDataIndex(myFollowThis.low) + i),
-					__primitive("array_get",srcstr,srcStride._value.getDataIndex(1)),
-					__primitive("array_get",cnt, count._value.getDataIndex(1)),
-					stridelevels);
-				var hereid = here.id;
-				if totalcomm2 then on Locales[0] do total_communication_counts2[hereid+1]+=bufsize3;
-				
-				//writeln("Buf = ", buf);
+		//writeln(myFollowThis);
+		//copy remote data to local buffer (todo don't do if not used, need to modify chapel compiler to check)
+		__primitive("chpl_comm_get_strd",
+			__primitive("array_get", dest, buf._value.getDataIndex(1)),
+			__primitive("array_get",dststr,dstStride._value.getDataIndex(1)), 
+			rid,
+			__primitive("array_get", src, arrSection.myElems._value.getDataIndex(myFollowThis.low)),
+			__primitive("array_get",srcstr,srcStride._value.getDataIndex(1)),
+			__primitive("array_get",cnt, count._value.getDataIndex(1)),
+			stridelevels);			
+		var hereid = here.id;
+		if totalcomm2 then on Locales[0] do total_communication_counts2[hereid+1]+=bufsize3;
 
-				//do debug / test if correct value for each, slow
-				if testzipopt {
-					var j=1;
-					for i in myFollowThis {
-						var val_is = buf[j];
-						var should_be = accessHelper(i);
-						if (0!=memcmp(val_is, should_be, sizeof(this.eltType))) {
-							writeln('comm get wrong ', here.id, ' t=', t, ' have=', val_is, ' expected=', should_be);
-						}
-						j+=1;
-					}
+		//writeln("rank");
+		//writeln(rank);
+		//writeln("srcStrides");
+		//writeln(srcStride);
+		//writeln(dstStride);
+		//writeln("counts");
+		//writeln(count);
+		//writeln(buf);
+		//if debugzipopt then writeln(buf);
+		//do debug / test if correct value for each, slow
+		if testzipopt {
+			var j=1;
+			for i in myFollowThis {
+				var val_is = buf[j];
+				var should_be = accessHelper(i);
+				if (0!=memcmp(val_is, should_be, sizeof(this.eltType))) {
+					writeln('comm get wrong ', here.id, ' t=', t, ' have=', val_is, ' expected=', should_be);
 				}
-				
-				var changed=false;
-				for i in buf {
-					var old_val=i;
-					yield i;
-					var new_val=i;
-					//use memcmp to check if new val and old val are same (== operator could be overloaded or non existant)
-					changed |= (0!=memcmp(old_val, new_val, sizeof(this.eltType)));
-				}
-				
-				if changed { //copy back incase they modified it
-					__primitive("chpl_comm_put_strd",
-						__primitive("array_get", src, arrSection.myElems._value.getDataIndex(myFollowThis.low) + i),
-						__primitive("array_get",srcstr,srcStride._value.getDataIndex(1)), 
-						rid,
-						__primitive("array_get", dest, buf._value.getDataIndex(1)),
-						__primitive("array_get",dststr,dstStride._value.getDataIndex(1)),
-						__primitive("array_get",cnt, count._value.getDataIndex(1)),
-						stridelevels);
-					if totalcomm2 then on Locales[0] do total_communication_counts2[hereid+1]+=bufsize3;
-
-				}
-		
-				if testzipopt {
-					var j=1;
-					for i in myFollowThis {
-						var val_is = buf[j];
-						var should_be = accessHelper(i);
-						if (0!=memcmp(val_is, should_be, sizeof(this.eltType))) {
-							writeln('comm get wrong ', here.id, ' t=', t, ' have=', val_is, ' expected=', should_be);
-						}
-						j+=1;
-					}
-				}	
-				i += 10;
-				total_buffersize = total_buffersize - 10;
+				j+=1;
 			}
 		}
+	
+		var changed=false;
+		for i in buf {
+			var old_val=i;
+			yield i;
+			var new_val=i;
+			//use memcmp to check if new val and old val are same (== operator could be overloaded or non existant)
+			changed |= (0!=memcmp(old_val, new_val, sizeof(this.eltType)));
+		}
 		
-		//Original code that Darren wrote 
-		else {
-			var buf: [1..bufsize] this.eltType;
-			//writeln("Buf = ", buf);
-			var dest = buf._value.theData;
-			const src = arrSection.myElems._value.theData;
-			const rid=arrSection.locale.id;
-			var dststr=dstStride._value.theData;
-			var srcstr=srcStride._value.theData;
-			var cnt=count._value.theData;
-		
-			//writeln("Bufsize = " + bufsize);
-			//writeln("Count = " + count(2));
-				
-			//copy remote data to local buffer (todo don't do if not used, need to modify chapel compiler to check)
-			__primitive("chpl_comm_get_strd",
-				__primitive("array_get", dest, buf._value.getDataIndex(1)),
-				__primitive("array_get",dststr,dstStride._value.getDataIndex(1)), 
-				rid,
+		if changed { //copy back incase they modified it
+			__primitive("chpl_comm_put_strd",
 				__primitive("array_get", src, arrSection.myElems._value.getDataIndex(myFollowThis.low)),
-				__primitive("array_get",srcstr,srcStride._value.getDataIndex(1)),
+				__primitive("array_get",srcstr,srcStride._value.getDataIndex(1)), 
+				rid,
+				__primitive("array_get", dest, buf._value.getDataIndex(1)),
+				__primitive("array_get",dststr,dstStride._value.getDataIndex(1)),
 				__primitive("array_get",cnt, count._value.getDataIndex(1)),
 				stridelevels);
-			var hereid = here.id;
 			if totalcomm2 then on Locales[0] do total_communication_counts2[hereid+1]+=bufsize3;
 
-			//writeln("Buf = ", buf);
-
-			//do debug / test if correct value for each, slow
-			if testzipopt {
-				var j=1;
-				for i in myFollowThis {
-					var val_is = buf[j];
-					var should_be = accessHelper(i);
-					if (0!=memcmp(val_is, should_be, sizeof(this.eltType))) {
-						writeln('comm get wrong ', here.id, ' t=', t, ' have=', val_is, ' expected=', should_be);
-					}
-					j+=1;
-				}
-			}
-	
-			var changed=false;
-			for i in buf {
-				var old_val=i;
-				yield i;
-				var new_val=i;
-				//use memcmp to check if new val and old val are same (== operator could be overloaded or non existant)
-				changed |= (0!=memcmp(old_val, new_val, sizeof(this.eltType)));
-			}
+		}
 		
-			if changed { //copy back incase they modified it
-				__primitive("chpl_comm_put_strd",
-					__primitive("array_get", src, arrSection.myElems._value.getDataIndex(myFollowThis.low)),
-					__primitive("array_get",srcstr,srcStride._value.getDataIndex(1)), 
-					rid,
-					__primitive("array_get", dest, buf._value.getDataIndex(1)),
-					__primitive("array_get",dststr,dstStride._value.getDataIndex(1)),
-					__primitive("array_get",cnt, count._value.getDataIndex(1)),
-					stridelevels);
-				if totalcomm2 then on Locales[0] do total_communication_counts2[hereid+1]+=bufsize3;
-
-			}
-		
-			if testzipopt {
-				var j=1;
-				for i in myFollowThis {
-					var val_is = buf[j];
-					var should_be = accessHelper(i);
-					if (0!=memcmp(val_is, should_be, sizeof(this.eltType))) {
-						writeln('comm get wrong ', here.id, ' t=', t, ' have=', val_is, ' expected=', should_be);
-					}
-					j+=1;
+		if testzipopt {
+			var j=1;
+			for i in myFollowThis {
+				var val_is = buf[j];
+				var should_be = accessHelper(i);
+				if (0!=memcmp(val_is, should_be, sizeof(this.eltType))) {
+					writeln('comm get wrong ', here.id, ' t=', t, ' have=', val_is, ' expected=', should_be);
 				}
+				j+=1;
 			}
 		}
 	}

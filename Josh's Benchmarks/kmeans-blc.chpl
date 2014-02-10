@@ -1,3 +1,7 @@
+use CyclicZipOptAroon;
+use Random;
+use Time;
+use BlockDist;
 //
 // parameter and type declarations: these are set at compile time;
 // numdims can be overridden on the compiler's command-line
@@ -18,7 +22,7 @@ config const debug = false;        // controls debug printing
 
 config const printTiming = false;  // unused, but should be eventually
 
-
+config const seed = 3;
 //
 // make sure k is positive because we divide by it
 //
@@ -29,14 +33,20 @@ assert(k > 0, "k must be positive");
 //
 // the index space and array for the data elements
 //
-const dataSpace = {1..n};
+const dom1 = {1..n};
+/*const dataSpace = dom1 dmapped CyclicZipOpt(startIdx=dom1.low);*/
+/*const dataSpace = dom1 dmapped Block(boundingBox=dom1);*/
+const dataSpace = dom1;
 var data: [dataSpace] coord = [i in dataSpace] initData(i);
 
 
 //
 // the index space and array for the cluster centers
 //
-const centerSpace = {1..k};
+const dom2 = {1..k};
+/*const centerSpace = dom2 dmapped CyclicZipOpt(startIdx=dom2.low);*/
+/*const centerSpace = dom2 dmapped Block(boundingBox=dom2);*/
+const centerSpace = dom2;
 var centers: [centerSpace] coord = initCenters(data);
 
 
@@ -50,9 +60,11 @@ writeln("initial centers are: ", centers);
 //
 // the main computation
 //
+var t:Timer;
 var prevError = 0.0,      // the error from the previous iteration
     numIters = 0;         // the number of iterations required
-
+    
+t.start();
 do {
   if debug then writeln("centers are: ", centers);
 
@@ -71,6 +83,8 @@ do {
 
   numIters += 1;        // increment the number of iterations
 } while (abs(error - prevError) > thresh);
+t.stop();
+writeln(t.elapsed(), " seconds elapsed");  
 
 
 //
@@ -142,6 +156,7 @@ class kmeans: ReduceScanOp {
 //
 proc initData(i) {
   var loc: coord;
+  var rand = new RandomStream(seed);
   loc(1) = i;
   return loc;
 }

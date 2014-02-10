@@ -1,4 +1,4 @@
-use CyclicZipOptAroon;
+use CyclicZipOpt;
 use BlockDist;
 
 use Time;
