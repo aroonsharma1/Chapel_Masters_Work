@@ -1,6 +1,6 @@
 #!/bin/bash
-nl=2
-N=4
+nl=10
+N=128
 
 echo nl=$nl
 echo N=$N

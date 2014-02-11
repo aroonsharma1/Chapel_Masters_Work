@@ -11,7 +11,7 @@
 #include <math.h>
 
 /* Include polybench common header. */
-#include <polybench.h>
+#include "polybench.h"
 
 /* Include benchmark-specific header. */
 /* Default data type is double, default size is 4000. */

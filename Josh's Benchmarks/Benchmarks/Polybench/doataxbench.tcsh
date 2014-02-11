@@ -1,6 +1,6 @@
 #!/bin/tcsh
-set nl=2
-set N=4
+set nl=10
+set N=128
 
 echo nl=$nl
 echo N=$N

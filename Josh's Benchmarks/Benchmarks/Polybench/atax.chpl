@@ -63,6 +63,12 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
     var still_correct = true;
 	var t:Timer;
 	
+	//Vectors and matrices to test correctness of calculation
+	var Atest = initialize_matrix({1..n_dim, 1..n_dim}, n_dim);
+	var xtest = initialize_array({1..n_dim}, n_dim);
+	var ytest: [1..n_dim] real = 0.0;
+	var tempTest: [1..n_dim] real = 0.0;
+	
 	if messages {
 		resetCommDiagnostics();
 		startCommDiagnostics();
@@ -86,6 +92,8 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
             var temp1 = a * b;
             tempArray[k] = temp1;
         }
+		writeln("A after iteration ", i);
+		writeln(A[i,1..n_dim], " ", x[1..n_dim]);
       /*  write("tempArray for " + i + " is: ");
         for l in tempArray {
             write(l + " ");
@@ -122,48 +130,9 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
 		}
 		writeln('message count=', messages);
 	}
-    
-	//Print out results
-    if (printMatrices) {
-        writeln("A:");
-        print_matrix(A, n_dim);
-        writeln();
-        write("x:       ");
-        for i in x {
-            write(i + " ");
-        }
-        writeln();
-        writeln();
-        write("temp:    ");
-        for i in temp {
-            write(i + " ");
-        }
-        writeln();
-        writeln();
-        write("y:       ");
-        for i in y {
-            write(i + " ");
-        }
-        writeln();
-        writeln();
-        /*print_locale_data(A, n_dim);
-        writeln();
-        print_locale_data(x, n_dim);
-        writeln();
-        print_locale_data(temp, n_dim);
-        writeln();
-        print_locale_data(y, n_dim);
-        writeln();*/
-    }
 	
 	//confirm the correctness of the calculation
-	if correct {
-		//Vectors and matrices to test correctness of calculation
-		var Atest = initialize_matrix({1..n_dim, 1..n_dim}, n_dim);
-		var xtest = initialize_array({1..n_dim}, n_dim);
-		var ytest: [1..n_dim] real = 0.0;
-		var tempTest: [1..n_dim] real = 0.0; 
-		
+	if correct { 
 	    forall i in dist_linear {
 	        var tempArrayTest: [1..n_dim] real;
 	        forall (a, b, k) in zip(xtest[1..n_dim], Atest[i,1..n_dim], 1..) {
@@ -194,8 +163,54 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
 			still_correct &&= y[i] == ytest[i];
 		}
 		writeln("Is the calculation correct? ", still_correct);
+		writeln(y);
+		writeln(ytest);
 		writeln("atax computation complete.");
 	}
+	
+	//Print out results
+    if (printMatrices) {
+        writeln("A:");
+        print_matrix(A, n_dim);
+        writeln();
+        write("x:       ");
+        for i in x {
+            write(i + " ");
+        }
+        writeln();
+        writeln();
+        write("temp:    ");
+        for i in temp {
+            write(i + " ");
+        }
+		writeln();
+        write("tempTest:    ");
+        for i in tempTest {
+            write(i + " ");
+        }
+        writeln();
+        writeln();
+        write("y:       ");
+		writeln();
+        for i in y {
+            write(i + " ");
+        }
+		writeln();
+        write("ytest:       ");
+        for i in ytest {
+            write(i + " ");
+        }
+        writeln();
+        writeln();
+        /*print_locale_data(A, n_dim);
+        writeln();
+        print_locale_data(x, n_dim);
+        writeln();
+        print_locale_data(temp, n_dim);
+        writeln();
+        print_locale_data(y, n_dim);
+        writeln();*/
+    }
 }
 
 proc main() {
