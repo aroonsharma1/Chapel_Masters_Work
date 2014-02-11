@@ -17,7 +17,6 @@ config var messages = false;
 config var printMatrices: bool = false;
 config var dist: string = "CM";
 config var N: int = 128;
-config var blocksize = 4;
 
 /* Initializes a matrix based on a distribution */
 proc initialize_matrix(distribution, n_dim: int) {

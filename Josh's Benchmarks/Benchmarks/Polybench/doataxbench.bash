@@ -1,25 +1,25 @@
 #!/bin/bash
-nl=10
-size=128
+nl=2
+N=4
 
 echo nl=$nl
-echo size=$size
+echo N=$N
 
-#compile 2mm
-chpl --fast 2mm.chpl -o 2mm
+#compile atax
+chpl --fast atax.chpl -o atax
 
 echo 'Cyclic (C)'
-./2mm -nl $nl --dist=C --size=$size --messages
-./2mm -nl $nl --dist=C --size=$size --timeit
+./atax -nl $nl --dist=C --N=$N --messages
+./atax -nl $nl --dist=C --N=$N --timeit
 
 echo 'Cyclic with modulo unrolling (CM)'
-./2mm -nl $nl --dist=CM --size=$size --correct
-./2mm -nl $nl --dist=CM --size=$size --messages
-./2mm -nl $nl --dist=CM --size=$size --timeit
+./atax -nl $nl --dist=CM --N=$N --correct
+./atax -nl $nl --dist=CM --N=$N --messages
+./atax -nl $nl --dist=CM --N=$N --timeit
 
 echo 'Block (B)'
-./2mm -nl $nl --dist=B --size=$size --messages
-./2mm -nl $nl --dist=B --size=$size --timeit
+./atax -nl $nl --dist=B --N=$N --messages
+./atax -nl $nl --dist=B --N=$N --timeit
 
 echo 'No distribution (NONE)'
-./2mm -nl $nl --dist=NONE --size=$size --timeit
+./atax -nl $nl --dist=NONE --N=$N --timeit
