@@ -17,6 +17,7 @@ config var messages = false;
 config var printMatrices: bool = false;
 config var dist: string = "CM";
 config var N: int = 128;
+config var blocksize = 4;
 
 /* Initializes a matrix based on a distribution */
 proc initialize_matrix(distribution, n_dim: int) {
@@ -105,7 +106,7 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
         y[i] = + reduce(tempArray);
     }
 	
-	//End the times
+	//End the timer and print out timer
 	if timeit {
 		t.stop();
 		writeln("took ", t.elapsed(), " seconds");
@@ -203,13 +204,6 @@ proc main() {
     var dom_square = {1..N, 1..N};
     var dom_linear = {dom_square[1, 1..N]};
     
-    var t: Timer;
-
-    /* Start measurements */
-    t.start();
-    resetCommDiagnostics();
-    startCommDiagnostics();
-    
     if dist == "NONE" {
         var user_dist_square = dom_square;
         var user_dist_linear = dom_linear;
@@ -228,10 +222,4 @@ proc main() {
         var user_dist_linear = dom_linear dmapped Block(boundingBox=dom_linear);
         kernel_atax(user_dist_square, user_dist_linear, N);
     } 
-    
-    /* End measurements */ 
-    stopCommDiagnostics();
-    t.stop();   
-    writeln(t.elapsed(), " seconds elapsed");  
-    writeln(getCommDiagnostics());
 }

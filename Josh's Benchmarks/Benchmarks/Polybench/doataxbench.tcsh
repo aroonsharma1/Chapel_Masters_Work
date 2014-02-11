@@ -1,6 +1,6 @@
 #!/bin/tcsh
 set nl=10
-set size=32
+set size=128
 
 echo nl=$nl
 echo size=$size

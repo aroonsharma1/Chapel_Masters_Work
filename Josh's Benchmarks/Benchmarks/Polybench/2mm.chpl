@@ -36,7 +36,7 @@ proc map_distribution(size:int): domain(2) {
     	user_dist = dom dmapped Cyclic(startIdx=dom.low);
     } else if dist == "B" {
     	user_dist = dom dmapped Block(boundingBox=dom);
-    }
+    } 
     return user_dist;
 }
 
@@ -168,8 +168,6 @@ proc kernel_2mm(alpha: int, beta: int, distribution, matrix_size: int) {
 				still_correct &&= E[ii,jj] == Etest[ii,jj];
 			}
 		}
-		writeln(E);
-		writeln(Etest);
 		writeln("Is the calculation correct? ", still_correct);
 		writeln("2mm computation complete.");
 	}
@@ -215,5 +213,5 @@ proc main() {
     } else if dist == "B" {
         var user_dist = dom dmapped Block(boundingBox=dom);
         kernel_2mm(alpha, beta, user_dist, size);   
-    }       
+    } 
 }
