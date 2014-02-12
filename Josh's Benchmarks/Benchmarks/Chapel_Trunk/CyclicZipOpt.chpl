@@ -916,7 +916,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 			srcStride(i)=(v.blk(rank-i+1)*dom.whole.dim(i).stride):int(32);
 			count(i+1)=nslice(rank-i+1):int(32);
 		}
-		writeln(count);
+		//writeln(count);
 		var buf: [1..bufsize] this.eltType;
 		var dest = buf._value.theData;
 		const src = arrSection.myElems._value.theData;
@@ -937,7 +937,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		var hereid = here.id;
 		if totalcomm2 then on Locales[0] do total_communication_counts2[hereid+1]+=bufsize3;
 
-		writeln(srcStride);
+		//writeln(srcStride);
 		//writeln(dstStride);
 		//writeln(count);
 		//writeln(buf);
