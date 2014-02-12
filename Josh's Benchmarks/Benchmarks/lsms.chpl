@@ -13,6 +13,8 @@ config const debug = false;
 config const reportFrequency = 1025;
 config const perfTest = false;
 config const displayLIZ = false;
+config var timeit = false;
+config var messages = false;
 
 config var dist: string = "CM";
 
@@ -162,14 +164,20 @@ proc kernel_lsms(gridDist1, gridDist2) {
 proc main() {
     var t:Timer;
     
-    t.start();
-    resetCommDiagnostics();
-    startCommDiagnostics();
+    /* Start the timer */
+	if timeit {
+	    t.start();
+	}
     
+	if messages {
+	    resetCommDiagnostics();
+	    startCommDiagnostics();	
+	}
+	
     /* Initialize the data */
     const gridDom = {0..#span_x, 0..#span_y, 0..#span_z};
-    const gridDist1  = gridDom dmapped CyclicZipOpt(startIdx=gridDom.low);
-    const gridDist2 = gridDom dmapped CyclicZipOpt(startIdx=gridDom.low + 1);
+    //const gridDist1  = gridDom dmapped CyclicZipOpt(startIdx=gridDom.low);
+    //const gridDist2 = gridDom dmapped CyclicZipOpt(startIdx=gridDom.low + 1);
     
     if dist == "NONE" {
         var gridDist1 = gridDom;
@@ -190,11 +198,22 @@ proc main() {
         var gridDist2 = gridDom dmapped Block(boundingBox=gridDom);
         kernel_lsms(gridDist1, gridDist2); 
     }       
-    
-    t.stop();
-    stopCommDiagnostics();
-    
-    writeln(t.elapsed(), " seconds elapsed");  
-    writeln(getCommDiagnostics());
+	
+	if timeit {
+	    t.stop();   
+	    writeln(t.elapsed(), " seconds elapsed");
+	}
+	
+	//Print out communication counts (gets and puts)
+	if messages {
+		stopCommDiagnostics();	
+		var messages=0;
+		var coms=getCommDiagnostics();
+		for i in 0..numLocales-1 {
+			messages+=coms(i).get:int;
+			messages+=coms(i).put:int;
+		}
+		writeln('message count=', messages);
+	}
 }
 
