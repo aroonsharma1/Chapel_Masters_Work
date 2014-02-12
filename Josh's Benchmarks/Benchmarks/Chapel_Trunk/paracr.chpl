@@ -12,9 +12,9 @@ use CommDiagnostics;
 
 //Problem Dimension
 config const n:int=16;
-
 config var verbose: bool = false;
-
+config var timeit = false;
+config var messages = false;
 config var dist: string = "CM";
 
 var stages:int= GetNumStages(n);
@@ -128,7 +128,7 @@ proc Check(A,B,C,D, X, Dist1) {
             }
         } else {
             if(abs(A[i]*X[i-1] + B[i]*X[i] + C[i]*X[i+1]-D[i]) > ERROR) { 
-                writeln("Caso 3 failed"); 
+                writeln("Case 3 failed"); 
                 error = 1;
             }
         }
@@ -166,11 +166,16 @@ proc main() {
 
     var t: Timer;
 
-    /* Start measurements */
-    t.start();
-    resetCommDiagnostics();
-    startCommDiagnostics();
+    /* Start the timer */
+	if timeit {
+	    t.start();
+	}
     
+	if messages {
+	    resetCommDiagnostics();
+	    startCommDiagnostics();	
+	}
+	
     if dist == "NONE" {
         const Dist_1 = Space;
         const Dist_2 = Space;
@@ -193,9 +198,20 @@ proc main() {
         kernel_paracr(Dist_1, Dist_2, DStages); 
     }      
     
-    /* End measurements */ 
-    stopCommDiagnostics();
-    t.stop();   
-    writeln(t.elapsed(), " seconds elapsed");  
-    writeln(getCommDiagnostics()); 
+	if timeit {
+	    t.stop();   
+	    writeln(t.elapsed(), " seconds elapsed");
+	}
+	
+	//Print out communication counts (gets and puts)
+	if messages {
+		stopCommDiagnostics();	
+		var messages=0;
+		var coms=getCommDiagnostics();
+		for i in 0..numLocales-1 {
+			messages+=coms(i).get:int;
+			messages+=coms(i).put:int;
+		}
+		writeln('message count=', messages);
+	}
 }
