@@ -125,12 +125,13 @@ proc kernel_correlation(dist_square, dist_linear, m_dim: int, n_dim: int) {
 		writeln('message count=', messages);	
 	}
 	
+	var dataTest = initialize_matrix({1..m_dim, 1..n_dim}, m_dim);
+    var symmatTest: [{1..m_dim, 1..n_dim}] real = 0.0;
+    var meanTest: [1..m_dim] real = 0.0;
+    var stddevTest: [1..m_dim] real = 0.0;
+	
 	//confirm correctness of calculation
 	if correct {
-		var dataTest = initialize_matrix({1..m_dim, 1..n_dim}, m_dim);
-	    var symmatTest: [{1..m_dim, 1..n_dim}] real = 0.0;
-	    var meanTest: [1..m_dim] real = 0.0;
-	    var stddevTest: [1..m_dim] real = 0.0;
 	    const eps: real = 0.1;
     
 	    /* 
@@ -187,6 +188,19 @@ proc kernel_correlation(dist_square, dist_linear, m_dim: int, n_dim: int) {
         writeln();
         writeln("symmat:");
         print_matrix(symmat, m_dim, m_dim);
+        writeln();
+		
+        writeln("dataTest:");
+        print_matrix(dataTest, m_dim, n_dim);
+        writeln();
+        writeln("meanTest:");
+        writeln(meanTest);
+        writeln();
+        writeln("stddevTest:");
+        writeln(stddevTest);
+        writeln();
+        writeln("symmatTest:");
+        print_matrix(symmatTest, m_dim, m_dim);
         writeln();
     }
 }
