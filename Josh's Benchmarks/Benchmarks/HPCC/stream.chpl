@@ -15,6 +15,9 @@ use HPCCProblemSize;
 const numVectors = 3;
 type elemType = real(64);
 
+config var timeit = false;
+config var messages = false;
+
 //
 // Configuration constants to set the problem size (m) and the scalar
 // multiplier, alpha
@@ -169,14 +172,18 @@ proc main() {
     const ProblemSpaceB = mydom dmapped CyclicZipOpt(startIdx=mydom.low + 1);
             // ...and print the results
             
-    
     var t: Timer;
-
-    /* Start measurements */
-    t.start();
-    resetCommDiagnostics();
-    startCommDiagnostics();
-            
+	
+    if timeit {
+		t = new Timer();
+	    t.start();
+    }
+	
+	if messages {
+	    resetCommDiagnostics();
+	    startCommDiagnostics();
+	}
+	            
     if dist == "NONE" {
         const ProblemSpaceA = mydom;
         const ProblemSpaceB = mydom;
@@ -195,9 +202,19 @@ proc main() {
         kernel_stream(ProblemSpaceA, ProblemSpaceB); 
     }       
     
-    /* End measurements */ 
-    stopCommDiagnostics();
-    t.stop();   
-    writeln(t.elapsed(), " seconds elapsed");  
-    writeln(getCommDiagnostics());
+	if timeit {
+		t.stop();
+		writeln("took ", t.elapsed(), " seconds");
+	}
+	
+	if messages {
+		stopCommDiagnostics();	
+		var messages=0;
+		var coms=getCommDiagnostics();
+		for i in 0..numLocales-1 {
+			messages+=coms(i).get:int;
+			messages+=coms(i).put:int;
+		}
+		writeln('message count=', messages);
+	}
 }
