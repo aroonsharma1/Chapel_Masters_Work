@@ -124,22 +124,6 @@ proc kernel_correlation(dist_square, dist_linear, m_dim: int, n_dim: int) {
 		}
 		writeln('message count=', messages);	
 	}
-
-	//Print out results
-    if (printMatrices) {
-        writeln("data:");
-        print_matrix(data, m_dim, n_dim);
-        writeln();
-        writeln("mean:");
-        writeln(mean);
-        writeln();
-        writeln("stddev:");
-        writeln(stddev);
-        writeln();
-        writeln("symmat:");
-        print_matrix(symmat, m_dim, m_dim);
-        writeln();
-    }
 	
 	//confirm correctness of calculation
 	if correct {
@@ -189,6 +173,22 @@ proc kernel_correlation(dist_square, dist_linear, m_dim: int, n_dim: int) {
 		writeln("Is the calculation correct? ", still_correct);
 		writeln("correlation computation complete.");
 	}
+	
+	//Print out results
+    if (printMatrices) {
+        writeln("data:");
+        print_matrix(data, m_dim, n_dim);
+        writeln();
+        writeln("mean:");
+        writeln(mean);
+        writeln();
+        writeln("stddev:");
+        writeln(stddev);
+        writeln();
+        writeln("symmat:");
+        print_matrix(symmat, m_dim, m_dim);
+        writeln();
+    }
 }
 
 proc main() {

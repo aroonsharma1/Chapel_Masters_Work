@@ -112,24 +112,12 @@ proc kernel_covariance(dist_square, dist_linear, m_dim: int, n_dim: int) {
 		writeln('message count=', messages);	
 	}
 	
-    if (printMatrices) {
-        writeln("data:");
-        print_matrix(data, m_dim, n_dim);
-        writeln();
-        writeln("mean:");
-        writeln(mean);
-        writeln();
-        writeln("symmat:");
-        print_matrix(symmat, m_dim, m_dim);
-        writeln();
-    }
+	var dataTest = initialize_matrix({1..m_dim,1..n_dim}, m_dim);
+    var symmatTest: [{1..m_dim,1..n_dim}] real = 0.0;
+    var meanTest: [1..m_dim] real = 0.0;
 	
 	//confirm correctness of calculation
 	if correct {
-		var dataTest = initialize_matrix({1..m_dim,1..n_dim}, m_dim);
-	    var symmatTest: [{1..m_dim,1..n_dim}] real = 0.0;
-	    var meanTest: [1..m_dim] real = 0.0;
-		
 	    /* Determine mean of column vectors of input data matrix */
 	    forall (m, i) in zip(meanTest, 1..) {
 	        m = (+ reduce(dataTest[1..n_dim, i])):real / float_n;
@@ -159,6 +147,28 @@ proc kernel_covariance(dist_square, dist_linear, m_dim: int, n_dim: int) {
 		writeln("Is the calculation correct? ", still_correct);
 		writeln("covariance computation complete.");
 	}
+	
+    if (printMatrices) {
+        writeln("data:");
+        print_matrix(data, m_dim, n_dim);
+        writeln();
+        writeln("mean:");
+        writeln(mean);
+        writeln();
+        writeln("symmat:");
+        print_matrix(symmat, m_dim, m_dim);
+        writeln();
+		
+        writeln("dataTest:");
+        print_matrix(dataTest, m_dim, n_dim);
+        writeln();
+        writeln("meanTest:");
+        writeln(meanTest);
+        writeln();
+        writeln("symmatTest:");
+        print_matrix(symmatTest, m_dim, m_dim);
+        writeln();
+    }
 }
 
 proc main() {

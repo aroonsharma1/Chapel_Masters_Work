@@ -1,4 +1,3 @@
-#!/bin/bash
 nl=4
 N=8
 M=8
