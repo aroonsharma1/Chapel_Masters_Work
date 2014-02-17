@@ -16,6 +16,7 @@ config var timeit = false;
 config var messages = false;
 config var printMatrices: bool = false;
 config var dist: string = "CM";
+
 config var N: int = 128;
 
 /* Initializes a matrix based on a distribution */
@@ -63,12 +64,6 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
     var still_correct = true;
 	var t:Timer;
 	
-	//Vectors and matrices to test correctness of calculation
-	var Atest = initialize_matrix({1..n_dim, 1..n_dim}, n_dim);
-	var xtest = initialize_array({1..n_dim}, n_dim);
-	var ytest: [1..n_dim] real = 0.0;
-	var tempTest: [1..n_dim] real = 0.0;
-	
 	if messages {
 		resetCommDiagnostics();
 		startCommDiagnostics();
@@ -80,95 +75,72 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
 		t.start();
 	}
 	
-	var A = initialize_matrix(dist_square, n_dim);
+    var A = initialize_matrix(dist_square, n_dim);
     var x = initialize_array(dist_linear, n_dim);
     var y: [dist_linear] real = 0.0;
-    var temp: [dist_linear] real = 0.0;  
+    var temp: [dist_linear] real = 0.0;    
     
     forall i in dist_linear {
         var tempArray: [1..n_dim] real;
         forall (a, b, k) in zip(x[1..n_dim], A[i,1..n_dim], 1..) {
-/*            writeln("i: " + i + ", a: " + a + ", b: " + b);*/
             var temp1 = a * b;
             tempArray[k] = temp1;
         }
-		writeln("A after iteration ", i);
-		writeln(A[i,1..n_dim], " ", x[1..n_dim]);
-      /*  write("tempArray for " + i + " is: ");
-        for l in tempArray {
-            write(l + " ");
-        }
-        writeln();
-        write("which sum is: " + (+ reduce tempArray));
-        writeln();*/
         temp[i] = + reduce(tempArray);
     }
     
-    forall i in dist_linear {
-        var tempArray: [1..n_dim] real;
-        forall (a, b, k) in zip(temp[1..n_dim], A[i,1..n_dim], 1..) {
-            var temp1 = a * b;
-            tempArray[k] = temp1;
+    for i in dist_linear {
+        forall (a, b) in zip(y, A[i,1..n_dim]) {
+            a += b * temp[i];
         }
-        y[i] = + reduce(tempArray);
     }
 	
-	//End the timer and print out timer
+    /******* End the timer *******/
 	if timeit {
-		t.stop();
+	    t.stop();
 		writeln("took ", t.elapsed(), " seconds");
 	}
 	
-	//Print out the communication counts (gets and puts)
+	//Print out communication counts (gets and puts)
 	if messages {
-		stopCommDiagnostics();
+		stopCommDiagnostics();	
 		var messages=0;
 		var coms=getCommDiagnostics();
 		for i in 0..numLocales-1 {
 			messages+=coms(i).get:int;
 			messages+=coms(i).put:int;
 		}
-		writeln('message count=', messages);
+		writeln('message count=', messages);	
 	}
 	
-	//confirm the correctness of the calculation
-	if correct { 
-	    forall i in dist_linear {
-	        var tempArrayTest: [1..n_dim] real;
-	        forall (a, b, k) in zip(xtest[1..n_dim], Atest[i,1..n_dim], 1..) {
-	/*            writeln("i: " + i + ", a: " + a + ", b: " + b);*/
-	            var temp1Test = a * b;
-	            tempArrayTest[k] = temp1Test;
+    var Atest = initialize_matrix({1..n_dim, 1..n_dim}, n_dim);
+    var xTest = initialize_array({1..n_dim}, n_dim);
+    var yTest: [{1..n_dim}] real = 0.0;
+    var tempTest: [{1..n_dim}] real = 0.0;  
+	
+	if correct {  
+	    forall i in {1..n_dim} {
+	        var tempArray: [1..n_dim] real;
+	        forall (a, b, k) in zip(xTest[1..n_dim], Atest[i,1..n_dim], 1..) {
+	            var temp1 = a * b;
+	            tempArray[k] = temp1;
 	        }
-	      /*  write("tempArray for " + i + " is: ");
-	        for l in tempArray {
-	            write(l + " ");
-	        }
-	        writeln();
-	        write("which sum is: " + (+ reduce tempArray));
-	        writeln();*/
-	        tempTest[i] = + reduce(tempArrayTest);
+	        tempTest[i] = + reduce(tempArray);
 	    }
     
-	    forall i in dist_linear {
-	        var tempArrayTest: [1..n_dim] real;
-	        forall (a, b, k) in zip(tempTest[1..n_dim], Atest[i,1..n_dim], 1..) {
-	            var temp1Test = a * b;
-	            tempArrayTest[k] = temp1Test;
+	    for i in {1..n_dim} {
+	        forall (a, b) in zip(yTest, Atest[i,1..n_dim]) {
+	            a += b * tempTest[i];
 	        }
-	        ytest[i] = + reduce(tempArrayTest);
-	    }	
+	    }
 		
-		for i in 1..n_dim {
-			still_correct &&= y[i] == ytest[i];
+		for ii in 1..n_dim {
+			still_correct &&= yTest[ii] == y[ii];
 		}
 		writeln("Is the calculation correct? ", still_correct);
-		writeln(y);
-		writeln(ytest);
 		writeln("atax computation complete.");
 	}
 	
-	//Print out results
     if (printMatrices) {
         writeln("A:");
         print_matrix(A, n_dim);
@@ -183,33 +155,36 @@ proc kernel_atax(dist_square, dist_linear, n_dim: int) {
         for i in temp {
             write(i + " ");
         }
-		writeln();
+        writeln();
+        writeln();
+        write("y:       ");
+        for i in y {
+            write(i + " ");
+        }
+        writeln();
+        writeln();
+		
+        writeln("Atest:");
+        print_matrix(Atest, n_dim);
+        writeln();
+        write("xTest:       ");
+        for i in xTest {
+            write(i + " ");
+        }
+        writeln();
+        writeln();
         write("tempTest:    ");
         for i in tempTest {
             write(i + " ");
         }
         writeln();
         writeln();
-        write("y:       ");
-		writeln();
-        for i in y {
-            write(i + " ");
-        }
-		writeln();
-        write("ytest:       ");
-        for i in ytest {
+        write("yTest:       ");
+        for i in yTest {
             write(i + " ");
         }
         writeln();
         writeln();
-        /*print_locale_data(A, n_dim);
-        writeln();
-        print_locale_data(x, n_dim);
-        writeln();
-        print_locale_data(temp, n_dim);
-        writeln();
-        print_locale_data(y, n_dim);
-        writeln();*/
     }
 }
 

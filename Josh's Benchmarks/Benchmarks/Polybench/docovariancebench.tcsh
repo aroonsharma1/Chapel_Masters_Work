@@ -1,7 +1,7 @@
 #!/bin/tcsh
-set nl=4
-set N=8
-set M=8
+set nl=10
+set N=128
+set M=128
 
 echo nl=$nl
 echo N=$N
