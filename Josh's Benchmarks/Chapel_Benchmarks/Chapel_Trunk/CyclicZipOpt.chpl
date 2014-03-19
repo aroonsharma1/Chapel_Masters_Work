@@ -862,7 +862,13 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		//pattern size of dimension i is dom.dist.targetLocDom.dim(i).size
 		if followThis(i).stride * dom.whole.dim(i).stride % dom.dist.targetLocDom.dim(i).size != 0 {
 			//writeln("In CyclicZipOpt follower not using optimization");
-			if debugzipopt then writeln("not doing cyclic opt ", here.id, " ", t);
+            if debugzipopt then writeln("not doing cyclic opt ", here.id, " ", t);
+/*            if debugzipopt{
+                writeln("Follow This stride is: " + followThis(i).stride);
+                writeln("Whole dim stride of " + i + " is " + dom.whole.dim(i).stride);
+                writeln("Size of dim of " + i + " is " + dom.dist.targetLocDom.dim(i).size);
+                writeln("not doing cyclic opt ", here.id, " ", t);
+            }*/
 			//this.original_follower(followThis);
 			for i in myFollowThis {
 				yield accessHelper(i);
@@ -910,7 +916,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 			srcStride(i)=(v.blk(rank-i+1)*dom.whole.dim(i).stride):int(32);
 			count(i+1)=nslice(rank-i+1):int(32);
 		}
-		//writeln(count);
+		writeln(count);
 		var buf: [1..bufsize] this.eltType;
 		var dest = buf._value.theData;
 		const src = arrSection.myElems._value.theData;
@@ -919,7 +925,6 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		var srcstr=srcStride._value.theData;
 		var cnt=count._value.theData;
 				
-		//writeln(myFollowThis);
 		//copy remote data to local buffer (todo don't do if not used, need to modify chapel compiler to check)
 		__primitive("chpl_comm_get_strd",
 			__primitive("array_get", dest, buf._value.getDataIndex(1)),
@@ -932,10 +937,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		var hereid = here.id;
 		if totalcomm2 then on Locales[0] do total_communication_counts2[hereid+1]+=bufsize3;
 
-		//writeln("rank");
-		//writeln(rank);
-		//writeln("srcStrides");
-		//writeln(srcStride);
+		writeln(srcStride);
 		//writeln(dstStride);
 		//writeln(count);
 		//writeln(buf);

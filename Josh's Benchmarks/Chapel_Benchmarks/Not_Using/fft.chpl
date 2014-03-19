@@ -11,7 +11,7 @@
 // Use standard modules for Bit operations, Random numbers, Timing, and
 // Block and Cyclic distributions
 //
-use BitOps, Random, Time, BlockDist, CyclicDist;
+use BitOps, Random, Time, BlockDist, CyclicDist, CyclicZipOpt;
 
 //
 // Use shared user module for computing HPCC problem sizes
@@ -28,7 +28,6 @@ type elemType = complex(128);  // the element type of the vectors
 // constant defining the problem size itself -- m
 //
 config const n = computeProblemSize(numVectors, elemType, returnLog2 = true);
-writeln(n);
 const m = 2**n;
 
 //
@@ -86,18 +85,20 @@ proc main() {
   //
   // BlkDom defines a Block-distributed problem space and is used to
   // define the vectors z (used to store the input vector) and ZBlk
-  // (used for the first half of the FFT phases).
+  // (used for the first half of the FFT phases). TODO Modify this for data distribution
   //
   const BlkDom: domain(1) dmapped Block(boundingBox=ProblemSpace)
               = ProblemSpace;
+/*  const BlkDom: domain(1) dmapped CyclicZipOpt(startIdx=ProblemSpace.low + 1)
+              = ProblemSpace;*/
   var Zblk, z: [BlkDom] elemType;
 
   //
   // CycDom defines the Cyclic-distributed problem space and is used
   // to define the Zcyc vector, used for the second half of the FFT
-  // phases.
+  // phases. TODO Modify this for data distribution
   //
-  const CycDom: domain(1) dmapped Cyclic(startIdx=0) = ProblemSpace;
+  const CycDom: domain(1) dmapped CyclicZipOpt(startIdx=ProblemSpace.low) = ProblemSpace;
 
   var Zcyc: [CycDom] elemType;
 
@@ -110,12 +111,12 @@ proc main() {
 
   dfft(Zblk, Twiddles, cyclicPhase=false); // compute the DFFT, block phases
 
-  forall (b, c) in zip(Zblk, Zcyc) do       // copy vector to Cyclic storage
+  forall (c, b) in zip(Zcyc,Zblk) do       // copy vector to Cyclic storage
     c = b;
 
   dfft(Zcyc, Twiddles, cyclicPhase=true); // compute the DFFT, cyclic phases
 
-  forall (b, c) in zip(Zblk, Zcyc) do        // copy vector back to Block storage
+  forall (c, b) in zip(Zcyc, Zblk) do        // copy vector back to Block storage
     b = c;
 
   const execTime = getCurrentTime() - startTime;     // store the elapsed time
@@ -141,6 +142,8 @@ proc dfft(A: [?ADom], W, cyclicPhase) {
     // shared twiddle factors, zippering with the unbounded range
     // 0.. to get the base twiddle indices
     //
+    writeln("str is ", str);
+    writeln("span is ", span);
     forall (bankStart, twidIndex) in zip(ADom by 2*span, 0..) {
       //
       // compute the first set of multipliers for the low bank
@@ -154,9 +157,16 @@ proc dfft(A: [?ADom], W, cyclicPhase) {
       // Note: lo..#num         == lo, lo+1, lo+2, ..., lo+num-1
       //       lo.. by str #num == lo, lo+str, lo+2*str, ... lo+(num-1)*str
       //
-      forall lo in bankStart..#str do
+      forall lo in bankStart..#str do {
+          var temp = ADom.dist.idxToLocale(lo);
+          writeln("lo is ");
+          writeln(lo);
+          writeln("temp is ");
+          writeln(temp);
+          writeln();
         on ADom.dist.idxToLocale(lo) do
           local butterfly(wk1, wk2, wk3, A.localSlice(lo..by str #radix));
+      }
 
       //
       // update the multipliers for the high bank
@@ -318,10 +328,10 @@ proc verifyResults(z, Zblk, Zcyc, Twiddles) {
   [z in Zblk] z = conjg(z) / m;
   bitReverseShuffle(Zblk);
   dfft(Zblk, Twiddles, cyclicPhase=false);
-  forall (b, c) in zip(Zblk, Zcyc) do
+  forall (c, b) in zip(Zcyc, Zblk) do
     c = b;
   dfft(Zcyc, Twiddles, true);
-  forall (b, c) in zip(Zblk, Zcyc) do
+  forall (c, b) in zip(Zcyc, Zblk) do
     b = c;
 
   if (printArrays) then writeln("After inverse FFT, Z is: ", Zblk, "\n");
