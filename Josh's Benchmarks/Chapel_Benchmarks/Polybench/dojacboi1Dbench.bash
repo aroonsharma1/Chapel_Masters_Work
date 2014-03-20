@@ -1,6 +1,7 @@
 #!/bin/bash
-nl=4
-M=100
+nl=10
+M=10000
+bsize=4
 
 echo nl=$nl
 echo M=$M
@@ -16,6 +17,15 @@ echo 'Cyclic with modulo unrolling (CM)'
 ./jacobi-1d -nl $nl --dist=CM --M=$M --correct
 ./jacobi-1d -nl $nl --dist=CM --M=$M --messages
 ./jacobi-1d -nl $nl --dist=CM --M=$M --timeit
+
+echo 'Block Cyclic (BC)'
+./jacobi-1d -nl $nl --dist=BC --M=$M --bsize=$bsize --messages
+./jacobi-1d -nl $nl --dist=BC --M=$M --bsize=$bsize --timeit
+
+echo 'Block Cyclic with modulo unrolling (CM)'
+./jacobi-1d -nl $nl --dist=BCM --M=$M --bsize=$bsize --correct
+./jacobi-1d -nl $nl --dist=BCM --M=$M --bsize=$bsize --messages
+./jacobi-1d -nl $nl --dist=BCM --M=$M --bsize=$bsize --timeit
 
 echo 'Block (B)'
 ./jacobi-1d -nl $nl --dist=B --M=$M --messages

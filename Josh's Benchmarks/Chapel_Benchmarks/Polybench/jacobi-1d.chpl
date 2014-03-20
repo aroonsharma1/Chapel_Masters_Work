@@ -1,5 +1,7 @@
 use CyclicZipOpt;
 use BlockDist;
+use BlockCycDist;
+use MyBlockCyclic;
 use Time;
 use CommDiagnostics;
 
@@ -20,6 +22,7 @@ config var correct = false;
 config var timeit = false;
 config var messages = false;
 config var M: int = 10000;
+config var bsize = 4;
 
 config var TSTEPS: int = 100;
 
@@ -124,6 +127,12 @@ proc main() {
         kernel_jacobi1d(dist_1D, M); 
     } else if dist == "B" {
         var dist_1D = dom_1D dmapped Block(boundingBox=dom_1D);
+        kernel_jacobi1d(dist_1D, M);
+    } else if dist == "BC" {
+        var dist_1D = dom_1D dmapped BlockCyclic(startIdx = dom_1D.low, blocksize=bsize);
+        kernel_jacobi1d(dist_1D, M);
+    } else if dist == "BCM" {
+        var dist_1D = dom_1D dmapped MyBlockCyclic(startIdx = dom_1D.low, blocksize=bsize);
         kernel_jacobi1d(dist_1D, M);
     }
 }
