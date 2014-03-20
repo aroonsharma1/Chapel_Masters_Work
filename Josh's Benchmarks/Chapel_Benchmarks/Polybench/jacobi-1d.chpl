@@ -16,6 +16,9 @@ use CommDiagnostics;
     dist: the distribution of the domain which the matrices are based on. 
         Default: cyclical with modulo unrolling
 *****************************/
+config var correct = false;
+config var timeit = false;
+config var messages = false;
 config var M: int = 10000;
 
 config var TSTEPS: int = 100;
@@ -39,6 +42,18 @@ proc print_1D(A: []) {
 
 /* The process which runs the benchmark */
 proc kernel_jacobi1d(dist_1D, m_dim: int) {
+	var still_correct = true;
+	var t:Timer;
+	
+	if messages {
+	    resetCommDiagnostics();
+	    startCommDiagnostics();
+	}
+	
+	if timeit {
+		t = new Timer();
+		t.start();
+	}
     var A = initialize_1D(dist_1D, 2, m_dim);
     var B = initialize_1D(dist_1D, 3, m_dim);
     
@@ -52,23 +67,50 @@ proc kernel_jacobi1d(dist_1D, m_dim: int) {
         }
         A(curr_stencil) = B(curr_stencil);
     }
+	
+	if timeit {
+		t.stop();
+		writeln("took ", t.elapsed(), " seconds");
+	}
+	
+	if messages {
+		stopCommDiagnostics();
+		var messages=0;
+		var coms=getCommDiagnostics();
+		for i in 0..numLocales-1 {
+			messages+=coms(i).get:int;
+			messages+=coms(i).put:int;
+		}
+		writeln('message count=', messages);
+	}
     
     if (printData) {
         writeln("A:");
         print_1D(A);
     }
+	
+	if correct {
+	    var Atest = initialize_1D({1..m_dim}, 2, m_dim);
+	    var Btest = initialize_1D({1..m_dim}, 3, m_dim);
+		
+	    for t in 1..TSTEPS {
+	        forall (a, b, c, d) in zip(Btest(curr_stencil), Atest(left_stencil), Atest(curr_stencil), Atest(right_stencil)) {
+	            a = (b + c + d) * (0.33333);
+	        }
+	        Atest(curr_stencil) = Btest(curr_stencil);
+	    }
+		
+		for ii in 1..m_dim {
+			still_correct &&= Atest[ii] == A[ii];
+		}
+		writeln("Is the calculation correct? ", still_correct);
+		writeln("jacobi-1d computation complete");
+	}
 }
 
 proc main() {
     /* Initialize the domains */
     var dom_1D = {1..M};
-    
-    var t: Timer;
-
-    /* Start measurements */
-    t.start();
-    resetCommDiagnostics();
-    startCommDiagnostics();
     
     if dist == "NONE" {
         var dist_1D = dom_1D;
@@ -83,11 +125,5 @@ proc main() {
     } else if dist == "B" {
         var dist_1D = dom_1D dmapped Block(boundingBox=dom_1D);
         kernel_jacobi1d(dist_1D, M);
-    } 
-    
-    /* End measurements */ 
-    stopCommDiagnostics();
-    t.stop();   
-    writeln(t.elapsed(), " seconds elapsed");  
-    writeln(getCommDiagnostics());
+    }
 }

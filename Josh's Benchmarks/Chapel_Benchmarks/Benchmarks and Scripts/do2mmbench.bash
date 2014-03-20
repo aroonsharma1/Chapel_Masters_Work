@@ -1,6 +1,6 @@
 #!/bin/bash
 nl=10
-size=128
+size=1024
 
 echo nl=$nl
 echo size=$size
