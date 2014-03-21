@@ -1,5 +1,6 @@
 use CyclicZipOpt;
 use BlockDist;
+use BlockCycDist;
 
 use Time;
 use CommDiagnostics;
@@ -11,6 +12,7 @@ config var correct=false;
 config var messages=false;
 config var timeit=false;
 config var volume=false;
+config var bsize = 16;
 
 var mydom = {1..n};
 if dist=='NONE' {
@@ -25,6 +27,12 @@ if dist=='NONE' {
 	dobench(mydist, mydom);	
 } else if dist=='B' {
 	var mydist = mydom dmapped Block(boundingBox=mydom);
+	dobench(mydist, mydom);
+} else if dist == 'BC' {
+	var mydist = mydom dmapped BlockCyclic(startIdx=mydom.low, blocksize=bsize);
+	dobench(mydist, mydom);
+} else if dist == "BCM" {
+	var mydist = mydom dmapped MyBlockCyclic(startIdx=mydom.low, blocksize=bsize);
 	dobench(mydist, mydom);
 }
 
