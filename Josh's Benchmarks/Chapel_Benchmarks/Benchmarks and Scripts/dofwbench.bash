@@ -1,12 +1,12 @@
 #!/bin/bash
 nl=10
-N=128
+N=1024
 
 echo nl=$nl
 echo N=$N
 
 #compile fw
-chpl --fast fw.chpl -o fw
+chpl --fast floyd-warshall.chpl -o fw
 
 echo 'Cyclic (C)'
 ./fw -nl $nl --dist=C --N=$N --messages

@@ -1,7 +1,7 @@
 #!/bin/bash
-nl=4
-N=8
-M=8
+nl=10
+N=1000
+M=1000
 
 echo nl=$nl
 echo N=$N

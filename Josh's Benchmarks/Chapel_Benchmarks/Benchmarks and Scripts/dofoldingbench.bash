@@ -23,5 +23,16 @@ echo 'Cyclic with modulo unrolling (CM)'
 ./folding -nl $nl --dist=CM --n=$n --iterations=$iterations --messages
 ./folding -nl $nl --dist=CM --n=$n --iterations=$iterations --timeit
 
+
+#won't work for this benchmark because of strided access patterns
+#echo 'Block Cyclic (BC)'
+#./folding -nl $nl --dist=BC --n=$n --iterations=$iterations --bsize=$bsize --messages
+#./folding -nl $nl --dist=BC --n=$n --iterations=$iterations --bsize=$bsize --timeit
+
+#echo 'Block Cyclic with modulo unrolling (CM)'
+#./folding -nl $nl --dist=BCM --n=$n --iterations=$iterations --bsize=$bsize --correct
+#./folding -nl $nl --dist=BCM --n=$n --iterations=$iterations --bsize=$bsize --messages
+#./folding -nl $nl --dist=BCM --n=$n --iterations=$iterations --bsize=$bsize --timeit
+
 echo 'No distribution (NONE)'
 ./folding -nl $nl --dist=NONE --n=$n --iterations=$iterations --timeit

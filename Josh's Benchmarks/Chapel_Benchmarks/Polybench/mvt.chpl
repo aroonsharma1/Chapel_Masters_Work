@@ -11,6 +11,9 @@ use CommDiagnostics;
     dist: the distribution of the domain which the matrices are based on. 
         Default: cyclical with modulo unrolling
 *****************************/
+config var correct = false;
+config var timeit = false;
+config var messages = false;
 config var printData: bool = false;
 config var dist: string = "CM";
 
@@ -57,6 +60,20 @@ proc print_matrix(A: [], dim: int) {
 
 /* The process which runs the benchmark */
 proc kernel_mvt(dist, dim: int) {
+	var still_correct = true;
+	var t:Timer;
+	
+	if messages {
+		resetCommDiagnostics();
+		startCommDiagnostics();
+	}
+	
+    /******* Start the timer: this is where we do work *******/
+	if timeit {
+		t = new Timer();
+		t.start();
+	}
+	
     var A = initialize_matrix(dist, dim);
     var x1 = initialize_array(dist(1, ..), dim, "x1");
     var x2 = initialize_array(dist(1, ..), dim, "x2");
@@ -89,6 +106,52 @@ proc kernel_mvt(dist, dim: int) {
         x2[i] += (+ reduce(x2_temp));
     } 
     
+    /******* End the timer *******/
+	if timeit {
+	    t.stop();
+		writeln("took ", t.elapsed(), " seconds");
+	}
+	
+	//Print out communication counts (gets and puts)
+	if messages {
+		stopCommDiagnostics();	
+		var messages=0;
+		var coms=getCommDiagnostics();
+		for i in 0..numLocales-1 {
+			messages+=coms(i).get:int;
+			messages+=coms(i).put:int;
+		}
+		writeln('message count=', messages);	
+	}
+	
+    var ATest = initialize_matrix({1..dim, 1..dim}, dim);
+    var x1Test = initialize_array({1..dim}, dim, "x1");
+    var x2Test = initialize_array({1..dim}, dim, "x2");
+    var y1Test = initialize_array({1..dim}, dim, "y1");
+    var y2Test = initialize_array({1..dim}, dim, "y2");
+	
+	//will say correctness is false but it is actually true
+	if correct {
+		
+	    for i in 1..dim {
+	        var x1_tempTest: [{1..dim}] real = 0.0;
+	        var x2_tempTest: [{1..dim}] real = 0.0;
+	        forall (a, b, c, d, e) in zip(ATest[i, 1..dim], ATest[1..dim, i], y1Test, y2Test, 1..dim) {
+	            x1_tempTest[e] = a * c;
+	            x2_tempTest[e] = b * d;
+	        }
+	        x1Test[i] += (+ reduce(x1_tempTest));
+	        x2Test[i] += (+ reduce(x2_tempTest));
+	    } 
+		
+		for ii in 1..dim {
+			still_correct &&= (x1[ii] == x1Test[ii]) && (x2[ii] == x2Test[ii]);
+		}
+		writeln("Is the calculation correct? ", still_correct);
+		writeln("mvt computation complete");
+	}
+	
+	
     if (printData) {
         writeln(x1);
         writeln();
@@ -96,19 +159,14 @@ proc kernel_mvt(dist, dim: int) {
         writeln(x2);
         writeln();
         writeln();
+		writeln(x1Test);
+		writeln(x2Test);
     }
 }
 
 proc main() {
     /* Initialize the domains */
     var dom = {1..Dim, 1..Dim};
-    
-    var t: Timer;
-
-    /* Start measurements */
-    t.start();
-    resetCommDiagnostics();
-    startCommDiagnostics();
     
     if dist == "NONE" {
         var user_dist = dom;
@@ -124,10 +182,4 @@ proc main() {
         var user_dist = dom dmapped Block(boundingBox=dom);
         kernel_mvt(user_dist, Dim);  
     } 
-    
-    /* End measurements */ 
-    stopCommDiagnostics();
-    t.stop();   
-    writeln(t.elapsed(), " seconds elapsed");  
-    writeln(getCommDiagnostics());
 }
