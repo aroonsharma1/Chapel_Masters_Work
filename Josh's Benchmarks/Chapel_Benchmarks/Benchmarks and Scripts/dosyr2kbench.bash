@@ -1,7 +1,8 @@
 #!/bin/bash
+#standard sata set is 1024
 nl=10
-M=1024
-N=1024
+M=32
+N=32
 
 echo nl=$nl
 echo N=$N

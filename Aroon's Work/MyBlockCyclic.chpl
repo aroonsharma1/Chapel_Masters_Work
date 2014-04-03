@@ -349,9 +349,6 @@ iter MyBlockCyclicDom.these(param tag: iterKind) where tag == iterKind.leader {
 	var cyclesize=locDoms.size;
 	var blockcyclesize=blocksize*cyclesize; //same as locDom.myStarts.stride
 	coforall locDom in locDoms do on locDom {
-// 		writeln(locDom.myStarts);
-// 		writeln(dist.blocksize(1));
-
 //begin new code
 		var tasks=here.numCores;
 		coforall core in 0..tasks-1 do

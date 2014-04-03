@@ -1,4 +1,5 @@
 #!/bin/bash
+#standard data set is 256 but should run on 32 or 64
 nl=10
 M=256
 N=256

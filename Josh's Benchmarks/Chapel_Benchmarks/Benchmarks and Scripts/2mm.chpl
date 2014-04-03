@@ -1,5 +1,6 @@
 use CyclicZipOpt;
 use BlockDist;
+use BlockCycDist;
 use Time;
 use CommDiagnostics;
 
@@ -213,5 +214,8 @@ proc main() {
     } else if dist == "B" {
         var user_dist = dom dmapped Block(boundingBox=dom);
         kernel_2mm(alpha, beta, user_dist, size);   
-    } 
+    } /*else if dist == "BC" {
+    	var user_dist = dom dmapped BlockCyclic(startIdx=dom.low, blocksize=(2,2));
+		kernel_2mm(alpha, beta, user_dist, size);
+    }*/
 }
