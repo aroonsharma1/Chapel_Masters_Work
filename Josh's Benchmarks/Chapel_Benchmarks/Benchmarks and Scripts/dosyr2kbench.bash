@@ -1,8 +1,8 @@
 #!/bin/bash
-#standard sata set is 1024
+#standard sata set is 1024 but should run on 32 or 64 or 128
 nl=10
-M=32
-N=32
+M=1024
+N=1024
 
 echo nl=$nl
 echo N=$N

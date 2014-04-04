@@ -12,6 +12,8 @@ var BA: [BlockSpace] int;
 forall ba in BA do
 	ba = here.id;
 
+writeln(BA[1,1..n]);
+
 writeln("Distributed with Block");
 writeln(BA);
 writeln();
@@ -22,11 +24,14 @@ var BCA: [BlockCyclicSpace] int;
 forall bca in BCA do
 	bca = here.id;
 
+//writeln(BCA[1,1..n]);
+writeln();
+
 writeln("Distributed with Block Cyclic");
 writeln(BCA);
 writeln();
 
-const MyBlockCyclicSpace = Space dmapped MyBlockCyclic(startIdx=Space.low, blocksize=(2,2));
+/*const MyBlockCyclicSpace = Space dmapped MyBlockCyclic(startIdx=Space.low, blocksize=(2,2));
 var MBCA: [MyBlockCyclicSpace] int;
 
 forall mbca in MBCA do
@@ -34,4 +39,4 @@ forall mbca in MBCA do
 
 //writeln("Distributed with My Block Cyclic");
 //writeln(MBCA);
-//writeln();
+//writeln();*/

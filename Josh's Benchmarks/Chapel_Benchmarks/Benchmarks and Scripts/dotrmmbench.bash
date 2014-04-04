@@ -1,6 +1,7 @@
 #!/bin/bash
+#standard data set is 1024 but should run on 128
 nl=10
-Dim=1024
+Dim=8
 
 echo nl=$nl
 echo Dim=$Dim
