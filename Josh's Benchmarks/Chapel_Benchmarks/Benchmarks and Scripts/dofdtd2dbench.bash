@@ -1,8 +1,8 @@
 #!/bin/bash
 #standard data set is 1000 but should run this with a size of 300
 nl=10
-M=1000
-N=1000
+M=300
+N=300
 TMAX=50
 
 echo nl=$nl

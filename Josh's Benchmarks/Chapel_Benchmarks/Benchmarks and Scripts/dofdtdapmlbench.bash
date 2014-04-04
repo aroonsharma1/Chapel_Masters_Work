@@ -1,9 +1,9 @@
 #!/bin/bash
 #standard data set is 256 but should run on 32 or 64
 nl=10
-M=256
-N=256
-P=256
+M=64
+N=64
+P=64
 
 echo nl=$nl
 echo M=$M

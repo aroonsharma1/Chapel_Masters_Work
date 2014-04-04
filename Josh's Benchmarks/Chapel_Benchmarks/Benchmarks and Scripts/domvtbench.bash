@@ -1,7 +1,7 @@
 #!/bin/bash
 #standard data set is 4000 should be able to run on full set
 nl=10
-Dim=40
+Dim=4000
 
 echo nl=$nl
 echo Dim=$Dim

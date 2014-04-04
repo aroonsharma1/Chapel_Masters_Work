@@ -2,7 +2,7 @@
 #standard data set is 1024 but should use 64 or 128
 
 nl=10
-N=32
+N=128
 
 echo nl=$nl
 echo N=$N
