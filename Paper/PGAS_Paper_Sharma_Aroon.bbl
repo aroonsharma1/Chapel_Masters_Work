@@ -1,0 +1,141 @@
+\begin{thebibliography}{10}
+
+\bibitem{barua1999maps}
+Rajeev Barua, Walter Lee, Saman Amarasinghe, and Anant Agarwal.
+\newblock Maps: a compiler-managed memory system for raw machines.
+\newblock In {\em ACM SIGARCH Computer Architecture News}, volume~27, pages
+  4--15. IEEE Computer Society, 1999.
+
+\bibitem{bonachea2007proposal}
+Dan Bonachea.
+\newblock Proposal for extending the upc memory copy library functions and
+  supporting extensions to gasnet, version 2.0.
+\newblock 2007.
+
+\bibitem{callahan1988compiling}
+David Callahan and Ken Kennedy.
+\newblock Compiling programs for distributed--memory multiprocessors.
+\newblock {\em The Journal of Supercomputing}, 2(2):151--169, 1988.
+
+\bibitem{chamberlain2011user}
+Bradford~L Chamberlain, Sung-Eun Choi, Steven~J Deitz, and Angeles Navarro.
+\newblock User-defined parallel zippered iterators in chapel.
+\newblock 2011.
+
+\bibitem{chamberlain1997factor}
+Bradford~L Chamberlain, Sung-Eun Choi, E~Christopher Lewis, Calvin Lin,
+  Lawrence Snyder, and W~Derrick Weathersby.
+\newblock Factor-join: A unique approach to compiling array languages for
+  parallel machines.
+\newblock In {\em Languages and Compilers for Parallel Computing}, pages
+  481--500. Springer, 1997.
+
+\bibitem{chamberlain1998zpl}
+Bradford~L Chamberlain, C~Lin, Sung-Eun Choi, L~Snyder, C~Lewis, and W~Derrick
+  Weathersby.
+\newblock Zpl's wysiwyg performance model.
+\newblock In {\em High-Level Parallel Programming Models and Supportive
+  Environments, 1998. Proceedings. Third International Workshop on}, pages
+  50--61. IEEE, 1998.
+
+\bibitem{chavarria2005effective}
+Daniel Chavarr{\'\i}a-Miranda and John Mellor-Crummey.
+\newblock Effective communication coalescing for data-parallel applications.
+\newblock In {\em Proceedings of the tenth ACM SIGPLAN symposium on Principles
+  and practice of parallel programming}, pages 14--25. ACM, 2005.
+
+\bibitem{davidson1995improving}
+Jack~W Davidson and Sanjay Jinturkar.
+\newblock Improving instruction-level parallelism by loop unrolling and dynamic
+  memory disambiguation.
+\newblock In {\em Proceedings of the 28th annual international symposium on
+  Microarchitecture}, pages 125--132. IEEE Computer Society Press, 1995.
+
+\bibitem{Dion96compilingaffine}
+Mich{\`e}le Dion, Cyril Randriamaro, and Yves Robert.
+\newblock Compiling affine nested loops: How to optimize the residual
+  communications after the alignment phase?
+\newblock {\em JOURNAL OF PARALLEL AND DISTRIBUTED COMPUTING (JPDC},
+  38:176--187, 1996.
+
+\bibitem{germain1995automatic}
+C{\'e}cile Germain and Franck Delaplace.
+\newblock Automatic vectorization of communications for data-parallel programs.
+\newblock In {\em EURO-PAR'95 Parallel Processing}, pages 429--440. Springer,
+  1995.
+
+\bibitem{Gupta91automaticdata}
+Manish Gupta and Prithviraj Banerjee.
+\newblock Automatic data partitioning on distributed memory multiprocessors.
+\newblock Technical report, 1991.
+
+\bibitem{gupta1996compiling}
+Sandeep K.~S. Gupta, SD~Kaushik, C-H Huang, and P~Sadayappan.
+\newblock Compiling array expressions for efficient execution on
+  distributed-memory machines.
+\newblock {\em Journal of Parallel and Distributed Computing}, 32(2):155--172,
+  1996.
+
+\bibitem{huang1994speculative}
+Andrew~S Huang, Gert Slavenburg, and John~Paul Shen.
+\newblock Speculative disambiguation: A compilation technique for dynamic
+  memory disambiguation.
+\newblock In {\em Computer Architecture, 1994., Proceedings the 21st Annual
+  International Symposium on}, pages 200--210. IEEE, 1994.
+
+\bibitem{iancu2008performance}
+Costin Iancu, Wei Chen, and Katherine Yelick.
+\newblock Performance portable optimizations for loops containing communication
+  operations.
+\newblock In {\em Proceedings of the 22nd annual international conference on
+  Supercomputing}, pages 266--276. ACM, 2008.
+
+\bibitem{li1991data}
+Jingke Li and Marina Chen.
+\newblock The data alignment phase in compiling programs for distributed-memory
+  machines.
+\newblock {\em Journal of parallel and distributed computing}, 13(2):213--221,
+  1991.
+
+\bibitem{pouchet2011loop}
+Louis-No{\"e}l Pouchet, Uday Bondhugula, C{\'e}dric Bastoul, Albert Cohen,
+  J~Ramanujam, P~Sadayappan, and Nicolas Vasilache.
+\newblock Loop transformations: convexity, pruning and optimization.
+\newblock In {\em ACM SIGPLAN Notices}, volume~46, pages 549--562. ACM, 2011.
+
+\bibitem{ramanujam1991compile}
+J~Ramanujam and P~Sadayappan.
+\newblock Compile-time techniques for data distribution in distributed memory
+  machines.
+\newblock {\em Parallel and Distributed Systems, IEEE Transactions on},
+  2(4):472--482, 1991.
+
+\bibitem{sanz2012global}
+Alberto Sanz, Rafael Asenjo, Juan L{\'o}pez, Rafael Larrosa, Angeles Navarro,
+  Vassily Litvinov, Sung-Eun Choi, and Bradford~L Chamberlain.
+\newblock Global data re-allocation via communication aggregation in chapel.
+\newblock In {\em Computer Architecture and High Performance Computing
+  (SBAC-PAD), 2012 IEEE 24th International Symposium on}, pages 235--242. IEEE,
+  2012.
+
+\bibitem{shih2000efficient}
+Kuei-Ping Shih, Jang-Ping Sheu, and Chih-Yung Chang.
+\newblock Efficient address generation for affine subscripts in data-parallel
+  programs.
+\newblock {\em The Journal of Supercomputing}, 17(2):205--227, 2000.
+
+\bibitem{trifunovic2010graphite}
+Konrad Trifunovic, Albert Cohen, David Edelsohn, Feng Li, Tobias Grosser,
+  Harsha Jagasia, Razya Ladelsky, Sebastian Pop, Jan Sj{\"o}din, Ramakrishna
+  Upadrasta, et~al.
+\newblock Graphite two years after: First lessons learned from real-world
+  polyhedral compilation.
+\newblock In {\em GCC Research Opportunities Workshop (GROW'10)}, 2010.
+
+\bibitem{wei1998compiling}
+Wen-Hsing Wei, Kuei-Ping Shih, Jang-Ping Sheu, et~al.
+\newblock Compiling array references with affine functions for data-parallel
+  programs.
+\newblock {\em J. Inf. Sci. Eng.}, 14(4):695--723, 1998.
+
+\end{thebibliography}
