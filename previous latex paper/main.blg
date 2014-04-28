@@ -1,0 +1,26 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: D:\BRW_Research\Papers\ASPLOS\Paper\main.aux
+The style file: abbrv.bst
+Database file #1: angelos.bib
+Database file #2: references.bib
+Repeated entry---line 1268 of file references.bib
+ : @article{valgrind
+ :                  ,
+I'm skipping whatever remains of this entry
+Database file #3: local.bib
+Database file #4: extra.bib
+Database file #5: matt.bib
+Database file #6: mincy.bib
+Database file #7: RewriterSurveyReferences.bib
+Database file #8: selfmod.bib
+A bad cross reference---entry "Brumley-Mayhem"
+refers to entry "DBLP:conf/sp/2012", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/sp/2012"
+Warning--empty title in DARPA-BET1
+Warning--empty title in boomerang
+Warning--empty title in llvm-qemu
+Warning--empty title in hex-rays
+Warning--empty booktitle in dyninst94
+Warning--empty title in ida-pro
+Warning--empty year in micro-aparna10
+Warning--empty year in dyn-reg-prom11
+(There were 2 error messages)

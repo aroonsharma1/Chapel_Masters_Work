@@ -1,0 +1,37 @@
+
+\begin{figure}[t]
+{
+\vspace{-0.2in}
+\centering
+{
+\begin{scriptsize}
+\begin{tabular}{|c|c|c|} %|r|r|r|}
+%xxxxx\=xxxxxxxxxxxxx\=xxxxxx\=xxxxxxxxxxx\=xxxxxx\=  \kill\\
+\hline
+\textbf{Statement s}&\textbf{gen[s]}&\textbf{kill[s]}\\ \hline
+d:store x,mem[reg]&if([sp+addr]$\in$VS(mem+reg))&if([sp+addr]$\in$VS(mem+reg))\\	
+					     &				d 	&				defs(addr) - {d}\\ 
+					     &	else \{ \} 	&				else \{ \}\\ \hline
+d: store y,addr[sp]&					d	&			defs(addr) - {d}\\ \hline
+d: z = load mem[reg]& \{\}&  \{\}\\ \hline
+d: z = load addr[sp]&\{\}&	\{\} \\ \hline
+\end{tabular}
+\begin{tabbing}
+Memory location $loc: [sp + addr]$ \\
+$mem$: Non-constant access\\
+$addr$: Constant\\
+$defs(addr)$: Set of instructions defining the memory location [sp+addr]\\
+$in[n]$: Set of definitions that reach the begining of node n \\
+$out[n]$: Set of definitions that reach  the end of node n \\
+$pred[n]$: Predecessor nodes of node n\\
+$in[n] = \cup_{i | i \in pred[n]}\{ (out[p])\}$ \\
+$out[n] = gen[n] \cup (in[n] - kill[n])$
+%\line(1,0){220}
+\end{tabbing}
+\caption {\textit{The reaching definition description. Definitions are propagated across the control flow of program }}
+\label{fig:reachingdef}
+\end{scriptsize}
+\vspace{-2ex}
+}
+}
+\end{figure}

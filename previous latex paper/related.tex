@@ -1,0 +1,37 @@
+\vspace{-2ex}
+\section{Related Work}
+\label{sec:related}
+%\vspace{-2ex}
+\textbf{Binary rewriting}: Binary rewriting research is being carried out in two directions: static and dynamic. None of the previous dynamic rewriters, PIN~\cite{pintool}, DynInst~\cite{dyninst94}, FX!32~\cite{fx32}, DynamoRIO~\cite{bruening2004eta}, Valgrind~\cite{valgrind} and others, employ a compiler IR. Chipounov~\cite{llvm-qemu} presented a method for dynamically translating x86 to LLVM using QEMU, reporting a huge slowdown of 35x over the baseline QEMU x86-to-x86 translator. Unlike our approach, it converts blocks of code to IR on the fly which limits the application of LLVM analyses to only one block at a time. Further, they do not provide any methods for stack deconstruction or symbol promotion.
+% further limiting the effectiveness of optimizations.
+
+%They do not attempt any stack pointer handling or symbols promotion, limiting the effectiveness of these optimizations even further.
+% This is not surprising since dynamic rewriters construct their internal representation at run-time, and hence they would not have the time to construct a compiler IR. BIRD~\cite{bird}.  In contrast, we obtain IR for complete binary code at once which allows us to apply complex inter-procedural optimizations.
+
+%Dynamic rewriters are hobbled since they do not have enough time to perform complex compiler transformations either; they have been primarily used for code instrumentation and simple security checks in the past. We do not discuss dynamic rewriters further since this paper's methods are primarily directed at static binary rewriters such as SecondWrite.
+
+% KAPIL: Add Dynamo/RIO to the above list of dynamic rewriters.
+
+Existing static binary rewriters related to our approach include Etch~\cite{newEtch}, ATOM~\cite{atom}, PLTO~\cite{plto}, FDPR~\cite{ibm-fdpr}, Diablo~\cite{Diablo1} and UQBT~\cite{cifuentes00}. All these rewriters define their own low-level custom IR as opposed to using a compiler IR. These IR are devoid of features like abstract frames, symbols and maintain memory as a black-box; the limitations of which have already been discussed in Sec~\ref{sec:intro}. PLTO implements stack analysis to determine the use-kill depths of each function~\cite{plto}. However this information is used only for low-level custom optimizations like load/store forwarding rather than obtaining a high-level IR. UQBT~\cite{cifuentes00} employs function prototypes in its IR, but relies on user to provide this information, instead of determining it automatically from a binary like we do. This severely limits its applicability since only the developers have access to that information.
+
+Virtual machines~\cite{jalapeno-vm} implement stack-walking techniques to determine the calling context by simply iterating over the list of frame pointers maintained as metadata in the dynamic framework; making it orthogonal to our run-time checks mechanism which statically inserts checks in the IR.
+%Diablo~\cite{Diablo1} is geared mainly towards optimizations like code compaction for embedded platforms while ATOM is mainly targeted towards RISC architectures like Compaq Alpha. of a procedure invocation, on the stack, dynamic
+%Etch~\cite{newEtch} does not explicitly build an IR and allows user to add new tools to analyze and instrument binaries.
+ %The primary goal of Etch appears to be instrumentation. 
+%, and moreover, the translation process to an intermediate form is no longer automatic.since only the developers have access to that information, and 
+%Taking memory as a black box limits its applicability to architectures like x86 which have a limited set of registers. 
+%does not attempt to obtain high-level information like function prototypes and  Taking memory as a black box limits its applicability to architectures like x86 which have a limited set of registers. 
+%and has only been shown to be applicable for simple optimizations like profile-guided code layout.
+%Diablo defines an augmented whole program control-flow-graph-based IR with program registers as globals and memory as a black box. hence it loses out on the advanced set of optimizations implemented in an already existing mature compiler infrastructure.
+%UQBT~\cite{cifuentes00} is a binary translation framework which also defines its own custom IR as opposed to using an existing compiler's IR. 
+%Ramakrishnan et al~\cite{venki04} suggest static analysis of binaries to check whether coding standards have been followed. which have been employed for different applications. of obtaining information from binaries 
+
+\textbf{Binary Analysis}: King et al.~\cite{dagstuhl-reports-KingMRS12} provide a comprehensive survey of several binary analysis tools. The analysis related to our methods are presented by~\cite{paramRetVal07,gogul04,reps06}. Balakrishnan et al~\cite{gogul04,reps06} present Value Set Analysis for analyzing memory accesses and extracting high level information like variables and their types. As presented in Sec~\ref{sec:contributions}, analyzing variables does not guarantee promotion to symbols in IR. Zhang et al~\cite{paramRetVal07} present techniques for recovering parameters and return values from executables but they do not consider the scenarios where the information cannot be derived.
+%Further, their prime aim is to employ this information for security analysis of executables and not for the rewriting.
+%Such best effort solutions are good for executable analysis but do not certify the reliable behavior once these analyses fail. Further all these analysis methods have neither been used for the generation of compiler IR nor for any rewriting purposes.
+
+Shastry et al~\cite{shastry-ssa} present methods for register promotion in source programs. Their method relies on memory locations being represented in SSA form with all the aliases exposed, which is a definite non-starter for binaries. Jianjun et al~\cite{dyn-reg-prom11} promote stack variables to registers in a dynamic rewriter, relying on hardware mechanism for memory disambiguation. In contrast, we provide theoretical formulations for symbol promotion without using any hardware support.
+%These techniques presented in ~\cite{Cooperregisterpromotion97} are only loop-based methods and are not applicable to binaries since disambiguating memory accesses in binaries is fundamentally different from that in source code. Cooper et al~\cite{Cooperregisterpromotion97} and There have been a lot of tools which employ symbolic execution for detecting vulnerabilities in programs. BAP~\cite{Brumley-BAP},
+
+\textbf{Symbolic execution} : KLEE~\cite{Cadar-KLEE}, EXE~\cite{Cadar-EXE} are example of source-level tools and cannot be applied directly to executables. Previous binary-only symbolic execution tools like BitBlaze~\cite{Song-Bitblaze}, S2E~\cite{Chipounov-S2E} do not represent symbolic memory. MAYHEM~\cite{Brumley-Mayhem} proposes a new index-based memory model for simulating symbolic memory, while our techniques enable application of existing solver based models to binaries.
+% without suggesting any new model.Further, these tools achieve symbolic execution only through a dynamic translator like QEMU, limiting its paths to one input, while we achieve symbolic execution in a static translator. 

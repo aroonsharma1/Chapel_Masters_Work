@@ -1,0 +1,43 @@
+\begin{figure*}[t]
+{
+\vspace{-0.3in}
+\begin{minipage}{.32\linewidth}
+\centering
+{
+\includegraphics[width=\linewidth]{figures/EPS/origSymPromotion.eps}
+\caption{\textit{Percentage of original symbolic accesses recovered in IR}}
+\label{fig:OrigSymPromResult}
+}
+\end{minipage}
+\hfill
+\begin{minipage}{.38\linewidth}
+\centering
+{
+\includegraphics[width=\linewidth]{figures/EPS/partition-visualization.eps}
+\caption{\textit{Partition algorithm visualization}}
+\label{fig:PartResult}
+}
+\end{minipage}
+\hfill
+\begin{minipage}{.29\linewidth}
+\centering
+{
+\begin{tiny}
+\begin{tabular}{|c|c|c|c|} %|r|r|r|}
+%xxxxx\=xxxxxxxxxxxxx\=xxxxxx\=xxxxxxxxxxx\=xxxxxx\=  \kill\\
+\hline
+\textbf{Program}&{\textbf{Version}}&{\textbf{Physical stack}}&{\textbf{Run Time}}\\
+{}&{}&{}&{\textbf{Checks}}\\ \hline
+gcc&gcc-O0,VS-O0&117&0\\\hline
+gcc&gcc-O3, VS-Ox&117&10\\	\hline
+tonto&gcc-O0, gccO3&20&0\\	\hline
+\end{tabular}
+\caption {{\textit{Programs demonstrating corner cases of our analysis }}}
+\label{fig:resultsCornerCases}
+\end{tiny}
+%\vspace{-4ex}
+}
+\end{minipage}
+}
+\vspace{-3ex}
+\end{figure*}

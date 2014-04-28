@@ -1,0 +1,81 @@
+
+\begin{figure*}[t]
+{
+\vspace{-0.2in}
+%\centering
+{
+\begin{minipage}[t]{.44\linewidth}
+{
+\centering
+\begin{scriptsize}
+\begin{tabbing}
+
+xxx\=xxxxx\=xxxxxxx\=xxxxxxxxxxx\=  \kill\\
+
+1.\ \ function foo:\\
+2.\> \>sub 100, esp   \>\>// Subtract 100 from sp \\
+3.\> \>call bar   \>\>// call bar \\
+\\
+4.\ \ function bar: \\
+5.\>\> sub 10, esp  \> \>// Subtract 10 from sp \\
+6.\>\> lea  4(esp),edi  \> \>//Move address esp+4 to edi \\
+7.\> \>mov  2, ebx   \> \>// Move value 2 to ebx\\
+8.\> \>mov  15, ecx  \> \>// Move value 15 to ecx\\
+9.\>\> if (esi $\leq$ 5) jmp B2 \>\>//Conditional Branch\\
+\\
+10.\>B1:\> mov 4,ebx \>\> // Move value 4 to ebx\\
+11.\>\> mov 16,ecx \>\> //Move value 16 to ecx\\
+\\\
+12.\>B2:\> store 10, ebx[edi] \>\>// Store 10 to indirect offset (edi + ebx)\\
+13.\>\> store 10, ecx[esp] \>\>// Store 10 to indirect offset (esp + ecx)\\
+14.\>\> store 10, edx[edi] \>\>// Store 10 to indirect offset (edi + edx)\\
+...
+\end{tabbing}
+\end{scriptsize}
+\vspace{-.2in}
+\caption {\textit{A small psuedo-assembly code. The second operand in the instruction is the destination}}
+\label{fig:argcodeex}
+}
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{.5\linewidth}
+{
+\centering
+\begin{scriptsize}
+\begin{tabbing}
+xxx\=xxxxx\=xxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxx\=xxxx\=xxxxx\=  \kill\\
+
+1.\ \ function foo:\\
+2.\> \>ORIG\_FRAME\_FOO=alloca i32, 100 \>\>// Local frame allocation \\
+3.\> \>call\> bar(ORIG\_FRAME\_FOO)   \>// call bar \\
+\\
+4.\ \ function bar(i32* inArg) \\
+5.\> \>ORIG\_FRAME\_BAR=alloca i32, 10  \> \>// Local frame allocation \\
+6.\> \> edi = ORIG\_FRAME\_BAR+4 \> \> \\
+7.\>\> ebx = 2    \>\>// Move value 2 to ebx\\
+8.\>\> ecx = 15    \>\>// Move value 15 to ecx\\
+9.\>\> if (esi $\leq$ 5) jmp B2\\
+\\
+10.\>B1:\> ebx = 4    \>\>// Move value 4 to ebx\\
+11.\>\> ecx = 16    \>\>// Move value 16 to ecx\\
+\\
+12.\>B2:\> store \> 10, ebx[edi]  \>// Store 10 to local frame\\
+13.\>\> store \> 10, (ecx-SIZE-BAR)[inArg]  \>// Ancestor Store\\
+14.\>\> if((edx+edi - ORIG\_FRAME\_BAR) $\leq$ SIZE-BAR)\>\>\>\>//Run Time Check\\
+15 \>\> \>store 10, edx[edi]\>\> //Local Store\\
+16.\>\>else\\
+17.\>\>\>store 10, (edx+edi - SIZE-BAR)[inArg] \>\>//Ancestor Store\\
+...
+\end{tabbing}
+\end{scriptsize}
+\vspace{-.2in}
+\caption {\textit{IR of the psuedo-assembly code. SIZE-BAR is size of ORIG\_FRAME\_BAR, register names are pure IR symbols}}
+\label{fig:argirex}
+}
+\end{minipage} 
+
+}
+\vspace{-3ex}
+}
+\end{figure*}
+%and have no relation to the hardware register other than their value was in that register name in the input binary

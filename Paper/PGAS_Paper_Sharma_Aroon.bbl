@@ -132,6 +132,11 @@ Konrad Trifunovic, Albert Cohen, David Edelsohn, Feng Li, Tobias Grosser,
   polyhedral compilation.
 \newblock In {\em GCC Research Opportunities Workshop (GROW'10)}, 2010.
 
+\bibitem{walker1996redistribution}
+David~W Walker and Steve~W. Otto.
+\newblock Redistribution of block-cyclic data distributions using mpi.
+\newblock {\em Concurrency Practice and Experience}, 8(9):707--728, 1996.
+
 \bibitem{wei1998compiling}
 Wen-Hsing Wei, Kuei-Ping Shih, Jang-Ping Sheu, et~al.
 \newblock Compiling array references with affine functions for data-parallel

@@ -1,0 +1,95 @@
+%\mysection{Decompilation to high-level compiler IR} \label{sec:high-IR}
+%\vspace{-2ex}
+\section{Deconstruction of physical stack frames} \label{sec:deconstructFrame}
+%Binary Stack
+
+%Small description of what next paragraphs are describing
+In order to recover a source-level stack representation, we first recognize the local stack frame of a procedure and represent it as a local variable in the IR. As explained in Sec~\ref{sec:contributions}, this local variable is coupled with the rest of the stack due to interprocedural accesses. We achieve this decoupling by recognizing interprocedural accesses and replacing them with symbolic accesses to the procedure arguments. Below, both these techniques are presented in detail. 
+
+%However, this local variable is not decoupled from the rest of the stack given the layout restrictions. For example, procedures access incoming arguments from their parent's stack frame. If the parent frame and the current frame are decoupled and are no longer contiguous, memory accesses to incoming arguments no longer point to their correct locations. We achieve this decoupling by recognizing accesses to the procedure argument space, and replacing them with symbolic accesses to the procedure arguments. Below, we present the detailed description of both of these techniques.
+
+\subsection{Representing the local stack frame} 
+
+We begin by finding an expression for the maximum size of the local stack frame in a procedure X. We analyze all the instructions which can modify the stack pointer, and find the maximum size, P, to which the stack can grow in a single invocation of procedure X among all its control-flow paths. P need not be a compile-time constant; a run-time expression for P suffices when variable-sized stack objects are allowed. An array ORIG\_FRAME of size P is then allocated as a local variable at the entry point of procedure X in the IR.
+%The P-byte space includes all the stack frame contents including register spills, callee arguments, and caller and callee-save values. The stack can grow deeper due to calls made by X; however, that allocation is considered as part of callee functions. 
+
+The local variables for the frame pointer and stack pointer are initialized to the beginning of ORIG\_FRAME at the entry point of procedure X. Thereafter, all the stack pointer modifications -- by constant or non-constant values -- are represented as adjustments of these variables. Allocation of a single array representing the original local frame guarantees the correctness of stack arithmetic inside the procedure X.
+
+In some procedures, it might not be possible to obtain a definite expression for the maximum size of the local stack frame. For example, scoped variable-sized local objects in source code might result in a stack allocation with a non-constant amount, whose expression is not available at the beginning of the procedure. Consequently, a single array ORIG\_FRAME of a definite size cannot be allocated. Neither can multiple local arrays, one per such stack increment, be allocated since IR optimizations and compiler backend can modify their relative layout thereby invalidating the stack arithmetic. In such procedures, we do not convert the physical stack 	to an abstract frame. A physical stack frame is maintained in the IR using inline assembly versions of all the stack modification instructions while the remaining instructions are converted to LLVM IR. The runtime checks mechanism presented in the next section is employed to distinguish the local and ancestor accesses. 
+%We have found this case of scoped variable-sized stack objects to be exceedingly rare; indeed they did not appear in our benchmarks.
+%In such scenarios, the stack frame size and the stack pointer in the caller procedure needs to be adjusted accordingly. Apart from the explicit stack pointer modification instructions inside a procedure, a procedure call might also modify the stack pointer in a way that persists beyond its return.
+
+\input{figures/indirect-access}
+\textbf{Persistent stack modification}: Returns from a procedure ordinarily restore the value of stack pointer to the value before the call. However, in some cases, the stack pointer might point to a different location after returning from a procedure call. For example, the called procedure can cleanup the arguments passed through the stack. To represent this stack pointer modification, which persists beyond a procedure call, we introduce the following definition:\\
+\textbf{\emph{Balance Number}}: The balance number for a procedure is defined as the net shift in the stack pointer from before its entry to after its exit. Four different cases can arise:\\
+\textbf{Case1}: {\emph{Balance Number} $=$ 0}\\
+This is the common case; no modification required.\\
+\textbf{Case2}: {\emph{Balance Number} $<$ 0}\\
+This case arises when a procedure cleans up a portion of the caller stack frame and is represented as an adjustment of the stack pointer by \emph{Balance Number} amount in the caller procedure after the call. The amount need not be a constant.\\
+\textbf{Case3}: {{\emph{Balance Number} $>$ 0}}\\
+This case implies that a procedure leaves its local frame on the stack and the corresponding frame outlives the activation of its procedure. Such procedures are represented by considering their allocation as part of the caller procedure allocation. The \emph{Balance Number} amount is added to the size of ORIG\_FRAME array in the caller procedure and the stack pointer is adjusted after the call by this amount. \\
+\textbf{Case4}: \emph{Balance Number} Indeterminable\\
+In such a case, we do not convert the physical frame into abstract frame and represent the stack as a default global variable in the IR, as shown in Fig~\ref{fig:origCCode}(b). This is an extremely rare case and in fact, it did not appear in our experiments.
+%However, the frames in a typical source level IR are active only for the lifetime of the procedure and are automatically deallocated at the exit.
+
+\subsection{Representing procedure arguments} 
+\label{sec:procarg}
+
+As per the source-level representation, we aim to represent all the stack-based interprocedural communication through explicit argument framework. We discuss why this is not feasible in all the cases and propose our novel methods based on run-time checks to handle such scenarios. 
+
+%Addressing modes
+%Machine-language instruction sets support various addressing modes for accessing stack memory locations: relative addressing via any general-purpose register (x[reg], reg can be esp, ebp or any other register) or generic indirect addressing mode where memory addresses are specified through a register expression such as \emph{base+index$\times$scale+ offset} (where base and index are registers).
+
+%Explanation of VSA
+We use Value Set Analysis (VSA)~\cite{gogul04} to aid our analysis. VSA determines an over-approximation of the set of memory addresses and integer values that each register and memory location can hold at each program point. Value Set (VS) of the address expression present in a memory access instruction provides a conservative but correct estimate of the possible memory locations accessed by the instruction. VSA accurately captures the stack pointer modifications and the assignments of stack pointer to other registers.
+%VSA is a combined numeric and pointer analysis which determines an overapproximation of the set of memory addresses as well as the set of integer values that each data object (a register or a memory location) can hold at each program point. 
+
+The stack location at the entry point of a procedure is initialized as the base (zero) in VSA and the local frame allocations are taken as negative offsets. Intuitively, memory accesses with positive offsets represent the accesses into the parent frame and constitute the arguments to a procedure. A formal argument is defined corresponding to each constant offset into the parent frame and each such access is directly replaced by an access to the formal argument. 
+
+However, the above method for recognizing arguments is suitable only if VS of the address expression is a singleton set. If the VS has multiple entries, it is not possible to statically replace it with a single argument. We introduce the following definitions to ease the understanding:
+{\begin{scriptsize}
+\vspace{-0.3ex}
+\rule{\linewidth}{0.5pt}\\
+{\scriptsize $CURRENT\_BASE$}: Stack pointer at the entry point of a procedure. \\
+{\scriptsize $addr_m$}: The address expression of a memory access instruction \emph{m}\\
+{\scriptsize $VS(addr_m)$}:Value Set of $addr_m$\\
+{\scriptsize $(x,y)$}: Lower and upper bounds, respectively, of the possible offsets relative to {\scriptsize$CURRENT\_BASE$} in {\scriptsize $VS(addr_m)$}\\
+{\scriptsize$LOCAL\_SIZE$}: Size of local frame variable {\scriptsize$ORIG\_FRAME$}\\
+{\scriptsize$SIZE_{i}$}:Size of {\scriptsize$ORIG\_FRAME_{i}$} of the `ith' ancestor in the call graph, with the caller being represented as the first ancestor. {\scriptsize$SIZE_{0}$} is defined as value 0. \\
+\rule{\linewidth}{0.5pt}\\
+\vspace{-0.3ex}
+\end{scriptsize}}
+Fig~\ref{fig:argcodeex} contains an x86 assembly fragment which will be used to illustrate the handling of interprocedural accesses. Fig~\ref{fig:argirex} shows the output IR that results from Fig~\ref{fig:argcodeex}. Three different cases for memory reference categorization of a memory access instruction \emph{m} arise:
+
+\textbf{Case 1} {\scriptsize $(x,y) \subset (-LOCAL\_SIZE,0)$\\}
+This condition implies that the current memory access instruction strictly refers to a local stack location. In Fig~\ref{fig:argcodeex}, Line 12 corresponds to this case. Instruction at Line 6 moves address \emph{(esp+4)} to register \emph{edi}. Since the size of current frame in \emph{bar} ({\scriptsize $LOCAL\_SIZE$}) is 10 and the local allocations are taken as negative offsets, this translates to VS of \emph{edi} as \{{\scriptsize $CURRENT\_BASE$-6}\}. The VS of \emph{ebx} at Line 12 is \{2,4\}; therefore the \emph{$VS(dest_m)$} is \{{{\scriptsize $CURRENT\_BASE$ -2 , $CURRENT\_BASE$ - 4}\}, which translates as a subset of (-{{\scriptsize $LOCAL\_SIZE$},0). In this case, we replace the indirect access by an access to the local frame as shown Fig~\ref{fig:argirex} (Line 12).
+
+%Instruction at line 7 moves value 2 to \emph{ebx} and instruction at line 10 moves value 4 to \emph{ebx}. 
+  \textbf{Case 2} {{\scriptsize $\exists$ N : $(x,y) \subset (\sum_{i \| i \in (0,N)} SIZE_{i}, \sum_{i \| i \in (0,N+1)}	SIZE_{i})$}\\
+This case implies that the current instruction exclusively accesses the local frame of Nth ancestor. In such cases, we make the local frame variable of the Nth ancestor procedure, {{\scriptsize $ORIG\_FRAME_{N}$}, an extra incoming argument to the current procedure as well as to all the procedures on the call-graph paths from the ancestor to the current procedure. The indirect stack access is replaced by an explicit argument access. 
+ %It is passed from each procedure to its callee in the call graph as an actual argument until we reach the current procedure. 
+
+Line 13 in Fig~\ref{fig:argcodeex} represents this case. Here, VS of \emph{ecx} is \{15,16\} which translates to the stack-offset range (5,6) which is subset of (0,{{\scriptsize $SIZE_{1}$}). Line 13 in Fig~\ref{fig:argirex} shows the adjusted offset into the formal argument \emph{inArg}. 
+
+%In \emph{bar}, the instruction at line 14 is replaced by an adjusted offset into the formal argument \emph{inArg}, as shown in instruction in line 14 in Fig~\ref{fig:argirex}. 
+%The local frame in \emph{foo}, ORIG\_FRAME\_FOO is passed as an actual argument to the procedure \emph{bar}. 
+
+ \textbf{Case 3} \\{\scriptsize 
+ $\exists$ N: \{ \{$(x,y) \cap (\sum_{i \| i \in (0,N)} SIZE_{i}, \sum_{i \| i \in (0,N+1)} SIZE_{i}) \neq \phi \} $
+ $\wedge$ \{$(x,y) \not \subset (\sum_{i \| i \in (0,N)} SIZE_{i}, \sum_{i \| i \in (0,N+1)} SIZE_{i}) $ \} \}}
+			 
+This case arises when VSA cannot bound the memory access exclusively to the local frame of one ancestor or to the local frame of the current procedure. It also includes cases where VS of the target location is \emph{TOP} (\ie unknown).
+%VSA, being a best effort analysis, can never guarantee a finite value set for every object. Some objects might have a value set TOP, specifying that they can point to any value. In fact, no amount of any advanced static analysis in the executables can assure the discovery of a bounded range for every object. where we cannot distinguish whether the accesses are to the local frame or to some ancestor frame, we insert a run-time check in the IR. This check
+
+We propose a run-time-check-based solution to represent such accesses in the IR. We define all the possible ancestor stack frames in the call graph as arguments to this procedure. Further, at the indirect stack access, a run-time check is inserted in the IR to dynamically translate the access to the local frame or to one of the ancestor stack frames.
+% thereafter the value is read from the corresponding location. 
+
+Line 14 in Fig~\ref{fig:argcodeex} represents this case. Suppose $edx$ is data-dependent and hence its VS is $TOP$. Line 14 in Fig~\ref{fig:argirex} shows the run-time check inserted based on this value. Depending on this check, we either access the local frame (Line 15) or the incoming argument (Line 17). 
+
+%An interesting observation helps us in limiting the number of ancestors stack arguments in the above case: an indirect access cannot be to any arbitrary ancestor in the call-graph. An access to a local variable of an ancestor can be made if there is only one path in the call-graph from the ancestor to the current procedure since different paths will have different layouts and compilers cannot know the exact stack layout on all these different paths. This limits the number of ancestors whose arguments need to be passed. The overhead of these runtime checks is likely to be very small since we have found these to be extremely rare in our experiments. 
+
+The cases where {\scriptsize $LOCAL\_SIZE$} is not statically known fall naturally under Case 3. The cases where the stack-frame size in the caller at the point of call is smaller than {\scriptsize $LOCAL\_SIZE_i$}, are handled by considering the actual size at the point of call instead of {\scriptsize $LOCAL\_SIZE_i$}. We have neglected the size of return buffer in our calculations for the ease of understanding. It is easily considered in our model by adding the return buffer size to each ancestor's local frame size.
+%The scenarios where the stack-depth in the caller procedure at the time of the call instruction is different from the maximum stack invocation size in the caller procedure, are also easily modeled using the above framework. The details have been suppressed due to the space constraints.
+% The incoming arguments are determined by analyzing the offsets into argument space above the local frame space. Since $ebx$ has value set $TOP$, we cannot determine the locations beyond the local frame accessed into argument space; hence, it is not possible to statically determine the number of memory arguments of function \emph{foo}.Any number of new local variables can be added above ORIG\_FRAME in the new stack layout, still providing unrestricted modifications of stack. for this call-site
+
+In the case of dynamically linked libraries (DLLs), the procedure body is not available; hence the above method for handling the arguments cannot be applied. In order to make sure that the external procedures access arguments as before, LLVM code generator is minimally modified to allocate the abstract frame, ORIG\_FRAME, at the bottom of the stack in each procedure in the rewritten binary. Since external procedures are not aware of the call hierarchy inside a program, their interprocedural references are usually limited to only the parent frame. When the prototypes of these external procedures are available (such as for standard library calls), this stack maintenance restriction is avoided altogether by employing the solution presented for any other procedure.

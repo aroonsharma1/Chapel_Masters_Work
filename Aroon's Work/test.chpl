@@ -49,9 +49,9 @@ proc kernel_2mm(dist) {
 			B[i,j] = i + j;
 		}
 	}
-
-    /******* Start the timer: this is where we do work *******/
-    t.start();
+	
+	print_locale_data(A);
+    /*t.start();
 	resetCommDiagnostics();
 	startCommDiagnostics();
 	
@@ -75,7 +75,6 @@ proc kernel_2mm(dist) {
 	
 	stopCommDiagnostics();
     t.stop();
-    /******* End the timer *******/
 
 	if printMatrices {
 		writeln("\nA:");
@@ -98,7 +97,7 @@ proc kernel_2mm(dist) {
 		messages += coms(i).get:int;
 		messages += coms(i).put:int;
 	}
-	writeln("Message count = ", messages);
+	writeln("Message count = ", messages);*/
 }
 
 

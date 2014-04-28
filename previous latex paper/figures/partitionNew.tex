@@ -1,0 +1,57 @@
+%\IncMargin{1in}
+\begin{algorithm}[t]
+{
+%\vspace{-0.2in}
+%\rule{\linewidth}{1pt}\\
+%\begin{tabular}{|c|c|c|}
+%\hline
+%\end{tabular}
+\begin{scriptsize}
+ L: Set of loads in P; S: Set of stores in P\\
+ DL:$\bigcup_{l \in L}\{ l | \{loc\} = VS(addr_{l})\}$     //Direct Loads \\
+ IL:$\bigcup_{l \in L}\{ l | \{loc\} \subset VS(addr_{l})\}$  //Indirect Aliasing Loads\\
+ DS:$\bigcup_{s \in S}\{ s | \{loc\} = VS(addr_{s})\}$   //Direct Stores\\
+ IS:$\bigcup_{s \in S}\{ s | \{loc\} \subset VS(addr_{s})\}$   //Indirect Aliasing Stores\\
+ Processed: Set of elements processed
+
+\While {DS != $\Phi \| $IS != $\Phi$} {
+ define new Partition P, define new list $ActiveList$
+
+ \eIf{DS != $\Phi$}{
+  s = DS.begin; add s to P.DirectAcc
+}{
+ s = IS.begin; add s to P.BeginSet
+}
+add s to ActiveList\\
+\While{ActiveList.size!=0}{
+s = $ActiveList.top$; Add s to Processed\\
+\For{$dl \in DL$}{
+\If{s $\in$ in[$dl$]}{
+  add $dl$ to P.DirectAcc\\
+			\For{$s' \in$ in[$dl$]}{ 
+       add s' to $ActiveList$ if s'$\notin$ Processed
+}
+remove $dl$ from DL
+}
+}
+ \If{$s \in IS$}{
+ continue /* No need to store symbol back */
+ }
+ \For{$il \in$ \{IL,IS\}}{ 
+  \If{s $\in$ in[$il$]}{
+ add $il$ to P.EndSet}
+ \For{$s' \in$ in[$il$]}{ 
+ add s' to $ActiveList$ if s'$\notin$ Processed
+ }
+ remove $il$ from $IL$ if $il \in IL$
+ }
+ }
+ }
+\end{scriptsize}
+\caption {{{ \textit{Algorithm for computing partitions for a location \emph{loc} in a procedure P}}}}
+%\vspace{-2ex}
+\label{fig:algpartition}
+}
+%\rule{\linewidth}{1pt}
+%\vspace{-2ex}
+\end{algorithm}

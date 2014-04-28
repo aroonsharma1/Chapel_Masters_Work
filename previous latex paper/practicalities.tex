@@ -1,0 +1,44 @@
+\section{Practical Considerations}
+\label{sec:practicalCons}
+
+%General
+%Binary Characterization
+%Call Translator
+%Old segment at same place
+%Indirect Branches
+
+\mypar{\underline{Indirect calls and branches}}:SecondWrite implements various mechanisms, as proposed by Smithson et. al.~\cite{matt-patent10}, to address code discovery problems and to handle indirect control transfers. Here, we briefly summarize the mechanism.
+
+A key challenge in binary frameworks is discovering which portions of the code section in an input executable are definitely code. Smithson et. al.~\cite{matt-patent10} proposed \emph{speculative disassembly}, coupled with \emph{binary characterization}, to efficiently address this problem. SecondWrite speculatively disassembles the unknown portions of the code segments as if they are code. However, it also retains the unchanged code segments in the IR to guarantee the correctness of data references in case the disassembled region was actually data. 
+
+SecondWrite employs \emph{binary characterization} to limit such unknown portions of code. It leverages the restriction that an indirect control transfer instruction (CTI) requires an absolute address operand, and that these address operands must appear within the code and/or data segments. The code and data segments are scanned for values that lie within the range of code segment. The resulting values are guaranteed to contain, at a minimum, all of the indirect CTI targets. 
+%Binary Characterization generates this list of possible addresses by first constructing a valid address using the base virtual address and the size of the code segment. The code and data segments are subsequently scanned for values that lie within the constructed range. SecondWrite speculatively disassembles the above determined CTI targets as if they are code anyway while also retaining the unchanged segment in case it was data.
+
+The indirect CTIs are handled by appropriately translating the original target to the corresponding location in IR through a runtime translator. Each recognized procedure (through speculative disassembly) is initially considered a possible target of the translator, which is pruned further using alias analysis. The arguments for each possible target procedure (Sec~\ref{sec:procarg}) are unioned to find the set of arguments to be passed to the translator; a stub inside the translator populates the arguments according to the actual target.
+
+%The only way to ensure this is to find a control flow path from the entry point of the execution to that portion. However, the portions of code reachable only through indirect CTIs cannot be discovered statically in all cases. Translators accomplish two major tasks. First, it examines the indirect CTI operand and provide an appropriate adjustment to effectively translate the original address into the corresponding address in the IR. Second,
+Above method is not sufficient for discovering indirect branch targets where addresses are calculated in binary. Hence, various procedure boundary determination techniques, like ending the boundary at beginning of next procedure, are also proposed~\cite{matt-patent10} to limit the possible targets.
+% For example, function boundary ends at the point at which the next function boundary begins. 
+%Various other heuristics are proposed to handle tail calls and multiple entry points.within the current procedure
+%If one of the target is outside procedure boundary, it is handled as an indirect call.
+
+\underline{\mypar{Memory Consistency}}:Our framework mimics the assumptions behind all standard software transformation tools with regards to memory consistency. A majority of compilers (gcc, LLVM, Visual Studio) and popular binary frameworks like PLTO~\cite{plto}, DynamoRIO~\cite{bruening2004eta}, PIN~\cite{pintool}, iSpike~\cite{ispike}, Diablo~\cite{Diablo1} reorder code without taking memory consistency into account. Since synchronization is highly multiprocessor specific, most programmers are expected to write synchronized programs using standard synchronization libraries~\cite{SC-compiler}. The presence of synchronization primitives legalizes the applications of all software optimizations.
+%The synchronized data accesses are translated to binaries using special synchronization instructions. Hence, the binary optimizers can also safely follow the same compiler model. Our framework also mimics existing software transformation tools about non-preservance of memory consistency in programs. In future work, we can categorize which of our optimizations are not safe under the memory model of target platform and can then turn off the invalid optimizations. for preserving memory consistency by categorizes valid and invalid transformations for each model. 
+
+Recently, the research community is exploring the possibility of preserving memory consistency in software transformation tools~\cite{SC-compiler}. The key idea is to selectively invalidate the transformations for possibly shared memory locations. Currently, our framework can preserve consistency by declaring all possibly shared memory regions as \emph{volatile} in the IR, we plan to work on more detailed  methods in future.
+%\emph{thread-escape} analysis in future to minimize the resulting overhead.
+
+{\underline{\mypar{Limitations}}}: Following are the limitations of our current framework, we plan to look at them in future.
+\squishlist
+\item \textbf{Self Modifying Code}
+Like most static binary tools, we do not handle self modifying code. Various tools ~\cite{smc-still} statically detect the presence of self-modifying code in a program. Such a tool can be integrated in our front-end to warn the user and to discontinue further operation.
+%However, this is not a serious limitation since most modern operating systems, including Microsoft Windows, prohibit self-modifying code for security reasons~\cite{Win-DEP}. (Note that virtual machines are not self-modifying but rather modify the application, so they pose no problem.) 
+
+\item \textbf{Volatile Memory}
+Stripped executables have no information about volatile variables. Existing binary tools~\cite{plto,bruening2004eta,Diablo1,fx32,cifuentes00,atom} ignore their occurrences, instead, we support most common cases of their occurrences. Externally visible volatile variables appear in dynamic symbol table of executables and memory mapped volatile variables can be detected through system calls like \emph{mmap}. Such variables are declared volatile in IR. Volatile variables for exception handling calls (e.g. \emph{setjmp}) are handled by declaring the abstract frame in the corresponding procedure as volatile. Other usages like lock-free variables fall under the umbrella of memory consistency discussed above.
+%We prevent symbol promotion for them to preserve correctness. in multi-threaded applications
+
+\item \textbf{Obfuscated Code}
+We have not tested our techniques against binaries with hand-coded assembly or with obfuscated control flow.
+
+\squishend

@@ -1,0 +1,207 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Brumley-Mayhem,Song-Bitblaze}
+\citation{Chipounov-S2E}
+\citation{plto,ispike}
+\citation{plto}
+\citation{Wagner-afirst,Bush-static}
+\citation{Cadar-KLEE}
+\citation{Cadar-EXE,Cadar-KLEE}
+\citation{Song-Bitblaze,Chipounov-S2E}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{boomerang,hex-rays}
+\citation{DARPA-BET1}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textit  {Source Code Example}}}{2}{figure.1}}
+\newlabel{fig:origCCode}{{1}{2}{\textit {Source Code Example}}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textit  {An example showing the limitation of existing methods for detecting arguments}}}{2}{figure.2}}
+\newlabel{fig:abstract-stack-diff}{{2}{2}{\textit {An example showing the limitation of existing methods for detecting arguments}}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textit  {An example showing that variable identification and symbol promotion are different}}}{2}{figure.3}}
+\newlabel{fig:ident-prom-diff}{{3}{2}{\textit {An example showing that variable identification and symbol promotion are different}}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textit  {System Flow}}}{2}{figure.4}}
+\newlabel{fig:systemflow}{{4}{2}{\textit {System Flow}}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Contributions}{2}{section.2}}
+\newlabel{sec:contributions}{{2}{2}{Contributions}{section.2}{}}
+\citation{gogul04}
+\citation{plto,Diablo1,pintool,dyninst94,newEtch}
+\citation{ispike}
+\citation{ida-pro}
+\citation{reps06}
+\citation{ParallelAugust,ParallelSohi}
+\citation{stackguard}
+\citation{propolice1}
+\citation{gogul04}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Deconstruction of physical stack frames}{4}{section.3}}
+\newlabel{sec:deconstructFrame}{{3}{4}{Deconstruction of physical stack frames}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Representing the local stack frame}{4}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Representing procedure arguments}{4}{subsection.3.2}}
+\newlabel{sec:procarg}{{3.2}{4}{Representing procedure arguments}{subsection.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textit  {A small psuedo-assembly code. The second operand in the instruction is the destination}}}{5}{figure.5}}
+\newlabel{fig:argcodeex}{{5}{5}{\textit {A small psuedo-assembly code. The second operand in the instruction is the destination}}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \textit  {IR of the psuedo-assembly code. SIZE-BAR is size of ORIG\_FRAME\_BAR, register names are pure IR symbols}}}{5}{figure.6}}
+\newlabel{fig:argirex}{{6}{5}{\textit {IR of the psuedo-assembly code. SIZE-BAR is size of ORIG\_FRAME\_BAR, register names are pure IR symbols}}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \textit  {Symbol promotion. Second operand in the instruction is the destination of the instruction. }}}{6}{figure.7}}
+\newlabel{fig:PromExample}{{7}{6}{\textit {Symbol promotion. Second operand in the instruction is the destination of the instruction. }}{figure.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Translating memory locations to symbols}{6}{section.4}}
+\newlabel{sec:symprom}{{4}{6}{Translating memory locations to symbols}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Motivation for partitions}{6}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textit  {The reaching definition description. Definitions are propagated across the control flow of program }}}{6}{figure.8}}
+\newlabel{fig:reachingdef}{{8}{6}{\textit {The reaching definition description. Definitions are propagated across the control flow of program }}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Reaching definition framework}{6}{subsection.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Symbol promotion algorithm}{6}{subsection.4.3}}
+\citation{Cadar-EXE}
+\citation{Song-Bitblaze,Chipounov-S2E}
+\citation{Cadar-EXE}
+\citation{Cadar-KLEE}
+\citation{Cadar-KLEE}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces {{ \textit  {Algorithm for computing partitions for a location \emph  {loc} in a procedure P}}}}}{7}{algocf.1}}
+\newlabel{fig:algpartition}{{1}{7}{Symbol promotion algorithm}{algocf.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textit  {A small source code example}}}{7}{figure.9}}
+\newlabel{fig:symExecSourceCodeEx}{{9}{7}{\textit {A small source code example}}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textit  {Constraints for Fig\nobreakspace  {}\ref  {fig:symExecSourceCodeEx}(b)}}}{7}{figure.10}}
+\newlabel{fig:symExecSourceConstraints}{{10}{7}{\textit {Constraints for Fig~\ref {fig:symExecSourceCodeEx}(b)}}{figure.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Symbolic Execution}{7}{section.5}}
+\newlabel{sec:symExec}{{5}{7}{Symbolic Execution}{section.5}{}}
+\citation{matt-patent10}
+\citation{matt-patent10}
+\citation{matt-patent10}
+\citation{plto}
+\citation{bruening2004eta}
+\citation{pintool}
+\citation{ispike}
+\citation{Diablo1}
+\citation{SC-compiler}
+\citation{SC-compiler}
+\citation{smc-still}
+\citation{plto,bruening2004eta,Diablo1,fx32,cifuentes00,atom}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Practical Considerations}{8}{section.6}}
+\newlabel{sec:practicalCons}{{6}{8}{Practical Considerations}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Results}{8}{section.7}}
+\newlabel{sec:results}{{7}{8}{Results}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Static characteristics}{9}{subsection.7.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces  \textit  {Benchmarks Table}}}{9}{figure.11}}
+\newlabel{fig:appTable}{{11}{9}{\textit {Benchmarks Table}}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Un-optimized input binaries}{9}{subsection.7.2}}
+\citation{Cadar-KLEE}
+\citation{Cadar-KLEE}
+\citation{Brumley-Mayhem}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \textit  {Percentage of original symbolic accesses recovered in IR}}}{10}{figure.12}}
+\newlabel{fig:OrigSymPromResult}{{12}{10}{\textit {Percentage of original symbolic accesses recovered in IR}}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces \textit  {Partition algorithm visualization}}}{10}{figure.13}}
+\newlabel{fig:PartResult}{{13}{10}{\textit {Partition algorithm visualization}}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces {\textit  {Programs demonstrating corner cases of our analysis }}}}{10}{figure.14}}
+\newlabel{fig:resultsCornerCases}{{14}{10}{\textit {Programs demonstrating corner cases of our analysis }}{figure.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces { {\textit  {Normalized runtime of rewritten binary as compared to unoptimized gcc input binary (=1.0)}}}}}{10}{figure.15}}
+\newlabel{fig:unoptimized}{{15}{10}{ {\textit {Normalized runtime of rewritten binary as compared to unoptimized gcc input binary (=1.0)}}}{figure.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces {{\textit  {Normalized runtime of rewritten binary as compared to optimized gcc input binary (=1.0)}}}}}{10}{figure.16}}
+\newlabel{fig:optimized}{{16}{10}{{\textit {Normalized runtime of rewritten binary as compared to optimized gcc input binary (=1.0)}}}{figure.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces {{\textit  {Normalized runtime of rewritten binary as compared to its corresponding input version (=1.0) compiled by visual studio}}}}}{10}{figure.17}}
+\newlabel{fig:visual-studio}{{17}{10}{{\textit {Normalized runtime of rewritten binary as compared to its corresponding input version (=1.0) compiled by visual studio}}}{figure.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Optimized input binaries}{10}{subsection.7.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Impact of symbol promotion}{10}{subsection.7.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Symbolic Execution}{10}{subsection.7.5}}
+\citation{micro-aparna10}
+\citation{pintool}
+\citation{dyninst94}
+\citation{fx32}
+\citation{bruening2004eta}
+\citation{valgrind}
+\citation{llvm-qemu}
+\citation{newEtch}
+\citation{atom}
+\citation{plto}
+\citation{ibm-fdpr}
+\citation{Diablo1}
+\citation{cifuentes00}
+\citation{plto}
+\citation{cifuentes00}
+\citation{jalapeno-vm}
+\citation{dagstuhl-reports-KingMRS12}
+\citation{paramRetVal07,gogul04,reps06}
+\citation{gogul04,reps06}
+\citation{paramRetVal07}
+\citation{shastry-ssa}
+\citation{dyn-reg-prom11}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces {\textit  {Impact of symbol promotion on runtime of rewritten binary v/s unoptimized input binary (=1.0) }}}}{11}{figure.18}}
+\newlabel{fig:unopt-symprom}{{18}{11}{\textit {Impact of symbol promotion on runtime of rewritten binary v/s unoptimized input binary (=1.0) }}{figure.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces {\textit  {Impact of symbol promotion on runtime of rewritten binary v/s optimized input binary (=1.0)}}}}{11}{figure.19}}
+\newlabel{fig:opt-symprom}{{19}{11}{\textit {Impact of symbol promotion on runtime of rewritten binary v/s optimized input binary (=1.0)}}{figure.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces {\textit  {Normalized code coverage in coreutils binaries as compared to source }}}}{11}{figure.20}}
+\newlabel{fig:KleeCovRes}{{20}{11}{\textit {Normalized code coverage in coreutils binaries as compared to source }}{figure.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces {\textit  {Testcases for crashes (a)Source code\nobreakspace  {}\cite  {Cadar-KLEE} (b) Binaries }}}}{11}{figure.21}}
+\newlabel{fig:result-symExec-testCases}{{21}{11}{\textit {Testcases for crashes (a)Source code~\cite {Cadar-KLEE} (b) Binaries }}{figure.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces {\textit  {Improvement in constraints processing with symbol promotion }}}}{11}{figure.22}}
+\newlabel{fig:results-symExecSymMem}{{22}{11}{\textit {Improvement in constraints processing with symbol promotion }}{figure.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces {\textit  {Automatic parallelization}}}}{11}{figure.23}}
+\newlabel{fig:parallel-runtime}{{23}{11}{\textit {Automatic parallelization}}{figure.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces {\textit  {Number of induction variables recognized}}}}{11}{figure.24}}
+\newlabel{fig:parallel-indvar}{{24}{11}{\textit {Number of induction variables recognized}}{figure.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Automatic Parallelization}{11}{subsection.7.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Related Work}{11}{section.8}}
+\newlabel{sec:related}{{8}{11}{Related Work}{section.8}{}}
+\citation{Cadar-KLEE}
+\citation{Cadar-EXE}
+\citation{Song-Bitblaze}
+\citation{Chipounov-S2E}
+\citation{Brumley-Mayhem}
+\bibdata{angelos,references,local,extra,matt,mincy,RewriterSurveyReferences,selfmod}
+\bibcite{jalapeno-vm}{{1}{}{{}}{{}}}
+\bibcite{DARPA-BET1}{{2}{}{{}}{{}}}
+\bibcite{gogul04}{{3}{}{{}}{{}}}
+\bibcite{reps06}{{4}{}{{}}{{}}}
+\bibcite{boomerang}{{5}{}{{}}{{}}}
+\bibcite{bruening2004eta}{{6}{}{{}}{{}}}
+\bibcite{Bush-static}{{7}{}{{}}{{}}}
+\bibcite{Cadar-KLEE}{{8}{}{{}}{{}}}
+\bibcite{Cadar-EXE}{{9}{}{{}}{{}}}
+\bibcite{Brumley-Mayhem}{{10}{}{{}}{{}}}
+\bibcite{fx32}{{11}{}{{}}{{}}}
+\bibcite{Chipounov-S2E}{{12}{}{{}}{{}}}
+\bibcite{cifuentes00}{{13}{}{{}}{{}}}
+\bibcite{stackguard}{{14}{}{{}}{{}}}
+\bibcite{llvm-qemu}{{15}{}{{}}{{}}}
+\bibcite{propolice1}{{16}{}{{}}{{}}}
+\bibcite{atom}{{17}{}{{}}{{}}}
+\bibcite{ibm-fdpr}{{18}{}{{}}{{}}}
+\bibcite{hex-rays}{{19}{}{{}}{{}}}
+\bibcite{dyninst94}{{20}{}{{}}{{}}}
+\bibcite{ida-pro}{{21}{}{{}}{{}}}
+\bibcite{ispike}{{22}{}{{}}{{}}}
+\bibcite{dagstuhl-reports-KingMRS12}{{23}{}{{}}{{}}}
+\bibcite{micro-aparna10}{{24}{}{{}}{{}}}
+\bibcite{dyn-reg-prom11}{{25}{}{{}}{{}}}
+\bibcite{pintool}{{26}{}{{}}{{}}}
+\bibcite{SC-compiler}{{27}{}{{}}{{}}}
+\bibcite{newEtch}{{28}{}{{}}{{}}}
+\bibcite{shastry-ssa}{{29}{}{{}}{{}}}
+\bibcite{plto}{{30}{}{{}}{{}}}
+\bibcite{valgrind}{{31}{}{{}}{{}}}
+\bibcite{matt-patent10}{{32}{}{{}}{{}}}
+\bibcite{Song-Bitblaze}{{33}{}{{}}{{}}}
+\bibcite{ParallelAugust}{{34}{}{{}}{{}}}
+\bibcite{Diablo1}{{35}{}{{}}{{}}}
+\bibcite{Wagner-afirst}{{36}{}{{}}{{}}}
+\bibcite{smc-still}{{37}{}{{}}{{}}}
+\bibcite{paramRetVal07}{{38}{}{{}}{{}}}
+\bibcite{ParallelSohi}{{39}{}{{}}{{}}}
+\bibstyle{abbrv}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusions}{12}{section.9}}
+\newlabel{sec:conclusions}{{9}{12}{Conclusions}{section.9}{}}
+\newlabel{sigplanconf@finalpage}{{9}{12}{Conclusions}{section*.2}{}}

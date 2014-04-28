@@ -1,0 +1,21 @@
+%\vspace*{-5ex}
+\begin{abstract}
+
+This paper presents component techniques essential for converting executables to a high-level intermediate representation (IR) of an existing compiler. The compiler IR is then employed for three distinct applications: binary rewriting using the compiler's binary back-end, vulnerability detection using source-level symbolic execution, and source-code recovery using the compiler's C backend. Our techniques enable complex high-level transformations not possible in existing binary systems, address a major challenge of input-derived memory addresses in symbolic execution and are the first to enable recovery of a fully functional source-code.
+ %from an executable.
+%First, the compiler's binary back-end is used to generate an output binary from the IR, yielding a binary rewriter. Second, a source-level symbolic execution tool is employed to detect vulnerabilities in the input executable. Third, the compiler's C backend is used to recover source-code for legacy binaries. This paper describes the first technique in literature to decompile an executable into an existing compiler's high-level intermediate representation
+%
+
+We present techniques to segment the flat address space in an executable containing undifferentiated blocks of memory. We demonstrate the inadequacy of existing variable identification methods for their promotion to symbols and present our methods for symbol promotion. We also present methods to convert the physically addressed stack in a binary (with a stack pointer) to an abstract stack (without a stack pointer). Our methods do not use symbolic, relocation, or debug information since these are usually absent in deployed binaries. 
+%We show why the variable identification done by existing binary analysis tools is inadequate for their promotion to symbols in IR and present our methods for symbol promotion. We also show how to convert the physically addressed stack in a binary (with a stack pointer) to an abstract stack (without a stack pointer). Our methods do not use symbolic, relocation, or debug information since these are usually absent in deployed binaries. 
+%Our methods are independent of the conventions of any particular compiler, OS, or language.
+%We solve a  , a widely-used compiler infrastructure, , using variables instead
+%Our techniques overcome challenges unique to executables: an explicitly addressed stack, the lack of function prototypes and the lack of symbols. 
+
+We have integrated our techniques with a prototype x86 binary framework called SecondWrite that uses LLVM as IR. The robustness of the framework is demonstrated by handling binaries totaling more than a million lines of source-code, produced by two different compilers (gcc and Microsoft compiler), three languages (C, C++, and Fortran), two operating systems (Windows and Linux) and a real world program (Apache). 
+%KLEE, a symbolic execution tool for detecting bugs in source code, is employed to symbolically execute the IR obtained from an input executable and achieves the same code coverage and detects same bugs as obtained through corresponding source-code. 
+%The techniques presented in our paper greatly improve the readability and understandability of source-code recovered through our framework.
+%SecondWrite accelerates un-optimized binaries by 45\% on average for our benchmarks, and further optimizes higly optimized binaries by 10\%, just by using standard optimizations present in LLVM.  
+%We also present the impact of our techniques on automatic parallelization to exemplify the benefits and applications of a binary rewriter using a compiler IR.
+
+\end{abstract}

@@ -1,0 +1,33 @@
+
+\begin{figure*}[t]
+{
+\vspace{-1in}
+%\centering
+{
+\begin{minipage}[t]{.4\linewidth}
+{
+\centering
+\begin{scriptsize}
+\begin{tabbing}
+
+xxxx\=xxxxxx\=xxxx\=xxxxxxxxxxx\=  \kill\\
+\ Statement s	\>\>								gen[s]	\>\>							kill[s]\\
+\ d: Mem[addr]<-x\>\>		if(c \in VSA(addr))\>\>		if(c \in VSA(addr))\\				
+\ \>\>												d \>\>											defs(c) - {d}\\
+\ d: Mem[c]<- y \>\>					d	\>\>											defs{c} - {d}\\
+\	d: z<-Mem[addr]\>\>		if(c \in VSA(addr))\>\>   if(c \in VSA(addr))\\
+\ \>\>												{} \>\>											defs(c)\\			
+\ d: z<- Mem[c] \>\>					{}			\>\>									{}\\												
+
+\end{tabbing}
+\end{scriptsize}
+\vspace{-.2in}
+\caption {\textit{The reaching definition description}}
+\label{fig:codeexample}
+}
+\end{minipage} 
+\hfill
+%\hspace{0.1in}
+}
+\vspace{-0.3in}
+\end{figure*}

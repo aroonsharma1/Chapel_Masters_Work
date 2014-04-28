@@ -1,0 +1,30 @@
+\begin{figure}[t]
+\centering
+%\psfig{figure=figures/plots/runtimeFinal.eps,width=5.5in} }
+\begin{scriptsize}
+\begin{tabbing}
+
+%\hspace{0.3in}\=\hspace{0.25in}\=\hspace{0.25in}\=\hspace{0.25in}\=\hspace{0.25in}\=\hspace{2.1in}\=
+%\\\kill
+
+xxxx\=xxxxxx\=xxxxxx\=xxxxxxxxxxxx\= \kill \\
+
+1.\ \ function foo:\\
+2.\> Entry:\>mov\> sp, bp   \>// Create Frame Pointer \\
+3.\> \>sub\> 100, sp   \>// Subtract 100 from sp to allocate local frame \\
+4.\> \>.... \\
+5.\> \> bre \> B1,B2 \\
+6.\>B1: \> store \> ecx, sp[ebx] \>// Load from an unknown stack location \\
+7.\> \>jump B3 \> \\
+8.\>B2:\> store eax, 8[sp] \> \\
+9.\> \> ... \\
+10.\> \>       load 8[sp] \\
+11.\> B3: \\
+\end{tabbing}
+\end{scriptsize}
+\caption {\textit{A small assembly code. The second operand in the instruction is the destination of the instruction}}
+\label{fig:pathBasedSymbol}
+\end{figure} 
+
+
+

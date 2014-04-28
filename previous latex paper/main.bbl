@@ -1,0 +1,227 @@
+\begin{thebibliography}{10}
+
+\bibitem{jalapeno-vm}
+B.~Alpern and et. al.
+\newblock The jalapeno virtual machine.
+\newblock {\em IBM Systems Journal}, 39(1):211 --238, 2000.
+
+\bibitem{DARPA-BET1}
+Announcement for Binary Executable Transforms.
+\newblock \url{http://www07.grants.gov/}.
+
+\bibitem{gogul04}
+G.~Balakrishnan and T.~Reps.
+\newblock Analyzing memory accesses in x86 executables.
+\newblock In {\em IN CC}, pages 5--23. Springer-Verlag, 2004.
+
+\bibitem{reps06}
+G.~Balakrishnan and T.~Reps.
+\newblock Divine: discovering variables in executables.
+\newblock In {\em Proceedings of the 8th international conference on
+  Verification, model checking, and abstract interpretation}, VMCAI'07, pages
+  1--28, Berlin, Heidelberg, 2007.
+
+\bibitem{boomerang}
+Boomerang Decompiler.
+\newblock \url{http://boomerang.sourceforge.net/}.
+
+\bibitem{bruening2004eta}
+D.~Bruening.
+\newblock {\em {Efficient, Transparent, and Comprehensive Runtime Code
+  Manipulation}}.
+\newblock PhD thesis, MIT, 2004.
+
+\bibitem{Bush-static}
+W.~R. Bush and et. al.
+\newblock A static analyzer for finding dynamic programming errors.
+\newblock {\em Softw. Pract. Exper.}, 30(7):775--802, June 2000.
+
+\bibitem{Cadar-KLEE}
+C.~Cadar, D.~Dunbar, and D.~Engler.
+\newblock Klee: unassisted and automatic generation of high-coverage tests for
+  complex systems programs.
+\newblock In {\em Proceedings of the 8th USENIX conference on Operating systems
+  design and implementation}, OSDI'08, pages 209--224, Berkeley, CA, USA, 2008.
+  USENIX Association.
+
+\bibitem{Cadar-EXE}
+C.~Cadar and et. al.
+\newblock Exe: automatically generating inputs of death.
+\newblock In {\em Proceedings of the 13th ACM conference on Computer and
+  communications security}, CCS '06, pages 322--335, NY, USA, 2006.
+
+\bibitem{Brumley-Mayhem}
+S.~K. Cha, T.~Avgerinos, A.~Rebert, and D.~Brumley.
+\newblock Unleashing mayhem on binary code.
+\newblock In {\em IEEE Symposium on Security and Privacy}, pages 380--394,
+  2012.
+
+\bibitem{fx32}
+A.~Chernoff and et. al.
+\newblock Fx!32 - a profile-directed binary translator.
+\newblock {\em IEEE Micro}, 18:56--64, 1998.
+
+\bibitem{Chipounov-S2E}
+V.~Chipounov, V.~Kuznetsov, and G.~Candea.
+\newblock S2e: a platform for in-vivo multi-path analysis of software systems.
+\newblock {\em SIGPLAN Not.}, 46(3):265--278, Mar. 2011.
+
+\bibitem{cifuentes00}
+C.~Cifuentes and M.~V. Emmerick.
+\newblock Uqbt: Adaptable binary translation at low cost.
+\newblock {\em IEEE Computer}, 33(3):60--66, March 2000.
+
+\bibitem{stackguard}
+C.~Cowan and et~al.
+\newblock Stackguard: automatic adaptive detection and prevention of
+  buffer-overflow attacks.
+\newblock In {\em Proceedings of the 7th conference on USENIX Security
+  Symposium}, pages 63--78, 1998.
+
+\bibitem{llvm-qemu}
+Dynamically Translating x86 to LLVM using QEMU.
+\newblock \url{http://infoscience.epfl.ch/record/149975}.
+
+\bibitem{propolice1}
+H.~ETO and K.~Yoda.
+\newblock Propolice: Improved stack-smashing attack detection.
+\newblock {\em IPSJ SIGNotes Computer Security 14 (Oct 26)}, 2001.
+
+\bibitem{atom}
+A.~Eustace and A.~Srivastava.
+\newblock Atom: a flexible interface for building high performance program
+  analysis tools.
+\newblock In {\em TCON'95: Proceedings of the USENIX 1995 Technical
+  Conference}, pages 25--25, Berkeley, CA, USA, 1995.
+
+\bibitem{ibm-fdpr}
+G.~Haber and et~al.
+\newblock Optimization opportunities created by global data reordering.
+\newblock In {\em Proceedings of the International symposium on Code generation
+  and optimization}, Washington DC, USA, 2003.
+
+\bibitem{hex-rays}
+Hex-Rays Decompiler.
+\newblock \url{http://www.hex-rays.com/}.
+
+\bibitem{dyninst94}
+J.~K. Hollingsworth, B.~P. Miller, and J.~Cargille.
+\newblock Dynamic program instrumentation for scalable performance tools.
+\newblock Scalable High Performance Computing Conference, May 1994.
+
+\bibitem{ida-pro}
+IDAPro disassembler.
+\newblock \url{http://www.hex-rays.com/idapro/}.
+
+\bibitem{ispike}
+C.~keung Luk and et. al.
+\newblock Ispike: A post-link optimizer for the intel itanium architecture.
+\newblock In {\em In IEEE/ACM International Symposium on Code Generation and
+  Optimization}, pages 15--26, 2004.
+
+\bibitem{dagstuhl-reports-KingMRS12}
+A.~King and et. al.
+\newblock Analysis of executables: Benefits and challenges.
+\newblock {\em Dagstuhl Reports}, pages 100--116, 2012.
+
+\bibitem{micro-aparna10}
+A.~Kotha and et~al.
+\newblock Automatic parallelization in a binary rewriter.
+\newblock In {\em Proceedings of the International Symposium on
+  Microarchitecture 2010}. ACM Press.
+
+\bibitem{dyn-reg-prom11}
+J.~Li, C.~Wu, and W.~Hsu.
+\newblock Dynamic register promotion of stack variables.
+\newblock In {\em Proceedings of the International symposium of Code generation
+  and optimization,March 2011}.
+
+\bibitem{pintool}
+C.-K. Luk and et~al.
+\newblock Pin: building customized program analysis tools with dynamic
+  instrumentation.
+\newblock In {\em Proceedings of the ACM conference on Programming language
+  design and implementation}, pages 190--200, 2005.
+
+\bibitem{SC-compiler}
+D.~Marino and et. al.
+\newblock A case for an sc-preserving compiler.
+\newblock In {\em Proceedings of the 32nd ACM SIGPLAN conference on Programming
+  language design and implementation}, PLDI '11, pages 199--210, New York, NY,
+  USA, 2011. ACM.
+
+\bibitem{newEtch}
+T.~Romer and et~al.
+\newblock Instrumentation and optimization of win32/intel executables using
+  etch.
+\newblock In {\em In Proceedings of the USENIX Windows NT Workshop}, 1997.
+
+\bibitem{shastry-ssa}
+A.~V.~S. Sastry and R.~D.~C. Ju.
+\newblock A new algorithm for scalar register promotion based on ssa form.
+\newblock {\em SIGPLAN Not.}, 33:15--25, May 1998.
+
+\bibitem{plto}
+B.~Schwarz and et. al.
+\newblock {PLTO}: A link-time optimizer for the intel ia-32 architecture.
+\newblock In {\em In Proc. Workshop on Binary Translation}, 2001.
+
+\bibitem{valgrind}
+J.~Seward and N.~Nethercote.
+\newblock {Valgrind, an open-source memory debugger for x86-linux}.
+\newblock \url{http://developer.kde.org/~sewardj/}.
+
+\bibitem{matt-patent10}
+M.~Smithson and R.~Barua.
+\newblock {Binary Rewriting without Relocation Information}.
+\newblock {\em USPTO patent pending no. 12/785,923}, May 2010.
+
+\bibitem{Song-Bitblaze}
+D.~Song and et~al.
+\newblock Bitblaze: A new approach to computer security via binary analysis.
+\newblock In {\em Proceedings of the 4th International Conference on
+  Information Systems Security}, pages 1--25, Berlin, 2008.
+
+\bibitem{ParallelAugust}
+N.~Vachharajani and et. al.
+\newblock Speculative decoupled software pipelining.
+\newblock In {\em PACT '07: Proceedings of the 16th International Conference on
+  Parallel Architecture and Compilation Techniques}, pages 49--59, Washington,
+  DC, USA, 2007.
+
+\bibitem{Diablo1}
+L.~Van~Put and et. al.
+\newblock Diablo: a reliable, retargetable and extensible link-time rewriting
+  framework.
+\newblock In {\em Proceedings of the 2005 IEEE International Symposium On
+  Signal Processing And Information Technology}, pages 7--12, Athens, December
+  2005.
+
+\bibitem{Wagner-afirst}
+D.~Wagner and et. al.
+\newblock A first step towards automated detection of buffer overrun
+  vulnerabilities.
+\newblock In {\em In Network and Distributed System Security Symposium}, pages
+  3--17, 2000.
+
+\bibitem{smc-still}
+X.~Wang and et. al.
+\newblock Still: Exploit code detection via static taint and initialization
+  analyses.
+\newblock In {\em Computer Security Applications Conference, Annual}, pages 289
+  --298, 2008.
+
+\bibitem{paramRetVal07}
+J.~Zhang and et. al.
+\newblock Parameter and return-value analysis of binary executables.
+\newblock In {\em Proceedings of the 31st Annual International Computer
+  Software and Applications Conference}, pages 501--508, Washington, DC, USA,
+  2007.
+
+\bibitem{ParallelSohi}
+C.~Zilles and G.~Sohi.
+\newblock Master/slave speculative parallelization.
+\newblock In {\em Proceedings of the 35th annual ACM international symposium on
+  Microarchitecture}, pages 85--96, CA, USA, 2002.
+
+\end{thebibliography}

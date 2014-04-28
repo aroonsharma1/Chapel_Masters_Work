@@ -1,30 +1,128 @@
-\documentclass[10pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\documentclass[10pt,letterpaper,twocolumn]{article}
+%\usepackage{setspace}
+%\doublespacing
+%\usepackage{iccv}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage[linesnumbered,noend,ruled]{algorithm2e}
+\usepackage{floatflt}
+%\usepackage{floatrow}
+%\floatsetup{footposition=caption}
+%\newcommand{\subparagraph}{}
 
-%PREAMBLE
-\title{\textbf{Affine Loop Optimization Using Modulo Unrolling in CHAPEL}}
-\author{Aroon Sharma}
+%\usepackage[small,compact]{titlesec}
+%\usepackage[scriptsize,it]{caption}
+%\DeclareCaptionFormat{myformat}{\hrulefill \newline #1#2#3}
+%\captionsetup[figure]{format=myformat}
 
+\newcommand{\mybeginlist}{\begin{list}{\labelitemi}{\setlength{\itemindent}{0.0in}}}
+\newcommand{\mypar}[1]{\vspace{0.0in}\noindent{\bfseries#1}\hspace{0.5em}}
+\newcommand{\myparnoskip}[1]{\noindent{\bfseries #1}\hspace{1em}}
+\newcommand{\ie}{\emph{i.e.}, }
+\newcommand{\eg}{\emph{e.g.}, }
+\newcommand{\etc}{\emph{etc.}}
+\newcommand{\etal}{, \emph{et al.}}
 
-%\date{}							% Activate to display a given date or no date
+\newcommand{\squishlist}{
+ \begin{list}{$\bullet$}
+  { \setlength{\itemsep}{0pt}
+     \setlength{\parsep}{1pt}
+     \setlength{\topsep}{1pt}
+     \setlength{\partopsep}{0pt}
+     \setlength{\leftmargin}{1.0em}
+     \setlength{\labelwidth}{1em}
+     \setlength{\labelsep}{0.5em} } }
 
+\newcommand{\squishlisttwo}{
+ \begin{list}{$\bullet$}
+  { \setlength{\itemsep}{0pt}
+     \setlength{\parsep}{0pt}
+    \setlength{\topsep}{0pt}
+    \setlength{\partopsep}{0pt}
+    \setlength{\leftmargin}{2em}
+    \setlength{\labelwidth}{1.5em}
+    \setlength{\labelsep}{0.5em} } }
 
-%CONTENT
+%\titlespacing{\section}{0pt}{*0}{*0}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+% vertical space reducers
+\newcommand{\mysection}[1]{\vspace{-0.11in}\section{#1}\vspace{-0.09in}}
+\newcommand{\mysectionstar}[1]{\vspace{-0.15in}\section*{#1}\vspace{-0.16in}}
+\newcommand{\mysubsection}[1]{\vspace{-0.12in}\subsection{#1}\vspace{-0.11in}}
+\newcommand{\mysubsectionstar}[1]{\vspace{-0.15in}\subsection*{#1}\vspace{-0.13in}}
+
+\newcommand{\squishend}{
+  \end{list}  }
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+%\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+%\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage[breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+
 \begin{document}
 
+%\preprintfooter{}   % 'preprint' option specified.
+
+\title{Affine Loop Optimization Using Modulo Unrolling in Chapel}
+\author{Aroon Sharma}
+%\subtitle{}
+           
 \maketitle
 
+%\setcounter{page}{1}
+%\vspace*{-9ex}
 \input{abstract}
-\input{introduction}
-\input{relwork}
-\input{modulo_unrolling}
 
-\bibliographystyle{plain}
+\input{introduction}
+\input{motivation_for_aggregation}
+\input{modulo_unrolling}
+\input{zippered_iteration}
+\input{cyclic_modulo}
+\input{block_cyclic_modulo}
+\input{results}
+\input{relwork}
+
+%\begin{singlespace}
+%\begin{scriptsize}
+
+{
+%\def\bibfont{\footnotesize}
+%\bibliographystyle{ieee}
+\begin{singlespace}
+%\begin{scriptsize}
+%\begin{footnotesize}
+\vspace{-3ex}
 \bibliography{bibliography}
-\end{document}  
+\vspace{-2ex}
+\bibliographystyle{abbrv}
+%\bibliography{matt}
+%\end{scriptsize}
+\end{singlespace}
+}
+
+%\setlength{\bibspacing}{\baselineskip}
+%\bibliography{angelos,references,local,extra,nghi,kiran,matt,mincy,kiran2,RewriterSurveyReferences,karan,selfmod}
+%\bibliographystyle{plain}
+%\end{scriptsize}
+%\end{singlespace}
+%\newpage
+%\pagestyle{empty}
+%\input{facilities}
+
+%\newpage
+%\pagestyle{empty}
+%\input{mentoring}
+
+\end{document}
