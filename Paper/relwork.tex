@@ -1,7 +1,14 @@
 \section{Related Work}\label{sec:relwork}
 
-This will be where the related section goes.\footnote{Aroon's comment: My related works section is still a work in progress. I think I'd like to address traditional methods for compiler optimization, polyhedral methods for compiler optimization, and PGAS methods for compiler optimizations. The citations listed in this section are present here just so they would appear in the bibliography. In the final paper, we might not include all of them.}
+The traditional method of compiler loop optimizations including loop peeling, loop reversal, and loop interchange has been applied to code generation for distributed memory multiprocessors \cite{callahan1988compiling, ramanujam1991compile}. These techniques are useful for discovering parallelism, improving the granularity of parallelism, and improving cache performance. However, Chapel is an explicitly parallel language, and the degree of parallelism is already defined by the programmer. Furthermore, these methods require footprint calculations which are modeled by matrices and need to be intersected with the data distribution in order to provide code generation for message passing machines. Our method does not require any footprint calculations, thereby simplifying code generation. 
 
+The polyhedral method is another branch of compiler optimization that seeks to speed up parallel programs on distributed memory architectures \cite{chavarria2005effective, germain1995automatic, Gupta91automaticdata, gupta1996compiling, iancu2008performance, wei1998compiling}. In this method, boundaries are traced for each array use and these are intersected with the program's data distribution. A detailed mathematical framework to express parallelism and find sequences of transformations can occur in one step using this method. However, the method at its core does not compute information for message passing code generation. 
+
+Similar work to take advantage of communication aggregation on distributed arrays has already been done in Chapel. In \cite{sanz2012global}, aggregation was applied to improve the communication performance of whole array assignments for Chapel's Block and Cyclic distributions. Our work goes beyond array assignments and is applicable to affine array accesses within parallel loops for Chapel's Cyclic and Block Cyclic distributions. One of the contribution's of \cite{sanz2012global} included two new bulk communication primitives for Chapel developers, \texttt{chpl\_comm\_gets} and \texttt{chpl\_comm\_puts}. They both rely on the GASNet networking layer, a portion of the Chapel runtime.  Modulo unrolling takes advantage of these new communication primitives to perform bulk remote data transfer between locales.
+
+Extensive work has been done with the UPC compiler (another PGAS language) by \cite{chen2005communication} to improve on communication performance. This method targets fine-grained communication and uses techniques such as redundancy elimination, split-phase communication, and communication coalescing to reduce overall communication. However, there is no locality analysis that statically determines whether an array access is shared or remote. Our method, modulo unrolling, can determine which accesses are local purely on the affine array access and data distribution. 
+
+\begin{comment}
 \cite{callahan1988compiling}
 \cite{chamberlain1998zpl}
 \cite{chamberlain1997factor}
@@ -22,3 +29,4 @@ This will be where the related section goes.\footnote{Aroon's comment: My relate
 \cite{chamberlain2011user}
 \cite{bonachea2007proposal}
 \cite{sanz2012global}
+\end{comment}

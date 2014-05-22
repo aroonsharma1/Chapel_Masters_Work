@@ -1,5 +1,5 @@
-//use CyclicZipOpt;
-use CyclicZipOptAroon;
+use CyclicZipOpt;
+//use CyclicZipOptAroon;
 use BlockDist;
 
 config var size=200;	//size of the array

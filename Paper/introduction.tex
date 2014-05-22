@@ -4,31 +4,33 @@ Message passing code generation is a difficult task for an optimizing compiler t
 
 The vast majority of loops in scientific programs access data using affine array accesses. An affine array access is one that is a linear expression of the loop's index variables. Loops using affine array accesses are special because they exhibit regular access patterns within a data distribution. Compilers can use this information to decide when message aggregation can take place. 
 
-This paper presents a loop optimization for message passing code generation based on a technique called modulo unrolling. The optimization can be performed by a compiler to aggregate messages and reduce a program's execution time and communication. Modulo unrolling in its original form, pioneered by \cite{barua1999maps}, was meant to target tiled architectures such as the MIT Raw machine, not distributed memory architecutres that use message passing. It has since been modified to apply to such machines in this work. Modulo unrolling used here works by unrolling an affine loop by a factor equal to the number of locales of the machine. If the arrays used in the loop are distributed cyclically or block cyclically, each array access is guaranteed reside on a single locale across all iterations of the loop. Using this information, the compiler can then aggregate remote array accesses into a single message before and after the loop. 
+This paper presents a loop optimization for message passing code generation based on a technique called modulo unrolling. The optimization can be performed by a compiler to aggregate messages and reduce a program's execution time and communication. Modulo unrolling in its original form, pioneered by \cite{barua1999maps}, was meant to target tiled architectures such as the MIT Raw machine, not distributed memory architecutres that use message passing. It has since been modified to apply to such machines in this work. Modulo unrolling used here works by unrolling an affine loop by a factor equal to the number of locales of the machine being utilized by the program. If the arrays used in the loop are distributed cyclically or block cyclically, each array access is guaranteed reside on a single locale across all iterations of the loop. Using this information, the compiler can then aggregate all remote array accesses that reside on a remote locale into a single message before the loop. If remote array elements are written to during the loop, one message is required to store these elements back to each remote locale after the loop runs. 
 
-We demonstrate the modulo unrolling loop optimization in practice by implementing it in Chapel. Chapel is an explicitly parallel programming language developed by Cray Inc. that falls under the Partitioned Global Address Space (PGAS) memory model. Here, a system's memory is abstracted to a single global address space regardless of the hardware architecture and is then logically divided per locale and thread of execution. By doing so, locality of reference can easily be exploited no matter how the system architecture is organized. The Chapel compiler is an open source project used by many in industry and academic settings. The language contains many high level features such as zippered iteration that greatly simplify the implementation of modulo unrolling into the language.
+We demonstrate the modulo unrolling loop optimization in practice by implementing it in Chapel. Chapel is an explicitly parallel programming language developed by Cray Inc. that falls under the Partitioned Global Address Space (PGAS) memory model. Here, a system's memory is abstracted to a single global address space regardless of the hardware architecture and is then logically divided per locale and thread of execution. By doing so, locality of reference can easily be exploited no matter how the system architecture is organized. The Chapel compiler is an open source project used by many in industry and academic settings. The language contains many high level features such as zippered iteration and array slicing that greatly simplify the implementation of modulo unrolling into the language.
 
 \subsection{Chapel's Data Distributions} 
 
 In this work, we consider three types of data distributions: Block, Cyclic, and Block Cyclic. In a Block distribution, elements of an array are mapped to locales evenly in a dense manner. In a Cyclic distribution, elements of an array are mapped in a round-robin manner across locales. In a Block Cyclic distribution, a blocksize number of elements is allocated to consecutive array indices in a round robin fashion. Figures \ref{block_dist} - \ref{cyc_dist} illustrate these three Chapel distributions for a two-dimensional array. In Figure \ref{block_cyc_dist}, the array takes a 2 x 2 blocksize parameter. 
 
-A programmer may choose a particular data distribution for reasons unknown to the compiler. These reasons may not even take communication behavior into account. For example, Cyclic and Block Cyclic distributions provide better load balancing of data across locales. Data redistribution may be used if elements of a data set are inserted or deleted. In particular, algorithms to redistribute data using a new blocksize exist for the Block Cyclic distribution \cite{walker1996redistribution}. If an application uses a dynamic data set with elements being appended to the end, a Cyclic or Block Cyclic distribution is superior to Block because new elements can just be added to the locale that follows the cyclic or block cyclic pattern. For Block, the entire data set would need to be redistributed every time a new element is appended. 
+The choice of data distribution to use for a program boils down to computation and communication efficiency. It has been shown that finding an optimal data distribution for parallel processing applications is an NP-complete problem, even for one or two dimensional arrays \cite{mace1987memory}. Certain program data access patterns will result in fewer communication calls if the data is distributed in a particular way. For example, many loops in stencil programs that contain nearest neighbor computation will have better communication performance if the data is distributed using a Block distribution. This occurs because on a given loop iteration, the elements accessed are near each other in the array and therefore more likley to reside on the same locale block. Accessing elements on the same block does not require a remote data access and can be done faster. However, programs that access array elements far away from each other will have better communication performance if data is distributed using a Cyclic distribution. Here, a Block distribution is almost guaranteed to have poor performance because the farther away accessed elements are the more likely they are guaranteed to reside on different locales. 
 
-Allowing a data set to be compatible with other PGAS languages might be an important consideration for a programmer. If a data set is going to be used by Chapel programs and programs written in other PGAS languages, Cyclic or Block Cyclic distributions may be the best choice to distribute the data. This is because other PGAS languages, such as UPC, support Cyclic and Block Cyclic distributions but not Block. A programmer would benefit by distributing the same data set using only one scheme so the data would not have to be replicated for different programs. 
+A programmer may choose a particular data distribution for reasons unknown to the compiler. These reasons may not even take communication behavior into account. For example, Cyclic and Block Cyclic distributions provide better load balancing of data across locales. For a given application, data redistribution may be needed if elements of a data set are inserted or deleted. In particular, algorithms to redistribute data using a new blocksize exist for the Block Cyclic distribution \cite{walker1996redistribution, prylli1997fast}. If an application uses a dynamic data set with elements being appended, a Cyclic or Block Cyclic distribution is superior to Block because new elements are added to the locale that follows the cyclic or block cyclic pattern. For Block, the entire data set would need to be redistributed every time a new element is appended, which can be expensive. 
+
+Compatability with other PGAS languages might be an important consideration for a programmer when selecting a data distribution. Data sets used by Chapel programs and other PGAS programs should use Cyclic or Block Cyclic distributions because other PGAS languages do not support the Block distribution. A programmer would benefit by distributing the same data set using only one scheme so the data would not have to be replicated for different programs. 
 
 Therefore, in this work, it is our view that the compiler should not change the programmer's choice of data distribution in order to achieve better runtime and communication performance. The compiler should attempt to perform optimizations based on the data distribution that the programmer specified. 
 
 \begin{figure}
 	\begin{center}
-	\includegraphics[scale=0.50]{./Figures/block_dist}
-	\caption{Chapel Block distribution.}
+	\includegraphics[scale=0.55]{./Figures/block_dist}
 	\label{block_dist}
 	\end{center}
+	\caption{Chapel Block distribution.}
 \end{figure}
 
 \begin{figure}
 	\begin{center}
-	\includegraphics[scale=0.50]{./Figures/block_cyc_dist}
+	\includegraphics[scale=0.55]{./Figures/block_cyc_dist}
 	\caption{Chapel Block Cyclic distribution with a 2 x 2 blocksize parameter.}
 	\label{block_cyc_dist}
 	\end{center}
@@ -36,7 +38,7 @@ Therefore, in this work, it is our view that the compiler should not change the 
 
 \begin{figure}
 	\begin{center}
-	\includegraphics[scale=0.50]{./Figures/cyc_dist}
+	\includegraphics[scale=0.55]{./Figures/cyc_dist}
 	\caption{Chapel Cyclic distribution.}
 	\label{cyc_dist}
 	\end{center}
@@ -44,8 +46,8 @@ Therefore, in this work, it is our view that the compiler should not change the 
 
 \begin{figure}
 	\begin{center}
-	\includegraphics[scale=0.50]{./Figures/jacobi}
-	\caption{Chapel code for Jacobi computation.}
+	\includegraphics[scale=0.55]{./Figures/jacobi}
+	\caption{Chapel code for Jacobi computation over an 8 x 8 two dimensional array. Arrays $A$ and $A_{new}$ are distributed with a Cyclic distribution and their declarations are not shown. During each iteration of the loop, the current array element $A_{new}[i, j]$ gets the average of the four adjacent array elements of $A[i, j]$.}
 	\label{jacobi_code}
 	\end{center}
 \end{figure}

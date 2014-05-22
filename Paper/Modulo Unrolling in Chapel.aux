@@ -1,0 +1,82 @@
+\relax 
+\citation{barua1999maps}
+\citation{barua1999maps}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\newlabel{sec:intro}{{1}{1}}
+\citation{mace1987memory}
+\citation{walker1996redistribution}
+\citation{prylli1997fast}
+\citation{callahan1988compiling}
+\citation{ramanujam1991compile}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Chapel's Data Distributions}{2}}
+\newlabel{block_dist}{{1.1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Chapel Block distribution.}}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Chapel Block Cyclic distribution with a 2 x 2 blocksize parameter.}}{2}}
+\newlabel{block_cyc_dist}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Chapel Cyclic distribution.}}{2}}
+\newlabel{cyc_dist}{{3}{2}}
+\citation{chavarria2005effective}
+\citation{germain1995automatic}
+\citation{Gupta91automaticdata}
+\citation{gupta1996compiling}
+\citation{iancu2008performance}
+\citation{wei1998compiling}
+\citation{sanz2012global}
+\citation{sanz2012global}
+\citation{chen2005communication}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Chapel code for Jacobi computation over an 8 x 8 two dimensional array. Arrays $A$ and $A_{new}$ are distributed with a Cyclic distribution and their declarations are not shown. During each iteration of the loop, the current array element $A_{new}[i, j]$ gets the average of the four adjacent array elements of $A[i, j]$.}}{3}}
+\newlabel{jacobi_code}{{4}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}}
+\newlabel{sec:relwork}{{2}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Motivation for Message Aggregation}{3}}
+\newlabel{sec:motivation_for_aggregation}{{3}{3}}
+\citation{barua1999maps}
+\citation{barua1999maps}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Modulo Unrolling}{4}}
+\newlabel{sec:modulo_unrolling}{{4}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Modulo unrolling example. (a) Original sequential for loop. Array $A$ is distributed using a Cyclic distribution. Each array access maps to a different memory bank on successive loop iterations. (b) Fully unrolled loop. Trivially, each array access maps to a single memory bank because each access only occurs once. This loop dramatically increases the code size for loops traversing through large data sets. (c) Loop transformed using modulo unrolling. The loop is unrolled by a factor equal to the number of memory banks on the architecture. Now each array access is guaranteed to map to a single memory bank for all loop iterations and code size increases only by the loop unroll factor.}}{4}}
+\newlabel{modulo_unrolling}{{5}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Chapel Zippered Iteration}{4}}
+\newlabel{sec:zippered_iteration}{{5}{4}}
+\citation{chamberlain2011user}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Chapel Array Slicing}{5}}
+\newlabel{sec:array_slicing}{{5.1}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces (a) Chapel code fragment showing a loop using zippered iteration. A tuple of loop index variables equal to the number of items in the zippering is declared in the loop header. If the variable $j$ corresponds to the current loop iteration, $i$ corresponds to the $j^{th}$ element in the range $1..5$, and $f$ corresponds to the $j^{th}$ element in the iterator $fibonacci(5)$. The \textit  {zip} keyword tells the loop header which items to iterate over using zippered iteration. (b) Program output of the code fragment in Figure\nobreakspace  {}6\hbox {}a.}}{5}}
+\newlabel{zippered_iteration}{{6}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces (a) Original loop written using a single loop induction variable $i$ ranging from 1 to 10. (b) The same loop written using zippered iteration. Instead of a loop induction variable and a range of values to denote the loop bounds, two array slices containing 10 elements each are specified.}}{5}}
+\newlabel{affine_loop}{{7}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Cyclic Distribution with Modulo Unrolling}{5}}
+\newlabel{sec:cyclic_modulo}{{6}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Block Cyclic Distribution with Modulo Unrolling}{6}}
+\newlabel{sec:block_cyclic_modulo}{{7}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Results}{6}}
+\newlabel{sec:results}{{8}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Benchmark suite. Benchmarks with $\dagger $ are taken from the Chapel Trunk test directory. Benchmarks with $\ddagger $ were developed on our own in order to test specific data access patterns. }}{6}}
+\newlabel{benchmarks}{{8}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Cyclic runtime.}}{6}}
+\newlabel{cyclic_runtime}{{9}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Future Work}{6}}
+\newlabel{sec:future_work}{{9}{6}}
+\bibdata{bibliography}
+\bibcite{barua1999maps}{1}
+\bibcite{callahan1988compiling}{2}
+\bibcite{chamberlain2011user}{3}
+\bibcite{chavarria2005effective}{4}
+\bibcite{chen2005communication}{5}
+\bibcite{germain1995automatic}{6}
+\bibcite{Gupta91automaticdata}{7}
+\bibcite{gupta1996compiling}{8}
+\bibcite{iancu2008performance}{9}
+\bibcite{mace1987memory}{10}
+\bibcite{prylli1997fast}{11}
+\bibcite{ramanujam1991compile}{12}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Cyclic message count.}}{7}}
+\newlabel{cyclic_message_count}{{10}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Block Cyclic runtime.}}{7}}
+\newlabel{block_cyclic_runtime}{{11}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Block Cyclic message count.}}{7}}
+\newlabel{block_cyclic_message_count}{{12}{7}}
+\bibcite{sanz2012global}{13}
+\bibcite{walker1996redistribution}{14}
+\bibcite{wei1998compiling}{15}
+\bibstyle{abbrv}

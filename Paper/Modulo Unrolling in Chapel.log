@@ -1,0 +1,481 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 MAY 2014 16:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"Modulo Unrolling in Chapel.tex"
+(./Modulo Unrolling in Chapel.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen107
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen108
+\Gm@wd@mp=\dimen109
+\Gm@odd@mp=\dimen110
+\Gm@even@mp=\dimen111
+\Gm@layoutwidth=\dimen112
+\Gm@layoutheight=\dimen113
+\Gm@layouthoffset=\dimen114
+\Gm@layoutvoffset=\dimen115
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks18
+\footnotemargin=\dimen116
+\c@pp@next@reset=\count91
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(./Modulo Unrolling in Chapel.aux)
+\openout1 = `"Modulo Unrolling in Chapel.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 18.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen117
+\scratchbox=\box26
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen118
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
+\everyMPtoPDFconversion=\toks20
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 722.7pt, 36.135pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=542.02501pt
+* \textheight=722.7pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-73.135pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 24.
+(./abstract.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+) (./introduction.tex [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+
+<./Figures/block_dist.pdf, id=8, 456.84982pt x 312.59174pt>
+File: ./Figures/block_dist.pdf Graphic file (type pdf)
+
+<use ./Figures/block_dist.pdf>
+Package pdftex.def Info: ./Figures/block_dist.pdf used on input line 25.
+(pdftex.def)             Requested size: 251.26817pt x 171.92598pt.
+
+<./Figures/block_cyc_dist.pdf, id=9, 456.55768pt x 310.69295pt>
+File: ./Figures/block_cyc_dist.pdf Graphic file (type pdf)
+
+<use ./Figures/block_cyc_dist.pdf>
+Package pdftex.def Info: ./Figures/block_cyc_dist.pdf used on input line 33.
+(pdftex.def)             Requested size: 251.1075pt x 170.88164pt.
+
+<./Figures/cyc_dist.pdf, id=10, 455.31497pt x 310.29929pt>
+File: ./Figures/cyc_dist.pdf Graphic file (type pdf)
+
+<use ./Figures/cyc_dist.pdf>
+Package pdftex.def Info: ./Figures/cyc_dist.pdf used on input line 41.
+(pdftex.def)             Requested size: 250.424pt x 170.66513pt.
+
+<./Figures/jacobi.pdf, id=11, 454.70589pt x 218.43578pt>
+File: ./Figures/jacobi.pdf Graphic file (type pdf)
+
+<use ./Figures/jacobi.pdf>
+Package pdftex.def Info: ./Figures/jacobi.pdf used on input line 49.
+(pdftex.def)             Requested size: 250.089pt x 120.14005pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 50.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 50.
+) (./relwork.tex [2 <./Figures/block_dist.pdf> <./Figures/block_cyc_dist.pdf> <
+./Figures/cyc_dist.pdf>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+))
+(./motivation_for_aggregation.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+ [3 <./Figures/jacobi.pdf>])
+(./modulo_unrolling.tex
+Package epstopdf Info: Source file: <./Figures/modulo_unrolling.eps>
+(epstopdf)                    date: 2014-05-20 21:23:17
+(epstopdf)                    size: 1497844 bytes
+(epstopdf)             Output file: <./Figures/modulo_unrolling-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2014-05-20 21:24:43
+(epstopdf)                    size: 69261 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/modulo_unrolling
+-eps-converted-to.pdf ./Figures/modulo_unrolling.eps>
+(epstopdf)             \includegraphics on input line 15.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Figures/modulo_unrolling-eps-converted-to.pdf, id=124, 519.9425pt x 475.7775
+pt>
+File: ./Figures/modulo_unrolling-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./Figures/modulo_unrolling-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/modulo_unrolling-eps-converted-to.pdf used o
+n input line 15.
+(pdftex.def)             Requested size: 285.96925pt x 261.67842pt.
+
+Overfull \hbox (19.95676pt too wide) in paragraph at lines 15--16
+ [] 
+ []
+
+) (./zippered_iteration.tex [4 <./Figures/modulo_unrolling-eps-converted-to.pdf
+>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 13.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+
+<./Figures/zippered_iteration.pdf, id=133, 445.7194pt x 135.27158pt>
+File: ./Figures/zippered_iteration.pdf Graphic file (type pdf)
+
+<use ./Figures/zippered_iteration.pdf>
+Package pdftex.def Info: ./Figures/zippered_iteration.pdf used on input line 19
+.
+(pdftex.def)             Requested size: 289.71417pt x 87.92548pt.
+
+Overfull \hbox (23.70168pt too wide) in paragraph at lines 19--20
+ [] 
+ []
+
+<./Figures/affine_loop.pdf, id=134, 482.23259pt x 76.93051pt>
+File: ./Figures/affine_loop.pdf Graphic file (type pdf)
+
+<use ./Figures/affine_loop.pdf>
+Package pdftex.def Info: ./Figures/affine_loop.pdf used on input line 27.
+(pdftex.def)             Requested size: 289.34178pt x 46.15865pt.
+
+Overfull \hbox (23.32928pt too wide) in paragraph at lines 27--28
+ [] 
+ []
+
+) (./cyclic_modulo.tex) (./block_cyclic_modulo.tex) (./results.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./Figures/zippered_iteration.pdf> <./Figures/affine_loop.pdf>]
+<./Figures/Benchmarks.pdf, id=179, 426.06029pt x 284.12349pt>
+File: ./Figures/Benchmarks.pdf Graphic file (type pdf)
+
+<use ./Figures/Benchmarks.pdf>
+Package pdftex.def Info: ./Figures/Benchmarks.pdf used on input line 16.
+(pdftex.def)             Requested size: 255.63814pt x 170.4754pt.
+Package epstopdf Info: Source file: <./Figures/cyclic_runtime.eps>
+(epstopdf)                    date: 2014-05-20 22:51:05
+(epstopdf)                    size: 231437 bytes
+(epstopdf)             Output file: <./Figures/cyclic_runtime-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2014-05-20 22:51:59
+(epstopdf)                    size: 63044 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/cyclic_runtime-e
+ps-converted-to.pdf ./Figures/cyclic_runtime.eps>
+(epstopdf)             \includegraphics on input line 24.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Figures/cyclic_runtime-eps-converted-to.pdf, id=180, 849.1725pt x 596.2275pt
+>
+File: ./Figures/cyclic_runtime-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./Figures/cyclic_runtime-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/cyclic_runtime-eps-converted-to.pdf used on 
+input line 24.
+(pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
+Package epstopdf Info: Source file: <./Figures/cyclic_message_count.eps>
+(epstopdf)                    date: 2014-05-20 23:47:55
+(epstopdf)                    size: 239453 bytes
+(epstopdf)             Output file: <./Figures/cyclic_message_count-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2014-05-20 23:48:33
+(epstopdf)                    size: 65244 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/cyclic_message_c
+ount-eps-converted-to.pdf ./Figures/cyclic_message_count.eps>
+(epstopdf)             \includegraphics on input line 32.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Figures/cyclic_message_count-eps-converted-to.pdf, id=181, 849.1725pt x 596.
+2275pt>
+File: ./Figures/cyclic_message_count-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use ./Figures/cyclic_message_count-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/cyclic_message_count-eps-converted-to.pdf us
+ed on input line 32.
+(pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
+Package epstopdf Info: Source file: <./Figures/block_cyclic_runtime.eps>
+(epstopdf)                    date: 2014-05-20 23:56:45
+(epstopdf)                    size: 140815 bytes
+(epstopdf)             Output file: <./Figures/block_cyclic_runtime-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2014-05-20 23:57:30
+(epstopdf)                    size: 39612 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/block_cyclic_run
+time-eps-converted-to.pdf ./Figures/block_cyclic_runtime.eps>
+(epstopdf)             \includegraphics on input line 40.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Figures/block_cyclic_runtime-eps-converted-to.pdf, id=182, 849.1725pt x 596.
+2275pt>
+File: ./Figures/block_cyclic_runtime-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use ./Figures/block_cyclic_runtime-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/block_cyclic_runtime-eps-converted-to.pdf us
+ed on input line 40.
+(pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
+Package epstopdf Info: Source file: <./Figures/block_cyclic_message_count.eps>
+(epstopdf)                    date: 2014-05-21 00:02:27
+(epstopdf)                    size: 148811 bytes
+(epstopdf)             Output file: <./Figures/block_cyclic_message_count-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2014-05-21 00:03:17
+(epstopdf)                    size: 41877 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/block_cyclic_mes
+sage_count-eps-converted-to.pdf ./Figures/block_cyclic_message_count.eps>
+(epstopdf)             \includegraphics on input line 48.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Figures/block_cyclic_message_count-eps-converted-to.pdf, id=183, 849.1725pt 
+x 596.2275pt>
+File: ./Figures/block_cyclic_message_count-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./Figures/block_cyclic_message_count-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/block_cyclic_message_count-eps-converted-to.
+pdf used on input line 48.
+(pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
+)
+(./future_work.tex [6 <./Figures/Benchmarks.pdf> <./Figures/cyclic_runtime-eps-
+converted-to.pdf>]) (./Modulo Unrolling in Chapel.bbl [7 <./Figures/cyclic_mess
+age_count-eps-converted-to.pdf> <./Figures/block_cyclic_runtime-eps-converted-t
+o.pdf> <./Figures/block_cyclic_message_count-eps-converted-to.pdf>]) [8
+
+]
+(./Modulo Unrolling in Chapel.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2432 strings out of 493315
+ 37530 string characters out of 6137904
+ 106478 words of memory out of 5000000
+ 5786 multiletter control sequences out of 15000+600000
+ 21314 words of font info for 44 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,8n,32p,1556b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on "Modulo Unrolling in Chapel.pdf" (8 pages, 634860 bytes).
+PDF statistics:
+ 269 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+

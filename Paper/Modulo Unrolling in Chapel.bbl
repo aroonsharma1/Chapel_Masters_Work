@@ -1,0 +1,93 @@
+\begin{thebibliography}{10}
+
+\bibitem{barua1999maps}
+R.~Barua, W.~Lee, S.~Amarasinghe, and A.~Agarwal.
+\newblock Maps: a compiler-managed memory system for raw machines.
+\newblock In {\em ACM SIGARCH Computer Architecture News}, volume~27, pages
+  4--15. IEEE Computer Society, 1999.
+
+\bibitem{callahan1988compiling}
+D.~Callahan and K.~Kennedy.
+\newblock Compiling programs for distributed--memory multiprocessors.
+\newblock {\em The Journal of Supercomputing}, 2(2):151--169, 1988.
+
+\bibitem{chamberlain2011user}
+B.~L. Chamberlain, S.-E. Choi, S.~J. Deitz, and A.~Navarro.
+\newblock User-defined parallel zippered iterators in chapel.
+\newblock 2011.
+
+\bibitem{chavarria2005effective}
+D.~Chavarr{\'\i}a-Miranda and J.~Mellor-Crummey.
+\newblock Effective communication coalescing for data-parallel applications.
+\newblock In {\em Proceedings of the tenth ACM SIGPLAN symposium on Principles
+  and practice of parallel programming}, pages 14--25. ACM, 2005.
+
+\bibitem{chen2005communication}
+W.-Y. Chen, C.~Iancu, and K.~Yelick.
+\newblock Communication optimizations for fine-grained upc applications.
+\newblock In {\em Parallel Architectures and Compilation Techniques, 2005. PACT
+  2005. 14th International Conference on}, pages 267--278. IEEE, 2005.
+
+\bibitem{germain1995automatic}
+C.~Germain and F.~Delaplace.
+\newblock Automatic vectorization of communications for data-parallel programs.
+\newblock In {\em EURO-PAR'95 Parallel Processing}, pages 429--440. Springer,
+  1995.
+
+\bibitem{Gupta91automaticdata}
+M.~Gupta and P.~Banerjee.
+\newblock Automatic data partitioning on distributed memory multiprocessors.
+\newblock Technical report, 1991.
+
+\bibitem{gupta1996compiling}
+S.~K.~S. Gupta, S.~Kaushik, C.-H. Huang, and P.~Sadayappan.
+\newblock Compiling array expressions for efficient execution on
+  distributed-memory machines.
+\newblock {\em Journal of Parallel and Distributed Computing}, 32(2):155--172,
+  1996.
+
+\bibitem{iancu2008performance}
+C.~Iancu, W.~Chen, and K.~Yelick.
+\newblock Performance portable optimizations for loops containing communication
+  operations.
+\newblock In {\em Proceedings of the 22nd annual international conference on
+  Supercomputing}, pages 266--276. ACM, 2008.
+
+\bibitem{mace1987memory}
+M.~E. Mace.
+\newblock {\em Memory storage patterns in parallel processing}.
+\newblock Kluwer Academic Publishers, 1987.
+
+\bibitem{prylli1997fast}
+L.~Prylli and B.~Tourancheau.
+\newblock Fast runtime block cyclic data redistribution on multiprocessors.
+\newblock {\em Journal of Parallel and Distributed Computing}, 45(1):63--72,
+  1997.
+
+\bibitem{ramanujam1991compile}
+J.~Ramanujam and P.~Sadayappan.
+\newblock Compile-time techniques for data distribution in distributed memory
+  machines.
+\newblock {\em Parallel and Distributed Systems, IEEE Transactions on},
+  2(4):472--482, 1991.
+
+\bibitem{sanz2012global}
+A.~Sanz, R.~Asenjo, J.~L{\'o}pez, R.~Larrosa, A.~Navarro, V.~Litvinov, S.-E.
+  Choi, and B.~L. Chamberlain.
+\newblock Global data re-allocation via communication aggregation in chapel.
+\newblock In {\em Computer Architecture and High Performance Computing
+  (SBAC-PAD), 2012 IEEE 24th International Symposium on}, pages 235--242. IEEE,
+  2012.
+
+\bibitem{walker1996redistribution}
+D.~W. Walker and S.~W. Otto.
+\newblock Redistribution of block-cyclic data distributions using mpi.
+\newblock {\em Concurrency Practice and Experience}, 8(9):707--728, 1996.
+
+\bibitem{wei1998compiling}
+W.-H. Wei, K.-P. Shih, J.-P. Sheu, et~al.
+\newblock Compiling array references with affine functions for data-parallel
+  programs.
+\newblock {\em J. Inf. Sci. Eng.}, 14(4):695--723, 1998.
+
+\end{thebibliography}

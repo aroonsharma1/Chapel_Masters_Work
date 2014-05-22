@@ -1,0 +1,13 @@
+Benchmark		C	CM
+2mm				1	1.000029086
+cholesky		1	0.972299351
+fw				1	0.996449987
+jacobi-1D		1	0.573686646
+jacobi-2D		1	0.069821086
+correlation		1	0.853444974
+covariance		1	0.851909917
+stencil9		1	0.050973978
+fdtd-2D			1	0.013546854
+folding			1	0.06549805
+pascal			1	0.090552636
+mean			1	0.234070579

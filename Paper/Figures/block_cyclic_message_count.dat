@@ -1,0 +1,4 @@
+Benchmark		BC	BCM
+pascal			1	0.095799885
+jacobi-1D		1	0.830195601
+mean			1	0.282015324
