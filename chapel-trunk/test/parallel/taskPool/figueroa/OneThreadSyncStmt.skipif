@@ -1,2 +1,2 @@
 CHPL_COMM != none
-CHPL_TASKS == none
+COMPOPTS <= --no-local

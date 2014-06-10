@@ -1,4 +1,4 @@
-Benchmark		BC	BCM
+Benchmark		"Block Cyclic"	"Block Cyclic with Modulo Unrolling"	
 pascal			1	0.29231857
 jacobi-1D		1	0.764203376
 mean			1	0.472642399

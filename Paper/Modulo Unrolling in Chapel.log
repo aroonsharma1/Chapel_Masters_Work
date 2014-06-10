@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 MAY 2014 16:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 JUN 2014 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,51 +246,42 @@ map/pdftex.map}
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
 
 <./Figures/block_dist.pdf, id=8, 456.84982pt x 312.59174pt>
 File: ./Figures/block_dist.pdf Graphic file (type pdf)
 
 <use ./Figures/block_dist.pdf>
-Package pdftex.def Info: ./Figures/block_dist.pdf used on input line 25.
+Package pdftex.def Info: ./Figures/block_dist.pdf used on input line 31.
 (pdftex.def)             Requested size: 251.26817pt x 171.92598pt.
 
 <./Figures/block_cyc_dist.pdf, id=9, 456.55768pt x 310.69295pt>
 File: ./Figures/block_cyc_dist.pdf Graphic file (type pdf)
 
 <use ./Figures/block_cyc_dist.pdf>
-Package pdftex.def Info: ./Figures/block_cyc_dist.pdf used on input line 33.
+Package pdftex.def Info: ./Figures/block_cyc_dist.pdf used on input line 39.
 (pdftex.def)             Requested size: 251.1075pt x 170.88164pt.
 
 <./Figures/cyc_dist.pdf, id=10, 455.31497pt x 310.29929pt>
 File: ./Figures/cyc_dist.pdf Graphic file (type pdf)
 
 <use ./Figures/cyc_dist.pdf>
-Package pdftex.def Info: ./Figures/cyc_dist.pdf used on input line 41.
+Package pdftex.def Info: ./Figures/cyc_dist.pdf used on input line 47.
 (pdftex.def)             Requested size: 250.424pt x 170.66513pt.
-
-<./Figures/jacobi.pdf, id=11, 454.70589pt x 218.43578pt>
-File: ./Figures/jacobi.pdf Graphic file (type pdf)
-
-<use ./Figures/jacobi.pdf>
-Package pdftex.def Info: ./Figures/jacobi.pdf used on input line 49.
-(pdftex.def)             Requested size: 250.089pt x 120.14005pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 50.
-) (./relwork.tex [2 <./Figures/block_dist.pdf> <./Figures/block_cyc_dist.pdf> <
-./Figures/cyc_dist.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
+) (./relwork.tex [2 <./Figures/block_dist.pdf> <./Figures/block_cyc_dist.pdf>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 9.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ))
-(./motivation_for_aggregation.tex
+(./modulo_unrolling.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
- [3 <./Figures/jacobi.pdf>])
-(./modulo_unrolling.tex
+ [3 <./Figures/cyc_dist.pdf>]
 Package epstopdf Info: Source file: <./Figures/modulo_unrolling.eps>
 (epstopdf)                    date: 2014-05-20 21:23:17
 (epstopdf)                    size: 1497844 bytes
@@ -303,75 +294,83 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/modulo_unrolling-eps-converted-to.pdf, id=124, 519.9425pt x 475.7775
+<./Figures/modulo_unrolling-eps-converted-to.pdf, id=108, 519.9425pt x 475.7775
 pt>
 File: ./Figures/modulo_unrolling-eps-converted-to.pdf Graphic file (type pdf)
  <use ./Figures/modulo_unrolling-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/modulo_unrolling-eps-converted-to.pdf used o
 n input line 15.
-(pdftex.def)             Requested size: 285.96925pt x 261.67842pt.
+(pdftex.def)             Requested size: 259.97061pt x 237.88815pt.
+)
+(./motivation_for_aggregation.tex
+<./Figures/jacobi.pdf, id=109, 454.70589pt x 218.43578pt>
+File: ./Figures/jacobi.pdf Graphic file (type pdf)
 
-Overfull \hbox (19.95676pt too wide) in paragraph at lines 15--16
+<use ./Figures/jacobi.pdf>
+Package pdftex.def Info: ./Figures/jacobi.pdf used on input line 17.
+(pdftex.def)             Requested size: 250.089pt x 120.14005pt.
+
+<./Figures/aggregation.pdf, id=110, 512.41312pt x 514.94324pt>
+File: ./Figures/aggregation.pdf Graphic file (type pdf)
+
+<use ./Figures/aggregation.pdf>
+Package pdftex.def Info: ./Figures/aggregation.pdf used on input line 25.
+(pdftex.def)             Requested size: 271.57765pt x 272.91861pt.
+
+Overfull \hbox (5.56516pt too wide) in paragraph at lines 25--26
  [] 
  []
 
-) (./zippered_iteration.tex [4 <./Figures/modulo_unrolling-eps-converted-to.pdf
->]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 13.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+) (./language_features.tex
+Underfull \hbox (badness 1062) in paragraph at lines 1--1
+[]\OT1/ptm/b/n/14.4 Chapel Lan-guage Fea-tures Nec-es-sary
+ []
 
-<./Figures/zippered_iteration.pdf, id=133, 445.7194pt x 135.27158pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./Figures/modulo_unrolling-eps-converted-to.pdf>] [5 <./Figures/jacobi.pdf
+> <./Figures/aggregation.pdf>]
+<./Figures/zippered_iteration.pdf, id=209, 445.7194pt x 135.27158pt>
 File: ./Figures/zippered_iteration.pdf Graphic file (type pdf)
 
 <use ./Figures/zippered_iteration.pdf>
-Package pdftex.def Info: ./Figures/zippered_iteration.pdf used on input line 19
+Package pdftex.def Info: ./Figures/zippered_iteration.pdf used on input line 23
 .
-(pdftex.def)             Requested size: 289.71417pt x 87.92548pt.
+(pdftex.def)             Requested size: 267.4337pt x 81.16356pt.
 
-Overfull \hbox (23.70168pt too wide) in paragraph at lines 19--20
+Overfull \hbox (1.4212pt too wide) in paragraph at lines 23--24
  [] 
  []
 
-<./Figures/affine_loop.pdf, id=134, 482.23259pt x 76.93051pt>
+<./Figures/affine_loop.pdf, id=210, 482.23259pt x 76.93051pt>
 File: ./Figures/affine_loop.pdf Graphic file (type pdf)
 
 <use ./Figures/affine_loop.pdf>
-Package pdftex.def Info: ./Figures/affine_loop.pdf used on input line 27.
-(pdftex.def)             Requested size: 289.34178pt x 46.15865pt.
-
-Overfull \hbox (23.32928pt too wide) in paragraph at lines 27--28
- [] 
- []
-
-) (./cyclic_modulo.tex) (./block_cyclic_modulo.tex) (./results.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./Figures/zippered_iteration.pdf> <./Figures/affine_loop.pdf>]
-<./Figures/Benchmarks.pdf, id=179, 426.06029pt x 284.12349pt>
+Package pdftex.def Info: ./Figures/affine_loop.pdf used on input line 31.
+(pdftex.def)             Requested size: 265.22874pt x 42.3119pt.
+) (./cyclic_modulo.tex)
+(./block_cyclic_modulo.tex) (./results.tex [6 <./Figures/zippered_iteration.pdf
+> <./Figures/affine_loop.pdf>]
+<./Figures/Benchmarks.pdf, id=250, 426.06029pt x 284.12349pt>
 File: ./Figures/Benchmarks.pdf Graphic file (type pdf)
 
 <use ./Figures/Benchmarks.pdf>
 Package pdftex.def Info: ./Figures/Benchmarks.pdf used on input line 16.
 (pdftex.def)             Requested size: 255.63814pt x 170.4754pt.
 Package epstopdf Info: Source file: <./Figures/cyclic_runtime.eps>
-(epstopdf)                    date: 2014-05-20 22:51:05
-(epstopdf)                    size: 231437 bytes
+(epstopdf)                    date: 2014-06-03 15:17:30
+(epstopdf)                    size: 270237 bytes
 (epstopdf)             Output file: <./Figures/cyclic_runtime-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2014-05-20 22:51:59
-(epstopdf)                    size: 63044 bytes
+(epstopdf)                    date: 2014-06-03 15:18:34
+(epstopdf)                    size: 73742 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/cyclic_runtime-e
 ps-converted-to.pdf ./Figures/cyclic_runtime.eps>
 (epstopdf)             \includegraphics on input line 24.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/cyclic_runtime-eps-converted-to.pdf, id=180, 849.1725pt x 596.2275pt
+<./Figures/cyclic_runtime-eps-converted-to.pdf, id=251, 849.1725pt x 596.2275pt
 >
 File: ./Figures/cyclic_runtime-eps-converted-to.pdf Graphic file (type pdf)
  <use ./Figures/cyclic_runtime-eps-converted-to.pdf>
@@ -379,18 +378,18 @@ Package pdftex.def Info: ./Figures/cyclic_runtime-eps-converted-to.pdf used on
 input line 24.
 (pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
 Package epstopdf Info: Source file: <./Figures/cyclic_message_count.eps>
-(epstopdf)                    date: 2014-05-20 23:47:55
-(epstopdf)                    size: 239453 bytes
+(epstopdf)                    date: 2014-06-03 15:18:27
+(epstopdf)                    size: 278253 bytes
 (epstopdf)             Output file: <./Figures/cyclic_message_count-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2014-05-20 23:48:33
-(epstopdf)                    size: 65244 bytes
+(epstopdf)                    date: 2014-06-03 15:18:36
+(epstopdf)                    size: 75947 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/cyclic_message_c
 ount-eps-converted-to.pdf ./Figures/cyclic_message_count.eps>
 (epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/cyclic_message_count-eps-converted-to.pdf, id=181, 849.1725pt x 596.
+<./Figures/cyclic_message_count-eps-converted-to.pdf, id=252, 849.1725pt x 596.
 2275pt>
 File: ./Figures/cyclic_message_count-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -399,18 +398,18 @@ Package pdftex.def Info: ./Figures/cyclic_message_count-eps-converted-to.pdf us
 ed on input line 32.
 (pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
 Package epstopdf Info: Source file: <./Figures/block_cyclic_runtime.eps>
-(epstopdf)                    date: 2014-05-20 23:56:45
-(epstopdf)                    size: 140815 bytes
+(epstopdf)                    date: 2014-06-03 15:13:22
+(epstopdf)                    size: 189720 bytes
 (epstopdf)             Output file: <./Figures/block_cyclic_runtime-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2014-05-20 23:57:30
-(epstopdf)                    size: 39612 bytes
+(epstopdf)                    date: 2014-06-03 15:13:35
+(epstopdf)                    size: 53036 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/block_cyclic_run
 time-eps-converted-to.pdf ./Figures/block_cyclic_runtime.eps>
 (epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/block_cyclic_runtime-eps-converted-to.pdf, id=182, 849.1725pt x 596.
+<./Figures/block_cyclic_runtime-eps-converted-to.pdf, id=253, 849.1725pt x 596.
 2275pt>
 File: ./Figures/block_cyclic_runtime-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -419,18 +418,18 @@ Package pdftex.def Info: ./Figures/block_cyclic_runtime-eps-converted-to.pdf us
 ed on input line 40.
 (pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
 Package epstopdf Info: Source file: <./Figures/block_cyclic_message_count.eps>
-(epstopdf)                    date: 2014-05-21 00:02:27
-(epstopdf)                    size: 148811 bytes
+(epstopdf)                    date: 2014-06-03 15:16:09
+(epstopdf)                    size: 197716 bytes
 (epstopdf)             Output file: <./Figures/block_cyclic_message_count-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2014-05-21 00:03:17
-(epstopdf)                    size: 41877 bytes
+(epstopdf)                    date: 2014-06-03 15:18:38
+(epstopdf)                    size: 55290 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/block_cyclic_mes
 sage_count-eps-converted-to.pdf ./Figures/block_cyclic_message_count.eps>
 (epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/block_cyclic_message_count-eps-converted-to.pdf, id=183, 849.1725pt 
+<./Figures/block_cyclic_message_count-eps-converted-to.pdf, id=254, 849.1725pt 
 x 596.2275pt>
 File: ./Figures/block_cyclic_message_count-eps-converted-to.pdf Graphic file (t
 ype pdf)
@@ -439,43 +438,35 @@ Package pdftex.def Info: ./Figures/block_cyclic_message_count-eps-converted-to.
 pdf used on input line 48.
 (pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
 )
-(./future_work.tex [6 <./Figures/Benchmarks.pdf> <./Figures/cyclic_runtime-eps-
-converted-to.pdf>]) (./Modulo Unrolling in Chapel.bbl [7 <./Figures/cyclic_mess
-age_count-eps-converted-to.pdf> <./Figures/block_cyclic_runtime-eps-converted-t
-o.pdf> <./Figures/block_cyclic_message_count-eps-converted-to.pdf>]) [8
+(./future_work.tex) [7 <./Figures/Benchmarks.pdf> <./Figures/cyclic_runtime-eps
+-converted-to.pdf> <./Figures/cyclic_message_count-eps-converted-to.pdf>]
+(./Modulo Unrolling in Chapel.bbl [8 <./Figures/block_cyclic_runtime-eps-conver
+ted-to.pdf> <./Figures/block_cyclic_message_count-eps-converted-to.pdf>])
+[9
 
-]
-(./Modulo Unrolling in Chapel.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./Modulo Unrolling in Chapel.aux) ) 
 Here is how much of TeX's memory you used:
- 2432 strings out of 493315
- 37530 string characters out of 6137904
- 106478 words of memory out of 5000000
- 5786 multiletter control sequences out of 15000+600000
- 21314 words of font info for 44 fonts, out of 8000000 for 9000
+ 2421 strings out of 493315
+ 37408 string characters out of 6137904
+ 108507 words of memory out of 5000000
+ 5777 multiletter control sequences out of 15000+600000
+ 18715 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,8n,32p,1556b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on "Modulo Unrolling in Chapel.pdf" (8 pages, 634860 bytes).
+ 38i,7n,32p,1420b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts
+/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8
+a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Modulo Unrolling in Chapel.pdf" (9 pages, 704581 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
+ 329 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

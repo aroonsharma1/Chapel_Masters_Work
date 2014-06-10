@@ -1,9 +1,0 @@
-#!/bin/bash
-echo `date` "" Starting $0 on `hostname`.
-
-export LOGFILE=$HOME/tmp/nightly.valgrind.linux64.out
-echo `date` "" "Testing valgrind.  Log file: $LOGFILE"
-export CHPL_RT_NUM_THREADS_PER_LOCALE=100
-source ~/.chapelbashrc-cron && ~/chapel/util/cron/nightly -cron -valgrind -no-futures -suppress Suppressions/valgrind.suppress -parnodefile ~/chapel/test/Nodes/CHAP9 2>&1 > $LOGFILE
-
-echo `date` "" Finished $0.

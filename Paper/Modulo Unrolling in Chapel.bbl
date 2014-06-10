@@ -34,6 +34,12 @@ C.~Germain and F.~Delaplace.
 \newblock In {\em EURO-PAR'95 Parallel Processing}, pages 429--440. Springer,
   1995.
 
+\bibitem{goumas2006message}
+G.~Goumas, N.~Drosinos, M.~Athanasaki, and N.~Koziris.
+\newblock Message-passing code generation for non-rectangular tiling
+  transformations.
+\newblock {\em Parallel Computing}, 32(10):711--732, 2006.
+
 \bibitem{Gupta91automaticdata}
 M.~Gupta and P.~Banerjee.
 \newblock Automatic data partitioning on distributed memory multiprocessors.
@@ -71,6 +77,12 @@ J.~Ramanujam and P.~Sadayappan.
 \newblock {\em Parallel and Distributed Systems, IEEE Transactions on},
   2(4):472--482, 1991.
 
+\bibitem{ramanujam1992tiling}
+J.~Ramanujam and P.~Sadayappan.
+\newblock Tiling multidimensional iteration spaces for multicomputers.
+\newblock {\em Journal of Parallel and Distributed Computing}, 16(2):108--120,
+  1992.
+
 \bibitem{sanz2012global}
 A.~Sanz, R.~Asenjo, J.~L{\'o}pez, R.~Larrosa, A.~Navarro, V.~Litvinov, S.-E.
   Choi, and B.~L. Chamberlain.
@@ -89,5 +101,11 @@ W.-H. Wei, K.-P. Shih, J.-P. Sheu, et~al.
 \newblock Compiling array references with affine functions for data-parallel
   programs.
 \newblock {\em J. Inf. Sci. Eng.}, 14(4):695--723, 1998.
+
+\bibitem{xue1997communication}
+J.~Xue.
+\newblock Communication-minimal tiling of uniform dependence loops.
+\newblock In {\em Languages and Compilers for Parallel Computing}, pages
+  330--349. Springer, 1997.
 
 \end{thebibliography}

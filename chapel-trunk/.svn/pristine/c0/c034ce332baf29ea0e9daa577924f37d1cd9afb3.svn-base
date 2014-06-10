@@ -1,4 +1,0 @@
-GEN_LFLAGS += -L$(RE2_LIB_DIR) -Wl,-rpath -Wl,$(RE2_LIB_DIR)
-LIBS += -lre2
-
-LD=$(CXX)

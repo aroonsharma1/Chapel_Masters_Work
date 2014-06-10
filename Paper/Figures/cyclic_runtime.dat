@@ -1,4 +1,4 @@
-Benchmark		C	CM
+Benchmark		"Cyclic"	"Cyclic with Modulo Unrolling"
 2mm				1	1.091063566
 cholesky		1	1.088760093
 fw				1	1.011392661

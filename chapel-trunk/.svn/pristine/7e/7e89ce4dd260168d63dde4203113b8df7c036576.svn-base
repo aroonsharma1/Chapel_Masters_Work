@@ -1,4 +1,0 @@
-perfkeys: real
-graphkeys: time
-ylabel: Time (seconds)
-graphtitle: Fannkuch (redux)

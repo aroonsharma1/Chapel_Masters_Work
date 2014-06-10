@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# tcmalloc with gasnet testing
+
+source $(cd $(dirname $0) ; pwd)/common-gasnet.bash
+
+# tcmalloc with comm gasnet for examples
+export LOGFILE=~/tmp/nightly.tcmalloc-gasnet.out
+log_info "Testing CHPL_MEM=tcmalloc CHPL_COMM=gasnet. Log file: $LOGFILE"
+
+export CHPL_MEM=tcmalloc
+export GASNET_QUIET=Y
+
+with_logging $LOGFILE $CHPL_HOME/util/cron/nightly -cron -multilocale -no-futures
+
+log_info "Finished."
