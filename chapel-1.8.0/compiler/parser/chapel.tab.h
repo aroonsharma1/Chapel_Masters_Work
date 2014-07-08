@@ -1,21 +1,24 @@
-/* A Bison parser, made by GNU Bison 2.5.  */
+/* A Bison parser, made by GNU Bison 2.3.  */
 
-/* Bison interface for Yacc-like parsers in C
-   
-      Copyright (C) 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc.
-   
-   This program is free software: you can redistribute it and/or modify
+/* Skeleton interface for Bison's Yacc-like parsers in C
+
+   Copyright (C) 1984, 1989, 1990, 2000, 2001, 2002, 2003, 2004, 2005, 2006
+   Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-   
+   the Free Software Foundation; either version 2, or (at your option)
+   any later version.
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor,
+   Boston, MA 02110-1301, USA.  */
 
 /* As a special exception, you may create a larger work that contains
    part or all of the Bison parser skeleton and distribute that work
@@ -26,10 +29,9 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
-
 
 /* Tokens.  */
 #ifndef YYTOKENTYPE
@@ -165,16 +167,141 @@
      TUPLUS = 383
    };
 #endif
+/* Tokens.  */
+#define TIDENT 258
+#define IMAGLITERAL 259
+#define INTLITERAL 260
+#define REALLITERAL 261
+#define STRINGLITERAL 262
+#define EXTERNCODE 263
+#define TALIGN 264
+#define TATOMIC 265
+#define TBEGIN 266
+#define TBREAK 267
+#define TBY 268
+#define TCLASS 269
+#define TCOBEGIN 270
+#define TCOFORALL 271
+#define TCONFIG 272
+#define TCONST 273
+#define TCONTINUE 274
+#define TDELETE 275
+#define TDMAPPED 276
+#define TDO 277
+#define TDOMAIN 278
+#define TELSE 279
+#define TENUM 280
+#define TEXPORT 281
+#define TEXTERN 282
+#define TFOR 283
+#define TFORALL 284
+#define TIF 285
+#define TIN 286
+#define TINDEX 287
+#define TINLINE 288
+#define TINOUT 289
+#define TITER 290
+#define TLABEL 291
+#define TLAMBDA 292
+#define TLET 293
+#define TLOCAL 294
+#define TMINUSMINUS 295
+#define TMODULE 296
+#define TNEW 297
+#define TNIL 298
+#define TON 299
+#define TOTHERWISE 300
+#define TOUT 301
+#define TPARAM 302
+#define TPLUSPLUS 303
+#define TPRAGMA 304
+#define TPRIMITIVE 305
+#define TPROC 306
+#define TRECORD 307
+#define TREDUCE 308
+#define TREF 309
+#define TRETURN 310
+#define TSCAN 311
+#define TSELECT 312
+#define TSERIAL 313
+#define TSINGLE 314
+#define TSPARSE 315
+#define TSUBDOMAIN 316
+#define TSYNC 317
+#define TTHEN 318
+#define TTYPE 319
+#define TUNDERSCORE 320
+#define TUNION 321
+#define TUSE 322
+#define TVAR 323
+#define TWHEN 324
+#define TWHERE 325
+#define TWHILE 326
+#define TYIELD 327
+#define TZIP 328
+#define TALIAS 329
+#define TAND 330
+#define TASSIGN 331
+#define TASSIGNBAND 332
+#define TASSIGNBOR 333
+#define TASSIGNBXOR 334
+#define TASSIGNDIVIDE 335
+#define TASSIGNEXP 336
+#define TASSIGNLAND 337
+#define TASSIGNLOR 338
+#define TASSIGNMINUS 339
+#define TASSIGNMOD 340
+#define TASSIGNMULTIPLY 341
+#define TASSIGNPLUS 342
+#define TASSIGNSL 343
+#define TASSIGNSR 344
+#define TBAND 345
+#define TBNOT 346
+#define TBOR 347
+#define TBXOR 348
+#define TCOLON 349
+#define TCOMMA 350
+#define TDIVIDE 351
+#define TDOT 352
+#define TDOTDOT 353
+#define TDOTDOTDOT 354
+#define TEQUAL 355
+#define TEXP 356
+#define TGREATER 357
+#define TGREATEREQUAL 358
+#define THASH 359
+#define TLESS 360
+#define TLESSEQUAL 361
+#define TMINUS 362
+#define TMOD 363
+#define TNOT 364
+#define TNOTEQUAL 365
+#define TOR 366
+#define TPLUS 367
+#define TQUESTION 368
+#define TSEMI 369
+#define TSHIFTLEFT 370
+#define TSHIFTRIGHT 371
+#define TSTAR 372
+#define TSWAP 373
+#define TIO 374
+#define TLCBR 375
+#define TRCBR 376
+#define TLP 377
+#define TRP 378
+#define TLSBR 379
+#define TRSBR 380
+#define TNOELSE 381
+#define TUMINUS 382
+#define TUPLUS 383
+
 
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
+#line 42 "chapel.ypp"
 {
-
-/* Line 2068 of yacc.c  */
-#line 47 "chapel.ypp"
-
   const char* pch;
   Vec<const char*>* vpch;
   RetTag retTag;
@@ -190,15 +317,13 @@ typedef union YYSTYPE
   Flag flag;
   ProcIter procIter;
   FlagSet* flagSet;
-
-
-
-/* Line 2068 of yacc.c  */
-#line 198 "chapel.tab.h"
-} YYSTYPE;
-# define YYSTYPE_IS_TRIVIAL 1
+}
+/* Line 1529 of yacc.c.  */
+#line 323 "chapel.tab.h"
+	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
+# define YYSTYPE_IS_TRIVIAL 1
 #endif
 
 extern YYSTYPE yylval;
@@ -217,4 +342,3 @@ typedef struct YYLTYPE
 #endif
 
 extern YYLTYPE yylloc;
-

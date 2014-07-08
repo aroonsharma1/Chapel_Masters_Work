@@ -1,0 +1,40 @@
+=================
+Memory Statistics
+==============================================================
+Current Allocated Memory               0
+Maximum Simultaneous Allocated Memory  112
+Total Allocated Memory                 112
+Total Freed Memory                     112
+==============================================================
+=================
+Memory Statistics
+==============================================================
+Current Allocated Memory               64
+Maximum Simultaneous Allocated Memory  112
+Total Allocated Memory                 176
+Total Freed Memory                     112
+==============================================================
+=================
+Memory Statistics
+==============================================================
+Current Allocated Memory               128
+Maximum Simultaneous Allocated Memory  128
+Total Allocated Memory                 240
+Total Freed Memory                     112
+==============================================================
+=================
+Memory Statistics
+==============================================================
+Current Allocated Memory               192
+Maximum Simultaneous Allocated Memory  192
+Total Allocated Memory                 304
+Total Freed Memory                     112
+==============================================================
+=================
+Memory Statistics
+==============================================================
+Current Allocated Memory               256
+Maximum Simultaneous Allocated Memory  256
+Total Allocated Memory                 368
+Total Freed Memory                     112
+==============================================================

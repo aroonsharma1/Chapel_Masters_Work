@@ -37,7 +37,7 @@ readlink='/usr/bin/readlink'
 dirname='/usr/bin/dirname'
 basename='/usr/bin/basename'
 pwd_prog='/bin/pwd'
-awk='awk'
+awk='gawk'
 
 # written carefully to still work if readlink is missing or broken
 if test -x "$readlink" -a "`$readlink / 2>&1 > /dev/null`" = ""; then

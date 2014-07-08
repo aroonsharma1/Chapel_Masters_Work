@@ -1,8 +1,3 @@
-/**************************************************************************
-  Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
-**************************************************************************/
-
-
 //
 // Shared code for different comm implementations in
 //  comm/<commlayer>/comm-<commlayer>.c

@@ -200,14 +200,22 @@ proc print_locale_data(A:[], matrix_size: int) {
 proc main() {
     /* Initialize the data */
     var dom = {1..size, 1..size};
-    
+	var MyLocaleView = {1..2, 0..4};
+	var MyLocales: [MyLocaleView] locale = reshape(Locales, MyLocaleView);
+
     if dist == "NONE" {
         var user_dist = dom;
         /* Run the benchmark */
         kernel_2mm(alpha, beta, user_dist, size); 
     } else if dist == "CM" {
-        var user_dist = dom dmapped CyclicZipOpt(startIdx=dom.low);
-        kernel_2mm(alpha, beta, user_dist, size);   
+		if numLocales == 10 {
+	        var user_dist = dom dmapped CyclicZipOpt(startIdx=dom.low, targetLocales=MyLocales);
+	        kernel_2mm(alpha, beta, user_dist, size); 
+		}
+		else {
+	        var user_dist = dom dmapped CyclicZipOpt(startIdx=dom.low);
+	        kernel_2mm(alpha, beta, user_dist, size);   
+		}
     } else if dist == "C" {
         var user_dist = dom dmapped Cyclic(startIdx=dom.low);
         kernel_2mm(alpha, beta, user_dist, size);   

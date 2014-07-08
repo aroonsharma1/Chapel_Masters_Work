@@ -1,8 +1,3 @@
-/**************************************************************************
-  Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
-**************************************************************************/
-
-
 #ifndef _FREEBSD_STDINT_H_
 #define _FREEBSD_STDINT_H_
 

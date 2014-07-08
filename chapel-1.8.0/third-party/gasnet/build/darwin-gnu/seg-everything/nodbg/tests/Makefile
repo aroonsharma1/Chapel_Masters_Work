@@ -169,7 +169,7 @@ testprograms_err =      \
 # (except in the case of cross-compilation, where we run them on the compute node using MPIRUN_CMD)
 testprograms_nongasnet = \
 	testtools testtoolscxx
-CONDUIT_NAME_UC=`echo $(CONDUIT_NAME) | awk  '{print toupper($$0)}'`
+CONDUIT_NAME_UC=`echo $(CONDUIT_NAME) | gawk  '{print toupper($$0)}'`
 awk_cmdbuild={  qargs="'"'"$$args"'"'"; \
                 gsub(ENVIRON["'"'"DQUOTE"'"'"],ENVIRON["'"'"BACKSLASH"'"'"]ENVIRON["'"'"DQUOTE"'"'"],qargs); \
                 gsub("'"'"%C"'"'", "'"'"%P %A"'"'");       \
@@ -186,7 +186,7 @@ perl_threadscan=print $$1 if (/\\\$$GASNetThreadModel: GASNET_([^ ]*) \\\$$/);
 
 run-tests: force
 	@$(TEST_PARAMS)                                                                 \
-	export `echo "$(TEST_PARAMS)" | awk 'BEGIN {FS="=";RS=";"}{ print $$1 }'` ;   \
+	export `echo "$(TEST_PARAMS)" | gawk 'BEGIN {FS="=";RS=";"}{ print $$1 }'` ;   \
 	line='+++++++++++++++++++++++++++++++++++++++' ; line="$$line$$line" ;          \
 	BACKSLASH='\' export BACKSLASH ;                                                \
 	DQUOTE='"' export DQUOTE ;                                                      \
@@ -236,7 +236,7 @@ run-tests: force
 	    if test "$$test_mpi" ; then                                                 \
 	      echo "*** Running MPI test $$file ***" ;                                  \
               awk_cmdbuild=`echo "$(awk_cmdbuild)"` ; 					\
-	      cmd=`echo "$$MPI_RUNCMD" | eval awk \'$$awk_cmdbuild\'` ;         	\
+	      cmd=`echo "$$MPI_RUNCMD" | eval gawk \'$$awk_cmdbuild\'` ;         	\
 	      faildesc="MPI test: $$file $$args" ;                                      \
 	    elif test "$$test_nongasnet" ; then                                         \
 	      echo "*** Running conduit-independent $$file ***" ;                       \
@@ -248,7 +248,7 @@ run-tests: force
 	      echo "*** Running $(CONDUIT_NAME)-conduit $$file"                         \
 		   "in $$threadmode/$(GASNET_SEGMENT_STR) mode ***" ;                   \
               awk_cmdbuild=`echo "$(awk_cmdbuild)"` ; 					\
-	      cmd=`echo "$$TEST_RUNCMD" | eval awk \'$$awk_cmdbuild\'` ;         	\
+	      cmd=`echo "$$TEST_RUNCMD" | eval gawk \'$$awk_cmdbuild\'` ;         	\
 	      faildesc="$(CONDUIT_NAME)-conduit/$$threadmode-$(GASNET_CONFIG_STR)/$$file $$args" ; \
 	    fi;                                                                         \
 	    echo "$$cmd" ;                                                              \
@@ -277,7 +277,7 @@ do-run-testexit: force
          BACKSLASH='\' export BACKSLASH ;                                 \
          DQUOTE='"' export DQUOTE ;                                       \
          awk_cmdbuild=`echo "$(awk_cmdbuild)"` ; 			  \
-         cmd=`echo "$(CONDUIT_RUNCMD)" | eval awk \'$$awk_cmdbuild\'` ; \
+         cmd=`echo "$(CONDUIT_RUNCMD)" | eval gawk \'$$awk_cmdbuild\'` ; \
 	 echo "INTERACTIVE_RUNCMD='$$cmd'"                        >> $(TESTEXIT_SCRIPT)
 	@echo "BATCH_RUNCMD='testexit'"                           >> $(TESTEXIT_SCRIPT)
 	@echo '#BATCH_RUNCMD="$$INTERACTIVE_RUNCMD"'              >> $(TESTEXIT_SCRIPT)

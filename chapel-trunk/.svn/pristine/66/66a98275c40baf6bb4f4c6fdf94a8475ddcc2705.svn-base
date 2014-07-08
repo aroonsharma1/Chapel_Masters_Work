@@ -1,2 +1,0 @@
-bug: Strings accessed on remote locales are copied and considered local
-

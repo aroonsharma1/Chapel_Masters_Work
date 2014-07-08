@@ -1,5 +1,8 @@
 \begin{thebibliography}{10}
 
+\bibitem{polybench}
+Polybench/c- the polyhedral benchmark suite.
+
 \bibitem{barua1999maps}
 R.~Barua, W.~Lee, S.~Amarasinghe, and A.~Agarwal.
 \newblock Maps: a compiler-managed memory system for raw machines.
@@ -77,12 +80,6 @@ J.~Ramanujam and P.~Sadayappan.
 \newblock {\em Parallel and Distributed Systems, IEEE Transactions on},
   2(4):472--482, 1991.
 
-\bibitem{ramanujam1992tiling}
-J.~Ramanujam and P.~Sadayappan.
-\newblock Tiling multidimensional iteration spaces for multicomputers.
-\newblock {\em Journal of Parallel and Distributed Computing}, 16(2):108--120,
-  1992.
-
 \bibitem{sanz2012global}
 A.~Sanz, R.~Asenjo, J.~L{\'o}pez, R.~Larrosa, A.~Navarro, V.~Litvinov, S.-E.
   Choi, and B.~L. Chamberlain.
@@ -90,6 +87,12 @@ A.~Sanz, R.~Asenjo, J.~L{\'o}pez, R.~Larrosa, A.~Navarro, V.~Litvinov, S.-E.
 \newblock In {\em Computer Architecture and High Performance Computing
   (SBAC-PAD), 2012 IEEE 24th International Symposium on}, pages 235--242. IEEE,
   2012.
+
+\bibitem{waingold1997baring}
+E.~Waingold, M.~Taylor, D.~Srikrishna, V.~Sarkar, W.~Lee, V.~Lee, J.~Kim,
+  M.~Frank, P.~Finch, R.~Barua, et~al.
+\newblock Baring it all to software: Raw machines.
+\newblock {\em Computer}, 30(9):86--93, 1997.
 
 \bibitem{walker1996redistribution}
 D.~W. Walker and S.~W. Otto.

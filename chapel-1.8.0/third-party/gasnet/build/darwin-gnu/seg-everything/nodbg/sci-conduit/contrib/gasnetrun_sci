@@ -193,16 +193,16 @@ fi
 # the second column should be all the SCI Ids of the hostnames in column 1
 if [ $MFILE ]
 then
-	HOSTS=`cat $MFILE | awk 'NF==0 {exit} {print $1}'`
-	SCI_IDS=`cat $MFILE | awk 'NF==0 {exit} {print $2}'`
+	HOSTS=`cat $MFILE | gawk 'NF==0 {exit} {print $1}'`
+	SCI_IDS=`cat $MFILE | gawk 'NF==0 {exit} {print $2}'`
 fi
 
 #note, if jobs file is defined, it overwrites the variables set by machines file
 if [ $JOB_FILE ]
  then
 
-	HOSTS=`cat $JOB_FILE | awk 'NF==0 {exit} {print $1}'`
-	SCI_IDS=`cat $JOB_FILE | awk 'NF==0 {exit} {print $2}'`
+	HOSTS=`cat $JOB_FILE | gawk 'NF==0 {exit} {print $1}'`
+	SCI_IDS=`cat $JOB_FILE | gawk 'NF==0 {exit} {print $2}'`
 fi
 
 #echo "Hosts are :"
@@ -219,8 +219,8 @@ fi
 # top of the file list going to the end
 
 #first get rid of all the \n and \r characters and replace with spaces
-SCI_IDS=`echo "$SCI_IDS" | awk '{ print gensub(/\n/, " ", "g") }'`
-SCI_IDS=`echo "$SCI_IDS" | awk '{ print gensub(/\r/, " ", "g") }'`
+SCI_IDS=`echo "$SCI_IDS" | gawk '{ print gensub(/\n/, " ", "g") }'`
+SCI_IDS=`echo "$SCI_IDS" | gawk '{ print gensub(/\r/, " ", "g") }'`
 
 #this code has terrible logrithmic time. It will take O(n^2), where n is the
 # number of nodes to use. Probably need to look into changing this. While 
@@ -287,10 +287,10 @@ if ! test -x $ENV ; then
 fi
 
 # round-up user requested environment variables
-USERENV=`echo "$USERENV" | awk -F, 'BEGIN{ORS=" "}{for(i=1;i<=NF;i++) { print "-e ^"$i"="; } }'`
+USERENV=`echo "$USERENV" | gawk -F, 'BEGIN{ORS=" "}{for(i=1;i<=NF;i++) { print "-e ^"$i"="; } }'`
 SYSTEMENV="-e ^GASNET_"
 
-EXPORT=`$ENV | grep $USERENV $SYSTEMENV | awk -F= 'BEGIN{ORS=""; print "'"$ENV "'"}{print $1"='"'"'"$2"'"'"' "; }'`
+EXPORT=`$ENV | grep $USERENV $SYSTEMENV | gawk -F= 'BEGIN{ORS=""; print "'"$ENV "'"}{print $1"='"'"'"$2"'"'"' "; }'`
 
 #if EXPORT is == ENV only, set EXPORT as empty since there are no variables to propogate
 if [ "$EXPORT" == "$ENV" ] 

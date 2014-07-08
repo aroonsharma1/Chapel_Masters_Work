@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 JUN 2014 16:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  20 JUN 2014 11:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,6 +23,10 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks14
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
@@ -34,7 +38,7 @@ Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -72,8 +76,8 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks15
-\verbatim@line=\toks16
+\every@verbatim=\toks16
+\verbatim@line=\toks17
 \verbatim@in@stream=\read1
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/geometry/geometry.sty
@@ -101,11 +105,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen113
 \Gm@layouthoffset=\dimen114
 \Gm@layoutvoffset=\dimen115
-\Gm@dimlist=\toks17
+\Gm@dimlist=\toks18
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks18
+\FN@temptoken=\toks19
 \footnotemargin=\dimen116
 \c@pp@next@reset=\count91
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
@@ -123,19 +127,19 @@ Package: courier 2005/04/12 PSNFSS-v9.2a (WaS)
 (./Modulo Unrolling in Chapel.aux)
 \openout1 = `"Modulo Unrolling in Chapel.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 19.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -147,12 +151,12 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \scratchbox=\box26
 \nofMPsegments=\count93
 \nofMParguments=\count94
-\everyMPshowfont=\toks19
+\everyMPshowfont=\toks20
 \MPscratchCnt=\count95
 \MPscratchDim=\dimen118
 \MPnumerator=\count96
 \makeMPintoPDFobject=\count97
-\everyMPtoPDFconversion=\toks20
+\everyMPtoPDFconversion=\toks21
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -232,56 +236,65 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 24.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 24.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 24.
+(Font)              <6> on input line 25.
 (./abstract.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-) (./introduction.tex [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/upd
-map/pdftex.map}
+) (./introduction.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 19.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
-
-<./Figures/block_dist.pdf, id=8, 456.84982pt x 312.59174pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+ [2]
+<./Figures/block_dist.pdf, id=15, 456.84982pt x 312.59174pt>
 File: ./Figures/block_dist.pdf Graphic file (type pdf)
 
 <use ./Figures/block_dist.pdf>
-Package pdftex.def Info: ./Figures/block_dist.pdf used on input line 31.
+Package pdftex.def Info: ./Figures/block_dist.pdf used on input line 57.
 (pdftex.def)             Requested size: 251.26817pt x 171.92598pt.
 
-<./Figures/block_cyc_dist.pdf, id=9, 456.55768pt x 310.69295pt>
+<./Figures/block_cyc_dist.pdf, id=16, 456.55768pt x 310.69295pt>
 File: ./Figures/block_cyc_dist.pdf Graphic file (type pdf)
 
 <use ./Figures/block_cyc_dist.pdf>
-Package pdftex.def Info: ./Figures/block_cyc_dist.pdf used on input line 39.
+Package pdftex.def Info: ./Figures/block_cyc_dist.pdf used on input line 65.
 (pdftex.def)             Requested size: 251.1075pt x 170.88164pt.
 
-<./Figures/cyc_dist.pdf, id=10, 455.31497pt x 310.29929pt>
+<./Figures/cyc_dist.pdf, id=17, 455.31497pt x 310.29929pt>
 File: ./Figures/cyc_dist.pdf Graphic file (type pdf)
 
 <use ./Figures/cyc_dist.pdf>
-Package pdftex.def Info: ./Figures/cyc_dist.pdf used on input line 47.
+Package pdftex.def Info: ./Figures/cyc_dist.pdf used on input line 73.
 (pdftex.def)             Requested size: 250.424pt x 170.66513pt.
-) (./relwork.tex [2 <./Figures/block_dist.pdf> <./Figures/block_cyc_dist.pdf>]
+) (./relwork.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 9.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-))
+) [3 <./Figures/block_dist.pdf> <./Figures/block_cyc_dist.pdf> <./Figures/cyc_d
+ist.pdf>])
 (./modulo_unrolling.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
- [3 <./Figures/cyc_dist.pdf>]
 Package epstopdf Info: Source file: <./Figures/modulo_unrolling.eps>
 (epstopdf)                    date: 2014-05-20 21:23:17
 (epstopdf)                    size: 1497844 bytes
@@ -303,14 +316,17 @@ n input line 15.
 (pdftex.def)             Requested size: 259.97061pt x 237.88815pt.
 )
 (./motivation_for_aggregation.tex
-<./Figures/jacobi.pdf, id=109, 454.70589pt x 218.43578pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./Figures/modulo_unrolling-eps-converted-to.pdf>]
+<./Figures/jacobi.pdf, id=116, 454.70589pt x 218.43578pt>
 File: ./Figures/jacobi.pdf Graphic file (type pdf)
 
 <use ./Figures/jacobi.pdf>
 Package pdftex.def Info: ./Figures/jacobi.pdf used on input line 17.
 (pdftex.def)             Requested size: 250.089pt x 120.14005pt.
 
-<./Figures/aggregation.pdf, id=110, 512.41312pt x 514.94324pt>
+<./Figures/aggregation.pdf, id=117, 512.41312pt x 514.94324pt>
 File: ./Figures/aggregation.pdf Graphic file (type pdf)
 
 <use ./Figures/aggregation.pdf>
@@ -326,12 +342,8 @@ Underfull \hbox (badness 1062) in paragraph at lines 1--1
 []\OT1/ptm/b/n/14.4 Chapel Lan-guage Fea-tures Nec-es-sary
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./Figures/modulo_unrolling-eps-converted-to.pdf>] [5 <./Figures/jacobi.pdf
-> <./Figures/aggregation.pdf>]
-<./Figures/zippered_iteration.pdf, id=209, 445.7194pt x 135.27158pt>
+[5 <./Figures/jacobi.pdf>]
+<./Figures/zippered_iteration.pdf, id=137, 445.7194pt x 135.27158pt>
 File: ./Figures/zippered_iteration.pdf Graphic file (type pdf)
 
 <use ./Figures/zippered_iteration.pdf>
@@ -343,21 +355,26 @@ Overfull \hbox (1.4212pt too wide) in paragraph at lines 23--24
  [] 
  []
 
-<./Figures/affine_loop.pdf, id=210, 482.23259pt x 76.93051pt>
+<./Figures/affine_loop.pdf, id=138, 482.23259pt x 76.93051pt>
 File: ./Figures/affine_loop.pdf Graphic file (type pdf)
 
 <use ./Figures/affine_loop.pdf>
 Package pdftex.def Info: ./Figures/affine_loop.pdf used on input line 31.
 (pdftex.def)             Requested size: 265.22874pt x 42.3119pt.
 ) (./cyclic_modulo.tex)
-(./block_cyclic_modulo.tex) (./results.tex [6 <./Figures/zippered_iteration.pdf
-> <./Figures/affine_loop.pdf>]
-<./Figures/Benchmarks.pdf, id=250, 426.06029pt x 284.12349pt>
+(./block_cyclic_modulo.tex [6 <./Figures/aggregation.pdf>]) (./results.tex
+[7 <./Figures/zippered_iteration.pdf> <./Figures/affine_loop.pdf>]
+<./Figures/Benchmarks.pdf, id=254, 506.42128pt x 289.89534pt>
 File: ./Figures/Benchmarks.pdf Graphic file (type pdf)
 
 <use ./Figures/Benchmarks.pdf>
 Package pdftex.def Info: ./Figures/Benchmarks.pdf used on input line 16.
-(pdftex.def)             Requested size: 255.63814pt x 170.4754pt.
+(pdftex.def)             Requested size: 278.53255pt x 159.44292pt.
+
+Overfull \hbox (12.52005pt too wide) in paragraph at lines 16--17
+ [] 
+ []
+
 Package epstopdf Info: Source file: <./Figures/cyclic_runtime.eps>
 (epstopdf)                    date: 2014-06-03 15:17:30
 (epstopdf)                    size: 270237 bytes
@@ -370,7 +387,7 @@ ps-converted-to.pdf ./Figures/cyclic_runtime.eps>
 (epstopdf)             \includegraphics on input line 24.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/cyclic_runtime-eps-converted-to.pdf, id=251, 849.1725pt x 596.2275pt
+<./Figures/cyclic_runtime-eps-converted-to.pdf, id=255, 849.1725pt x 596.2275pt
 >
 File: ./Figures/cyclic_runtime-eps-converted-to.pdf Graphic file (type pdf)
  <use ./Figures/cyclic_runtime-eps-converted-to.pdf>
@@ -389,7 +406,7 @@ ount-eps-converted-to.pdf ./Figures/cyclic_message_count.eps>
 (epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/cyclic_message_count-eps-converted-to.pdf, id=252, 849.1725pt x 596.
+<./Figures/cyclic_message_count-eps-converted-to.pdf, id=256, 849.1725pt x 596.
 2275pt>
 File: ./Figures/cyclic_message_count-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -409,7 +426,7 @@ time-eps-converted-to.pdf ./Figures/block_cyclic_runtime.eps>
 (epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/block_cyclic_runtime-eps-converted-to.pdf, id=253, 849.1725pt x 596.
+<./Figures/block_cyclic_runtime-eps-converted-to.pdf, id=257, 849.1725pt x 596.
 2275pt>
 File: ./Figures/block_cyclic_runtime-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -429,7 +446,7 @@ sage_count-eps-converted-to.pdf ./Figures/block_cyclic_message_count.eps>
 (epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/block_cyclic_message_count-eps-converted-to.pdf, id=254, 849.1725pt 
+<./Figures/block_cyclic_message_count-eps-converted-to.pdf, id=258, 849.1725pt 
 x 596.2275pt>
 File: ./Figures/block_cyclic_message_count-eps-converted-to.pdf Graphic file (t
 ype pdf)
@@ -438,32 +455,30 @@ Package pdftex.def Info: ./Figures/block_cyclic_message_count-eps-converted-to.
 pdf used on input line 48.
 (pdftex.def)             Requested size: 254.75371pt x 178.86963pt.
 )
-(./future_work.tex) [7 <./Figures/Benchmarks.pdf> <./Figures/cyclic_runtime-eps
--converted-to.pdf> <./Figures/cyclic_message_count-eps-converted-to.pdf>]
-(./Modulo Unrolling in Chapel.bbl [8 <./Figures/block_cyclic_runtime-eps-conver
-ted-to.pdf> <./Figures/block_cyclic_message_count-eps-converted-to.pdf>])
-[9
-
-] (./Modulo Unrolling in Chapel.aux) ) 
+(./future_work.tex [8 <./Figures/Benchmarks.pdf> <./Figures/cyclic_runtime-eps-
+converted-to.pdf> <./Figures/cyclic_message_count-eps-converted-to.pdf> <./Figu
+res/block_cyclic_runtime-eps-converted-to.pdf> <./Figures/block_cyclic_message_
+count-eps-converted-to.pdf>]) (./Modulo Unrolling in Chapel.bbl) [9]
+(./Modulo Unrolling in Chapel.aux) ) 
 Here is how much of TeX's memory you used:
- 2421 strings out of 493315
- 37408 string characters out of 6137904
- 108507 words of memory out of 5000000
- 5777 multiletter control sequences out of 15000+600000
+ 2458 strings out of 493315
+ 38002 string characters out of 6137904
+ 107879 words of memory out of 5000000
+ 5809 multiletter control sequences out of 15000+600000
  18715 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,32p,1420b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts
-/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8
-a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Modulo Unrolling in Chapel.pdf" (9 pages, 704581 bytes).
+ 38i,7n,32p,1476b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/e
+nc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Modulo Unrolling in Chapel.pdf" (9 pages, 707309 bytes).
 PDF statistics:
  329 PDF objects out of 1000 (max. 8388607)
  227 compressed objects within 3 object streams

@@ -1,21 +1,24 @@
-/* A Bison parser, made by GNU Bison 2.5.  */
+/* A Bison parser, made by GNU Bison 2.3.  */
 
-/* Bison implementation for Yacc-like parsers in C
-   
-      Copyright (C) 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc.
-   
-   This program is free software: you can redistribute it and/or modify
+/* Skeleton implementation for Bison's Yacc-like parsers in C
+
+   Copyright (C) 1984, 1989, 1990, 2000, 2001, 2002, 2003, 2004, 2005, 2006
+   Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-   
+   the Free Software Foundation; either version 2, or (at your option)
+   any later version.
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor,
+   Boston, MA 02110-1301, USA.  */
 
 /* As a special exception, you may create a larger work that contains
    part or all of the Bison parser skeleton and distribute that work
@@ -26,7 +29,7 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
@@ -44,7 +47,7 @@
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "2.5"
+#define YYBISON_VERSION "2.3"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -52,69 +55,9 @@
 /* Pure parsers.  */
 #define YYPURE 0
 
-/* Push parsers.  */
-#define YYPUSH 0
-
-/* Pull parsers.  */
-#define YYPULL 1
-
 /* Using locations.  */
 #define YYLSP_NEEDED 1
 
-
-
-/* Copy the first part of user declarations.  */
-
-/* Line 268 of yacc.c  */
-#line 17 "chapel.ypp"
-
-
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <stdint.h>
-#include "lexyacc.h" // all #includes here, for make depend
-#include "driver.h"
-
-  static int query_uid = 1;
-  int captureTokens;
-  char captureString[1024];
-
- 
-#define YYLLOC_DEFAULT(Current, Rhs, N)                                 \
-  if (N) {                                                              \
-        (Current).first_line   = (Rhs)[1].first_line;                   \
-        if ((Current).first_line) yystartlineno = (Current).first_line; \
-        (Current).first_column = (Rhs)[1].first_column;                 \
-        (Current).last_line    = (Rhs)[N].last_line;                    \
-        (Current).last_column  = (Rhs)[N].last_column;                  \
-        (Current).comment = NULL;                                       \
-  } else  {                                                             \
-    (Current) = yylloc;                                                 \
-  }                                                                     \
-
-
-
-/* Line 268 of yacc.c  */
-#line 100 "chapel.tab.cpp"
-
-/* Enabling traces.  */
-#ifndef YYDEBUG
-# define YYDEBUG 1
-#endif
-
-/* Enabling verbose error messages.  */
-#ifdef YYERROR_VERBOSE
-# undef YYERROR_VERBOSE
-# define YYERROR_VERBOSE 1
-#else
-# define YYERROR_VERBOSE 0
-#endif
-
-/* Enabling the token table.  */
-#ifndef YYTOKEN_TABLE
-# define YYTOKEN_TABLE 0
-#endif
 
 
 /* Tokens.  */
@@ -251,16 +194,189 @@
      TUPLUS = 383
    };
 #endif
+/* Tokens.  */
+#define TIDENT 258
+#define IMAGLITERAL 259
+#define INTLITERAL 260
+#define REALLITERAL 261
+#define STRINGLITERAL 262
+#define EXTERNCODE 263
+#define TALIGN 264
+#define TATOMIC 265
+#define TBEGIN 266
+#define TBREAK 267
+#define TBY 268
+#define TCLASS 269
+#define TCOBEGIN 270
+#define TCOFORALL 271
+#define TCONFIG 272
+#define TCONST 273
+#define TCONTINUE 274
+#define TDELETE 275
+#define TDMAPPED 276
+#define TDO 277
+#define TDOMAIN 278
+#define TELSE 279
+#define TENUM 280
+#define TEXPORT 281
+#define TEXTERN 282
+#define TFOR 283
+#define TFORALL 284
+#define TIF 285
+#define TIN 286
+#define TINDEX 287
+#define TINLINE 288
+#define TINOUT 289
+#define TITER 290
+#define TLABEL 291
+#define TLAMBDA 292
+#define TLET 293
+#define TLOCAL 294
+#define TMINUSMINUS 295
+#define TMODULE 296
+#define TNEW 297
+#define TNIL 298
+#define TON 299
+#define TOTHERWISE 300
+#define TOUT 301
+#define TPARAM 302
+#define TPLUSPLUS 303
+#define TPRAGMA 304
+#define TPRIMITIVE 305
+#define TPROC 306
+#define TRECORD 307
+#define TREDUCE 308
+#define TREF 309
+#define TRETURN 310
+#define TSCAN 311
+#define TSELECT 312
+#define TSERIAL 313
+#define TSINGLE 314
+#define TSPARSE 315
+#define TSUBDOMAIN 316
+#define TSYNC 317
+#define TTHEN 318
+#define TTYPE 319
+#define TUNDERSCORE 320
+#define TUNION 321
+#define TUSE 322
+#define TVAR 323
+#define TWHEN 324
+#define TWHERE 325
+#define TWHILE 326
+#define TYIELD 327
+#define TZIP 328
+#define TALIAS 329
+#define TAND 330
+#define TASSIGN 331
+#define TASSIGNBAND 332
+#define TASSIGNBOR 333
+#define TASSIGNBXOR 334
+#define TASSIGNDIVIDE 335
+#define TASSIGNEXP 336
+#define TASSIGNLAND 337
+#define TASSIGNLOR 338
+#define TASSIGNMINUS 339
+#define TASSIGNMOD 340
+#define TASSIGNMULTIPLY 341
+#define TASSIGNPLUS 342
+#define TASSIGNSL 343
+#define TASSIGNSR 344
+#define TBAND 345
+#define TBNOT 346
+#define TBOR 347
+#define TBXOR 348
+#define TCOLON 349
+#define TCOMMA 350
+#define TDIVIDE 351
+#define TDOT 352
+#define TDOTDOT 353
+#define TDOTDOTDOT 354
+#define TEQUAL 355
+#define TEXP 356
+#define TGREATER 357
+#define TGREATEREQUAL 358
+#define THASH 359
+#define TLESS 360
+#define TLESSEQUAL 361
+#define TMINUS 362
+#define TMOD 363
+#define TNOT 364
+#define TNOTEQUAL 365
+#define TOR 366
+#define TPLUS 367
+#define TQUESTION 368
+#define TSEMI 369
+#define TSHIFTLEFT 370
+#define TSHIFTRIGHT 371
+#define TSTAR 372
+#define TSWAP 373
+#define TIO 374
+#define TLCBR 375
+#define TRCBR 376
+#define TLP 377
+#define TRP 378
+#define TLSBR 379
+#define TRSBR 380
+#define TNOELSE 381
+#define TUMINUS 382
+#define TUPLUS 383
 
 
+
+
+/* Copy the first part of user declarations.  */
+#line 12 "chapel.ypp"
+
+
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <stdint.h>
+#include "lexyacc.h" // all #includes here, for make depend
+#include "driver.h"
+
+  static int query_uid = 1;
+  int captureTokens;
+  char captureString[1024];
+
+ 
+#define YYLLOC_DEFAULT(Current, Rhs, N)                                 \
+  if (N) {                                                              \
+        (Current).first_line   = (Rhs)[1].first_line;                   \
+        if ((Current).first_line) yystartlineno = (Current).first_line; \
+        (Current).first_column = (Rhs)[1].first_column;                 \
+        (Current).last_line    = (Rhs)[N].last_line;                    \
+        (Current).last_column  = (Rhs)[N].last_column;                  \
+        (Current).comment = NULL;                                       \
+  } else  {                                                             \
+    (Current) = yylloc;                                                 \
+  }                                                                     \
+
+
+
+/* Enabling traces.  */
+#ifndef YYDEBUG
+# define YYDEBUG 1
+#endif
+
+/* Enabling verbose error messages.  */
+#ifdef YYERROR_VERBOSE
+# undef YYERROR_VERBOSE
+# define YYERROR_VERBOSE 1
+#else
+# define YYERROR_VERBOSE 0
+#endif
+
+/* Enabling the token table.  */
+#ifndef YYTOKEN_TABLE
+# define YYTOKEN_TABLE 0
+#endif
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
+#line 42 "chapel.ypp"
 {
-
-/* Line 293 of yacc.c  */
-#line 47 "chapel.ypp"
-
   const char* pch;
   Vec<const char*>* vpch;
   RetTag retTag;
@@ -276,15 +392,13 @@ typedef union YYSTYPE
   Flag flag;
   ProcIter procIter;
   FlagSet* flagSet;
-
-
-
-/* Line 293 of yacc.c  */
-#line 284 "chapel.tab.cpp"
-} YYSTYPE;
-# define YYSTYPE_IS_TRIVIAL 1
+}
+/* Line 193 of yacc.c.  */
+#line 398 "chapel.tab.cpp"
+	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
+# define YYSTYPE_IS_TRIVIAL 1
 #endif
 
 #if ! defined YYLTYPE && ! defined YYLTYPE_IS_DECLARED
@@ -304,8 +418,8 @@ typedef struct YYLTYPE
 /* Copy the second part of user declarations.  */
 
 
-/* Line 343 of yacc.c  */
-#line 309 "chapel.tab.cpp"
+/* Line 216 of yacc.c.  */
+#line 423 "chapel.tab.cpp"
 
 #ifdef short
 # undef short
@@ -380,14 +494,14 @@ typedef short int yytype_int16;
 #if (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 static int
-YYID (int yyi)
+YYID (int i)
 #else
 static int
-YYID (yyi)
-    int yyi;
+YYID (i)
+    int i;
 #endif
 {
-  return yyi;
+  return i;
 }
 #endif
 
@@ -408,11 +522,11 @@ YYID (yyi)
 #    define alloca _alloca
 #   else
 #    define YYSTACK_ALLOC alloca
-#    if ! defined _ALLOCA_H && ! defined EXIT_SUCCESS && (defined __STDC__ || defined __C99__FUNC__ \
+#    if ! defined _ALLOCA_H && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 #     include <stdlib.h> /* INFRINGES ON USER NAME SPACE */
-#     ifndef EXIT_SUCCESS
-#      define EXIT_SUCCESS 0
+#     ifndef _STDLIB_H
+#      define _STDLIB_H 1
 #     endif
 #    endif
 #   endif
@@ -435,24 +549,24 @@ YYID (yyi)
 #  ifndef YYSTACK_ALLOC_MAXIMUM
 #   define YYSTACK_ALLOC_MAXIMUM YYSIZE_MAXIMUM
 #  endif
-#  if (defined __cplusplus && ! defined EXIT_SUCCESS \
+#  if (defined __cplusplus && ! defined _STDLIB_H \
        && ! ((defined YYMALLOC || defined malloc) \
 	     && (defined YYFREE || defined free)))
 #   include <stdlib.h> /* INFRINGES ON USER NAME SPACE */
-#   ifndef EXIT_SUCCESS
-#    define EXIT_SUCCESS 0
+#   ifndef _STDLIB_H
+#    define _STDLIB_H 1
 #   endif
 #  endif
 #  ifndef YYMALLOC
 #   define YYMALLOC malloc
-#   if ! defined malloc && ! defined EXIT_SUCCESS && (defined __STDC__ || defined __C99__FUNC__ \
+#   if ! defined malloc && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 void *malloc (YYSIZE_T); /* INFRINGES ON USER NAME SPACE */
 #   endif
 #  endif
 #  ifndef YYFREE
 #   define YYFREE free
-#   if ! defined free && ! defined EXIT_SUCCESS && (defined __STDC__ || defined __C99__FUNC__ \
+#   if ! defined free && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 void free (void *); /* INFRINGES ON USER NAME SPACE */
 #   endif
@@ -469,9 +583,9 @@ void free (void *); /* INFRINGES ON USER NAME SPACE */
 /* A type that is properly aligned for any stack member.  */
 union yyalloc
 {
-  yytype_int16 yyss_alloc;
-  YYSTYPE yyvs_alloc;
-  YYLTYPE yyls_alloc;
+  yytype_int16 yyss;
+  YYSTYPE yyvs;
+    YYLTYPE yyls;
 };
 
 /* The size of the maximum gap between one aligned stack and the next.  */
@@ -483,27 +597,6 @@ union yyalloc
      ((N) * (sizeof (yytype_int16) + sizeof (YYSTYPE) + sizeof (YYLTYPE)) \
       + 2 * YYSTACK_GAP_MAXIMUM)
 
-# define YYCOPY_NEEDED 1
-
-/* Relocate STACK from its old location to the new one.  The
-   local variables YYSIZE and YYSTACKSIZE give the old and new number of
-   elements in the stack, and YYPTR gives the new location of the
-   stack.  Advance YYPTR to a properly aligned location for the next
-   stack.  */
-# define YYSTACK_RELOCATE(Stack_alloc, Stack)				\
-    do									\
-      {									\
-	YYSIZE_T yynewbytes;						\
-	YYCOPY (&yyptr->Stack_alloc, Stack, yysize);			\
-	Stack = &yyptr->Stack_alloc;					\
-	yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \
-	yyptr += yynewbytes / sizeof (*yyptr);				\
-      }									\
-    while (YYID (0))
-
-#endif
-
-#if defined YYCOPY_NEEDED && YYCOPY_NEEDED
 /* Copy COUNT objects from FROM to TO.  The source and destination do
    not overlap.  */
 # ifndef YYCOPY
@@ -521,7 +614,24 @@ union yyalloc
       while (YYID (0))
 #  endif
 # endif
-#endif /* !YYCOPY_NEEDED */
+
+/* Relocate STACK from its old location to the new one.  The
+   local variables YYSIZE and YYSTACKSIZE give the old and new number of
+   elements in the stack, and YYPTR gives the new location of the
+   stack.  Advance YYPTR to a properly aligned location for the next
+   stack.  */
+# define YYSTACK_RELOCATE(Stack)					\
+    do									\
+      {									\
+	YYSIZE_T yynewbytes;						\
+	YYCOPY (&yyptr->Stack, Stack, yysize);				\
+	Stack = &yyptr->Stack;						\
+	yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \
+	yyptr += yynewbytes / sizeof (*yyptr);				\
+      }									\
+    while (YYID (0))
+
+#endif
 
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  3
@@ -782,47 +892,47 @@ static const yytype_int16 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   190,   190,   195,   196,   201,   202,   207,   208,   213,
-     214,   218,   219,   220,   221,   222,   223,   224,   225,   226,
-     227,   228,   229,   230,   231,   232,   233,   234,   235,   236,
-     237,   238,   239,   240,   241,   242,   246,   247,   248,   249,
-     250,   251,   252,   253,   254,   255,   256,   257,   258,   259,
-     260,   272,   273,   277,   278,   282,   286,   287,   291,   292,
-     296,   297,   298,   299,   300,   301,   305,   320,   321,   322,
-     323,   324,   325,   326,   327,   328,   329,   330,   331,   332,
-     333,   339,   345,   355,   359,   360,   361,   362,   366,   371,
-     372,   376,   378,   383,   390,   396,   397,   401,   403,   405,
-     409,   410,   415,   416,   418,   423,   433,   440,   444,   452,
-     453,   458,   463,   457,   488,   489,   491,   493,   495,   498,
-     504,   510,   503,   540,   549,   565,   566,   567,   568,   569,
-     570,   571,   572,   573,   574,   575,   576,   577,   578,   579,
-     580,   581,   582,   583,   584,   585,   586,   587,   588,   589,
-     590,   591,   592,   593,   594,   595,   596,   597,   598,   599,
-     600,   601,   602,   606,   607,   611,   615,   616,   617,   621,
-     623,   625,   627,   632,   633,   634,   635,   636,   637,   638,
-     639,   640,   641,   645,   646,   650,   651,   655,   656,   657,
-     658,   659,   663,   664,   668,   669,   673,   675,   680,   681,
-     685,   686,   690,   691,   695,   697,   702,   707,   709,   711,
-     716,   723,   734,   735,   737,   742,   746,   750,   757,   758,
-     759,   763,   764,   772,   774,   780,   785,   787,   789,   794,
-     796,   798,   805,   806,   810,   811,   816,   817,   818,   819,
-     839,   843,   847,   855,   859,   860,   861,   865,   867,   873,
-     875,   877,   882,   883,   884,   885,   886,   887,   888,   894,
-     895,   896,   897,   901,   902,   903,   907,   908,   912,   913,
-     917,   918,   922,   923,   924,   925,   926,   930,   941,   942,
-     943,   944,   945,   946,   948,   950,   952,   954,   956,   958,
-     963,   965,   967,   969,   971,   973,   975,   977,   979,   981,
-     983,   985,   987,   994,  1000,  1006,  1012,  1021,  1026,  1034,
-    1035,  1036,  1037,  1038,  1039,  1040,  1041,  1046,  1047,  1051,
-    1052,  1056,  1057,  1062,  1067,  1075,  1076,  1077,  1078,  1079,
-    1080,  1081,  1082,  1083,  1085,  1087,  1089,  1091,  1093,  1098,
-    1099,  1100,  1101,  1112,  1113,  1117,  1118,  1119,  1123,  1124,
-    1125,  1133,  1134,  1135,  1139,  1140,  1141,  1142,  1143,  1144,
-    1145,  1152,  1153,  1157,  1158,  1159,  1160,  1161,  1162,  1163,
-    1164,  1165,  1166,  1167,  1168,  1169,  1170,  1171,  1172,  1173,
-    1174,  1175,  1176,  1177,  1178,  1179,  1183,  1184,  1185,  1186,
-    1187,  1188,  1192,  1193,  1194,  1195,  1199,  1200,  1201,  1202,
-    1207,  1208,  1209,  1210,  1211,  1212,  1213
+       0,   185,   185,   190,   191,   196,   197,   202,   203,   208,
+     209,   213,   214,   215,   216,   217,   218,   219,   220,   221,
+     222,   223,   224,   225,   226,   227,   228,   229,   230,   231,
+     232,   233,   234,   235,   236,   237,   241,   242,   243,   244,
+     245,   246,   247,   248,   249,   250,   251,   252,   253,   254,
+     255,   267,   268,   272,   273,   277,   281,   282,   286,   287,
+     291,   292,   293,   294,   295,   296,   300,   315,   316,   317,
+     318,   319,   320,   321,   322,   323,   324,   325,   326,   327,
+     328,   334,   340,   350,   354,   355,   356,   357,   361,   366,
+     367,   371,   373,   378,   385,   391,   392,   396,   398,   400,
+     404,   405,   410,   411,   413,   418,   428,   435,   439,   447,
+     448,   453,   458,   452,   483,   484,   486,   488,   490,   493,
+     499,   505,   498,   535,   544,   560,   561,   562,   563,   564,
+     565,   566,   567,   568,   569,   570,   571,   572,   573,   574,
+     575,   576,   577,   578,   579,   580,   581,   582,   583,   584,
+     585,   586,   587,   588,   589,   590,   591,   592,   593,   594,
+     595,   596,   597,   601,   602,   606,   610,   611,   612,   616,
+     618,   620,   622,   627,   628,   629,   630,   631,   632,   633,
+     634,   635,   636,   640,   641,   645,   646,   650,   651,   652,
+     653,   654,   658,   659,   663,   664,   668,   670,   675,   676,
+     680,   681,   685,   686,   690,   692,   697,   702,   704,   706,
+     711,   718,   729,   730,   732,   737,   741,   745,   752,   753,
+     754,   758,   759,   767,   769,   775,   780,   782,   784,   789,
+     791,   793,   800,   801,   805,   806,   811,   812,   813,   814,
+     834,   838,   842,   850,   854,   855,   856,   860,   862,   868,
+     870,   872,   877,   878,   879,   880,   881,   882,   883,   889,
+     890,   891,   892,   896,   897,   898,   902,   903,   907,   908,
+     912,   913,   917,   918,   919,   920,   921,   925,   936,   937,
+     938,   939,   940,   941,   943,   945,   947,   949,   951,   953,
+     958,   960,   962,   964,   966,   968,   970,   972,   974,   976,
+     978,   980,   982,   989,   995,  1001,  1007,  1016,  1021,  1029,
+    1030,  1031,  1032,  1033,  1034,  1035,  1036,  1041,  1042,  1046,
+    1047,  1051,  1052,  1057,  1062,  1070,  1071,  1072,  1073,  1074,
+    1075,  1076,  1077,  1078,  1080,  1082,  1084,  1086,  1088,  1093,
+    1094,  1095,  1096,  1107,  1108,  1112,  1113,  1114,  1118,  1119,
+    1120,  1128,  1129,  1130,  1134,  1135,  1136,  1137,  1138,  1139,
+    1140,  1147,  1148,  1152,  1153,  1154,  1155,  1156,  1157,  1158,
+    1159,  1160,  1161,  1162,  1163,  1164,  1165,  1166,  1167,  1168,
+    1169,  1170,  1171,  1172,  1173,  1174,  1178,  1179,  1180,  1181,
+    1182,  1183,  1187,  1188,  1189,  1190,  1194,  1195,  1196,  1197,
+    1202,  1203,  1204,  1205,  1206,  1207,  1208
 };
 #endif
 
@@ -858,24 +968,24 @@ static const char *const yytname[] =
   "select_stmt", "when_stmt_ls", "when_stmt", "type_select_stmt",
   "class_decl_stmt", "opt_extern", "class_tag", "opt_inherit",
   "class_level_stmt_ls", "enum_decl_stmt", "enum_ls", "enum_item",
-  "lambda_decl_expr", "$@1", "$@2", "linkage_spec", "fn_decl_stmt", "$@3",
-  "$@4", "fn_decl_stmt_inner", "fn_ident", "opt_formal_ls",
-  "req_formal_ls", "formal_ls", "formal", "opt_intent_tag",
-  "opt_this_intent_tag", "proc_or_iter", "opt_ret_tag",
-  "opt_function_body_stmt", "function_body_stmt", "query_expr",
-  "opt_query_expr", "var_arg_expr", "opt_where_part", "module_decl_stmt",
-  "module", "type_alias_decl_stmt", "type_alias_decl_stmt_inner",
-  "opt_init_type", "var_decl_stmt", "opt_config", "var_decl_stmt_inner_ls",
-  "var_decl_stmt_inner", "tuple_var_decl_component",
-  "tuple_var_decl_stmt_inner_ls", "opt_init_expr", "opt_reindex_expr",
-  "opt_type", "array_type", "opt_formal_array_elt_type",
-  "formal_array_type", "opt_formal_type", "expr_ls", "tuple_component",
-  "tuple_expr_ls", "opt_actual_ls", "actual_ls", "actual_expr",
-  "ident_expr", "type_level_expr", "for_expr", "cond_expr", "nil_expr",
-  "stmt_level_expr", "opt_ref_var_ls", "ref_var_ls", "io_expr", "new_expr",
-  "let_expr", "expr", "lhs_expr", "fun_expr", "call_expr", "dot_expr",
-  "parenthesized_expr", "literal_expr", "assoc_expr_ls", "binary_op_expr",
-  "unary_op_expr", "reduce_expr", "scan_expr", "reduce_scan_op_expr", 0
+  "lambda_decl_expr", "@1", "@2", "linkage_spec", "fn_decl_stmt", "@3",
+  "@4", "fn_decl_stmt_inner", "fn_ident", "opt_formal_ls", "req_formal_ls",
+  "formal_ls", "formal", "opt_intent_tag", "opt_this_intent_tag",
+  "proc_or_iter", "opt_ret_tag", "opt_function_body_stmt",
+  "function_body_stmt", "query_expr", "opt_query_expr", "var_arg_expr",
+  "opt_where_part", "module_decl_stmt", "module", "type_alias_decl_stmt",
+  "type_alias_decl_stmt_inner", "opt_init_type", "var_decl_stmt",
+  "opt_config", "var_decl_stmt_inner_ls", "var_decl_stmt_inner",
+  "tuple_var_decl_component", "tuple_var_decl_stmt_inner_ls",
+  "opt_init_expr", "opt_reindex_expr", "opt_type", "array_type",
+  "opt_formal_array_elt_type", "formal_array_type", "opt_formal_type",
+  "expr_ls", "tuple_component", "tuple_expr_ls", "opt_actual_ls",
+  "actual_ls", "actual_expr", "ident_expr", "type_level_expr", "for_expr",
+  "cond_expr", "nil_expr", "stmt_level_expr", "opt_ref_var_ls",
+  "ref_var_ls", "io_expr", "new_expr", "let_expr", "expr", "lhs_expr",
+  "fun_expr", "call_expr", "dot_expr", "parenthesized_expr",
+  "literal_expr", "assoc_expr_ls", "binary_op_expr", "unary_op_expr",
+  "reduce_expr", "scan_expr", "reduce_scan_op_expr", 0
 };
 #endif
 
@@ -992,8 +1102,8 @@ static const yytype_uint8 yyr2[] =
        1,     1,     1,     1,     1,     1,     1
 };
 
-/* YYDEFACT[STATE-NAME] -- Default reduction number in state STATE-NUM.
-   Performed when YYTABLE doesn't specify something else to do.  Zero
+/* YYDEFACT[STATE-NAME] -- Default rule to reduce with in state
+   STATE-NUM when YYTABLE doesn't specify something else to do.  Zero
    means the default is an error.  */
 static const yytype_uint16 yydefact[] =
 {
@@ -1194,7 +1304,8 @@ static const yytype_int16 yypgoto[] =
 
 /* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
    positive, shift that token.  If negative, reduce the rule which
-   number is the opposite.  If YYTABLE_NINF, syntax error.  */
+   number is the opposite.  If zero, do what YYDEFACT says.
+   If YYTABLE_NINF, syntax error.  */
 #define YYTABLE_NINF -360
 static const yytype_int16 yytable[] =
 {
@@ -2299,12 +2410,6 @@ static const yytype_int16 yytable[] =
      235,   236,     0,   237,   238,   239,     0,     0,   240,   241,
      242
 };
-
-#define yypact_value_is_default(yystate) \
-  ((yystate) == (-687))
-
-#define yytable_value_is_error(yytable_value) \
-  YYID (0)
 
 static const yytype_int16 yycheck[] =
 {
@@ -3505,18 +3610,9 @@ static const yytype_uint8 yystos[] =
 
 /* Like YYERROR except do call yyerror.  This remains here temporarily
    to ease the transition to the new meaning of YYERROR, for GCC.
-   Once GCC version 2 has supplanted version 1, this can go.  However,
-   YYFAIL appears to be in use.  Nevertheless, it is formally deprecated
-   in Bison 2.4.2's NEWS entry, where a plan to phase it out is
-   discussed.  */
+   Once GCC version 2 has supplanted version 1, this can go.  */
 
 #define YYFAIL		goto yyerrlab
-#if defined YYFAIL
-  /* This is here to suppress warnings from the GCC cpp's
-     -Wunused-macros.  Normally we don't worry about that warning, but
-     some users do, and we want to make it easy for users to remove
-     YYFAIL uses, which will produce warnings from Bison 2.5.  */
-#endif
 
 #define YYRECOVERING()  (!!yyerrstatus)
 
@@ -3526,6 +3622,7 @@ do								\
     {								\
       yychar = (Token);						\
       yylval = (Value);						\
+      yytoken = YYTRANSLATE (yychar);				\
       YYPOPSTACK (1);						\
       goto yybackup;						\
     }								\
@@ -3688,20 +3785,17 @@ yy_symbol_print (yyoutput, yytype, yyvaluep, yylocationp)
 #if (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 static void
-yy_stack_print (yytype_int16 *yybottom, yytype_int16 *yytop)
+yy_stack_print (yytype_int16 *bottom, yytype_int16 *top)
 #else
 static void
-yy_stack_print (yybottom, yytop)
-    yytype_int16 *yybottom;
-    yytype_int16 *yytop;
+yy_stack_print (bottom, top)
+    yytype_int16 *bottom;
+    yytype_int16 *top;
 #endif
 {
   YYFPRINTF (stderr, "Stack now");
-  for (; yybottom <= yytop; yybottom++)
-    {
-      int yybot = *yybottom;
-      YYFPRINTF (stderr, " %d", yybot);
-    }
+  for (; bottom <= top; ++bottom)
+    YYFPRINTF (stderr, " %d", *bottom);
   YYFPRINTF (stderr, "\n");
 }
 
@@ -3736,11 +3830,11 @@ yy_reduce_print (yyvsp, yylsp, yyrule)
   /* The symbols being reduced.  */
   for (yyi = 0; yyi < yynrhs; yyi++)
     {
-      YYFPRINTF (stderr, "   $%d = ", yyi + 1);
+      fprintf (stderr, "   $%d = ", yyi + 1);
       yy_symbol_print (stderr, yyrhs[yyprhs[yyrule] + yyi],
 		       &(yyvsp[(yyi + 1) - (yynrhs)])
 		       , &(yylsp[(yyi + 1) - (yynrhs)])		       );
-      YYFPRINTF (stderr, "\n");
+      fprintf (stderr, "\n");
     }
 }
 
@@ -3777,6 +3871,7 @@ int yydebug;
 # define YYMAXDEPTH 10000
 #endif
 
+
 
 #if YYERROR_VERBOSE
 
@@ -3879,142 +3974,115 @@ yytnamerr (char *yyres, const char *yystr)
 }
 # endif
 
-/* Copy into *YYMSG, which is of size *YYMSG_ALLOC, an error message
-   about the unexpected token YYTOKEN for the state stack whose top is
-   YYSSP.
-
-   Return 0 if *YYMSG was successfully written.  Return 1 if *YYMSG is
-   not large enough to hold the message.  In that case, also set
-   *YYMSG_ALLOC to the required number of bytes.  Return 2 if the
-   required number of bytes is too large to store.  */
-static int
-yysyntax_error (YYSIZE_T *yymsg_alloc, char **yymsg,
-                yytype_int16 *yyssp, int yytoken)
+/* Copy into YYRESULT an error message about the unexpected token
+   YYCHAR while in state YYSTATE.  Return the number of bytes copied,
+   including the terminating null byte.  If YYRESULT is null, do not
+   copy anything; just return the number of bytes that would be
+   copied.  As a special case, return 0 if an ordinary "syntax error"
+   message will do.  Return YYSIZE_MAXIMUM if overflow occurs during
+   size calculation.  */
+static YYSIZE_T
+yysyntax_error (char *yyresult, int yystate, int yychar)
 {
-  YYSIZE_T yysize0 = yytnamerr (0, yytname[yytoken]);
-  YYSIZE_T yysize = yysize0;
-  YYSIZE_T yysize1;
-  enum { YYERROR_VERBOSE_ARGS_MAXIMUM = 5 };
-  /* Internationalized format string. */
-  const char *yyformat = 0;
-  /* Arguments of yyformat. */
-  char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
-  /* Number of reported tokens (one for the "unexpected", one per
-     "expected"). */
-  int yycount = 0;
+  int yyn = yypact[yystate];
 
-  /* There are many possibilities here to consider:
-     - Assume YYFAIL is not used.  It's too flawed to consider.  See
-       <http://lists.gnu.org/archive/html/bison-patches/2009-12/msg00024.html>
-       for details.  YYERROR is fine as it does not invoke this
-       function.
-     - If this state is a consistent state with a default action, then
-       the only way this function was invoked is if the default action
-       is an error action.  In that case, don't check for expected
-       tokens because there are none.
-     - The only way there can be no lookahead present (in yychar) is if
-       this state is a consistent state with a default action.  Thus,
-       detecting the absence of a lookahead is sufficient to determine
-       that there is no unexpected or expected token to report.  In that
-       case, just report a simple "syntax error".
-     - Don't assume there isn't a lookahead just because this state is a
-       consistent state with a default action.  There might have been a
-       previous inconsistent state, consistent state with a non-default
-       action, or user semantic action that manipulated yychar.
-     - Of course, the expected token list depends on states to have
-       correct lookahead information, and it depends on the parser not
-       to perform extra reductions after fetching a lookahead from the
-       scanner and before detecting a syntax error.  Thus, state merging
-       (from LALR or IELR) and default reductions corrupt the expected
-       token list.  However, the list is correct for canonical LR with
-       one exception: it will still contain any token that will not be
-       accepted due to an error action in a later state.
-  */
-  if (yytoken != YYEMPTY)
+  if (! (YYPACT_NINF < yyn && yyn <= YYLAST))
+    return 0;
+  else
     {
-      int yyn = yypact[*yyssp];
-      yyarg[yycount++] = yytname[yytoken];
-      if (!yypact_value_is_default (yyn))
-        {
-          /* Start YYX at -YYN if negative to avoid negative indexes in
-             YYCHECK.  In other words, skip the first -YYN actions for
-             this state because they are default actions.  */
-          int yyxbegin = yyn < 0 ? -yyn : 0;
-          /* Stay within bounds of both yycheck and yytname.  */
-          int yychecklim = YYLAST - yyn + 1;
-          int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;
-          int yyx;
+      int yytype = YYTRANSLATE (yychar);
+      YYSIZE_T yysize0 = yytnamerr (0, yytname[yytype]);
+      YYSIZE_T yysize = yysize0;
+      YYSIZE_T yysize1;
+      int yysize_overflow = 0;
+      enum { YYERROR_VERBOSE_ARGS_MAXIMUM = 5 };
+      char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
+      int yyx;
 
-          for (yyx = yyxbegin; yyx < yyxend; ++yyx)
-            if (yycheck[yyx + yyn] == yyx && yyx != YYTERROR
-                && !yytable_value_is_error (yytable[yyx + yyn]))
-              {
-                if (yycount == YYERROR_VERBOSE_ARGS_MAXIMUM)
-                  {
-                    yycount = 1;
-                    yysize = yysize0;
-                    break;
-                  }
-                yyarg[yycount++] = yytname[yyx];
-                yysize1 = yysize + yytnamerr (0, yytname[yyx]);
-                if (! (yysize <= yysize1
-                       && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
-                  return 2;
-                yysize = yysize1;
-              }
-        }
+# if 0
+      /* This is so xgettext sees the translatable formats that are
+	 constructed on the fly.  */
+      YY_("syntax error, unexpected %s");
+      YY_("syntax error, unexpected %s, expecting %s");
+      YY_("syntax error, unexpected %s, expecting %s or %s");
+      YY_("syntax error, unexpected %s, expecting %s or %s or %s");
+      YY_("syntax error, unexpected %s, expecting %s or %s or %s or %s");
+# endif
+      char *yyfmt;
+      char const *yyf;
+      static char const yyunexpected[] = "syntax error, unexpected %s";
+      static char const yyexpecting[] = ", expecting %s";
+      static char const yyor[] = " or %s";
+      char yyformat[sizeof yyunexpected
+		    + sizeof yyexpecting - 1
+		    + ((YYERROR_VERBOSE_ARGS_MAXIMUM - 2)
+		       * (sizeof yyor - 1))];
+      char const *yyprefix = yyexpecting;
+
+      /* Start YYX at -YYN if negative to avoid negative indexes in
+	 YYCHECK.  */
+      int yyxbegin = yyn < 0 ? -yyn : 0;
+
+      /* Stay within bounds of both yycheck and yytname.  */
+      int yychecklim = YYLAST - yyn + 1;
+      int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;
+      int yycount = 1;
+
+      yyarg[0] = yytname[yytype];
+      yyfmt = yystpcpy (yyformat, yyunexpected);
+
+      for (yyx = yyxbegin; yyx < yyxend; ++yyx)
+	if (yycheck[yyx + yyn] == yyx && yyx != YYTERROR)
+	  {
+	    if (yycount == YYERROR_VERBOSE_ARGS_MAXIMUM)
+	      {
+		yycount = 1;
+		yysize = yysize0;
+		yyformat[sizeof yyunexpected - 1] = '\0';
+		break;
+	      }
+	    yyarg[yycount++] = yytname[yyx];
+	    yysize1 = yysize + yytnamerr (0, yytname[yyx]);
+	    yysize_overflow |= (yysize1 < yysize);
+	    yysize = yysize1;
+	    yyfmt = yystpcpy (yyfmt, yyprefix);
+	    yyprefix = yyor;
+	  }
+
+      yyf = YY_(yyformat);
+      yysize1 = yysize + yystrlen (yyf);
+      yysize_overflow |= (yysize1 < yysize);
+      yysize = yysize1;
+
+      if (yysize_overflow)
+	return YYSIZE_MAXIMUM;
+
+      if (yyresult)
+	{
+	  /* Avoid sprintf, as that infringes on the user's name space.
+	     Don't have undefined behavior even if the translation
+	     produced a string with the wrong number of "%s"s.  */
+	  char *yyp = yyresult;
+	  int yyi = 0;
+	  while ((*yyp = *yyf) != '\0')
+	    {
+	      if (*yyp == '%' && yyf[1] == 's' && yyi < yycount)
+		{
+		  yyp += yytnamerr (yyp, yyarg[yyi++]);
+		  yyf += 2;
+		}
+	      else
+		{
+		  yyp++;
+		  yyf++;
+		}
+	    }
+	}
+      return yysize;
     }
-
-  switch (yycount)
-    {
-# define YYCASE_(N, S)                      \
-      case N:                               \
-        yyformat = S;                       \
-      break
-      YYCASE_(0, YY_("syntax error"));
-      YYCASE_(1, YY_("syntax error, unexpected %s"));
-      YYCASE_(2, YY_("syntax error, unexpected %s, expecting %s"));
-      YYCASE_(3, YY_("syntax error, unexpected %s, expecting %s or %s"));
-      YYCASE_(4, YY_("syntax error, unexpected %s, expecting %s or %s or %s"));
-      YYCASE_(5, YY_("syntax error, unexpected %s, expecting %s or %s or %s or %s"));
-# undef YYCASE_
-    }
-
-  yysize1 = yysize + yystrlen (yyformat);
-  if (! (yysize <= yysize1 && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
-    return 2;
-  yysize = yysize1;
-
-  if (*yymsg_alloc < yysize)
-    {
-      *yymsg_alloc = 2 * yysize;
-      if (! (yysize <= *yymsg_alloc
-             && *yymsg_alloc <= YYSTACK_ALLOC_MAXIMUM))
-        *yymsg_alloc = YYSTACK_ALLOC_MAXIMUM;
-      return 1;
-    }
-
-  /* Avoid sprintf, as that infringes on the user's name space.
-     Don't have undefined behavior even if the translation
-     produced a string with the wrong number of "%s"s.  */
-  {
-    char *yyp = *yymsg;
-    int yyi = 0;
-    while ((*yyp = *yyformat) != '\0')
-      if (*yyp == '%' && yyformat[1] == 's' && yyi < yycount)
-        {
-          yyp += yytnamerr (yyp, yyarg[yyi++]);
-          yyformat += 2;
-        }
-      else
-        {
-          yyp++;
-          yyformat++;
-        }
-  }
-  return 0;
 }
 #endif /* YYERROR_VERBOSE */
+
 
 /*-----------------------------------------------.
 | Release the memory associated to this symbol.  |
@@ -4048,9 +4116,10 @@ yydestruct (yymsg, yytype, yyvaluep, yylocationp)
 	break;
     }
 }
-
+
 
 /* Prevent warnings from -Wmissing-prototypes.  */
+
 #ifdef YYPARSE_PARAM
 #if defined __STDC__ || defined __cplusplus
 int yyparse (void *YYPARSE_PARAM);
@@ -4066,17 +4135,18 @@ int yyparse ();
 #endif /* ! YYPARSE_PARAM */
 
 
-/* The lookahead symbol.  */
+
+/* The look-ahead symbol.  */
 int yychar;
 
-/* The semantic value of the lookahead symbol.  */
+/* The semantic value of the look-ahead symbol.  */
 YYSTYPE yylval;
-
-/* Location data for the lookahead symbol.  */
-YYLTYPE yylloc;
 
 /* Number of syntax errors so far.  */
 int yynerrs;
+/* Location data for the look-ahead symbol.  */
+YYLTYPE yylloc;
+
 
 
 /*----------.
@@ -4105,47 +4175,14 @@ yyparse ()
 #endif
 #endif
 {
-    int yystate;
-    /* Number of tokens to shift before error messages enabled.  */
-    int yyerrstatus;
-
-    /* The stacks and their tools:
-       `yyss': related to states.
-       `yyvs': related to semantic values.
-       `yyls': related to locations.
-
-       Refer to the stacks thru separate pointers, to allow yyoverflow
-       to reallocate them elsewhere.  */
-
-    /* The state stack.  */
-    yytype_int16 yyssa[YYINITDEPTH];
-    yytype_int16 *yyss;
-    yytype_int16 *yyssp;
-
-    /* The semantic value stack.  */
-    YYSTYPE yyvsa[YYINITDEPTH];
-    YYSTYPE *yyvs;
-    YYSTYPE *yyvsp;
-
-    /* The location stack.  */
-    YYLTYPE yylsa[YYINITDEPTH];
-    YYLTYPE *yyls;
-    YYLTYPE *yylsp;
-
-    /* The locations where the error started and ended.  */
-    YYLTYPE yyerror_range[3];
-
-    YYSIZE_T yystacksize;
-
+  
+  int yystate;
   int yyn;
   int yyresult;
-  /* Lookahead token as an internal (translated) token number.  */
-  int yytoken;
-  /* The variables used to return semantic value and location from the
-     action routines.  */
-  YYSTYPE yyval;
-  YYLTYPE yyloc;
-
+  /* Number of tokens to shift before error messages enabled.  */
+  int yyerrstatus;
+  /* Look-ahead token as an internal (translated) token number.  */
+  int yytoken = 0;
 #if YYERROR_VERBOSE
   /* Buffer for error messages, and its allocated size.  */
   char yymsgbuf[128];
@@ -4153,37 +4190,63 @@ yyparse ()
   YYSIZE_T yymsg_alloc = sizeof yymsgbuf;
 #endif
 
+  /* Three stacks and their tools:
+     `yyss': related to states,
+     `yyvs': related to semantic values,
+     `yyls': related to locations.
+
+     Refer to the stacks thru separate pointers, to allow yyoverflow
+     to reallocate them elsewhere.  */
+
+  /* The state stack.  */
+  yytype_int16 yyssa[YYINITDEPTH];
+  yytype_int16 *yyss = yyssa;
+  yytype_int16 *yyssp;
+
+  /* The semantic value stack.  */
+  YYSTYPE yyvsa[YYINITDEPTH];
+  YYSTYPE *yyvs = yyvsa;
+  YYSTYPE *yyvsp;
+
+  /* The location stack.  */
+  YYLTYPE yylsa[YYINITDEPTH];
+  YYLTYPE *yyls = yylsa;
+  YYLTYPE *yylsp;
+  /* The locations where the error started and ended.  */
+  YYLTYPE yyerror_range[2];
+
 #define YYPOPSTACK(N)   (yyvsp -= (N), yyssp -= (N), yylsp -= (N))
+
+  YYSIZE_T yystacksize = YYINITDEPTH;
+
+  /* The variables used to return semantic value and location from the
+     action routines.  */
+  YYSTYPE yyval;
+  YYLTYPE yyloc;
 
   /* The number of symbols on the RHS of the reduced rule.
      Keep to zero when no symbol should be popped.  */
   int yylen = 0;
-
-  yytoken = 0;
-  yyss = yyssa;
-  yyvs = yyvsa;
-  yyls = yylsa;
-  yystacksize = YYINITDEPTH;
 
   YYDPRINTF ((stderr, "Starting parse\n"));
 
   yystate = 0;
   yyerrstatus = 0;
   yynerrs = 0;
-  yychar = YYEMPTY; /* Cause a token to be read.  */
+  yychar = YYEMPTY;		/* Cause a token to be read.  */
 
   /* Initialize stack pointers.
      Waste one element of value and location stack
      so that they stay on the same level as the state stack.
      The wasted elements are never initialized.  */
+
   yyssp = yyss;
   yyvsp = yyvs;
   yylsp = yyls;
-
 #if defined YYLTYPE_IS_TRIVIAL && YYLTYPE_IS_TRIVIAL
   /* Initialize the default location before parsing starts.  */
   yylloc.first_line   = yylloc.last_line   = 1;
-  yylloc.first_column = yylloc.last_column = 1;
+  yylloc.first_column = yylloc.last_column = 0;
 #endif
 
   goto yysetstate;
@@ -4222,7 +4285,6 @@ yyparse ()
 		    &yyvs1, yysize * sizeof (*yyvsp),
 		    &yyls1, yysize * sizeof (*yylsp),
 		    &yystacksize);
-
 	yyls = yyls1;
 	yyss = yyss1;
 	yyvs = yyvs1;
@@ -4244,9 +4306,9 @@ yyparse ()
 	  (union yyalloc *) YYSTACK_ALLOC (YYSTACK_BYTES (yystacksize));
 	if (! yyptr)
 	  goto yyexhaustedlab;
-	YYSTACK_RELOCATE (yyss_alloc, yyss);
-	YYSTACK_RELOCATE (yyvs_alloc, yyvs);
-	YYSTACK_RELOCATE (yyls_alloc, yyls);
+	YYSTACK_RELOCATE (yyss);
+	YYSTACK_RELOCATE (yyvs);
+	YYSTACK_RELOCATE (yyls);
 #  undef YYSTACK_RELOCATE
 	if (yyss1 != yyssa)
 	  YYSTACK_FREE (yyss1);
@@ -4267,9 +4329,6 @@ yyparse ()
 
   YYDPRINTF ((stderr, "Entering state %d\n", yystate));
 
-  if (yystate == YYFINAL)
-    YYACCEPT;
-
   goto yybackup;
 
 /*-----------.
@@ -4278,16 +4337,16 @@ yyparse ()
 yybackup:
 
   /* Do appropriate processing given the current state.  Read a
-     lookahead token if we need one and don't already have one.  */
+     look-ahead token if we need one and don't already have one.  */
 
-  /* First try to decide what to do without reference to lookahead token.  */
+  /* First try to decide what to do without reference to look-ahead token.  */
   yyn = yypact[yystate];
-  if (yypact_value_is_default (yyn))
+  if (yyn == YYPACT_NINF)
     goto yydefault;
 
-  /* Not known => get a lookahead token if don't already have one.  */
+  /* Not known => get a look-ahead token if don't already have one.  */
 
-  /* YYCHAR is either YYEMPTY or YYEOF or a valid lookahead symbol.  */
+  /* YYCHAR is either YYEMPTY or YYEOF or a valid look-ahead symbol.  */
   if (yychar == YYEMPTY)
     {
       YYDPRINTF ((stderr, "Reading a token: "));
@@ -4313,22 +4372,26 @@ yybackup:
   yyn = yytable[yyn];
   if (yyn <= 0)
     {
-      if (yytable_value_is_error (yyn))
-        goto yyerrlab;
+      if (yyn == 0 || yyn == YYTABLE_NINF)
+	goto yyerrlab;
       yyn = -yyn;
       goto yyreduce;
     }
+
+  if (yyn == YYFINAL)
+    YYACCEPT;
 
   /* Count tokens shifted since error; after three, turn off error
      status.  */
   if (yyerrstatus)
     yyerrstatus--;
 
-  /* Shift the lookahead token.  */
+  /* Shift the look-ahead token.  */
   YY_SYMBOL_PRINT ("Shifting", yytoken, &yylval, &yylloc);
 
-  /* Discard the shifted token.  */
-  yychar = YYEMPTY;
+  /* Discard the shifted token unless it is eof.  */
+  if (yychar != YYEOF)
+    yychar = YYEMPTY;
 
   yystate = yyn;
   *++yyvsp = yylval;
@@ -4369,338 +4432,242 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-
-/* Line 1806 of yacc.c  */
-#line 190 "chapel.ypp"
-    { (void)(yylsp[(1) - (1)]).first_line; yyblock = (yyval.pblockstmt); }
+#line 185 "chapel.ypp"
+    { (void)(yylsp[(1) - (1)]).first_line; yyblock = (yyval.pblockstmt); ;}
     break;
 
   case 3:
-
-/* Line 1806 of yacc.c  */
-#line 195 "chapel.ypp"
-    { (yyval.pblockstmt) = new BlockStmt(); resetTempID(); }
+#line 190 "chapel.ypp"
+    { (yyval.pblockstmt) = new BlockStmt(); resetTempID(); ;}
     break;
 
   case 4:
-
-/* Line 1806 of yacc.c  */
-#line 196 "chapel.ypp"
-    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pblockstmt)); resetTempID(); }
+#line 191 "chapel.ypp"
+    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pblockstmt)); resetTempID(); ;}
     break;
 
   case 6:
-
-/* Line 1806 of yacc.c  */
-#line 202 "chapel.ypp"
-    { (yyval.pblockstmt) = buildPragmaStmt( (yyvsp[(1) - (2)].vpch), (yyvsp[(2) - (2)].pblockstmt) ); }
+#line 197 "chapel.ypp"
+    { (yyval.pblockstmt) = buildPragmaStmt( (yyvsp[(1) - (2)].vpch), (yyvsp[(2) - (2)].pblockstmt) ); ;}
     break;
 
   case 7:
-
-/* Line 1806 of yacc.c  */
-#line 207 "chapel.ypp"
-    { (yyval.pblockstmt) = new BlockStmt(); (yyval.pblockstmt)->insertAtTail((yyvsp[(1) - (1)].pblockstmt)); }
+#line 202 "chapel.ypp"
+    { (yyval.pblockstmt) = new BlockStmt(); (yyval.pblockstmt)->insertAtTail((yyvsp[(1) - (1)].pblockstmt)); ;}
     break;
 
   case 8:
-
-/* Line 1806 of yacc.c  */
-#line 208 "chapel.ypp"
-    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pblockstmt)); }
+#line 203 "chapel.ypp"
+    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pblockstmt)); ;}
     break;
 
   case 9:
-
-/* Line 1806 of yacc.c  */
-#line 213 "chapel.ypp"
-    { (yyval.vpch) = new Vec<const char*>(); (yyval.vpch)->add(astr((yyvsp[(2) - (2)].pch))); }
+#line 208 "chapel.ypp"
+    { (yyval.vpch) = new Vec<const char*>(); (yyval.vpch)->add(astr((yyvsp[(2) - (2)].pch))); ;}
     break;
 
   case 10:
-
-/* Line 1806 of yacc.c  */
-#line 214 "chapel.ypp"
-    { (yyvsp[(1) - (3)].vpch)->add(astr((yyvsp[(3) - (3)].pch))); }
+#line 209 "chapel.ypp"
+    { (yyvsp[(1) - (3)].vpch)->add(astr((yyvsp[(3) - (3)].pch))); ;}
     break;
 
   case 21:
-
-/* Line 1806 of yacc.c  */
-#line 228 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt((yyvsp[(1) - (2)].pexpr)); }
+#line 223 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt((yyvsp[(1) - (2)].pexpr)); ;}
     break;
 
   case 22:
-
-/* Line 1806 of yacc.c  */
-#line 229 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAtomicStmt((yyvsp[(2) - (2)].pblockstmt)); }
+#line 224 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAtomicStmt((yyvsp[(2) - (2)].pblockstmt)); ;}
     break;
 
   case 23:
-
-/* Line 1806 of yacc.c  */
-#line 230 "chapel.ypp"
-    { (yyval.pblockstmt) = buildBeginStmt((yyvsp[(2) - (3)].pcallexpr), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 225 "chapel.ypp"
+    { (yyval.pblockstmt) = buildBeginStmt((yyvsp[(2) - (3)].pcallexpr), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 24:
-
-/* Line 1806 of yacc.c  */
-#line 231 "chapel.ypp"
-    { (yyval.pblockstmt) = buildGotoStmt(GOTO_BREAK, (yyvsp[(2) - (3)].pch)); }
+#line 226 "chapel.ypp"
+    { (yyval.pblockstmt) = buildGotoStmt(GOTO_BREAK, (yyvsp[(2) - (3)].pch)); ;}
     break;
 
   case 25:
-
-/* Line 1806 of yacc.c  */
-#line 232 "chapel.ypp"
-    { (yyval.pblockstmt) = buildCobeginStmt((yyvsp[(2) - (3)].pcallexpr), (yyvsp[(3) - (3)].pblockstmt));  }
+#line 227 "chapel.ypp"
+    { (yyval.pblockstmt) = buildCobeginStmt((yyvsp[(2) - (3)].pcallexpr), (yyvsp[(3) - (3)].pblockstmt));  ;}
     break;
 
   case 26:
-
-/* Line 1806 of yacc.c  */
-#line 233 "chapel.ypp"
-    { (yyval.pblockstmt) = buildGotoStmt(GOTO_CONTINUE, (yyvsp[(2) - (3)].pch)); }
+#line 228 "chapel.ypp"
+    { (yyval.pblockstmt) = buildGotoStmt(GOTO_CONTINUE, (yyvsp[(2) - (3)].pch)); ;}
     break;
 
   case 27:
-
-/* Line 1806 of yacc.c  */
-#line 234 "chapel.ypp"
-    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_DELETE, (yyvsp[(2) - (3)].pexpr)); }
+#line 229 "chapel.ypp"
+    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_DELETE, (yyvsp[(2) - (3)].pexpr)); ;}
     break;
 
   case 28:
-
-/* Line 1806 of yacc.c  */
-#line 235 "chapel.ypp"
-    { (yyval.pblockstmt) = buildLabelStmt((yyvsp[(2) - (3)].pch), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 230 "chapel.ypp"
+    { (yyval.pblockstmt) = buildLabelStmt((yyvsp[(2) - (3)].pch), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 29:
-
-/* Line 1806 of yacc.c  */
-#line 236 "chapel.ypp"
-    { (yyval.pblockstmt) = buildLocalStmt((yyvsp[(2) - (2)].pblockstmt)); }
+#line 231 "chapel.ypp"
+    { (yyval.pblockstmt) = buildLocalStmt((yyvsp[(2) - (2)].pblockstmt)); ;}
     break;
 
   case 30:
-
-/* Line 1806 of yacc.c  */
-#line 237 "chapel.ypp"
-    { (yyval.pblockstmt) = buildOnStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 232 "chapel.ypp"
+    { (yyval.pblockstmt) = buildOnStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 31:
-
-/* Line 1806 of yacc.c  */
-#line 238 "chapel.ypp"
-    { (yyval.pblockstmt) = buildSerialStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 233 "chapel.ypp"
+    { (yyval.pblockstmt) = buildSerialStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 32:
-
-/* Line 1806 of yacc.c  */
-#line 239 "chapel.ypp"
-    { (yyval.pblockstmt) = buildSyncStmt((yyvsp[(2) - (2)].pblockstmt)); }
+#line 234 "chapel.ypp"
+    { (yyval.pblockstmt) = buildSyncStmt((yyvsp[(2) - (2)].pblockstmt)); ;}
     break;
 
   case 33:
-
-/* Line 1806 of yacc.c  */
-#line 240 "chapel.ypp"
-    { (yyval.pblockstmt) = buildUseStmt((yyvsp[(2) - (3)].pcallexpr)); }
+#line 235 "chapel.ypp"
+    { (yyval.pblockstmt) = buildUseStmt((yyvsp[(2) - (3)].pcallexpr)); ;}
     break;
 
   case 34:
-
-/* Line 1806 of yacc.c  */
-#line 241 "chapel.ypp"
-    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_YIELD, (yyvsp[(2) - (3)].pexpr)); }
+#line 236 "chapel.ypp"
+    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_YIELD, (yyvsp[(2) - (3)].pexpr)); ;}
     break;
 
   case 35:
-
-/* Line 1806 of yacc.c  */
-#line 242 "chapel.ypp"
-    { printf("syntax error"); clean_exit(1); }
+#line 237 "chapel.ypp"
+    { printf("syntax error"); clean_exit(1); ;}
     break;
 
   case 36:
-
-/* Line 1806 of yacc.c  */
-#line 246 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "="); }
+#line 241 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "="); ;}
     break;
 
   case 37:
-
-/* Line 1806 of yacc.c  */
-#line 247 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "+="); }
+#line 242 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "+="); ;}
     break;
 
   case 38:
-
-/* Line 1806 of yacc.c  */
-#line 248 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "-="); }
+#line 243 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "-="); ;}
     break;
 
   case 39:
-
-/* Line 1806 of yacc.c  */
-#line 249 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "*="); }
+#line 244 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "*="); ;}
     break;
 
   case 40:
-
-/* Line 1806 of yacc.c  */
-#line 250 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "/="); }
+#line 245 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "/="); ;}
     break;
 
   case 41:
-
-/* Line 1806 of yacc.c  */
-#line 251 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "%="); }
+#line 246 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "%="); ;}
     break;
 
   case 42:
-
-/* Line 1806 of yacc.c  */
-#line 252 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "**="); }
+#line 247 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "**="); ;}
     break;
 
   case 43:
-
-/* Line 1806 of yacc.c  */
-#line 253 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "&="); }
+#line 248 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "&="); ;}
     break;
 
   case 44:
-
-/* Line 1806 of yacc.c  */
-#line 254 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "|="); }
+#line 249 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "|="); ;}
     break;
 
   case 45:
-
-/* Line 1806 of yacc.c  */
-#line 255 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "^="); }
+#line 250 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "^="); ;}
     break;
 
   case 46:
-
-/* Line 1806 of yacc.c  */
-#line 256 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), ">>="); }
+#line 251 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), ">>="); ;}
     break;
 
   case 47:
-
-/* Line 1806 of yacc.c  */
-#line 257 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "<<="); }
+#line 252 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "<<="); ;}
     break;
 
   case 48:
-
-/* Line 1806 of yacc.c  */
-#line 258 "chapel.ypp"
-    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "<=>"); }
+#line 253 "chapel.ypp"
+    { (yyval.pblockstmt) = buildAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr), "<=>"); ;}
     break;
 
   case 49:
-
-/* Line 1806 of yacc.c  */
-#line 259 "chapel.ypp"
-    { (yyval.pblockstmt) = buildLAndAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr)); }
+#line 254 "chapel.ypp"
+    { (yyval.pblockstmt) = buildLAndAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr)); ;}
     break;
 
   case 50:
-
-/* Line 1806 of yacc.c  */
-#line 260 "chapel.ypp"
-    { (yyval.pblockstmt) = buildLOrAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr)); }
+#line 255 "chapel.ypp"
+    { (yyval.pblockstmt) = buildLOrAssignment((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pexpr)); ;}
     break;
 
   case 51:
-
-/* Line 1806 of yacc.c  */
-#line 272 "chapel.ypp"
-    { (yyval.pblockstmt) = new BlockStmt(); }
+#line 267 "chapel.ypp"
+    { (yyval.pblockstmt) = new BlockStmt(); ;}
     break;
 
   case 52:
-
-/* Line 1806 of yacc.c  */
-#line 273 "chapel.ypp"
-    { (yyval.pblockstmt) = (yyvsp[(2) - (3)].pblockstmt); }
+#line 268 "chapel.ypp"
+    { (yyval.pblockstmt) = (yyvsp[(2) - (3)].pblockstmt); ;}
     break;
 
   case 53:
-
-/* Line 1806 of yacc.c  */
-#line 277 "chapel.ypp"
-    { (yyval.pch) = NULL; }
+#line 272 "chapel.ypp"
+    { (yyval.pch) = NULL; ;}
     break;
 
   case 55:
-
-/* Line 1806 of yacc.c  */
-#line 282 "chapel.ypp"
-    { (yyval.pch) = astr(yytext); }
+#line 277 "chapel.ypp"
+    { (yyval.pch) = astr(yytext); ;}
     break;
 
   case 56:
-
-/* Line 1806 of yacc.c  */
-#line 286 "chapel.ypp"
-    { (yyval.pblockstmt) = (yyvsp[(2) - (2)].pblockstmt); }
+#line 281 "chapel.ypp"
+    { (yyval.pblockstmt) = (yyvsp[(2) - (2)].pblockstmt); ;}
     break;
 
   case 57:
-
-/* Line 1806 of yacc.c  */
-#line 287 "chapel.ypp"
-    { (yyval.pblockstmt) = (yyvsp[(1) - (1)].pblockstmt); }
+#line 282 "chapel.ypp"
+    { (yyval.pblockstmt) = (yyvsp[(1) - (1)].pblockstmt); ;}
     break;
 
   case 58:
-
-/* Line 1806 of yacc.c  */
-#line 291 "chapel.ypp"
-    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_RETURN, new SymExpr(gVoid)); }
+#line 286 "chapel.ypp"
+    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_RETURN, new SymExpr(gVoid)); ;}
     break;
 
   case 59:
-
-/* Line 1806 of yacc.c  */
-#line 292 "chapel.ypp"
-    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_RETURN, (yyvsp[(2) - (3)].pexpr)); }
+#line 287 "chapel.ypp"
+    { (yyval.pblockstmt) = buildPrimitiveStmt(PRIM_RETURN, (yyvsp[(2) - (3)].pexpr)); ;}
     break;
 
   case 60:
-
-/* Line 1806 of yacc.c  */
-#line 296 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt(new BlockStmt()); }
+#line 291 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt(new BlockStmt()); ;}
     break;
 
   case 66:
-
-/* Line 1806 of yacc.c  */
-#line 306 "chapel.ypp"
+#line 301 "chapel.ypp"
     {
 #ifdef HAVE_LLVM
       if (externC) {
@@ -4711,372 +4678,278 @@ yyreduce:
 #else
       USR_FATAL(new BlockStmt(), "Chapel must be built with llvm in order to use the extern block syntax");
 #endif
-    }
+    ;}
     break;
 
   case 67:
-
-/* Line 1806 of yacc.c  */
-#line 320 "chapel.ypp"
-    { (yyval.pblockstmt) = buildDoWhileLoopStmt((yyvsp[(4) - (5)].pexpr), (yyvsp[(2) - (5)].pblockstmt)); }
+#line 315 "chapel.ypp"
+    { (yyval.pblockstmt) = buildDoWhileLoopStmt((yyvsp[(4) - (5)].pexpr), (yyvsp[(2) - (5)].pblockstmt)); ;}
     break;
 
   case 68:
-
-/* Line 1806 of yacc.c  */
-#line 321 "chapel.ypp"
-    { (yyval.pblockstmt) = buildWhileDoLoopStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 316 "chapel.ypp"
+    { (yyval.pblockstmt) = buildWhileDoLoopStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 69:
-
-/* Line 1806 of yacc.c  */
-#line 322 "chapel.ypp"
-    { (yyval.pblockstmt) = buildCoforallLoopStmt((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(5) - (6)].pcallexpr), (yyvsp[(6) - (6)].pblockstmt)); }
+#line 317 "chapel.ypp"
+    { (yyval.pblockstmt) = buildCoforallLoopStmt((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(5) - (6)].pcallexpr), (yyvsp[(6) - (6)].pblockstmt)); ;}
     break;
 
   case 70:
-
-/* Line 1806 of yacc.c  */
-#line 323 "chapel.ypp"
-    { (yyval.pblockstmt) = buildCoforallLoopStmt((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(5) - (6)].pcallexpr), (yyvsp[(6) - (6)].pblockstmt), true); }
+#line 318 "chapel.ypp"
+    { (yyval.pblockstmt) = buildCoforallLoopStmt((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(5) - (6)].pcallexpr), (yyvsp[(6) - (6)].pblockstmt), true); ;}
     break;
 
   case 71:
-
-/* Line 1806 of yacc.c  */
-#line 324 "chapel.ypp"
-    { (yyval.pblockstmt) = buildCoforallLoopStmt(NULL, (yyvsp[(2) - (4)].pexpr), (yyvsp[(3) - (4)].pcallexpr), (yyvsp[(4) - (4)].pblockstmt)); }
+#line 319 "chapel.ypp"
+    { (yyval.pblockstmt) = buildCoforallLoopStmt(NULL, (yyvsp[(2) - (4)].pexpr), (yyvsp[(3) - (4)].pcallexpr), (yyvsp[(4) - (4)].pblockstmt)); ;}
     break;
 
   case 72:
-
-/* Line 1806 of yacc.c  */
-#line 325 "chapel.ypp"
-    { (yyval.pblockstmt) = buildForLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt)); }
+#line 320 "chapel.ypp"
+    { (yyval.pblockstmt) = buildForLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt)); ;}
     break;
 
   case 73:
-
-/* Line 1806 of yacc.c  */
-#line 326 "chapel.ypp"
-    { (yyval.pblockstmt) = buildForLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt), false, true); }
+#line 321 "chapel.ypp"
+    { (yyval.pblockstmt) = buildForLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt), false, true); ;}
     break;
 
   case 74:
-
-/* Line 1806 of yacc.c  */
-#line 327 "chapel.ypp"
-    { (yyval.pblockstmt) = buildForLoopStmt(NULL, (yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 322 "chapel.ypp"
+    { (yyval.pblockstmt) = buildForLoopStmt(NULL, (yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 75:
-
-/* Line 1806 of yacc.c  */
-#line 328 "chapel.ypp"
-    { (yyval.pblockstmt) = buildForLoopStmt(NULL, (yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt), false, true); }
+#line 323 "chapel.ypp"
+    { (yyval.pblockstmt) = buildForLoopStmt(NULL, (yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt), false, true); ;}
     break;
 
   case 76:
-
-/* Line 1806 of yacc.c  */
-#line 329 "chapel.ypp"
-    { (yyval.pblockstmt) = buildParamForLoopStmt((yyvsp[(3) - (6)].pch), (yyvsp[(5) - (6)].pexpr), (yyvsp[(6) - (6)].pblockstmt)); }
+#line 324 "chapel.ypp"
+    { (yyval.pblockstmt) = buildParamForLoopStmt((yyvsp[(3) - (6)].pch), (yyvsp[(5) - (6)].pexpr), (yyvsp[(6) - (6)].pblockstmt)); ;}
     break;
 
   case 77:
-
-/* Line 1806 of yacc.c  */
-#line 330 "chapel.ypp"
-    { (yyval.pblockstmt) = buildForallLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt)); }
+#line 325 "chapel.ypp"
+    { (yyval.pblockstmt) = buildForallLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt)); ;}
     break;
 
   case 78:
-
-/* Line 1806 of yacc.c  */
-#line 331 "chapel.ypp"
-    { (yyval.pblockstmt) = buildForallLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt), true); }
+#line 326 "chapel.ypp"
+    { (yyval.pblockstmt) = buildForallLoopStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pblockstmt), true); ;}
     break;
 
   case 79:
-
-/* Line 1806 of yacc.c  */
-#line 332 "chapel.ypp"
-    { (yyval.pblockstmt) = buildForallLoopStmt(NULL, (yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 327 "chapel.ypp"
+    { (yyval.pblockstmt) = buildForallLoopStmt(NULL, (yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 80:
-
-/* Line 1806 of yacc.c  */
-#line 334 "chapel.ypp"
+#line 329 "chapel.ypp"
     {
       if ((yyvsp[(2) - (6)].pcallexpr)->argList.length != 1)
         USR_FATAL((yyvsp[(4) - (6)].pexpr), "invalid index expression");
       (yyval.pblockstmt) = buildForallLoopStmt((yyvsp[(2) - (6)].pcallexpr)->get(1)->remove(), (yyvsp[(4) - (6)].pexpr), new BlockStmt((yyvsp[(6) - (6)].pblockstmt)));
-    }
+    ;}
     break;
 
   case 81:
-
-/* Line 1806 of yacc.c  */
-#line 340 "chapel.ypp"
+#line 335 "chapel.ypp"
     {
       if ((yyvsp[(2) - (6)].pcallexpr)->argList.length != 1)
         USR_FATAL((yyvsp[(4) - (6)].pexpr), "invalid index expression");
       (yyval.pblockstmt) = buildForallLoopStmt((yyvsp[(2) - (6)].pcallexpr)->get(1)->remove(), (yyvsp[(4) - (6)].pexpr), new BlockStmt((yyvsp[(6) - (6)].pblockstmt)), true);
-    }
+    ;}
     break;
 
   case 82:
-
-/* Line 1806 of yacc.c  */
-#line 346 "chapel.ypp"
+#line 341 "chapel.ypp"
     {
       if ((yyvsp[(2) - (4)].pcallexpr)->argList.length > 1)
         (yyval.pblockstmt) = buildForallLoopStmt(NULL, new CallExpr("chpl__buildDomainExpr", (yyvsp[(2) - (4)].pcallexpr)), new BlockStmt((yyvsp[(4) - (4)].pblockstmt)));
       else
         (yyval.pblockstmt) = buildForallLoopStmt(NULL, (yyvsp[(2) - (4)].pcallexpr)->get(1)->remove(), new BlockStmt((yyvsp[(4) - (4)].pblockstmt)));
-    }
+    ;}
     break;
 
   case 83:
-
-/* Line 1806 of yacc.c  */
-#line 355 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("_build_tuple", (yyvsp[(3) - (4)].pcallexpr)); }
+#line 350 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("_build_tuple", (yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 84:
-
-/* Line 1806 of yacc.c  */
-#line 359 "chapel.ypp"
-    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (4)].pexpr), (yyvsp[(4) - (4)].pblockstmt)); }
+#line 354 "chapel.ypp"
+    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (4)].pexpr), (yyvsp[(4) - (4)].pblockstmt)); ;}
     break;
 
   case 85:
-
-/* Line 1806 of yacc.c  */
-#line 360 "chapel.ypp"
-    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 355 "chapel.ypp"
+    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (3)].pexpr), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 86:
-
-/* Line 1806 of yacc.c  */
-#line 361 "chapel.ypp"
-    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pblockstmt), (yyvsp[(6) - (6)].pblockstmt)); }
+#line 356 "chapel.ypp"
+    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pblockstmt), (yyvsp[(6) - (6)].pblockstmt)); ;}
     break;
 
   case 87:
-
-/* Line 1806 of yacc.c  */
-#line 362 "chapel.ypp"
-    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(3) - (5)].pblockstmt), (yyvsp[(5) - (5)].pblockstmt)); }
+#line 357 "chapel.ypp"
+    { (yyval.pblockstmt) = buildIfStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(3) - (5)].pblockstmt), (yyvsp[(5) - (5)].pblockstmt)); ;}
     break;
 
   case 88:
-
-/* Line 1806 of yacc.c  */
-#line 367 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt(buildSelectStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pblockstmt))); }
+#line 362 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt(buildSelectStmt((yyvsp[(2) - (5)].pexpr), (yyvsp[(4) - (5)].pblockstmt))); ;}
     break;
 
   case 89:
-
-/* Line 1806 of yacc.c  */
-#line 371 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt(); }
+#line 366 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt(); ;}
     break;
 
   case 90:
-
-/* Line 1806 of yacc.c  */
-#line 372 "chapel.ypp"
-    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pexpr)); }
+#line 367 "chapel.ypp"
+    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 91:
-
-/* Line 1806 of yacc.c  */
-#line 377 "chapel.ypp"
-    { (yyval.pexpr) = new CondStmt(new CallExpr(PRIM_WHEN, (yyvsp[(2) - (3)].pcallexpr)), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 372 "chapel.ypp"
+    { (yyval.pexpr) = new CondStmt(new CallExpr(PRIM_WHEN, (yyvsp[(2) - (3)].pcallexpr)), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 92:
-
-/* Line 1806 of yacc.c  */
-#line 379 "chapel.ypp"
-    { (yyval.pexpr) = new CondStmt(new CallExpr(PRIM_WHEN), (yyvsp[(2) - (2)].pblockstmt)); }
+#line 374 "chapel.ypp"
+    { (yyval.pexpr) = new CondStmt(new CallExpr(PRIM_WHEN), (yyvsp[(2) - (2)].pblockstmt)); ;}
     break;
 
   case 93:
-
-/* Line 1806 of yacc.c  */
-#line 384 "chapel.ypp"
-    { (yyval.pblockstmt) = buildTypeSelectStmt((yyvsp[(3) - (6)].pcallexpr), (yyvsp[(5) - (6)].pblockstmt)); }
+#line 379 "chapel.ypp"
+    { (yyval.pblockstmt) = buildTypeSelectStmt((yyvsp[(3) - (6)].pcallexpr), (yyvsp[(5) - (6)].pblockstmt)); ;}
     break;
 
   case 94:
-
-/* Line 1806 of yacc.c  */
-#line 391 "chapel.ypp"
+#line 386 "chapel.ypp"
     { (yyval.pblockstmt) = buildChapelStmt(buildClassDefExpr((yyvsp[(3) - (7)].pch), (yyvsp[(2) - (7)].ptype), (yyvsp[(4) - (7)].pcallexpr), (yyvsp[(6) - (7)].pblockstmt), (yyvsp[(1) - (7)].flag), (yylsp[(1) - (7)]).comment));
-      yylloc.comment = NULL; }
+      yylloc.comment = NULL; ;}
     break;
 
   case 95:
-
-/* Line 1806 of yacc.c  */
-#line 396 "chapel.ypp"
-    { (yyval.flag) = FLAG_UNKNOWN; }
+#line 391 "chapel.ypp"
+    { (yyval.flag) = FLAG_UNKNOWN; ;}
     break;
 
   case 96:
-
-/* Line 1806 of yacc.c  */
-#line 397 "chapel.ypp"
-    { (yyval.flag) = FLAG_EXTERN; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+#line 392 "chapel.ypp"
+    { (yyval.flag) = FLAG_EXTERN; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 97:
-
-/* Line 1806 of yacc.c  */
-#line 401 "chapel.ypp"
+#line 396 "chapel.ypp"
     { (yyval.ptype) = new ClassType(CLASS_CLASS); (yyloc).comment = yylloc.comment; 
-             yylloc.comment = NULL;}
+             yylloc.comment = NULL;;}
     break;
 
   case 98:
-
-/* Line 1806 of yacc.c  */
-#line 403 "chapel.ypp"
+#line 398 "chapel.ypp"
     { (yyval.ptype) = new ClassType(CLASS_RECORD); (yyloc).comment = yylloc.comment; 
-             yylloc.comment = NULL;}
+             yylloc.comment = NULL;;}
     break;
 
   case 99:
-
-/* Line 1806 of yacc.c  */
-#line 405 "chapel.ypp"
-    { (yyval.ptype) = new ClassType(CLASS_UNION); }
+#line 400 "chapel.ypp"
+    { (yyval.ptype) = new ClassType(CLASS_UNION); ;}
     break;
 
   case 100:
-
-/* Line 1806 of yacc.c  */
-#line 409 "chapel.ypp"
-    { (yyval.pcallexpr) = NULL; }
+#line 404 "chapel.ypp"
+    { (yyval.pcallexpr) = NULL; ;}
     break;
 
   case 101:
-
-/* Line 1806 of yacc.c  */
-#line 410 "chapel.ypp"
-    { (yyval.pcallexpr) = (yyvsp[(2) - (2)].pcallexpr); }
+#line 405 "chapel.ypp"
+    { (yyval.pcallexpr) = (yyvsp[(2) - (2)].pcallexpr); ;}
     break;
 
   case 102:
-
-/* Line 1806 of yacc.c  */
-#line 415 "chapel.ypp"
-    { (yyval.pblockstmt) = new BlockStmt(); }
+#line 410 "chapel.ypp"
+    { (yyval.pblockstmt) = new BlockStmt(); ;}
     break;
 
   case 103:
-
-/* Line 1806 of yacc.c  */
-#line 417 "chapel.ypp"
-    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pblockstmt)); }
+#line 412 "chapel.ypp"
+    { (yyvsp[(1) - (2)].pblockstmt)->insertAtTail((yyvsp[(2) - (2)].pblockstmt)); ;}
     break;
 
   case 104:
-
-/* Line 1806 of yacc.c  */
-#line 419 "chapel.ypp"
-    { (yyvsp[(1) - (3)].pblockstmt)->insertAtTail(buildPragmaStmt((yyvsp[(2) - (3)].vpch), (yyvsp[(3) - (3)].pblockstmt))); }
+#line 414 "chapel.ypp"
+    { (yyvsp[(1) - (3)].pblockstmt)->insertAtTail(buildPragmaStmt((yyvsp[(2) - (3)].vpch), (yyvsp[(3) - (3)].pblockstmt))); ;}
     break;
 
   case 105:
-
-/* Line 1806 of yacc.c  */
-#line 424 "chapel.ypp"
+#line 419 "chapel.ypp"
     {
       EnumType* pdt = (yyvsp[(4) - (5)].penumtype);
       TypeSymbol* pst = new TypeSymbol((yyvsp[(2) - (5)].pch), pdt);
       (yyvsp[(4) - (5)].penumtype)->symbol = pst;
       (yyval.pblockstmt) = buildChapelStmt(new DefExpr(pst));
-    }
+    ;}
     break;
 
   case 106:
-
-/* Line 1806 of yacc.c  */
-#line 434 "chapel.ypp"
+#line 429 "chapel.ypp"
     {
       (yyval.penumtype) = new EnumType();
       (yyvsp[(1) - (1)].pdefexpr)->sym->type = (yyval.penumtype);
       (yyval.penumtype)->constants.insertAtTail((yyvsp[(1) - (1)].pdefexpr));
       (yyval.penumtype)->defaultValue = (yyvsp[(1) - (1)].pdefexpr)->sym;
-    }
+    ;}
     break;
 
   case 107:
-
-/* Line 1806 of yacc.c  */
-#line 441 "chapel.ypp"
+#line 436 "chapel.ypp"
     {
       (yyval.penumtype) = (yyvsp[(1) - (2)].penumtype);
-    }
+    ;}
     break;
 
   case 108:
-
-/* Line 1806 of yacc.c  */
-#line 445 "chapel.ypp"
+#line 440 "chapel.ypp"
     {
       (yyvsp[(1) - (3)].penumtype)->constants.insertAtTail((yyvsp[(3) - (3)].pdefexpr));
       (yyvsp[(3) - (3)].pdefexpr)->sym->type = (yyvsp[(1) - (3)].penumtype);
-    }
+    ;}
     break;
 
   case 109:
-
-/* Line 1806 of yacc.c  */
-#line 452 "chapel.ypp"
-    { (yyval.pdefexpr) = new DefExpr(new EnumSymbol((yyvsp[(1) - (1)].pch))); }
+#line 447 "chapel.ypp"
+    { (yyval.pdefexpr) = new DefExpr(new EnumSymbol((yyvsp[(1) - (1)].pch))); ;}
     break;
 
   case 110:
-
-/* Line 1806 of yacc.c  */
-#line 453 "chapel.ypp"
-    { (yyval.pdefexpr) = new DefExpr(new EnumSymbol((yyvsp[(1) - (3)].pch)), (yyvsp[(3) - (3)].pexpr)); }
+#line 448 "chapel.ypp"
+    { (yyval.pdefexpr) = new DefExpr(new EnumSymbol((yyvsp[(1) - (3)].pch)), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 111:
-
-/* Line 1806 of yacc.c  */
-#line 458 "chapel.ypp"
+#line 453 "chapel.ypp"
     {
       captureTokens = 1;
       captureString[0] = '\0';
-    }
+    ;}
     break;
 
   case 112:
-
-/* Line 1806 of yacc.c  */
-#line 463 "chapel.ypp"
+#line 458 "chapel.ypp"
     {
       captureTokens = 0;
       (yyvsp[(3) - (3)].pfnsymbol)->userString = astr(captureString);
-    }
+    ;}
     break;
 
   case 113:
-
-/* Line 1806 of yacc.c  */
-#line 468 "chapel.ypp"
+#line 463 "chapel.ypp"
     {
       (yyvsp[(3) - (8)].pfnsymbol)->retTag = (yyvsp[(5) - (8)].retTag);
       if ((yyvsp[(5) - (8)].retTag) == RET_VAR)
@@ -5091,85 +4964,67 @@ yyreduce:
         (yyvsp[(3) - (8)].pfnsymbol)->where = new BlockStmt((yyvsp[(7) - (8)].pexpr));
       (yyvsp[(3) - (8)].pfnsymbol)->insertAtTail((yyvsp[(8) - (8)].pblockstmt));
       (yyval.pexpr) = new DefExpr(buildLambda((yyvsp[(3) - (8)].pfnsymbol)));
-    }
+    ;}
     break;
 
   case 114:
-
-/* Line 1806 of yacc.c  */
-#line 488 "chapel.ypp"
-    { (yyval.pfnsymbol) = new FnSymbol(""); }
+#line 483 "chapel.ypp"
+    { (yyval.pfnsymbol) = new FnSymbol(""); ;}
     break;
 
   case 115:
-
-/* Line 1806 of yacc.c  */
-#line 489 "chapel.ypp"
+#line 484 "chapel.ypp"
     { (yyval.pfnsymbol) = new FnSymbol(""); (yyval.pfnsymbol)->addFlag(FLAG_INLINE); 
-                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 116:
-
-/* Line 1806 of yacc.c  */
-#line 491 "chapel.ypp"
+#line 486 "chapel.ypp"
     { (yyval.pfnsymbol) = new FnSymbol(""); (yyval.pfnsymbol)->addFlag(FLAG_EXPORT);  
-                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 117:
-
-/* Line 1806 of yacc.c  */
-#line 493 "chapel.ypp"
+#line 488 "chapel.ypp"
     { (yyval.pfnsymbol) = new FnSymbol((yyvsp[(2) - (2)].pch)); (yyval.pfnsymbol)->addFlag(FLAG_EXPORT);  
-                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 118:
-
-/* Line 1806 of yacc.c  */
-#line 495 "chapel.ypp"
+#line 490 "chapel.ypp"
     { (yyval.pfnsymbol) = new FnSymbol(""); (yyval.pfnsymbol)->addFlag(FLAG_EXTERN);
                   (yyval.pfnsymbol)->addFlag(FLAG_LOCAL_ARGS);
-                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 119:
-
-/* Line 1806 of yacc.c  */
-#line 498 "chapel.ypp"
+#line 493 "chapel.ypp"
     { (yyval.pfnsymbol) = new FnSymbol((yyvsp[(2) - (2)].pch)); (yyval.pfnsymbol)->addFlag(FLAG_EXTERN);  
                   (yyval.pfnsymbol)->addFlag(FLAG_LOCAL_ARGS);
-                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+                  (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 120:
-
-/* Line 1806 of yacc.c  */
-#line 504 "chapel.ypp"
+#line 499 "chapel.ypp"
     {
       // Sets up to capture tokens while parsing the next grammar nonterminal.
       captureTokens = 1;
       captureString[0] = '\0';
-    }
+    ;}
     break;
 
   case 121:
-
-/* Line 1806 of yacc.c  */
-#line 510 "chapel.ypp"
+#line 505 "chapel.ypp"
     {
       // Stop capturing and save the result.
       captureTokens = 0;
 
       (yyvsp[(4) - (4)].pfnsymbol)->userString = astr(captureString);
-    }
+    ;}
     break;
 
   case 122:
-
-/* Line 1806 of yacc.c  */
-#line 517 "chapel.ypp"
+#line 512 "chapel.ypp"
     {
       FnSymbol* fn = (yyvsp[(4) - (9)].pfnsymbol);
 
@@ -5189,13 +5044,11 @@ yyreduce:
 
       (yyval.pblockstmt) = buildFunctionDecl((yyvsp[(4) - (9)].pfnsymbol), (yyvsp[(6) - (9)].retTag), (yyvsp[(7) - (9)].pexpr), (yyvsp[(8) - (9)].pexpr), (yyvsp[(9) - (9)].pblockstmt), (yylsp[(1) - (9)]).comment);
       yylloc.comment = NULL;
-    }
+    ;}
     break;
 
   case 123:
-
-/* Line 1806 of yacc.c  */
-#line 541 "chapel.ypp"
+#line 536 "chapel.ypp"
     {
       (yyval.pfnsymbol) = (yyvsp[(3) - (3)].pfnsymbol);
       (yyval.pfnsymbol)->thisTag = (yyvsp[(1) - (3)].pt);
@@ -5203,13 +5056,11 @@ yyreduce:
       (yyval.pfnsymbol)->cname = (yyval.pfnsymbol)->name;
       if ((yyvsp[(2) - (3)].pch)[0] == '~' && (yyvsp[(2) - (3)].pch)[1] != '\0')
         (yyval.pfnsymbol)->addFlag(FLAG_DESTRUCTOR);
-    }
+    ;}
     break;
 
   case 124:
-
-/* Line 1806 of yacc.c  */
-#line 550 "chapel.ypp"
+#line 545 "chapel.ypp"
     {
       (yyval.pfnsymbol) = (yyvsp[(5) - (5)].pfnsymbol);
       (yyval.pfnsymbol)->thisTag = (yyvsp[(1) - (5)].pt);
@@ -5221,1819 +5072,1311 @@ yyreduce:
       (yyval.pfnsymbol)->_this->addFlag(FLAG_ARG_THIS);
       (yyval.pfnsymbol)->insertFormalAtHead(new DefExpr((yyval.pfnsymbol)->_this));
       (yyval.pfnsymbol)->insertFormalAtHead(new DefExpr(new ArgSymbol(INTENT_BLANK, "_mt", dtMethodToken)));
-    }
+    ;}
     break;
 
   case 126:
-
-/* Line 1806 of yacc.c  */
-#line 566 "chapel.ypp"
-    { (yyval.pch) = astr("~", (yyvsp[(2) - (2)].pch)); }
+#line 561 "chapel.ypp"
+    { (yyval.pch) = astr("~", (yyvsp[(2) - (2)].pch)); ;}
     break;
 
   case 127:
-
-/* Line 1806 of yacc.c  */
-#line 567 "chapel.ypp"
-    { (yyval.pch) = "="; }
+#line 562 "chapel.ypp"
+    { (yyval.pch) = "="; ;}
     break;
 
   case 128:
-
-/* Line 1806 of yacc.c  */
-#line 568 "chapel.ypp"
-    { (yyval.pch) = "&"; }
+#line 563 "chapel.ypp"
+    { (yyval.pch) = "&"; ;}
     break;
 
   case 129:
-
-/* Line 1806 of yacc.c  */
-#line 569 "chapel.ypp"
-    { (yyval.pch) = "|"; }
+#line 564 "chapel.ypp"
+    { (yyval.pch) = "|"; ;}
     break;
 
   case 130:
-
-/* Line 1806 of yacc.c  */
-#line 570 "chapel.ypp"
-    { (yyval.pch) = "^"; }
+#line 565 "chapel.ypp"
+    { (yyval.pch) = "^"; ;}
     break;
 
   case 131:
-
-/* Line 1806 of yacc.c  */
-#line 571 "chapel.ypp"
-    { (yyval.pch) = "~"; }
+#line 566 "chapel.ypp"
+    { (yyval.pch) = "~"; ;}
     break;
 
   case 132:
-
-/* Line 1806 of yacc.c  */
-#line 572 "chapel.ypp"
-    { (yyval.pch) = "=="; }
+#line 567 "chapel.ypp"
+    { (yyval.pch) = "=="; ;}
     break;
 
   case 133:
-
-/* Line 1806 of yacc.c  */
-#line 573 "chapel.ypp"
-    { (yyval.pch) = "!="; }
+#line 568 "chapel.ypp"
+    { (yyval.pch) = "!="; ;}
     break;
 
   case 134:
-
-/* Line 1806 of yacc.c  */
-#line 574 "chapel.ypp"
-    { (yyval.pch) = "<="; }
+#line 569 "chapel.ypp"
+    { (yyval.pch) = "<="; ;}
     break;
 
   case 135:
-
-/* Line 1806 of yacc.c  */
-#line 575 "chapel.ypp"
-    { (yyval.pch) = ">="; }
+#line 570 "chapel.ypp"
+    { (yyval.pch) = ">="; ;}
     break;
 
   case 136:
-
-/* Line 1806 of yacc.c  */
-#line 576 "chapel.ypp"
-    { (yyval.pch) = "<"; }
+#line 571 "chapel.ypp"
+    { (yyval.pch) = "<"; ;}
     break;
 
   case 137:
-
-/* Line 1806 of yacc.c  */
-#line 577 "chapel.ypp"
-    { (yyval.pch) = ">"; }
+#line 572 "chapel.ypp"
+    { (yyval.pch) = ">"; ;}
     break;
 
   case 138:
-
-/* Line 1806 of yacc.c  */
-#line 578 "chapel.ypp"
-    { (yyval.pch) = "+"; }
+#line 573 "chapel.ypp"
+    { (yyval.pch) = "+"; ;}
     break;
 
   case 139:
-
-/* Line 1806 of yacc.c  */
-#line 579 "chapel.ypp"
-    { (yyval.pch) = "-"; }
+#line 574 "chapel.ypp"
+    { (yyval.pch) = "-"; ;}
     break;
 
   case 140:
-
-/* Line 1806 of yacc.c  */
-#line 580 "chapel.ypp"
-    { (yyval.pch) = "*"; }
+#line 575 "chapel.ypp"
+    { (yyval.pch) = "*"; ;}
     break;
 
   case 141:
-
-/* Line 1806 of yacc.c  */
-#line 581 "chapel.ypp"
-    { (yyval.pch) = "/"; }
+#line 576 "chapel.ypp"
+    { (yyval.pch) = "/"; ;}
     break;
 
   case 142:
-
-/* Line 1806 of yacc.c  */
-#line 582 "chapel.ypp"
-    { (yyval.pch) = "<<"; }
+#line 577 "chapel.ypp"
+    { (yyval.pch) = "<<"; ;}
     break;
 
   case 143:
-
-/* Line 1806 of yacc.c  */
-#line 583 "chapel.ypp"
-    { (yyval.pch) = ">>"; }
+#line 578 "chapel.ypp"
+    { (yyval.pch) = ">>"; ;}
     break;
 
   case 144:
-
-/* Line 1806 of yacc.c  */
-#line 584 "chapel.ypp"
-    { (yyval.pch) = "%"; }
+#line 579 "chapel.ypp"
+    { (yyval.pch) = "%"; ;}
     break;
 
   case 145:
-
-/* Line 1806 of yacc.c  */
-#line 585 "chapel.ypp"
-    { (yyval.pch) = "**"; }
+#line 580 "chapel.ypp"
+    { (yyval.pch) = "**"; ;}
     break;
 
   case 146:
-
-/* Line 1806 of yacc.c  */
-#line 586 "chapel.ypp"
-    { (yyval.pch) = "!"; }
+#line 581 "chapel.ypp"
+    { (yyval.pch) = "!"; ;}
     break;
 
   case 147:
-
-/* Line 1806 of yacc.c  */
-#line 587 "chapel.ypp"
-    { (yyval.pch) = "by"; }
+#line 582 "chapel.ypp"
+    { (yyval.pch) = "by"; ;}
     break;
 
   case 148:
-
-/* Line 1806 of yacc.c  */
-#line 588 "chapel.ypp"
-    { (yyval.pch) = "#"; }
+#line 583 "chapel.ypp"
+    { (yyval.pch) = "#"; ;}
     break;
 
   case 149:
-
-/* Line 1806 of yacc.c  */
-#line 589 "chapel.ypp"
-    { (yyval.pch) = "align"; }
+#line 584 "chapel.ypp"
+    { (yyval.pch) = "align"; ;}
     break;
 
   case 150:
-
-/* Line 1806 of yacc.c  */
-#line 590 "chapel.ypp"
-    { (yyval.pch) = "+="; }
+#line 585 "chapel.ypp"
+    { (yyval.pch) = "+="; ;}
     break;
 
   case 151:
-
-/* Line 1806 of yacc.c  */
-#line 591 "chapel.ypp"
-    { (yyval.pch) = "-="; }
+#line 586 "chapel.ypp"
+    { (yyval.pch) = "-="; ;}
     break;
 
   case 152:
-
-/* Line 1806 of yacc.c  */
-#line 592 "chapel.ypp"
-    { (yyval.pch) = "*="; }
+#line 587 "chapel.ypp"
+    { (yyval.pch) = "*="; ;}
     break;
 
   case 153:
-
-/* Line 1806 of yacc.c  */
-#line 593 "chapel.ypp"
-    { (yyval.pch) = "/="; }
+#line 588 "chapel.ypp"
+    { (yyval.pch) = "/="; ;}
     break;
 
   case 154:
-
-/* Line 1806 of yacc.c  */
-#line 594 "chapel.ypp"
-    { (yyval.pch) = "%="; }
+#line 589 "chapel.ypp"
+    { (yyval.pch) = "%="; ;}
     break;
 
   case 155:
-
-/* Line 1806 of yacc.c  */
-#line 595 "chapel.ypp"
-    { (yyval.pch) = "**="; }
+#line 590 "chapel.ypp"
+    { (yyval.pch) = "**="; ;}
     break;
 
   case 156:
-
-/* Line 1806 of yacc.c  */
-#line 596 "chapel.ypp"
-    { (yyval.pch) = "&="; }
+#line 591 "chapel.ypp"
+    { (yyval.pch) = "&="; ;}
     break;
 
   case 157:
-
-/* Line 1806 of yacc.c  */
-#line 597 "chapel.ypp"
-    { (yyval.pch) = "|="; }
+#line 592 "chapel.ypp"
+    { (yyval.pch) = "|="; ;}
     break;
 
   case 158:
-
-/* Line 1806 of yacc.c  */
-#line 598 "chapel.ypp"
-    { (yyval.pch) = "^="; }
+#line 593 "chapel.ypp"
+    { (yyval.pch) = "^="; ;}
     break;
 
   case 159:
-
-/* Line 1806 of yacc.c  */
-#line 599 "chapel.ypp"
-    { (yyval.pch) = ">>="; }
+#line 594 "chapel.ypp"
+    { (yyval.pch) = ">>="; ;}
     break;
 
   case 160:
-
-/* Line 1806 of yacc.c  */
-#line 600 "chapel.ypp"
-    { (yyval.pch) = "<<="; }
+#line 595 "chapel.ypp"
+    { (yyval.pch) = "<<="; ;}
     break;
 
   case 161:
-
-/* Line 1806 of yacc.c  */
-#line 601 "chapel.ypp"
-    { (yyval.pch) = "<=>"; }
+#line 596 "chapel.ypp"
+    { (yyval.pch) = "<=>"; ;}
     break;
 
   case 162:
-
-/* Line 1806 of yacc.c  */
-#line 602 "chapel.ypp"
-    { (yyval.pch) = "<~>"; }
+#line 597 "chapel.ypp"
+    { (yyval.pch) = "<~>"; ;}
     break;
 
   case 163:
-
-/* Line 1806 of yacc.c  */
-#line 606 "chapel.ypp"
-    { (yyval.pfnsymbol) = new FnSymbol("_"); (yyval.pfnsymbol)->addFlag(FLAG_NO_PARENS); }
+#line 601 "chapel.ypp"
+    { (yyval.pfnsymbol) = new FnSymbol("_"); (yyval.pfnsymbol)->addFlag(FLAG_NO_PARENS); ;}
     break;
 
   case 164:
-
-/* Line 1806 of yacc.c  */
-#line 607 "chapel.ypp"
-    { (yyval.pfnsymbol) = (yyvsp[(2) - (3)].pfnsymbol); }
+#line 602 "chapel.ypp"
+    { (yyval.pfnsymbol) = (yyvsp[(2) - (3)].pfnsymbol); ;}
     break;
 
   case 165:
-
-/* Line 1806 of yacc.c  */
-#line 611 "chapel.ypp"
-    { (yyval.pfnsymbol) = (yyvsp[(2) - (3)].pfnsymbol); }
+#line 606 "chapel.ypp"
+    { (yyval.pfnsymbol) = (yyvsp[(2) - (3)].pfnsymbol); ;}
     break;
 
   case 166:
-
-/* Line 1806 of yacc.c  */
-#line 615 "chapel.ypp"
-    { (yyval.pfnsymbol) = buildFunctionFormal(NULL, NULL); }
+#line 610 "chapel.ypp"
+    { (yyval.pfnsymbol) = buildFunctionFormal(NULL, NULL); ;}
     break;
 
   case 167:
-
-/* Line 1806 of yacc.c  */
-#line 616 "chapel.ypp"
-    { (yyval.pfnsymbol) = buildFunctionFormal(NULL, (yyvsp[(1) - (1)].pdefexpr)); }
+#line 611 "chapel.ypp"
+    { (yyval.pfnsymbol) = buildFunctionFormal(NULL, (yyvsp[(1) - (1)].pdefexpr)); ;}
     break;
 
   case 168:
-
-/* Line 1806 of yacc.c  */
-#line 617 "chapel.ypp"
-    { (yyval.pfnsymbol) = buildFunctionFormal((yyvsp[(1) - (3)].pfnsymbol), (yyvsp[(3) - (3)].pdefexpr)); }
+#line 612 "chapel.ypp"
+    { (yyval.pfnsymbol) = buildFunctionFormal((yyvsp[(1) - (3)].pfnsymbol), (yyvsp[(3) - (3)].pdefexpr)); ;}
     break;
 
   case 169:
-
-/* Line 1806 of yacc.c  */
-#line 622 "chapel.ypp"
-    { (yyval.pdefexpr) = buildArgDefExpr((yyvsp[(1) - (4)].pt), (yyvsp[(2) - (4)].pch), (yyvsp[(3) - (4)].pexpr), (yyvsp[(4) - (4)].pexpr), NULL); }
+#line 617 "chapel.ypp"
+    { (yyval.pdefexpr) = buildArgDefExpr((yyvsp[(1) - (4)].pt), (yyvsp[(2) - (4)].pch), (yyvsp[(3) - (4)].pexpr), (yyvsp[(4) - (4)].pexpr), NULL); ;}
     break;
 
   case 170:
-
-/* Line 1806 of yacc.c  */
-#line 624 "chapel.ypp"
-    { (yyval.pdefexpr) = buildArgDefExpr((yyvsp[(1) - (4)].pt), (yyvsp[(2) - (4)].pch), (yyvsp[(3) - (4)].pexpr), NULL, (yyvsp[(4) - (4)].pexpr)); }
+#line 619 "chapel.ypp"
+    { (yyval.pdefexpr) = buildArgDefExpr((yyvsp[(1) - (4)].pt), (yyvsp[(2) - (4)].pch), (yyvsp[(3) - (4)].pexpr), NULL, (yyvsp[(4) - (4)].pexpr)); ;}
     break;
 
   case 171:
-
-/* Line 1806 of yacc.c  */
-#line 626 "chapel.ypp"
-    { (yyval.pdefexpr) = buildTupleArgDefExpr((yyvsp[(1) - (6)].pt), (yyvsp[(3) - (6)].pblockstmt), (yyvsp[(5) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)); }
+#line 621 "chapel.ypp"
+    { (yyval.pdefexpr) = buildTupleArgDefExpr((yyvsp[(1) - (6)].pt), (yyvsp[(3) - (6)].pblockstmt), (yyvsp[(5) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)); ;}
     break;
 
   case 172:
-
-/* Line 1806 of yacc.c  */
-#line 628 "chapel.ypp"
-    { USR_FATAL("variable-length argument may not be grouped in a tuple"); }
+#line 623 "chapel.ypp"
+    { USR_FATAL("variable-length argument may not be grouped in a tuple"); ;}
     break;
 
   case 173:
-
-/* Line 1806 of yacc.c  */
-#line 632 "chapel.ypp"
-    { (yyval.pt) = INTENT_BLANK; }
+#line 627 "chapel.ypp"
+    { (yyval.pt) = INTENT_BLANK; ;}
     break;
 
   case 174:
-
-/* Line 1806 of yacc.c  */
-#line 633 "chapel.ypp"
-    { (yyval.pt) = INTENT_IN; }
+#line 628 "chapel.ypp"
+    { (yyval.pt) = INTENT_IN; ;}
     break;
 
   case 175:
-
-/* Line 1806 of yacc.c  */
-#line 634 "chapel.ypp"
-    { (yyval.pt) = INTENT_INOUT; }
+#line 629 "chapel.ypp"
+    { (yyval.pt) = INTENT_INOUT; ;}
     break;
 
   case 176:
-
-/* Line 1806 of yacc.c  */
-#line 635 "chapel.ypp"
-    { (yyval.pt) = INTENT_OUT; }
+#line 630 "chapel.ypp"
+    { (yyval.pt) = INTENT_OUT; ;}
     break;
 
   case 177:
-
-/* Line 1806 of yacc.c  */
-#line 636 "chapel.ypp"
-    { (yyval.pt) = INTENT_CONST; }
+#line 631 "chapel.ypp"
+    { (yyval.pt) = INTENT_CONST; ;}
     break;
 
   case 178:
-
-/* Line 1806 of yacc.c  */
-#line 637 "chapel.ypp"
-    { (yyval.pt) = INTENT_CONST_IN; }
+#line 632 "chapel.ypp"
+    { (yyval.pt) = INTENT_CONST_IN; ;}
     break;
 
   case 179:
-
-/* Line 1806 of yacc.c  */
-#line 638 "chapel.ypp"
-    { (yyval.pt) = INTENT_CONST_REF; }
+#line 633 "chapel.ypp"
+    { (yyval.pt) = INTENT_CONST_REF; ;}
     break;
 
   case 180:
-
-/* Line 1806 of yacc.c  */
-#line 639 "chapel.ypp"
-    { (yyval.pt) = INTENT_PARAM; }
+#line 634 "chapel.ypp"
+    { (yyval.pt) = INTENT_PARAM; ;}
     break;
 
   case 181:
-
-/* Line 1806 of yacc.c  */
-#line 640 "chapel.ypp"
-    { (yyval.pt) = INTENT_REF; }
+#line 635 "chapel.ypp"
+    { (yyval.pt) = INTENT_REF; ;}
     break;
 
   case 182:
-
-/* Line 1806 of yacc.c  */
-#line 641 "chapel.ypp"
-    { (yyval.pt) = INTENT_TYPE; }
+#line 636 "chapel.ypp"
+    { (yyval.pt) = INTENT_TYPE; ;}
     break;
 
   case 183:
-
-/* Line 1806 of yacc.c  */
-#line 645 "chapel.ypp"
-    { (yyval.pt) = INTENT_BLANK; }
+#line 640 "chapel.ypp"
+    { (yyval.pt) = INTENT_BLANK; ;}
     break;
 
   case 184:
-
-/* Line 1806 of yacc.c  */
-#line 646 "chapel.ypp"
-    { (yyval.pt) = INTENT_PARAM; }
+#line 641 "chapel.ypp"
+    { (yyval.pt) = INTENT_PARAM; ;}
     break;
 
   case 185:
-
-/* Line 1806 of yacc.c  */
-#line 650 "chapel.ypp"
-    { (yyval.procIter) = ProcIter_PROC; }
+#line 645 "chapel.ypp"
+    { (yyval.procIter) = ProcIter_PROC; ;}
     break;
 
   case 186:
-
-/* Line 1806 of yacc.c  */
-#line 651 "chapel.ypp"
-    { (yyval.procIter) = ProcIter_ITER; }
+#line 646 "chapel.ypp"
+    { (yyval.procIter) = ProcIter_ITER; ;}
     break;
 
   case 187:
-
-/* Line 1806 of yacc.c  */
-#line 655 "chapel.ypp"
-    { (yyval.retTag) = RET_VALUE; }
+#line 650 "chapel.ypp"
+    { (yyval.retTag) = RET_VALUE; ;}
     break;
 
   case 188:
-
-/* Line 1806 of yacc.c  */
-#line 656 "chapel.ypp"
-    { (yyval.retTag) = RET_VALUE; }
+#line 651 "chapel.ypp"
+    { (yyval.retTag) = RET_VALUE; ;}
     break;
 
   case 189:
-
-/* Line 1806 of yacc.c  */
-#line 657 "chapel.ypp"
-    { (yyval.retTag) = RET_VAR; }
+#line 652 "chapel.ypp"
+    { (yyval.retTag) = RET_VAR; ;}
     break;
 
   case 190:
-
-/* Line 1806 of yacc.c  */
-#line 658 "chapel.ypp"
-    { (yyval.retTag) = RET_PARAM; }
+#line 653 "chapel.ypp"
+    { (yyval.retTag) = RET_PARAM; ;}
     break;
 
   case 191:
-
-/* Line 1806 of yacc.c  */
-#line 659 "chapel.ypp"
-    { (yyval.retTag) = RET_TYPE; }
+#line 654 "chapel.ypp"
+    { (yyval.retTag) = RET_TYPE; ;}
     break;
 
   case 192:
-
-/* Line 1806 of yacc.c  */
-#line 663 "chapel.ypp"
-    { (yyval.pblockstmt) = NULL; }
+#line 658 "chapel.ypp"
+    { (yyval.pblockstmt) = NULL; ;}
     break;
 
   case 195:
-
-/* Line 1806 of yacc.c  */
-#line 669 "chapel.ypp"
-    { (yyval.pblockstmt) = new BlockStmt((yyvsp[(1) - (1)].pblockstmt)); }
+#line 664 "chapel.ypp"
+    { (yyval.pblockstmt) = new BlockStmt((yyvsp[(1) - (1)].pblockstmt)); ;}
     break;
 
   case 196:
-
-/* Line 1806 of yacc.c  */
-#line 674 "chapel.ypp"
-    { (yyval.pdefexpr) = new DefExpr(new VarSymbol((yyvsp[(2) - (2)].pch))); }
+#line 669 "chapel.ypp"
+    { (yyval.pdefexpr) = new DefExpr(new VarSymbol((yyvsp[(2) - (2)].pch))); ;}
     break;
 
   case 197:
-
-/* Line 1806 of yacc.c  */
-#line 676 "chapel.ypp"
-    { (yyval.pdefexpr) = new DefExpr(new VarSymbol(astr("chpl__query", istr(query_uid++)))); }
+#line 671 "chapel.ypp"
+    { (yyval.pdefexpr) = new DefExpr(new VarSymbol(astr("chpl__query", istr(query_uid++)))); ;}
     break;
 
   case 198:
-
-/* Line 1806 of yacc.c  */
-#line 680 "chapel.ypp"
-    { (yyval.pdefexpr) = new DefExpr(new VarSymbol(astr("chpl__query", istr(query_uid++)))); }
+#line 675 "chapel.ypp"
+    { (yyval.pdefexpr) = new DefExpr(new VarSymbol(astr("chpl__query", istr(query_uid++)))); ;}
     break;
 
   case 200:
-
-/* Line 1806 of yacc.c  */
-#line 685 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); }
+#line 680 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); ;}
     break;
 
   case 201:
-
-/* Line 1806 of yacc.c  */
-#line 686 "chapel.ypp"
-    { (yyvsp[(2) - (2)].pdefexpr)->sym->addFlag(FLAG_PARAM); (yyval.pexpr) = (yyvsp[(2) - (2)].pdefexpr); }
+#line 681 "chapel.ypp"
+    { (yyvsp[(2) - (2)].pdefexpr)->sym->addFlag(FLAG_PARAM); (yyval.pexpr) = (yyvsp[(2) - (2)].pdefexpr); ;}
     break;
 
   case 202:
-
-/* Line 1806 of yacc.c  */
-#line 690 "chapel.ypp"
-    { (yyval.pexpr) = NULL; }
+#line 685 "chapel.ypp"
+    { (yyval.pexpr) = NULL; ;}
     break;
 
   case 203:
-
-/* Line 1806 of yacc.c  */
-#line 691 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); }
+#line 686 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); ;}
     break;
 
   case 204:
-
-/* Line 1806 of yacc.c  */
-#line 696 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt(new DefExpr(buildModule((yyvsp[(2) - (4)].pch), new BlockStmt(), yyfilename, (yylsp[(1) - (4)]).comment))); }
+#line 691 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt(new DefExpr(buildModule((yyvsp[(2) - (4)].pch), new BlockStmt(), yyfilename, (yylsp[(1) - (4)]).comment))); ;}
     break;
 
   case 205:
-
-/* Line 1806 of yacc.c  */
-#line 698 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt(new DefExpr(buildModule((yyvsp[(2) - (5)].pch), (yyvsp[(4) - (5)].pblockstmt), yyfilename, (yylsp[(1) - (5)]).comment))); }
+#line 693 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt(new DefExpr(buildModule((yyvsp[(2) - (5)].pch), (yyvsp[(4) - (5)].pblockstmt), yyfilename, (yylsp[(1) - (5)]).comment))); ;}
     break;
 
   case 206:
-
-/* Line 1806 of yacc.c  */
-#line 703 "chapel.ypp"
-    {(yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+#line 698 "chapel.ypp"
+    {(yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 207:
-
-/* Line 1806 of yacc.c  */
-#line 708 "chapel.ypp"
-    { (yyval.pblockstmt) = (yyvsp[(2) - (3)].pblockstmt); }
+#line 703 "chapel.ypp"
+    { (yyval.pblockstmt) = (yyvsp[(2) - (3)].pblockstmt); ;}
     break;
 
   case 208:
-
-/* Line 1806 of yacc.c  */
-#line 710 "chapel.ypp"
-    { (yyval.pblockstmt) = handleConfigTypes((yyvsp[(3) - (4)].pblockstmt)); }
+#line 705 "chapel.ypp"
+    { (yyval.pblockstmt) = handleConfigTypes((yyvsp[(3) - (4)].pblockstmt)); ;}
     break;
 
   case 209:
-
-/* Line 1806 of yacc.c  */
-#line 712 "chapel.ypp"
-    { (yyval.pblockstmt) = convertTypesToExtern((yyvsp[(3) - (4)].pblockstmt)); }
+#line 707 "chapel.ypp"
+    { (yyval.pblockstmt) = convertTypesToExtern((yyvsp[(3) - (4)].pblockstmt)); ;}
     break;
 
   case 210:
-
-/* Line 1806 of yacc.c  */
-#line 717 "chapel.ypp"
+#line 712 "chapel.ypp"
     {
       VarSymbol* var = new VarSymbol((yyvsp[(1) - (2)].pch));
       var->addFlag(FLAG_TYPE_VARIABLE);
       DefExpr* def = new DefExpr(var, (yyvsp[(2) - (2)].pexpr));
       (yyval.pblockstmt) = buildChapelStmt(def);
-    }
+    ;}
     break;
 
   case 211:
-
-/* Line 1806 of yacc.c  */
-#line 724 "chapel.ypp"
+#line 719 "chapel.ypp"
     {
       VarSymbol* var = new VarSymbol((yyvsp[(1) - (4)].pch));
       var->addFlag(FLAG_TYPE_VARIABLE);
       DefExpr* def = new DefExpr(var, (yyvsp[(2) - (4)].pexpr));
       (yyvsp[(4) - (4)].pblockstmt)->insertAtHead(def);
       (yyval.pblockstmt) = buildChapelStmt((yyvsp[(4) - (4)].pblockstmt));
-    }
+    ;}
     break;
 
   case 212:
-
-/* Line 1806 of yacc.c  */
-#line 734 "chapel.ypp"
-    { (yyval.pexpr) = NULL; }
+#line 729 "chapel.ypp"
+    { (yyval.pexpr) = NULL; ;}
     break;
 
   case 213:
-
-/* Line 1806 of yacc.c  */
-#line 736 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); }
+#line 731 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); ;}
     break;
 
   case 214:
-
-/* Line 1806 of yacc.c  */
-#line 738 "chapel.ypp"
-    { (yyval.pexpr) = buildForallLoopExprFromArrayType((yyvsp[(2) - (2)].pcallexpr)); }
+#line 733 "chapel.ypp"
+    { (yyval.pexpr) = buildForallLoopExprFromArrayType((yyvsp[(2) - (2)].pcallexpr)); ;}
     break;
 
   case 215:
-
-/* Line 1806 of yacc.c  */
-#line 743 "chapel.ypp"
+#line 738 "chapel.ypp"
     {
       (yyval.pblockstmt) = buildVarDecls((yyvsp[(3) - (4)].pblockstmt), (yyvsp[(1) - (4)].flag), FLAG_PARAM, (yylsp[(1) - (4)]).comment);
-    }
+    ;}
     break;
 
   case 216:
-
-/* Line 1806 of yacc.c  */
-#line 747 "chapel.ypp"
+#line 742 "chapel.ypp"
     {
       (yyval.pblockstmt) = buildVarDecls((yyvsp[(3) - (4)].pblockstmt), (yyvsp[(1) - (4)].flag), FLAG_CONST, (yylsp[(1) - (4)]).comment);
-    }
+    ;}
     break;
 
   case 217:
-
-/* Line 1806 of yacc.c  */
-#line 751 "chapel.ypp"
+#line 746 "chapel.ypp"
     {
       (yyval.pblockstmt) = buildVarDecls((yyvsp[(3) - (4)].pblockstmt), (yyvsp[(1) - (4)].flag), FLAG_UNKNOWN, (yylsp[(1) - (4)]).comment);
-    }
+    ;}
     break;
 
   case 218:
-
-/* Line 1806 of yacc.c  */
-#line 757 "chapel.ypp"
-    { (yyval.flag) = FLAG_UNKNOWN; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+#line 752 "chapel.ypp"
+    { (yyval.flag) = FLAG_UNKNOWN; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 219:
-
-/* Line 1806 of yacc.c  */
-#line 758 "chapel.ypp"
-    { (yyval.flag) = FLAG_CONFIG; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+#line 753 "chapel.ypp"
+    { (yyval.flag) = FLAG_CONFIG; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 220:
-
-/* Line 1806 of yacc.c  */
-#line 759 "chapel.ypp"
-    { (yyval.flag) = FLAG_EXTERN; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;}
+#line 754 "chapel.ypp"
+    { (yyval.flag) = FLAG_EXTERN; (yyloc).comment = yylloc.comment; yylloc.comment = NULL;;}
     break;
 
   case 222:
-
-/* Line 1806 of yacc.c  */
-#line 765 "chapel.ypp"
+#line 760 "chapel.ypp"
     {
       for_alist(expr, (yyvsp[(3) - (3)].pblockstmt)->body)
         (yyvsp[(1) - (3)].pblockstmt)->insertAtTail(expr->remove());
-    }
+    ;}
     break;
 
   case 223:
-
-/* Line 1806 of yacc.c  */
-#line 773 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt(new DefExpr(new VarSymbol((yyvsp[(1) - (3)].pch)), (yyvsp[(3) - (3)].pexpr), (yyvsp[(2) - (3)].pexpr))); }
+#line 768 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt(new DefExpr(new VarSymbol((yyvsp[(1) - (3)].pch)), (yyvsp[(3) - (3)].pexpr), (yyvsp[(2) - (3)].pexpr))); ;}
     break;
 
   case 224:
-
-/* Line 1806 of yacc.c  */
-#line 775 "chapel.ypp"
+#line 770 "chapel.ypp"
     {
       VarSymbol* var = new VarSymbol((yyvsp[(1) - (4)].pch));
       var->addFlag(FLAG_ARRAY_ALIAS);
       (yyval.pblockstmt) = buildChapelStmt(new DefExpr(var, (yyvsp[(4) - (4)].pexpr), (yyvsp[(2) - (4)].pexpr)));
-    }
+    ;}
     break;
 
   case 225:
-
-/* Line 1806 of yacc.c  */
-#line 781 "chapel.ypp"
-    { (yyval.pblockstmt) = buildTupleVarDeclStmt((yyvsp[(2) - (5)].pblockstmt), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pexpr)); }
+#line 776 "chapel.ypp"
+    { (yyval.pblockstmt) = buildTupleVarDeclStmt((yyvsp[(2) - (5)].pblockstmt), (yyvsp[(4) - (5)].pexpr), (yyvsp[(5) - (5)].pexpr)); ;}
     break;
 
   case 226:
-
-/* Line 1806 of yacc.c  */
-#line 786 "chapel.ypp"
-    { (yyval.pexpr) = new DefExpr(new VarSymbol("chpl__tuple_blank")); }
+#line 781 "chapel.ypp"
+    { (yyval.pexpr) = new DefExpr(new VarSymbol("chpl__tuple_blank")); ;}
     break;
 
   case 227:
-
-/* Line 1806 of yacc.c  */
-#line 788 "chapel.ypp"
-    { (yyval.pexpr) = new DefExpr(new VarSymbol((yyvsp[(1) - (1)].pch))); }
+#line 783 "chapel.ypp"
+    { (yyval.pexpr) = new DefExpr(new VarSymbol((yyvsp[(1) - (1)].pch))); ;}
     break;
 
   case 228:
-
-/* Line 1806 of yacc.c  */
-#line 790 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (3)].pblockstmt); }
+#line 785 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (3)].pblockstmt); ;}
     break;
 
   case 229:
-
-/* Line 1806 of yacc.c  */
-#line 795 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt((yyvsp[(1) - (1)].pexpr)); }
+#line 790 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt((yyvsp[(1) - (1)].pexpr)); ;}
     break;
 
   case 230:
-
-/* Line 1806 of yacc.c  */
-#line 797 "chapel.ypp"
-    { (yyval.pblockstmt) = buildChapelStmt((yyvsp[(1) - (2)].pexpr)); }
+#line 792 "chapel.ypp"
+    { (yyval.pblockstmt) = buildChapelStmt((yyvsp[(1) - (2)].pexpr)); ;}
     break;
 
   case 231:
-
-/* Line 1806 of yacc.c  */
-#line 799 "chapel.ypp"
-    { (yyval.pblockstmt) = ((yyvsp[(3) - (3)].pblockstmt)->insertAtHead((yyvsp[(1) - (3)].pexpr)), (yyvsp[(3) - (3)].pblockstmt)); }
+#line 794 "chapel.ypp"
+    { (yyval.pblockstmt) = ((yyvsp[(3) - (3)].pblockstmt)->insertAtHead((yyvsp[(1) - (3)].pexpr)), (yyvsp[(3) - (3)].pblockstmt)); ;}
     break;
 
   case 232:
-
-/* Line 1806 of yacc.c  */
-#line 805 "chapel.ypp"
-    { (yyval.pexpr) = NULL; }
+#line 800 "chapel.ypp"
+    { (yyval.pexpr) = NULL; ;}
     break;
 
   case 233:
-
-/* Line 1806 of yacc.c  */
-#line 806 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); }
+#line 801 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); ;}
     break;
 
   case 234:
-
-/* Line 1806 of yacc.c  */
-#line 810 "chapel.ypp"
-    { (yyval.pexpr) = NULL; }
+#line 805 "chapel.ypp"
+    { (yyval.pexpr) = NULL; ;}
     break;
 
   case 235:
-
-/* Line 1806 of yacc.c  */
-#line 812 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildDomainExpr", (yyvsp[(3) - (4)].pcallexpr)); }
+#line 807 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildDomainExpr", (yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 236:
-
-/* Line 1806 of yacc.c  */
-#line 816 "chapel.ypp"
-    { (yyval.pexpr) = NULL; }
+#line 811 "chapel.ypp"
+    { (yyval.pexpr) = NULL; ;}
     break;
 
   case 237:
-
-/* Line 1806 of yacc.c  */
-#line 817 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); }
+#line 812 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); ;}
     break;
 
   case 238:
-
-/* Line 1806 of yacc.c  */
-#line 818 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pcallexpr); }
+#line 813 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pcallexpr); ;}
     break;
 
   case 239:
-
-/* Line 1806 of yacc.c  */
-#line 819 "chapel.ypp"
-    {printf("bad type specification"); }
+#line 814 "chapel.ypp"
+    {printf("bad type specification"); ;}
     break;
 
   case 240:
-
-/* Line 1806 of yacc.c  */
-#line 840 "chapel.ypp"
+#line 835 "chapel.ypp"
     { (yyval.pcallexpr) = new CallExpr("chpl__buildArrayRuntimeType",
              new CallExpr("chpl__buildDomainExpr", (yyvsp[(2) - (4)].pcallexpr)), (yyvsp[(4) - (4)].pexpr)); 
-    }
+    ;}
     break;
 
   case 241:
-
-/* Line 1806 of yacc.c  */
-#line 844 "chapel.ypp"
+#line 839 "chapel.ypp"
     { (yyval.pcallexpr) = new CallExpr("chpl__buildArrayRuntimeType",
              new CallExpr("chpl__buildDomainExpr", (yyvsp[(2) - (4)].pcallexpr)), (yyvsp[(4) - (4)].pcallexpr)); 
-    }
+    ;}
     break;
 
   case 242:
-
-/* Line 1806 of yacc.c  */
-#line 848 "chapel.ypp"
+#line 843 "chapel.ypp"
     { 
       if ((yyvsp[(2) - (6)].pcallexpr)->argList.length != 1)
         USR_FATAL((yyvsp[(4) - (6)].pexpr), "invalid index expression");
       (yyval.pcallexpr) = new CallExpr("chpl__buildArrayRuntimeType",
              new CallExpr("chpl__buildDomainExpr", (yyvsp[(4) - (6)].pexpr)), (yyvsp[(6) - (6)].pexpr), (yyvsp[(2) - (6)].pcallexpr)->get(1)->remove(),
              new CallExpr("chpl__buildDomainExpr", (yyvsp[(4) - (6)].pexpr)->copy()));
-    }
+    ;}
     break;
 
   case 243:
-
-/* Line 1806 of yacc.c  */
-#line 855 "chapel.ypp"
-    {printf("bad array type specification"); clean_exit(1); }
+#line 850 "chapel.ypp"
+    {printf("bad array type specification"); clean_exit(1); ;}
     break;
 
   case 244:
-
-/* Line 1806 of yacc.c  */
-#line 859 "chapel.ypp"
-    { (yyval.pexpr) = NULL; }
+#line 854 "chapel.ypp"
+    { (yyval.pexpr) = NULL; ;}
     break;
 
   case 245:
-
-/* Line 1806 of yacc.c  */
-#line 860 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(1) - (1)].pexpr); }
+#line 855 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(1) - (1)].pexpr); ;}
     break;
 
   case 246:
-
-/* Line 1806 of yacc.c  */
-#line 861 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(1) - (1)].pdefexpr); }
+#line 856 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(1) - (1)].pdefexpr); ;}
     break;
 
   case 247:
-
-/* Line 1806 of yacc.c  */
-#line 866 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildArrayRuntimeType", gNil, (yyvsp[(3) - (3)].pexpr)); }
+#line 861 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildArrayRuntimeType", gNil, (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 248:
-
-/* Line 1806 of yacc.c  */
-#line 868 "chapel.ypp"
-    { (yyval.pexpr) = buildFormalArrayType((yyvsp[(2) - (4)].pcallexpr), (yyvsp[(4) - (4)].pexpr)); }
+#line 863 "chapel.ypp"
+    { (yyval.pexpr) = buildFormalArrayType((yyvsp[(2) - (4)].pcallexpr), (yyvsp[(4) - (4)].pexpr)); ;}
     break;
 
   case 249:
-
-/* Line 1806 of yacc.c  */
-#line 874 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildArrayRuntimeType", gNil, (yyvsp[(3) - (3)].pexpr)); }
+#line 869 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildArrayRuntimeType", gNil, (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 250:
-
-/* Line 1806 of yacc.c  */
-#line 876 "chapel.ypp"
-    { (yyval.pexpr) = buildFormalArrayType((yyvsp[(2) - (4)].pcallexpr), (yyvsp[(4) - (4)].pexpr)); }
+#line 871 "chapel.ypp"
+    { (yyval.pexpr) = buildFormalArrayType((yyvsp[(2) - (4)].pcallexpr), (yyvsp[(4) - (4)].pexpr)); ;}
     break;
 
   case 251:
-
-/* Line 1806 of yacc.c  */
-#line 878 "chapel.ypp"
-    { (yyval.pexpr) = buildFormalArrayType((yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), (yyvsp[(2) - (6)].pcallexpr)); }
+#line 873 "chapel.ypp"
+    { (yyval.pexpr) = buildFormalArrayType((yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), (yyvsp[(2) - (6)].pcallexpr)); ;}
     break;
 
   case 252:
-
-/* Line 1806 of yacc.c  */
-#line 882 "chapel.ypp"
-    { (yyval.pexpr) = NULL; }
+#line 877 "chapel.ypp"
+    { (yyval.pexpr) = NULL; ;}
     break;
 
   case 253:
-
-/* Line 1806 of yacc.c  */
-#line 883 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); }
+#line 878 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); ;}
     break;
 
   case 254:
-
-/* Line 1806 of yacc.c  */
-#line 884 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pdefexpr); }
+#line 879 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pdefexpr); ;}
     break;
 
   case 255:
-
-/* Line 1806 of yacc.c  */
-#line 885 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("_domain"); }
+#line 880 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("_domain"); ;}
     break;
 
   case 256:
-
-/* Line 1806 of yacc.c  */
-#line 886 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr( "_singlevar"); }
+#line 881 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr( "_singlevar"); ;}
     break;
 
   case 257:
-
-/* Line 1806 of yacc.c  */
-#line 887 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr( "_syncvar"); }
+#line 882 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr( "_syncvar"); ;}
     break;
 
   case 258:
-
-/* Line 1806 of yacc.c  */
-#line 888 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); }
+#line 883 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (2)].pexpr); ;}
     break;
 
   case 259:
-
-/* Line 1806 of yacc.c  */
-#line 894 "chapel.ypp"
-    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pexpr)); }
+#line 889 "chapel.ypp"
+    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pexpr)); ;}
     break;
 
   case 260:
-
-/* Line 1806 of yacc.c  */
-#line 895 "chapel.ypp"
-    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pdefexpr)); }
+#line 890 "chapel.ypp"
+    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pdefexpr)); ;}
     break;
 
   case 261:
-
-/* Line 1806 of yacc.c  */
-#line 896 "chapel.ypp"
-    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); }
+#line 891 "chapel.ypp"
+    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 262:
-
-/* Line 1806 of yacc.c  */
-#line 897 "chapel.ypp"
-    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pdefexpr)); }
+#line 892 "chapel.ypp"
+    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pdefexpr)); ;}
     break;
 
   case 263:
-
-/* Line 1806 of yacc.c  */
-#line 901 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("chpl__tuple_blank"); }
+#line 896 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("chpl__tuple_blank"); ;}
     break;
 
   case 264:
-
-/* Line 1806 of yacc.c  */
-#line 902 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(1) - (1)].pexpr); }
+#line 897 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(1) - (1)].pexpr); ;}
     break;
 
   case 265:
-
-/* Line 1806 of yacc.c  */
-#line 903 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(1) - (1)].pdefexpr); }
+#line 898 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(1) - (1)].pdefexpr); ;}
     break;
 
   case 266:
-
-/* Line 1806 of yacc.c  */
-#line 907 "chapel.ypp"
-    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 902 "chapel.ypp"
+    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 267:
-
-/* Line 1806 of yacc.c  */
-#line 908 "chapel.ypp"
-    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); }
+#line 903 "chapel.ypp"
+    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 268:
-
-/* Line 1806 of yacc.c  */
-#line 912 "chapel.ypp"
-    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST); }
+#line 907 "chapel.ypp"
+    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST); ;}
     break;
 
   case 270:
-
-/* Line 1806 of yacc.c  */
-#line 917 "chapel.ypp"
-    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pexpr)); }
+#line 912 "chapel.ypp"
+    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pexpr)); ;}
     break;
 
   case 271:
-
-/* Line 1806 of yacc.c  */
-#line 918 "chapel.ypp"
-    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); }
+#line 913 "chapel.ypp"
+    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 272:
-
-/* Line 1806 of yacc.c  */
-#line 922 "chapel.ypp"
-    { (yyval.pexpr) = buildNamedActual((yyvsp[(1) - (3)].pch), (yyvsp[(3) - (3)].pdefexpr)); }
+#line 917 "chapel.ypp"
+    { (yyval.pexpr) = buildNamedActual((yyvsp[(1) - (3)].pch), (yyvsp[(3) - (3)].pdefexpr)); ;}
     break;
 
   case 273:
-
-/* Line 1806 of yacc.c  */
-#line 923 "chapel.ypp"
-    { (yyval.pexpr) = buildNamedActual((yyvsp[(1) - (3)].pch), (yyvsp[(3) - (3)].pexpr)); }
+#line 918 "chapel.ypp"
+    { (yyval.pexpr) = buildNamedActual((yyvsp[(1) - (3)].pch), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 274:
-
-/* Line 1806 of yacc.c  */
-#line 924 "chapel.ypp"
-    { (yyval.pexpr) = buildNamedAliasActual((yyvsp[(1) - (3)].pch), (yyvsp[(3) - (3)].pexpr)); }
+#line 919 "chapel.ypp"
+    { (yyval.pexpr) = buildNamedAliasActual((yyvsp[(1) - (3)].pch), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 275:
-
-/* Line 1806 of yacc.c  */
-#line 925 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(1) - (1)].pdefexpr); }
+#line 920 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(1) - (1)].pdefexpr); ;}
     break;
 
   case 277:
-
-/* Line 1806 of yacc.c  */
-#line 930 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr((yyvsp[(1) - (1)].pch)); }
+#line 925 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr((yyvsp[(1) - (1)].pch)); ;}
     break;
 
   case 283:
-
-/* Line 1806 of yacc.c  */
-#line 947 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr( "_singlevar", (yyvsp[(2) - (2)].pexpr)); }
+#line 942 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr( "_singlevar", (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 284:
-
-/* Line 1806 of yacc.c  */
-#line 949 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildIndexType", (yyvsp[(3) - (4)].pcallexpr)); }
+#line 944 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildIndexType", (yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 285:
-
-/* Line 1806 of yacc.c  */
-#line 951 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildDomainRuntimeType", new UnresolvedSymExpr("defaultDist"), (yyvsp[(3) - (4)].pcallexpr)); }
+#line 946 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildDomainRuntimeType", new UnresolvedSymExpr("defaultDist"), (yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 286:
-
-/* Line 1806 of yacc.c  */
-#line 953 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildSubDomainType", (yyvsp[(3) - (4)].pcallexpr)); }
+#line 948 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildSubDomainType", (yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 287:
-
-/* Line 1806 of yacc.c  */
-#line 955 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildSparseDomainRuntimeType", new UnresolvedSymExpr("defaultDist"), (yyvsp[(4) - (5)].pcallexpr)); }
+#line 950 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildSparseDomainRuntimeType", new UnresolvedSymExpr("defaultDist"), (yyvsp[(4) - (5)].pcallexpr)); ;}
     break;
 
   case 288:
-
-/* Line 1806 of yacc.c  */
-#line 957 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__atomicType", (yyvsp[(2) - (2)].pexpr)); }
+#line 952 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__atomicType", (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 289:
-
-/* Line 1806 of yacc.c  */
-#line 959 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr( "_syncvar", (yyvsp[(2) - (2)].pexpr)); }
+#line 954 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr( "_syncvar", (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 290:
-
-/* Line 1806 of yacc.c  */
-#line 964 "chapel.ypp"
-    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)); }
+#line 959 "chapel.ypp"
+    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)); ;}
     break;
 
   case 291:
-
-/* Line 1806 of yacc.c  */
-#line 966 "chapel.ypp"
-    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), NULL, false, true); }
+#line 961 "chapel.ypp"
+    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), NULL, false, true); ;}
     break;
 
   case 292:
-
-/* Line 1806 of yacc.c  */
-#line 968 "chapel.ypp"
-    { (yyval.pexpr) = buildForLoopExpr(NULL, (yyvsp[(2) - (4)].pexpr), (yyvsp[(4) - (4)].pexpr)); }
+#line 963 "chapel.ypp"
+    { (yyval.pexpr) = buildForLoopExpr(NULL, (yyvsp[(2) - (4)].pexpr), (yyvsp[(4) - (4)].pexpr)); ;}
     break;
 
   case 293:
-
-/* Line 1806 of yacc.c  */
-#line 970 "chapel.ypp"
-    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr)); }
+#line 965 "chapel.ypp"
+    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr)); ;}
     break;
 
   case 294:
-
-/* Line 1806 of yacc.c  */
-#line 972 "chapel.ypp"
-    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr), false, true); }
+#line 967 "chapel.ypp"
+    { (yyval.pexpr) = buildForLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr), false, true); ;}
     break;
 
   case 295:
-
-/* Line 1806 of yacc.c  */
-#line 974 "chapel.ypp"
-    { (yyval.pexpr) = buildForLoopExpr(NULL, (yyvsp[(2) - (7)].pexpr), (yyvsp[(7) - (7)].pexpr), (yyvsp[(5) - (7)].pexpr)); }
+#line 969 "chapel.ypp"
+    { (yyval.pexpr) = buildForLoopExpr(NULL, (yyvsp[(2) - (7)].pexpr), (yyvsp[(7) - (7)].pexpr), (yyvsp[(5) - (7)].pexpr)); ;}
     break;
 
   case 296:
-
-/* Line 1806 of yacc.c  */
-#line 976 "chapel.ypp"
-    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)); }
+#line 971 "chapel.ypp"
+    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)); ;}
     break;
 
   case 297:
-
-/* Line 1806 of yacc.c  */
-#line 978 "chapel.ypp"
-    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), NULL, false, true); }
+#line 973 "chapel.ypp"
+    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), NULL, false, true); ;}
     break;
 
   case 298:
-
-/* Line 1806 of yacc.c  */
-#line 980 "chapel.ypp"
-    { (yyval.pexpr) = buildForallLoopExpr(NULL, (yyvsp[(2) - (4)].pexpr), (yyvsp[(4) - (4)].pexpr)); }
+#line 975 "chapel.ypp"
+    { (yyval.pexpr) = buildForallLoopExpr(NULL, (yyvsp[(2) - (4)].pexpr), (yyvsp[(4) - (4)].pexpr)); ;}
     break;
 
   case 299:
-
-/* Line 1806 of yacc.c  */
-#line 982 "chapel.ypp"
-    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr)); }
+#line 977 "chapel.ypp"
+    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr)); ;}
     break;
 
   case 300:
-
-/* Line 1806 of yacc.c  */
-#line 984 "chapel.ypp"
-    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr), false, true); }
+#line 979 "chapel.ypp"
+    { (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (9)].pexpr), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr), false, true); ;}
     break;
 
   case 301:
-
-/* Line 1806 of yacc.c  */
-#line 986 "chapel.ypp"
-    { (yyval.pexpr) = buildForallLoopExpr(NULL, (yyvsp[(2) - (7)].pexpr), (yyvsp[(7) - (7)].pexpr), (yyvsp[(5) - (7)].pexpr)); }
+#line 981 "chapel.ypp"
+    { (yyval.pexpr) = buildForallLoopExpr(NULL, (yyvsp[(2) - (7)].pexpr), (yyvsp[(7) - (7)].pexpr), (yyvsp[(5) - (7)].pexpr)); ;}
     break;
 
   case 302:
-
-/* Line 1806 of yacc.c  */
-#line 988 "chapel.ypp"
+#line 983 "chapel.ypp"
     {
       if ((yyvsp[(2) - (4)].pcallexpr)->argList.length > 1)
         (yyval.pexpr) = buildForallLoopExpr(NULL, new CallExpr("chpl__buildDomainExpr", (yyvsp[(2) - (4)].pcallexpr)), (yyvsp[(4) - (4)].pexpr), NULL, true);
       else
         (yyval.pexpr) = buildForallLoopExpr(NULL, (yyvsp[(2) - (4)].pcallexpr)->get(1)->remove(), (yyvsp[(4) - (4)].pexpr), NULL, true);
-    }
+    ;}
     break;
 
   case 303:
-
-/* Line 1806 of yacc.c  */
-#line 995 "chapel.ypp"
+#line 990 "chapel.ypp"
     {
       if ((yyvsp[(2) - (6)].pcallexpr)->argList.length != 1)
         USR_FATAL((yyvsp[(4) - (6)].pexpr), "invalid index expression");
       (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (6)].pcallexpr)->get(1)->remove(), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), NULL, true);
-    }
+    ;}
     break;
 
   case 304:
-
-/* Line 1806 of yacc.c  */
-#line 1001 "chapel.ypp"
+#line 996 "chapel.ypp"
     {
       if ((yyvsp[(2) - (6)].pcallexpr)->argList.length != 1)
         USR_FATAL((yyvsp[(4) - (6)].pexpr), "invalid index expression");
       (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (6)].pcallexpr)->get(1)->remove(), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr), NULL, false, true);
-    }
+    ;}
     break;
 
   case 305:
-
-/* Line 1806 of yacc.c  */
-#line 1007 "chapel.ypp"
+#line 1002 "chapel.ypp"
     {
       if ((yyvsp[(2) - (9)].pcallexpr)->argList.length != 1)
         USR_FATAL((yyvsp[(4) - (9)].pexpr), "invalid index expression");
       (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (9)].pcallexpr)->get(1)->remove(), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr));
-    }
+    ;}
     break;
 
   case 306:
-
-/* Line 1806 of yacc.c  */
-#line 1013 "chapel.ypp"
+#line 1008 "chapel.ypp"
     {
       if ((yyvsp[(2) - (9)].pcallexpr)->argList.length != 1)
         USR_FATAL((yyvsp[(4) - (9)].pexpr), "invalid index expression");
       (yyval.pexpr) = buildForallLoopExpr((yyvsp[(2) - (9)].pcallexpr)->get(1)->remove(), (yyvsp[(4) - (9)].pexpr), (yyvsp[(9) - (9)].pexpr), (yyvsp[(7) - (9)].pexpr), false, true);
-    }
+    ;}
     break;
 
   case 307:
-
-/* Line 1806 of yacc.c  */
-#line 1022 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr(new DefExpr(buildIfExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)))); }
+#line 1017 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr(new DefExpr(buildIfExpr((yyvsp[(2) - (6)].pexpr), (yyvsp[(4) - (6)].pexpr), (yyvsp[(6) - (6)].pexpr)))); ;}
     break;
 
   case 308:
-
-/* Line 1806 of yacc.c  */
-#line 1026 "chapel.ypp"
-    { (yyval.pexpr) = new SymExpr(gNil); }
+#line 1021 "chapel.ypp"
+    { (yyval.pexpr) = new SymExpr(gNil); ;}
     break;
 
   case 316:
-
-/* Line 1806 of yacc.c  */
-#line 1042 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("<~>", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1037 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("<~>", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 317:
-
-/* Line 1806 of yacc.c  */
-#line 1046 "chapel.ypp"
-    { (yyval.pcallexpr) = NULL; }
+#line 1041 "chapel.ypp"
+    { (yyval.pcallexpr) = NULL; ;}
     break;
 
   case 318:
-
-/* Line 1806 of yacc.c  */
-#line 1047 "chapel.ypp"
-    { (yyval.pcallexpr) = (yyvsp[(3) - (4)].pcallexpr);   }
+#line 1042 "chapel.ypp"
+    { (yyval.pcallexpr) = (yyvsp[(3) - (4)].pcallexpr);   ;}
     break;
 
   case 319:
-
-/* Line 1806 of yacc.c  */
-#line 1051 "chapel.ypp"
-    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pexpr)); }
+#line 1046 "chapel.ypp"
+    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (1)].pexpr)); ;}
     break;
 
   case 320:
-
-/* Line 1806 of yacc.c  */
-#line 1052 "chapel.ypp"
-    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); }
+#line 1047 "chapel.ypp"
+    { (yyvsp[(1) - (3)].pcallexpr)->insertAtTail((yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 322:
-
-/* Line 1806 of yacc.c  */
-#line 1058 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("<~>", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1053 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("<~>", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 323:
-
-/* Line 1806 of yacc.c  */
-#line 1063 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr(PRIM_NEW, (yyvsp[(2) - (2)].pexpr)); }
+#line 1058 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr(PRIM_NEW, (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 324:
-
-/* Line 1806 of yacc.c  */
-#line 1068 "chapel.ypp"
-    { (yyval.pexpr) = buildLetExpr((yyvsp[(2) - (4)].pblockstmt), (yyvsp[(4) - (4)].pexpr)); }
+#line 1063 "chapel.ypp"
+    { (yyval.pexpr) = buildLetExpr((yyvsp[(2) - (4)].pblockstmt), (yyvsp[(4) - (4)].pexpr)); ;}
     break;
 
   case 333:
-
-/* Line 1806 of yacc.c  */
-#line 1084 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr(PRIM_TUPLE_EXPAND, (yyvsp[(3) - (4)].pexpr)); }
+#line 1079 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr(PRIM_TUPLE_EXPAND, (yyvsp[(3) - (4)].pexpr)); ;}
     break;
 
   case 334:
-
-/* Line 1806 of yacc.c  */
-#line 1086 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("_cast", (yyvsp[(3) - (3)].pexpr), (yyvsp[(1) - (3)].pexpr)); }
+#line 1081 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("_cast", (yyvsp[(3) - (3)].pexpr), (yyvsp[(1) - (3)].pexpr)); ;}
     break;
 
   case 335:
-
-/* Line 1806 of yacc.c  */
-#line 1088 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("_build_range", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1083 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("_build_range", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 336:
-
-/* Line 1806 of yacc.c  */
-#line 1090 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("_build_range", buildDotExpr("BoundedRangeType", "boundedLow"), (yyvsp[(1) - (2)].pexpr)); }
+#line 1085 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("_build_range", buildDotExpr("BoundedRangeType", "boundedLow"), (yyvsp[(1) - (2)].pexpr)); ;}
     break;
 
   case 337:
-
-/* Line 1806 of yacc.c  */
-#line 1092 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("_build_range", buildDotExpr("BoundedRangeType", "boundedHigh"), (yyvsp[(2) - (2)].pexpr)); }
+#line 1087 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("_build_range", buildDotExpr("BoundedRangeType", "boundedHigh"), (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 338:
-
-/* Line 1806 of yacc.c  */
-#line 1094 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("_build_range", buildDotExpr("BoundedRangeType", "boundedNone")); }
+#line 1089 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("_build_range", buildDotExpr("BoundedRangeType", "boundedNone")); ;}
     break;
 
   case 345:
-
-/* Line 1806 of yacc.c  */
-#line 1117 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pcallexpr)); }
+#line 1112 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 346:
-
-/* Line 1806 of yacc.c  */
-#line 1118 "chapel.ypp"
-    { (yyval.pexpr) = buildSquareCallExpr((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pcallexpr)); }
+#line 1113 "chapel.ypp"
+    { (yyval.pexpr) = buildSquareCallExpr((yyvsp[(1) - (4)].pexpr), (yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 347:
-
-/* Line 1806 of yacc.c  */
-#line 1119 "chapel.ypp"
-    { (yyval.pexpr) = buildPrimitiveExpr((yyvsp[(3) - (4)].pcallexpr)); }
+#line 1114 "chapel.ypp"
+    { (yyval.pexpr) = buildPrimitiveExpr((yyvsp[(3) - (4)].pcallexpr)); ;}
     break;
 
   case 348:
-
-/* Line 1806 of yacc.c  */
-#line 1123 "chapel.ypp"
-    { (yyval.pexpr) = buildDotExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pch)); }
+#line 1118 "chapel.ypp"
+    { (yyval.pexpr) = buildDotExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pch)); ;}
     break;
 
   case 349:
-
-/* Line 1806 of yacc.c  */
-#line 1124 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr(PRIM_TYPEOF, (yyvsp[(1) - (3)].pexpr)); }
+#line 1119 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr(PRIM_TYPEOF, (yyvsp[(1) - (3)].pexpr)); ;}
     break;
 
   case 350:
-
-/* Line 1806 of yacc.c  */
-#line 1125 "chapel.ypp"
-    { (yyval.pexpr) = buildDotExpr((yyvsp[(1) - (3)].pexpr), "_dom"); }
+#line 1120 "chapel.ypp"
+    { (yyval.pexpr) = buildDotExpr((yyvsp[(1) - (3)].pexpr), "_dom"); ;}
     break;
 
   case 351:
-
-/* Line 1806 of yacc.c  */
-#line 1133 "chapel.ypp"
-    { (yyval.pexpr) = (yyvsp[(2) - (3)].pexpr); }
+#line 1128 "chapel.ypp"
+    { (yyval.pexpr) = (yyvsp[(2) - (3)].pexpr); ;}
     break;
 
   case 352:
-
-/* Line 1806 of yacc.c  */
-#line 1134 "chapel.ypp"
-    { (yyval.pexpr) = buildOneTuple((yyvsp[(2) - (4)].pexpr)); }
+#line 1129 "chapel.ypp"
+    { (yyval.pexpr) = buildOneTuple((yyvsp[(2) - (4)].pexpr)); ;}
     break;
 
   case 353:
-
-/* Line 1806 of yacc.c  */
-#line 1135 "chapel.ypp"
-    { (yyval.pexpr) = buildTuple((yyvsp[(2) - (3)].pcallexpr)); }
+#line 1130 "chapel.ypp"
+    { (yyval.pexpr) = buildTuple((yyvsp[(2) - (3)].pcallexpr)); ;}
     break;
 
   case 354:
-
-/* Line 1806 of yacc.c  */
-#line 1139 "chapel.ypp"
-    { (yyval.pexpr) = buildIntLiteral(yytext); }
+#line 1134 "chapel.ypp"
+    { (yyval.pexpr) = buildIntLiteral(yytext); ;}
     break;
 
   case 355:
-
-/* Line 1806 of yacc.c  */
-#line 1140 "chapel.ypp"
-    { (yyval.pexpr) = buildRealLiteral(yytext); }
+#line 1135 "chapel.ypp"
+    { (yyval.pexpr) = buildRealLiteral(yytext); ;}
     break;
 
   case 356:
-
-/* Line 1806 of yacc.c  */
-#line 1141 "chapel.ypp"
-    { (yyval.pexpr) = buildImagLiteral(yytext); }
+#line 1136 "chapel.ypp"
+    { (yyval.pexpr) = buildImagLiteral(yytext); ;}
     break;
 
   case 357:
-
-/* Line 1806 of yacc.c  */
-#line 1142 "chapel.ypp"
-    { (yyval.pexpr) = buildStringLiteral((yyvsp[(1) - (1)].pch)); }
+#line 1137 "chapel.ypp"
+    { (yyval.pexpr) = buildStringLiteral((yyvsp[(1) - (1)].pch)); ;}
     break;
 
   case 358:
-
-/* Line 1806 of yacc.c  */
-#line 1143 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildDomainExpr", (yyvsp[(2) - (3)].pcallexpr)); }
+#line 1138 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildDomainExpr", (yyvsp[(2) - (3)].pcallexpr)); ;}
     break;
 
   case 359:
-
-/* Line 1806 of yacc.c  */
-#line 1144 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__buildArrayExpr", (yyvsp[(2) - (3)].pcallexpr)); }
+#line 1139 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__buildArrayExpr", (yyvsp[(2) - (3)].pcallexpr)); ;}
     break;
 
   case 360:
-
-/* Line 1806 of yacc.c  */
-#line 1146 "chapel.ypp"
+#line 1141 "chapel.ypp"
     {
       (yyval.pexpr) = new CallExpr("chpl__buildAssociativeArrayExpr", (yyvsp[(2) - (3)].pcallexpr));
-    }
+    ;}
     break;
 
   case 361:
-
-/* Line 1806 of yacc.c  */
-#line 1152 "chapel.ypp"
-    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1147 "chapel.ypp"
+    { (yyval.pcallexpr) = new CallExpr(PRIM_ACTUALS_LIST, (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 362:
-
-/* Line 1806 of yacc.c  */
-#line 1153 "chapel.ypp"
-    { (yyvsp[(1) - (5)].pcallexpr)->insertAtTail((yyvsp[(3) - (5)].pexpr)); (yyvsp[(1) - (5)].pcallexpr)->insertAtTail((yyvsp[(5) - (5)].pexpr)); }
+#line 1148 "chapel.ypp"
+    { (yyvsp[(1) - (5)].pcallexpr)->insertAtTail((yyvsp[(3) - (5)].pexpr)); (yyvsp[(1) - (5)].pcallexpr)->insertAtTail((yyvsp[(5) - (5)].pexpr)); ;}
     break;
 
   case 363:
-
-/* Line 1806 of yacc.c  */
-#line 1157 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("+", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1152 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("+", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 364:
-
-/* Line 1806 of yacc.c  */
-#line 1158 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("-", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1153 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("-", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 365:
-
-/* Line 1806 of yacc.c  */
-#line 1159 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("*", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1154 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("*", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 366:
-
-/* Line 1806 of yacc.c  */
-#line 1160 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("/", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1155 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("/", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 367:
-
-/* Line 1806 of yacc.c  */
-#line 1161 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("<<", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1156 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("<<", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 368:
-
-/* Line 1806 of yacc.c  */
-#line 1162 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr(">>", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1157 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr(">>", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 369:
-
-/* Line 1806 of yacc.c  */
-#line 1163 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("%", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1158 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("%", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 370:
-
-/* Line 1806 of yacc.c  */
-#line 1164 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("==", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1159 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("==", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 371:
-
-/* Line 1806 of yacc.c  */
-#line 1165 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("!=", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1160 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("!=", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 372:
-
-/* Line 1806 of yacc.c  */
-#line 1166 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("<=", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1161 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("<=", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 373:
-
-/* Line 1806 of yacc.c  */
-#line 1167 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr(">=", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1162 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr(">=", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 374:
-
-/* Line 1806 of yacc.c  */
-#line 1168 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("<", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1163 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("<", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 375:
-
-/* Line 1806 of yacc.c  */
-#line 1169 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr(">", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1164 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr(">", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 376:
-
-/* Line 1806 of yacc.c  */
-#line 1170 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("&", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1165 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("&", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 377:
-
-/* Line 1806 of yacc.c  */
-#line 1171 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("|", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1166 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("|", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 378:
-
-/* Line 1806 of yacc.c  */
-#line 1172 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("^", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1167 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("^", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 379:
-
-/* Line 1806 of yacc.c  */
-#line 1173 "chapel.ypp"
-    { (yyval.pexpr) = buildLogicalAndExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1168 "chapel.ypp"
+    { (yyval.pexpr) = buildLogicalAndExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 380:
-
-/* Line 1806 of yacc.c  */
-#line 1174 "chapel.ypp"
-    { (yyval.pexpr) = buildLogicalOrExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1169 "chapel.ypp"
+    { (yyval.pexpr) = buildLogicalOrExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 381:
-
-/* Line 1806 of yacc.c  */
-#line 1175 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("**", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1170 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("**", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 382:
-
-/* Line 1806 of yacc.c  */
-#line 1176 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("by", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1171 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("by", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 383:
-
-/* Line 1806 of yacc.c  */
-#line 1177 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("align", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1172 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("align", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 384:
-
-/* Line 1806 of yacc.c  */
-#line 1178 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("#", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1173 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("#", (yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 385:
-
-/* Line 1806 of yacc.c  */
-#line 1179 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("chpl__distributed", (yyvsp[(3) - (3)].pexpr), (yyvsp[(1) - (3)].pexpr)); }
+#line 1174 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("chpl__distributed", (yyvsp[(3) - (3)].pexpr), (yyvsp[(1) - (3)].pexpr)); ;}
     break;
 
   case 386:
-
-/* Line 1806 of yacc.c  */
-#line 1183 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("+", (yyvsp[(2) - (2)].pexpr)); }
+#line 1178 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("+", (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 387:
-
-/* Line 1806 of yacc.c  */
-#line 1184 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("-", (yyvsp[(2) - (2)].pexpr)); }
+#line 1179 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("-", (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 388:
-
-/* Line 1806 of yacc.c  */
-#line 1185 "chapel.ypp"
-    { (yyval.pexpr) = buildPreDecIncWarning((yyvsp[(2) - (2)].pexpr), '-'); }
+#line 1180 "chapel.ypp"
+    { (yyval.pexpr) = buildPreDecIncWarning((yyvsp[(2) - (2)].pexpr), '-'); ;}
     break;
 
   case 389:
-
-/* Line 1806 of yacc.c  */
-#line 1186 "chapel.ypp"
-    { (yyval.pexpr) = buildPreDecIncWarning((yyvsp[(2) - (2)].pexpr), '+'); }
+#line 1181 "chapel.ypp"
+    { (yyval.pexpr) = buildPreDecIncWarning((yyvsp[(2) - (2)].pexpr), '+'); ;}
     break;
 
   case 390:
-
-/* Line 1806 of yacc.c  */
-#line 1187 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("!", (yyvsp[(2) - (2)].pexpr)); }
+#line 1182 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("!", (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 391:
-
-/* Line 1806 of yacc.c  */
-#line 1188 "chapel.ypp"
-    { (yyval.pexpr) = new CallExpr("~", (yyvsp[(2) - (2)].pexpr)); }
+#line 1183 "chapel.ypp"
+    { (yyval.pexpr) = new CallExpr("~", (yyvsp[(2) - (2)].pexpr)); ;}
     break;
 
   case 392:
-
-/* Line 1806 of yacc.c  */
-#line 1192 "chapel.ypp"
-    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1187 "chapel.ypp"
+    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 393:
-
-/* Line 1806 of yacc.c  */
-#line 1193 "chapel.ypp"
-    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); }
+#line 1188 "chapel.ypp"
+    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); ;}
     break;
 
   case 394:
-
-/* Line 1806 of yacc.c  */
-#line 1194 "chapel.ypp"
-    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1189 "chapel.ypp"
+    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 395:
-
-/* Line 1806 of yacc.c  */
-#line 1195 "chapel.ypp"
-    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); }
+#line 1190 "chapel.ypp"
+    { (yyval.pexpr) = buildReduceExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); ;}
     break;
 
   case 396:
-
-/* Line 1806 of yacc.c  */
-#line 1199 "chapel.ypp"
-    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1194 "chapel.ypp"
+    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 397:
-
-/* Line 1806 of yacc.c  */
-#line 1200 "chapel.ypp"
-    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); }
+#line 1195 "chapel.ypp"
+    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); ;}
     break;
 
   case 398:
-
-/* Line 1806 of yacc.c  */
-#line 1201 "chapel.ypp"
-    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); }
+#line 1196 "chapel.ypp"
+    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr)); ;}
     break;
 
   case 399:
-
-/* Line 1806 of yacc.c  */
-#line 1202 "chapel.ypp"
-    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); }
+#line 1197 "chapel.ypp"
+    { (yyval.pexpr) = buildScanExpr((yyvsp[(1) - (3)].pexpr), (yyvsp[(3) - (3)].pexpr), true); ;}
     break;
 
   case 400:
-
-/* Line 1806 of yacc.c  */
-#line 1207 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("SumReduceScanOp"); }
+#line 1202 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("SumReduceScanOp"); ;}
     break;
 
   case 401:
-
-/* Line 1806 of yacc.c  */
-#line 1208 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("ProductReduceScanOp"); }
+#line 1203 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("ProductReduceScanOp"); ;}
     break;
 
   case 402:
-
-/* Line 1806 of yacc.c  */
-#line 1209 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("LogicalAndReduceScanOp"); }
+#line 1204 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("LogicalAndReduceScanOp"); ;}
     break;
 
   case 403:
-
-/* Line 1806 of yacc.c  */
-#line 1210 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("LogicalOrReduceScanOp"); }
+#line 1205 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("LogicalOrReduceScanOp"); ;}
     break;
 
   case 404:
-
-/* Line 1806 of yacc.c  */
-#line 1211 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("BitwiseAndReduceScanOp"); }
+#line 1206 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("BitwiseAndReduceScanOp"); ;}
     break;
 
   case 405:
-
-/* Line 1806 of yacc.c  */
-#line 1212 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("BitwiseOrReduceScanOp"); }
+#line 1207 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("BitwiseOrReduceScanOp"); ;}
     break;
 
   case 406:
-
-/* Line 1806 of yacc.c  */
-#line 1213 "chapel.ypp"
-    { (yyval.pexpr) = new UnresolvedSymExpr("BitwiseXorReduceScanOp"); }
+#line 1208 "chapel.ypp"
+    { (yyval.pexpr) = new UnresolvedSymExpr("BitwiseXorReduceScanOp"); ;}
     break;
 
 
-
-/* Line 1806 of yacc.c  */
-#line 7024 "chapel.tab.cpp"
+/* Line 1267 of yacc.c.  */
+#line 6378 "chapel.tab.cpp"
       default: break;
     }
-  /* User semantic actions sometimes alter yychar, and that requires
-     that yytoken be updated with the new translation.  We take the
-     approach of translating immediately before every use of yytoken.
-     One alternative is translating here after every semantic action,
-     but that translation would be missed if the semantic action invokes
-     YYABORT, YYACCEPT, or YYERROR immediately after altering yychar or
-     if it invokes YYBACKUP.  In the case of YYABORT or YYACCEPT, an
-     incorrect destructor might then be invoked immediately.  In the
-     case of YYERROR or YYBACKUP, subsequent parser actions might lead
-     to an incorrect destructor call or verbose syntax error message
-     before the lookahead is translated.  */
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
 
   YYPOPSTACK (yylen);
@@ -7062,10 +6405,6 @@ yyreduce:
 | yyerrlab -- here on detecting error |
 `------------------------------------*/
 yyerrlab:
-  /* Make sure we have latest lookahead translation.  See comments at
-     user semantic actions for why this is necessary.  */
-  yytoken = yychar == YYEMPTY ? YYEMPTY : YYTRANSLATE (yychar);
-
   /* If not already recovering from an error, report this error.  */
   if (!yyerrstatus)
     {
@@ -7073,44 +6412,45 @@ yyerrlab:
 #if ! YYERROR_VERBOSE
       yyerror (YY_("syntax error"));
 #else
-# define YYSYNTAX_ERROR yysyntax_error (&yymsg_alloc, &yymsg, \
-                                        yyssp, yytoken)
       {
-        char const *yymsgp = YY_("syntax error");
-        int yysyntax_error_status;
-        yysyntax_error_status = YYSYNTAX_ERROR;
-        if (yysyntax_error_status == 0)
-          yymsgp = yymsg;
-        else if (yysyntax_error_status == 1)
-          {
-            if (yymsg != yymsgbuf)
-              YYSTACK_FREE (yymsg);
-            yymsg = (char *) YYSTACK_ALLOC (yymsg_alloc);
-            if (!yymsg)
-              {
-                yymsg = yymsgbuf;
-                yymsg_alloc = sizeof yymsgbuf;
-                yysyntax_error_status = 2;
-              }
-            else
-              {
-                yysyntax_error_status = YYSYNTAX_ERROR;
-                yymsgp = yymsg;
-              }
-          }
-        yyerror (yymsgp);
-        if (yysyntax_error_status == 2)
-          goto yyexhaustedlab;
+	YYSIZE_T yysize = yysyntax_error (0, yystate, yychar);
+	if (yymsg_alloc < yysize && yymsg_alloc < YYSTACK_ALLOC_MAXIMUM)
+	  {
+	    YYSIZE_T yyalloc = 2 * yysize;
+	    if (! (yysize <= yyalloc && yyalloc <= YYSTACK_ALLOC_MAXIMUM))
+	      yyalloc = YYSTACK_ALLOC_MAXIMUM;
+	    if (yymsg != yymsgbuf)
+	      YYSTACK_FREE (yymsg);
+	    yymsg = (char *) YYSTACK_ALLOC (yyalloc);
+	    if (yymsg)
+	      yymsg_alloc = yyalloc;
+	    else
+	      {
+		yymsg = yymsgbuf;
+		yymsg_alloc = sizeof yymsgbuf;
+	      }
+	  }
+
+	if (0 < yysize && yysize <= yymsg_alloc)
+	  {
+	    (void) yysyntax_error (yymsg, yystate, yychar);
+	    yyerror (yymsg);
+	  }
+	else
+	  {
+	    yyerror (YY_("syntax error"));
+	    if (yysize != 0)
+	      goto yyexhaustedlab;
+	  }
       }
-# undef YYSYNTAX_ERROR
 #endif
     }
 
-  yyerror_range[1] = yylloc;
+  yyerror_range[0] = yylloc;
 
   if (yyerrstatus == 3)
     {
-      /* If just tried and failed to reuse lookahead token after an
+      /* If just tried and failed to reuse look-ahead token after an
 	 error, discard it.  */
 
       if (yychar <= YYEOF)
@@ -7127,7 +6467,7 @@ yyerrlab:
 	}
     }
 
-  /* Else will try to reuse lookahead token after shifting the error
+  /* Else will try to reuse look-ahead token after shifting the error
      token.  */
   goto yyerrlab1;
 
@@ -7143,7 +6483,7 @@ yyerrorlab:
   if (/*CONSTCOND*/ 0)
      goto yyerrorlab;
 
-  yyerror_range[1] = yylsp[1-yylen];
+  yyerror_range[0] = yylsp[1-yylen];
   /* Do not reclaim the symbols of the rule which action triggered
      this YYERROR.  */
   YYPOPSTACK (yylen);
@@ -7162,7 +6502,7 @@ yyerrlab1:
   for (;;)
     {
       yyn = yypact[yystate];
-      if (!yypact_value_is_default (yyn))
+      if (yyn != YYPACT_NINF)
 	{
 	  yyn += YYTERROR;
 	  if (0 <= yyn && yyn <= YYLAST && yycheck[yyn] == YYTERROR)
@@ -7177,7 +6517,7 @@ yyerrlab1:
       if (yyssp == yyss)
 	YYABORT;
 
-      yyerror_range[1] = *yylsp;
+      yyerror_range[0] = *yylsp;
       yydestruct ("Error: popping",
 		  yystos[yystate], yyvsp, yylsp);
       YYPOPSTACK (1);
@@ -7185,12 +6525,15 @@ yyerrlab1:
       YY_STACK_PRINT (yyss, yyssp);
     }
 
+  if (yyn == YYFINAL)
+    YYACCEPT;
+
   *++yyvsp = yylval;
 
-  yyerror_range[2] = yylloc;
+  yyerror_range[1] = yylloc;
   /* Using YYLLOC is tempting, but would change the location of
-     the lookahead.  YYLOC is available though.  */
-  YYLLOC_DEFAULT (yyloc, yyerror_range, 2);
+     the look-ahead.  YYLOC is available though.  */
+  YYLLOC_DEFAULT (yyloc, (yyerror_range - 1), 2);
   *++yylsp = yyloc;
 
   /* Shift the error token.  */
@@ -7214,7 +6557,7 @@ yyabortlab:
   yyresult = 1;
   goto yyreturn;
 
-#if !defined(yyoverflow) || YYERROR_VERBOSE
+#ifndef yyoverflow
 /*-------------------------------------------------.
 | yyexhaustedlab -- memory exhaustion comes here.  |
 `-------------------------------------------------*/
@@ -7225,14 +6568,9 @@ yyexhaustedlab:
 #endif
 
 yyreturn:
-  if (yychar != YYEMPTY)
-    {
-      /* Make sure we have latest lookahead translation.  See comments at
-         user semantic actions for why this is necessary.  */
-      yytoken = YYTRANSLATE (yychar);
-      yydestruct ("Cleanup: discarding lookahead",
-                  yytoken, &yylval, &yylloc);
-    }
+  if (yychar != YYEOF && yychar != YYEMPTY)
+     yydestruct ("Cleanup: discarding lookahead",
+		 yytoken, &yylval, &yylloc);
   /* Do not reclaim the symbols of the rule which action triggered
      this YYABORT or YYACCEPT.  */
   YYPOPSTACK (yylen);
@@ -7256,8 +6594,6 @@ yyreturn:
 }
 
 
-
-/* Line 2067 of yacc.c  */
-#line 1216 "chapel.ypp"
+#line 1211 "chapel.ypp"
 
 

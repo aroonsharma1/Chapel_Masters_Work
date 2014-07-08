@@ -97,7 +97,7 @@ libgasnet_dependencies =                  \
 
 # library targets 
 THREAD_MODEL=SEQ
-THREAD_MODEL_LC=`echo "$(THREAD_MODEL)" | awk '{print tolower($$0)}'`
+THREAD_MODEL_LC=`echo "$(THREAD_MODEL)" | gawk '{print tolower($$0)}'`
 LIBGASNET_NAME=libgasnet-$(CONDUIT_NAME)
 do-libgasnet: $(CONDUIT_SPECIAL_OBJS)
 	@mkdir -p .$(THREAD_MODEL)

@@ -1,5 +1,6 @@
-use CyclicZipOpt;
 use BlockDist;
+use CyclicDist;
+use CyclicZipOpt;
 
 use Time;
 use CommDiagnostics;
@@ -13,19 +14,19 @@ config var messages=false;
 config var timeit=false;
 config var volume=false;
 
-var mydom = {0..n,0..n};
+const mydom = {0..n,0..n};
 if dist=='NONE' {
-	var mydist = mydom;
+	const mydist = mydom;
 	dobench(mydist, mydom);
 } else if dist=='CM' {
-	var mydist = mydom dmapped CyclicZipOpt(startIdx=mydom.low);
+	const mydist = mydom dmapped CyclicZipOpt(startIdx=mydom.low);
 	totalcomm2=volume;
 	dobench(mydist, mydom);	
 } else if dist=='C' {
-	var mydist = mydom dmapped Cyclic(startIdx=mydom.low);
+	const mydist = mydom dmapped Cyclic(startIdx=mydom.low);
 	dobench(mydist, mydom);	
 } else if dist=='B' {
-	var mydist = mydom dmapped Block(boundingBox=mydom);
+	const mydist = mydom dmapped Block(boundingBox=mydom);
 	dobench(mydist, mydom);
 }
 
@@ -146,6 +147,4 @@ proc dobench(mydist, mydom) {
 		//writeln('totals count=', total_communication_counts+total_communication_counts2);
 		writeln('message volume=', total);
 	}
-
-
 }

@@ -1,8 +1,3 @@
-/**************************************************************************
-  Copyright (c) 2004-2013, Cray Inc.  (See LICENSE file for more details)
-**************************************************************************/
-
-
 //
 // Error checking functions for memory debugging support.
 //

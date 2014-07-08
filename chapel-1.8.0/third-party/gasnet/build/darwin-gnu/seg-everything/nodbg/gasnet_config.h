@@ -14,9 +14,9 @@
 #endif
 
 
-#define GASNETI_BUILD_ID "Mon Dec  2 20:45:51 EST 2013 aroonsharma"
+#define GASNETI_BUILD_ID "Thu Jun 26 22:59:40 EDT 2014 aroonsharma"
 #define GASNETI_CONFIGURE_ARGS " '--prefix=/Users/aroonsharma/Desktop/CHAPEL/chapel-1.8.0/third-party/gasnet/install/darwin-gnu/seg-everything/nodbg' '--enable-segment-everything' '--enable-allow-gcc4' '--disable-seq' '--enable-par' '--disable-parsync' 'CC=gcc' 'CXX=g++'"
-#define GASNETI_SYSTEM_TUPLE "x86_64-apple-darwin13.0.0"
+#define GASNETI_SYSTEM_TUPLE "x86_64-apple-darwin13.2.0"
 #define GASNETI_SYSTEM_NAME "Aroon-Sharmas-MacBook-Pro.local"
 /* #undef GASNETI_CROSS_COMPILING */
 
@@ -85,16 +85,16 @@
 /* #undef GASNETI_HAVE_MPI_CC_ATTRIBUTE_FORMAT_FUNCPTR_ARG */
 
 /* identification of the C compiler used at configure time */
-#define GASNETI_PLATFORM_COMPILER_IDSTR "|COMPILER_FAMILY:CLANG|COMPILER_VERSION:5.0 (clang-500.2.79)|COMPILER_FAMILYID:19|GNU:4.2.1|STD:__STDC__,__STDC_VERSION__=199901L|misc:4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79)|"
+#define GASNETI_PLATFORM_COMPILER_IDSTR "|COMPILER_FAMILY:CLANG|COMPILER_VERSION:5.1 (clang-503.0.40)|COMPILER_FAMILYID:19|GNU:4.2.1|STD:__STDC__,__STDC_VERSION__=199901L|misc:4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40)|"
 #define GASNETI_PLATFORM_COMPILER_FAMILYID 19
 #define GASNETI_PLATFORM_COMPILER_ID 19
-#define GASNETI_PLATFORM_COMPILER_VERSION 327680
+#define GASNETI_PLATFORM_COMPILER_VERSION 327936
 
 /* identification of the C++ compiler used at configure time */
-#define GASNETI_PLATFORM_CXX_IDSTR "|COMPILER_FAMILY:CLANG|COMPILER_VERSION:5.0 (clang-500.2.79)|COMPILER_FAMILYID:19|GNU:4.2.1|STD:__STDC__,__cplusplus=199711L|misc:4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79)|"
+#define GASNETI_PLATFORM_CXX_IDSTR "|COMPILER_FAMILY:CLANG|COMPILER_VERSION:5.1 (clang-503.0.40)|COMPILER_FAMILYID:19|GNU:4.2.1|STD:__STDC__,__cplusplus=199711L|misc:4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40)|"
 #define GASNETI_PLATFORM_CXX_FAMILYID 19
 #define GASNETI_PLATFORM_CXX_ID 10019
-#define GASNETI_PLATFORM_CXX_VERSION 327680
+#define GASNETI_PLATFORM_CXX_VERSION 327936
 
 /* identification of the MPI C compiler used at configure time */
 /* #undef GASNETI_PLATFORM_MPI_CC_IDSTR */
