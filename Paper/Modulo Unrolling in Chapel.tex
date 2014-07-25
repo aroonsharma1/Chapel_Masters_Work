@@ -5,21 +5,40 @@
 \usepackage{graphicx}
 \usepackage{setspace}
 %\usepackage{amsmath}
-%\usepackage{amssymb}
+\usepackage{amssymb}
 %\usepackage{subfigure}
 \usepackage{multirow}
 %\usepackage[linesnumbered,noend,ruled]{algorithm2e}
-%\usepackage{floatflt}
+\usepackage{float}
 \usepackage{verbatim}
 \usepackage[margin=0.5in]{geometry}
 \usepackage[symbol]{footmisc}
 \usepackage{courier}
 %\usepackage[breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage{caption}
+\captionsetup{font=scriptsize}
+\usepackage[export]{adjustbox}
+\usepackage{fancybox}
+\usepackage{authblk}
+\usepackage{url}
+\usepackage{latexsym}
+
+
+
+%\DeclareCaptionFormat{myformat}{#1#2#3\hrulefill}
+%\captionsetup{format=myformat}
+\newcommand{\tab}{\hspace*{2em}}
 
 \begin{document}
 
-\title{Affine Loop Optimization Using Modulo Unrolling in Chapel}
-\author{Aroon Sharma}
+\title{Affine Loop Optimization Based On Modulo Unrolling in Chapel}
+\author[1]{Aroon Sharma}
+\author[1]{Rajeev Barua}
+\author[2]{Michael Ferguson}
+\author[1]{Darren Smith}
+\author[1]{Joshua Koehler}
+\affil[1]{Department of Electrical and Computer Engineering, University of Maryland College Park}
+\affil[2]{Laboratory for Telecommunication Sciences, Greenbelt, Maryland}
 
            
 \maketitle
@@ -27,12 +46,14 @@
 \input{abstract}
 
 \input{introduction}
+\input{data_distributions}
 \input{relwork}
 \input{modulo_unrolling}
 \input{motivation_for_aggregation}
-\input{language_features}
-\input{cyclic_modulo}
-\input{block_cyclic_modulo}
+\input{transformation}
+%\input{language_features}
+\input{adaptation_in_chapel}
+%\input{block_cyclic_modulo}
 \input{results}
 \input{future_work}
 %\input{conclusion}
@@ -43,7 +64,7 @@
 \vspace{-3ex}
 \bibliography{bibliography}
 \vspace{-2ex}
-\bibliographystyle{abbrv}
+\bibliographystyle{ieeetr}
 \end{singlespace}
 }
 

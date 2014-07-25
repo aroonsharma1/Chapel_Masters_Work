@@ -1,5 +1,5 @@
 #!/bin/bash
-nl=10
+nl=8
 size=128
 
 echo nl=$nl

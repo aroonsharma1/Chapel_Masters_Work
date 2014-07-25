@@ -1,7 +1,7 @@
 #!/bin/bash
-nl=10
+nl=8
 epsilon=0.05
-n=400
+n=4000
 
 echo nl=$nl
 echo n=$n

@@ -1,6 +1,6 @@
 #!/bin/bash
 #standard data set is 1000 but should run this with a size of 300
-nl=10
+nl=8
 M=1000
 N=1000
 TMAX=50

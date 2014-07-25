@@ -1,5 +1,5 @@
 #!/bin/bash
-nl=10
+nl=8
 N=64
 
 echo nl=$nl

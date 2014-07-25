@@ -74,7 +74,7 @@ proc kernel_2mm(alpha: int, beta: int, distribution, matrix_size: int) {
 
     forall (i,j) in distribution {
         var tempArray: [1..matrix_size] real;
-        forall (a, b, k) in zip(A[i, 1..matrix_size], B[1..matrix_size, j], 1..) {
+        forall (b, a, k) in zip(B[1..matrix_size, j], A[i, 1..matrix_size], 1..) {
             var temp = a * b;
             tempArray[k] = temp;
         }
@@ -83,7 +83,7 @@ proc kernel_2mm(alpha: int, beta: int, distribution, matrix_size: int) {
     
     forall (i,j) in distribution {
         var tempArray: [1..matrix_size] real;
-        forall (c, d, k) in zip(C[i, 1..matrix_size], D[1..matrix_size, j], 1..) {
+        forall (d, c, k) in zip(D[1..matrix_size, j], C[i, 1..matrix_size], 1..) {
 			var temp = c * d;
 			tempArray[k] = temp;
         }
@@ -200,8 +200,8 @@ proc print_locale_data(A:[], matrix_size: int) {
 proc main() {
     /* Initialize the data */
     var dom = {1..size, 1..size};
-	var MyLocaleView = {1..2, 0..4};
-	var MyLocales: [MyLocaleView] locale = reshape(Locales, MyLocaleView);
+	//var MyLocaleView = {1..2, 0..4};
+	//var MyLocales: [MyLocaleView] locale = reshape(Locales, MyLocaleView);
 
     if dist == "NONE" {
         var user_dist = dom;

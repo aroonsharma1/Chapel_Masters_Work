@@ -1,5 +1,5 @@
 #!/bin/bash
-nl=10
+nl=8
 M=10000
 bsize=4
 TSTEPS=100

@@ -1,5 +1,5 @@
 #!/bin/bash
-nl=10
+nl=8
 iterations=10
 n=50400
 

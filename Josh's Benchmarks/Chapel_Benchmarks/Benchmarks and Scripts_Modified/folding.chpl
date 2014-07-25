@@ -28,7 +28,7 @@ if dist=='NONE' {
 } else if dist=='B' {
 	var mydist = mydom dmapped Block(boundingBox=mydom);
 	dobench(mydist, mydom);
-} else if dist == 'BC' {
+} /*else if dist == 'BC' {
 	//won't work for this benchmark because of strided access patterns
 	var mydist = mydom dmapped BlockCyclic(startIdx=mydom.low, blocksize=bsize);
 	dobench(mydist, mydom);
@@ -36,7 +36,7 @@ if dist=='NONE' {
 	//won't work for this benchmark because of strided access patterns
 	var mydist = mydom dmapped MyBlockCyclic(startIdx=mydom.low, blocksize=bsize);
 	dobench(mydist, mydom);
-}
+}*/
 
 proc dobench(mydist, mydom) {
 	var a={1..n}:[mydist]int;

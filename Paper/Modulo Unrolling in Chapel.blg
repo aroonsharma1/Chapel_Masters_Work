@@ -1,53 +1,55 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Modulo Unrolling in Chapel.aux
-The style file: abbrv.bst
+The style file: ieeetr.bst
 Database file #1: bibliography.bib
-Warning--entry type for "polybench" isn't style-file defined
+Warning--entry type for "distributions" isn't style-file defined
 --line 12 of file bibliography.bib
-Warning--to sort, need author or key in polybench
+Warning--entry type for "polybench" isn't style-file defined
+--line 21 of file bibliography.bib
 Warning--can't use both volume and number fields in barua1999maps
-Warning--empty booktitle in chamberlain2011user
 Warning--empty institution in Gupta91automaticdata
-You've used 19 entries,
-            2118 wiz_defined-function locations,
-            611 strings with 7369 characters,
-and the built_in function-call counts, 7463 in all, are:
-= -- 751
-> -- 358
-< -- 8
-+ -- 141
-- -- 122
-* -- 530
-:= -- 1186
-add.period$ -- 62
-call.type$ -- 19
-change.case$ -- 116
+Warning--empty journal in bonachea2007proposal
+Warning--empty booktitle in chamberlain2011user
+You've used 21 entries,
+            1876 wiz_defined-function locations,
+            600 strings with 7554 characters,
+and the built_in function-call counts, 6100 in all, are:
+= -- 608
+> -- 226
+< -- 0
++ -- 84
+- -- 63
+* -- 425
+:= -- 834
+add.period$ -- 22
+call.type$ -- 21
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 285
-empty$ -- 578
-format.name$ -- 122
-if$ -- 1600
+cite$ -- 25
+duplicate$ -- 314
+empty$ -- 597
+format.name$ -- 63
+if$ -- 1497
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 18
-newline$ -- 96
-num.names$ -- 36
-pop$ -- 133
+int.to.str$ -- 21
+missing$ -- 19
+newline$ -- 69
+num.names$ -- 20
+pop$ -- 87
 preamble$ -- 1
-purify$ -- 97
+purify$ -- 0
 quote$ -- 0
-skip$ -- 210
+skip$ -- 219
 stack$ -- 0
-substring$ -- 482
-swap$ -- 82
-text.length$ -- 8
+substring$ -- 439
+swap$ -- 127
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
+type$ -- 0
 warning$ -- 4
-while$ -- 72
-width$ -- 21
-write$ -- 209
-(There were 5 warnings)
+while$ -- 64
+width$ -- 23
+write$ -- 207
+(There were 6 warnings)
