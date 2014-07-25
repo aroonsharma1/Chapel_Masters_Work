@@ -879,10 +879,19 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		//writeln('i ', i, ', patternsize(i)=', patternsize(i), ', followThis(i).stride=',followThis(i).stride, ', dom.whole.dim(i).stride=',dom.whole.dim(i).stride);
 	}
 	
+	if (bufsize < minimumForAggregation) || (bufsize > maximumForAggregation) {
+		if debugzipopt then writeln("not doing opt because not enough/too many elements, num elements = " + bufsize);
+		for i in myFollowThis {
+			yield accessHelper(i);
+		}
+		return;
+	}
+	
+	//check if all elements in chunk are on the same locale?
 	for i in 1..rank {
 	
 		//pattern size of dimension i is dom.dist.targetLocDom.dim(i).size
-		if ((bufsize < minimumForAggregation) || (bufsize > maximumForAggregation) || (followThis(i).stride * dom.whole.dim(i).stride % dom.dist.targetLocDom.dim(i).size != 0)) {
+		if (followThis(i).stride * dom.whole.dim(i).stride % dom.dist.targetLocDom.dim(i).size != 0) {
 			//writeln("In CyclicZipOpt follower not using optimization");
             if debugzipopt then writeln("not doing cyclic opt ", here.id, " ", t);
             if debugzipopt{
