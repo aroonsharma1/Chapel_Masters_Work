@@ -1,0 +1,11 @@
+set terminal aqua fsize 22
+set offset -0.2, -0.2, 0, 0
+set yrange [0:2.8]
+set style data histogram
+set style histogram cluster gap 2
+set style fill solid border rgb "black"
+set xtics nomirror rotate by -45
+set xlabel "Benchmark"
+set ylabel "Normalized Message Counts"
+set boxwidth 0.9 relative
+plot 'message_count.dat' using 2:xtic(1) title col,'' using 3:xtic(1) title col,'' using 4:xtic(1) title col,'' using 5:xtic(1) title col, 

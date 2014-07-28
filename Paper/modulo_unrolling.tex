@@ -1,6 +1,6 @@
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.50]{./Figures/modulo_unrolling.eps}
+\includegraphics[scale=0.45]{./Figures/modulo_unrolling.eps}
 \caption{Modulo unrolling example. (a) Original sequential for loop. Array $A$ is distributed using a Cyclic distribution. Each array access maps to a different memory bank on successive loop iterations. (b) Fully unrolled loop. Trivially, each array access maps to a single memory bank because each access only occurs once. This loop dramatically increases the code size for loops traversing through large data sets. (c) Loop transformed using modulo unrolling. The loop is unrolled by a factor equal to the number of memory banks on the architecture. Now each array access is guaranteed to map to a single memory bank for all loop iterations and code size increases only by the loop unroll factor.}
 \label{modulo_unrolling}
 \end{center}

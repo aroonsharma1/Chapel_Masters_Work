@@ -15,8 +15,17 @@ chpl --fast jacobi-1d.chpl -o jacobi-1d
 echo 'Cyclic (C)'
 ./jacobi-1d -nl $nl --dist=C --M=$M --TSTEPS=$TSTEPS --messages --timeit
 
-echo 'Cyclic with modulo unrolling (CM)'
-./jacobi-1d -nl $nl --dist=CM --M=$M --TSTEPS=$TSTEPS --correct --messages --timeit
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 4'
+./jacobi-1d -nl $nl --dist=CM --M=$M --TSTEPS=$TSTEPS --correct --messages --timeit --minimumForAggregation=4
+
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 16'
+./jacobi-1d -nl $nl --dist=CM --M=$M --TSTEPS=$TSTEPS --correct --messages --timeit --minimumForAggregation=16
+
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 100'
+./jacobi-1d -nl $nl --dist=CM --M=$M --TSTEPS=$TSTEPS --correct --messages --timeit --minimumForAggregation=100
+
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 1000000'
+./jacobi-1d -nl $nl --dist=CM --M=$M --TSTEPS=$TSTEPS --correct --messages --timeit --minimumForAggregation=1000000
 
 echo 'Block Cyclic (BC)'
 ./jacobi-1d -nl $nl --dist=BC --M=$M --TSTEPS=$TSTEPS --bsize=$bsize --messages --timeit

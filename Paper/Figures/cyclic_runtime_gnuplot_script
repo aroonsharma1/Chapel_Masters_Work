@@ -1,9 +1,0 @@
-set style data histogram
-set style histogram cluster gap 2
-set style fill solid border rgb "black"
-set auto x
-set xtics nomirror rotate -45 font ",8"
-set xlabel "Benchmark"
-set ylabel "Runtime Normalized to Cyclic Distribution"
-set yrange [0:*]
-plot 'cyclic_runtime.dat' using 2:xtic(1) title col,'' using 3:xtic(1) title col

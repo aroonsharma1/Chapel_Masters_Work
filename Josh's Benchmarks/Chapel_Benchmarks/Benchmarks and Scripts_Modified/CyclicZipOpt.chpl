@@ -8,7 +8,7 @@ config var totalcomm2=false; //do total communication counts test?
 //minimum number of elements in the follower's chunk of work for aggregation to occur
 //this is the smallest number of elements such that one strided get is as fast or
 //faster than minimumForAggregation individual RDMA gets
-config const minimumForAggregation = 4;	
+config const minimumForAggregation = 100;	
 
 //maximum number of elements in the follower's chunk of work for aggregation to occur
 //chunks higher than this will not be aggregated to avoid memory pressure on a locale
@@ -879,6 +879,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		//writeln('i ', i, ', patternsize(i)=', patternsize(i), ', followThis(i).stride=',followThis(i).stride, ', dom.whole.dim(i).stride=',dom.whole.dim(i).stride);
 	}
 	
+	if(debugzipopt) then writeln(bufsize);
 	if (bufsize < minimumForAggregation) || (bufsize > maximumForAggregation) {
 		if debugzipopt then writeln("not doing opt because not enough/too many elements, num elements = " + bufsize);
 		for i in myFollowThis {

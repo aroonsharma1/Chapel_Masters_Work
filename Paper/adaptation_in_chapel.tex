@@ -45,20 +45,26 @@ Because any parallel affine loop can be transformed into an equivalent parallel 
 \begin{figure}
 	\begin{center}
 	\includegraphics[scale=0.40]{./Figures/cyclic_muwu_follower}
-	\caption{Cyclic with modulo unrolling WU caption}
+	\caption{Pseudocode for the Cyclic distribution follower iterator that has been modified to perform modulo unrolling WU. }
 	\label{cyclic_muwu_follower}
 	\end{center}
 \end{figure}
 
-\subsection{Cyclic Distribution with Modulo Unrolling WU}\label{subsec:cyclic_modulo}
+\subsection{Implementation}\label{subsec:cyclic_modulo}
 
-Modulo unrolling WU is implemented into the Chapel programming language through the Cyclic and Block Cyclic distribution modules, as opposed to being implemented via traditional compiler passes. This allows the optimization to be expressed using Chapel's higher-level language constructs, such as zippered iteration and array slicing. 
+Modulo unrolling WU is implemented into the Chapel programming language through the Cyclic and Block Cyclic distribution modules, as opposed to being implemented via traditional compiler passes. Specifically, the follower iterator is modified in the Cyclic distribution, and both the leader and follower iterators are modified in the Block Cyclic distribution. Because these modules are written in Chapel, the optimization can be expressed using Chapel's higher-level language constructs, such as zippered iteration and array slicing. 
+
+Figure \ref{cyclic_muwu_follower} shows a pseudocode representation of the Cyclic follower iterator modified to perform modulo unrolling WU. Some coding details are left out for brevity. The follower iterator is responsible for carrying out the loop iterations that are passed to it by the leader iterator. Because the follower iterator has no knowledge about how the leader iterator divides up the loop iteratrions, this chunk of work can either be entirely local, entirely remote to a single locale, or partially remote and local. Lines 5-9 determine whether all elements of the chunk of work come from the same locale. If not, then we can not aggregate, and the follower iterator calls a helper function responsible for yielding remote elements individually. Lines 10-25 handle the cases where the chunk of work does reside on a single locale. If the chunk is found locally, another helper function responsible for yielding local elements is called, showed in lines 10-12. Finally, if the chunk is entirely remote, we can perform the message aggregation step of modulo unrolling WU that was previously described in Section \ref{subsec:message_aggregation}. 
+
+The entire chunk of work, specified by the \texttt{arrSection} pointer, is communicated to the local \texttt{buf} in one message with the \texttt{chpl\_comm\_gets} call on line 15. Then, elements in this buffer are yielded back to the loop following zippered iteration semantics. The values in \texttt{buf} are compared before and after they are yielded in order to determine whether or not they were written to in the loop body. If so, a \texttt{chpl\_comm\_puts} call on line 24 is required to write all \texttt{buf} elements back to the remote locale.
+
+The implementation of modulo unrolling WU into the Block Cyclic distribution is nearly identical to Figure \ref{cyclic_muwu_follower} with one key addition: the Block Cyclic leader iterator is also altered so that chunks of work that the leader creates only contain elements that reside in the same position within a block. This addition ensures static disambiguation for the Block Cyclic distribution, as described in Section \ref{subsec:block_cyclic_transformation}.
 
 \begin{comment}
 Modulo unrolling WU is implemented in the follower iterator of the Cyclic distribution. Based on the semantics of parallel zippered iteration, the leader iterator will divide up the iterations of the loop across the locales of the machine according to the first item in the zippering. This could mean that some portions of work will not be local to where the computation is taking place. The follower iterator in the Cyclic distribution recognizes whether or not its chunk of work is local or remote. If remote, all of the remote array elements are brought to the present locale in a local buffer using one \texttt{chpl\_comm\_gets} call. Finally, elements of the local buffer are now yielded back to the loop header. A loop body may modify the elements that are yielded to it via zippered iteration. To account for this, the follower iterator compares the element before it was yielded to the element after it was yielded. If any of the elements in the follower's chunk of work were modified, the entire local buffer is stored back to the remote local via one \texttt{chpl\_comm\_puts} call. 
 \end{comment}
 
-\subsection{Block Cyclic Distribution with Modulo Unrolling WU}\label{subsec:block_cyclic_modulo}
+%\subsection{Block Cyclic Distribution with Modulo Unrolling WU}\label{subsec:block_cyclic_modulo}
 
 \begin{comment}
 For the Chapel Block Cyclic implementation, both the leader and follower iterators have been modified to support the modulo unrolling WU optimization. Modulo unrolling, in its original form, is not compatible with the Block Cyclic distribution because consecutive array elements can reside on the same locale (this is defined by the block size parameter), which destroys the static locality information that we were able to use in the Cyclic distribution. The Block Cyclic leader iterator is now modified to choose slices of work such that the new "stride" is equal to the product of the block size and the cycle size. This way, when the work is passed to the follower iterator, elements that are in the same position within each block are guaranteed to be on the same locale. The follower iterator of the Block Cyclic distribution can now perform modulo unrolling WU in the same way as the Cyclic distribution. 

@@ -16,8 +16,17 @@ echo 'Block (B)'
 echo 'Cyclic (C)'
 ./folding -nl $nl --dist=C --n=$n --iterations=$iterations --messages --timeit
 
-echo 'Cyclic with modulo unrolling (CM)'
-./folding -nl $nl --dist=CM --n=$n --iterations=$iterations --correct --messages --timeit
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 4'
+./folding -nl $nl --dist=CM --n=$n --iterations=$iterations --correct --messages --timeit --minimumForAggregation=4
+
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 16'
+./folding -nl $nl --dist=CM --n=$n --iterations=$iterations --correct --messages --timeit --minimumForAggregation=16
+
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 100'
+./folding -nl $nl --dist=CM --n=$n --iterations=$iterations --correct --messages --timeit --minimumForAggregation=100
+
+echo 'Cyclic with modulo unrolling (CM) aggregation minimum = 1000000'
+./folding -nl $nl --dist=CM --n=$n --iterations=$iterations --correct --messages --timeit --minimumForAggregation=1000000
 
 #won't work for this benchmark because of strided access patterns
 #echo 'Block Cyclic (BC)'

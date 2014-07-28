@@ -4,7 +4,7 @@ This section describes modulo unrolling without unrolling (WU), our method to tr
 
 \subsection{Modulo Unrolling Without Unrolling}\label{subsec:modulo_unrolling_without_unrolling}
 
-Modulo unrolling as originally described in \cite{barua1999maps} increases code size because it unrolls loops by a factor equal to the number of locales (memory banks) on the system. However modulo unrolling WU for message passing machines does not increase code size. For parallel machines that use message passing, static disambiguation can be achieved by using the locale identifier without increasing the code size. Conceptually, an affine loop written in source code on a message passing machine where data is distributed cyclically among four locales such as:\newline
+Modulo unrolling increases code size because it unrolls loops by a factor equal to the number of locales (memory banks) on the system. However modulo unrolling WU for message passing machines does not increase code size. For parallel machines that use message passing, static disambiguation can be achieved by using the locale identifier without increasing the code size. Conceptually, an affine loop written in source code on a message passing machine where data is distributed cyclically among four locales such as:\newline
 
 \tab{\texttt{\textbf{forall} i \textbf{in} 0..99 \{}}
 
@@ -54,7 +54,7 @@ The final step of the optimization is to aggregate all remote affine array acces
 
 The series of transformations described in this section and illustrated in Figure \ref{transformations} all apply to one-dimensional arrays indexed by one loop induction variable. We claim here, but do not prove, that these transformations can also be generalized to apply to certain affine array accesses for multi-dimensional arrays. The intuition for this generalization is as follows. The input affine loop now contains $m$ loop induction variables $i_{1}$, $i_{2}$, ... , $i_{m}$. Similarly, there are now $m$ starting loop bounds, ending loop bounds, loop strides, and block sizes. The $p^{th}$ block size is now the number of consecutive array elements allocated to a single locale in dimension $p$ of the array, where $1 < p < m$. Each affine array access in the loop body now contains $m$ affine array expressions where expression $p$ is an affine function of $i_{p}$. 
 
-Under these assumptions, the transformations described in this section need only be applied to each loop induction variable independently. The owning expression calculation now produces an $m$-tuple of affine array expressions. 
+Under these assumptions, the transformations described in this section need only be applied to each loop induction variable independently. The owning expression calculation now produces an $m$-tuple of affine array expressions.\footnote{In our adaptation of modulo unrolling WU in Chapel, the Cyclic distribution can apply the optimization to loops with multi-dimensional array accesses, but the Block Cyclic distribution is limited to one-dimensional array accesses. This is due to the current lmitations within Chapel's Block Cyclic distribution that remained outside the scope of this work. }
 
  
 
