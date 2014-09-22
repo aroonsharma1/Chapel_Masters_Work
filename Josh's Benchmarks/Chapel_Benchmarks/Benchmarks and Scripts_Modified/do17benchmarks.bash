@@ -1,4 +1,4 @@
-##!/bin/bash
+#!/bin/bash
 
 #benchmarks run with 8 locales
 ./do2mmbench.bash

@@ -11,19 +11,17 @@ chpl --fast pascal.chpl -o pascal
 
 for n1 in {100..200..10}
 	do
-		n2 = $n1+3
-		echo n1=$n1
-		echo n2=$n2
+		n2=$((n1+3))
 		
-		echo 'Cyclic (C)'
+		echo "Cyclic (C) n1=$n1, n2=$n2"
 		./pascal -nl $nl --dist=C --n1=$n1 --n2=$n2 --messages --timeit
 
-		echo 'Cyclic with modulo unrolling (CM) aggregation minimum=4'
-		./pascal -nl $nl --dist=CM --n1=$n1 --n2=$n2 --messages --timiet
+		echo "Cyclic with modulo unrolling (CM) n1=$n1, n2=$n2"
+		./pascal -nl $nl --dist=CM --n1=$n1 --n2=$n2 --messages --timeit
 
-		echo 'Block Cyclic (BC)'
+		echo "Block Cyclic (BC) n1=$n1, n2=$n2"
 		./pascal -nl $nl --dist=BC --n1=$n1 --n2=$n2 --messages --timeit --blocksize=$blocksize
 
-		echo 'Block Cyclic with modulo unrolling (BCM)'
+		echo "Block Cyclic with modulo unrolling (BCM) n1=$n1, n2=$n2"
 		./pascal -nl $nl --dist=BCM --n1=$n1 --n2=$n2 --messages --timeit --blocksize=$blocksize
 	done
