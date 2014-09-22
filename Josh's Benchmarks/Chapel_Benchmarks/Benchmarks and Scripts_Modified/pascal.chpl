@@ -17,14 +17,14 @@ config var blocksize=4;
 var mydom = {1..n2};
 if dist=='BCM' {
 	var mydist = mydom dmapped MyBlockCyclic(startIdx=mydom.low, blocksize=blocksize);
-	totalcomm3=volume;
+	//totalcomm3=volume;
 	dobench(mydist, mydom);
 } else if dist=='NONE' {
 	var mydist = mydom;
 	dobench(mydist, mydom);
 } else if dist=='CM' {
 	var mydist = mydom dmapped CyclicZipOpt(startIdx=mydom.low);
-	totalcomm2=volume;
+	//totalcomm2=volume;
 	dobench(mydist, mydom);	
 } else if dist=='C' {
 	var mydist = mydom dmapped Cyclic(startIdx=mydom.low);
@@ -115,12 +115,12 @@ if messages {
 	writeln('message count=', messages);
 }
 
-if volume {
+/*if volume {
 	var total=0;
 	for i in 0..numLocales-1 {
 		total+=total_communication_counts(i+1)+total_communication_counts2(i+1);
 	}
 	//writeln('totals count=', total_communication_counts+total_communication_counts2);
 	writeln('message volume=', total);
-}
+}*/
 }
