@@ -1,3 +1,4 @@
+use CyclicDist;
 use CyclicZipOpt;
 use BlockDist;
 use Time;
@@ -114,7 +115,6 @@ proc kernel_stencil9(dist_little, dist_big, dom_little, dom_big) {
 		writeln("it is correct? ", still_correct);
 		writeln("stencil9 computation complete.");
 	}
-	
 }
 
 proc main() {

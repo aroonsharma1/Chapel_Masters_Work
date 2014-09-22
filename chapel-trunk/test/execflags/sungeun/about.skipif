@@ -1,0 +1,4 @@
+COMPOPTS <= --baseline
+COMPOPTS <= --no-local
+COMPOPTS <= --fast
+COMPOPTS <= --verify

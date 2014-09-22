@@ -1,8 +1,7 @@
 #!/bin/bash
 #standard data set is 1024 but should use 64 or 128
-
 nl=8
-N=128
+N=32
 
 echo nl=$nl
 echo N=$N

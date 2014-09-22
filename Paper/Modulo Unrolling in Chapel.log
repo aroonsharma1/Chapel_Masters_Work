@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  27 JUL 2014 11:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  28 JUL 2014 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -430,26 +430,32 @@ File: ./Figures/modulo_unrolling-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figures/modulo_unrolling-eps-converted-to.pdf used o
 n input line 3.
 (pdftex.def)             Requested size: 233.97197pt x 214.09789pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [4 <./Figures/modulo_unrolling-eps-converted-to.pdf>]) (./motivation_for_aggre
 gation.tex
 <./Figures/jacobi.pdf, id=118, 460.60286pt x 248.61864pt>
 File: ./Figures/jacobi.pdf Graphic file (type pdf)
 
 <use ./Figures/jacobi.pdf>
-Package pdftex.def Info: ./Figures/jacobi.pdf used on input line 7.
+Package pdftex.def Info: ./Figures/jacobi.pdf used on input line 9.
 (pdftex.def)             Requested size: 202.66588pt x 109.39253pt.
 
 <./Figures/aggregation.pdf, id=119, 512.41312pt x 514.94324pt>
 File: ./Figures/aggregation.pdf Graphic file (type pdf)
 
 <use ./Figures/aggregation.pdf>
-Package pdftex.def Info: ./Figures/aggregation.pdf used on input line 19.
+Package pdftex.def Info: ./Figures/aggregation.pdf used on input line 21.
 (pdftex.def)             Requested size: 245.95549pt x 247.16994pt.
+
+Underfull \vbox (badness 1348) has occurred while \output is active []
+
  [5 <./Figures/jacobi.pdf> <./Figures/aggregation.pdf>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
 ) (./transformation.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
@@ -491,22 +497,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 File: ./Figures/transformations.pdf Graphic file (type pdf)
 
 <use ./Figures/transformations.pdf>
-Package pdftex.def Info: ./Figures/transformations.pdf used on input line 27.
-(pdftex.def)             Requested size: 290.60309pt x 215.70177pt.
+Package pdftex.def Info: ./Figures/transformations.pdf used on input line 31.
+(pdftex.def)             Requested size: 262.24577pt x 194.65338pt.
+ [6]) (./adaptation_in_chapel.tex
+Underfull \vbox (badness 1062) has occurred while \output is active []
 
-Overfull \hbox (24.59059pt too wide) in paragraph at lines 27--28
- [] 
- []
-
-[6 <./Figures/transformations.pdf>]) (./adaptation_in_chapel.tex [7]
-<./Figures/affine_loop.pdf, id=307, 528.95787pt x 206.08725pt>
+ [7 <./Figures/transformations.pdf>]
+<./Figures/affine_loop.pdf, id=308, 528.95787pt x 206.08725pt>
 File: ./Figures/affine_loop.pdf Graphic file (type pdf)
 
 <use ./Figures/affine_loop.pdf>
 Package pdftex.def Info: ./Figures/affine_loop.pdf used on input line 23.
 (pdftex.def)             Requested size: 264.47829pt x 103.04337pt.
 
-<./Figures/cyclic_muwu_follower.pdf, id=308, 686.4432pt x 363.74344pt>
+<./Figures/cyclic_muwu_follower.pdf, id=309, 686.4432pt x 363.74344pt>
 File: ./Figures/cyclic_muwu_follower.pdf Graphic file (type pdf)
 
 <use ./Figures/cyclic_muwu_follower.pdf>
@@ -518,8 +522,12 @@ Overfull \hbox (8.55992pt too wide) in paragraph at lines 47--48
  [] 
  []
 
-[8 <./Figures/affine_loop.pdf> <./Figures/cyclic_muwu_follower.pdf>])
-(./results.tex <./Figures/Benchmarks.pdf, id=393, 506.42128pt x 289.89534pt>
+
+Underfull \vbox (badness 3250) has occurred while \output is active []
+
+ [8 <./Figures/affine_loop.pdf> <./Figures/cyclic_muwu_follower.pdf>]) (./resul
+ts.tex
+<./Figures/Benchmarks.pdf, id=394, 506.42128pt x 289.89534pt>
 File: ./Figures/Benchmarks.pdf Graphic file (type pdf)
 
 <use ./Figures/Benchmarks.pdf>
@@ -530,14 +538,14 @@ Overfull \hbox (2.3895pt too wide) in paragraph at lines 3--4
  [] 
  []
 
-<./Figures/runtimes.pdf, id=394, 812.32573pt x 569.77228pt>
+<./Figures/runtimes.pdf, id=395, 812.32573pt x 569.77228pt>
 File: ./Figures/runtimes.pdf Graphic file (type pdf)
 
 <use ./Figures/runtimes.pdf>
 Package pdftex.def Info: ./Figures/runtimes.pdf used on input line 21.
 (pdftex.def)             Requested size: 243.6996pt x 170.933pt.
 
-<./Figures/message_counts.pdf, id=395, 814.7062pt x 568.30672pt>
+<./Figures/message_counts.pdf, id=396, 814.7062pt x 568.30672pt>
 File: ./Figures/message_counts.pdf Graphic file (type pdf)
 
 <use ./Figures/message_counts.pdf>
@@ -552,8 +560,7 @@ LaTeX Warning: Reference `cyclic_runtime' on page 9 undefined on input line 54.
 LaTeX Warning: Reference `cyclic_message_count' on page 9 undefined on input li
 ne 54.
 
-[9 <./Figures/Benchmarks.pdf> <./Figures/runtimes.pdf> <./Figures/message_count
-s.pdf>]
+[9 <./Figures/Benchmarks.pdf>]
 
 LaTeX Warning: Reference `cyclic_runtime' on page 10 undefined on input line 56
 .
@@ -575,7 +582,8 @@ Underfull \hbox (badness 1163) in paragraph at lines 5--60
 []\OT1/ptm/m/n/10 The two forms of bulk com-mu-ni-ca-tion used in this work
  []
 
-(./Modulo Unrolling in Chapel.bbl
+(./Modulo Unrolling in Chapel.bbl [10 <./Figures/runtimes.pdf> <./Figures/messa
+ge_counts.pdf>]
 Underfull \hbox (badness 2343) in paragraph at lines 24--27
 \OT1/ptm/m/n/10 trans-for-ma-tions,'' \OT1/ptm/m/it/10 Par-al-lel Com-put-ing\O
 T1/ptm/m/n/10 , vol. 32, no. 10,
@@ -593,7 +601,7 @@ Underfull \hbox (badness 1490) in paragraph at lines 63--66
 
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 105--107
 []\OT1/ptm/m/n/10 ``Polybench/C- The Poly-he-dral Bench-mark Suite.''
  []
@@ -603,9 +611,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 \OT1/pcr/m/n/10 http : / / www . cse . ohio-[]state . edu / []pouchet /
  []
 
-) [11
-
-] (./Modulo Unrolling in Chapel.aux)
+) [11] (./Modulo Unrolling in Chapel.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -613,30 +619,31 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  4958 strings out of 493315
  77173 string characters out of 6137904
- 147053 words of memory out of 5000000
+ 148055 words of memory out of 5000000
  8227 multiletter control sequences out of 15000+600000
  28835 words of font info for 72 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,8n,75p,1594b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,75p,1548b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
 e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on "Modulo Unrolling in Chapel.pdf" (11 pages, 1085436 bytes).
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on "Modulo Unrolling in Chapel.pdf" (11 pages, 1094230 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
+ 492 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,11 +1,3 @@
-\begin{figure}
-\begin{center}
-\includegraphics[scale=0.45]{./Figures/modulo_unrolling.eps}
-\caption{Modulo unrolling example. (a) Original sequential for loop. Array $A$ is distributed using a Cyclic distribution. Each array access maps to a different memory bank on successive loop iterations. (b) Fully unrolled loop. Trivially, each array access maps to a single memory bank because each access only occurs once. This loop dramatically increases the code size for loops traversing through large data sets. (c) Loop transformed using modulo unrolling. The loop is unrolled by a factor equal to the number of memory banks on the architecture. Now each array access is guaranteed to map to a single memory bank for all loop iterations and code size increases only by the loop unroll factor.}
-\label{modulo_unrolling}
-\end{center}
-\end{figure}
-
 \section{Background on Modulo Unrolling}\label{sec:modulo_unrolling}
 
 Modulo unrolling \cite{barua1999maps} is a static disambiguation method used in tiled architectures that is applicable to loops with affine array accesses. An affine function of a set of variables is defined as a linear combination of those variables. An affine array access is any array access where each dimension of the array is accessed by an affine function of the loop induction variables. For example, for loop index variables $i$ and $j$ and array $A$, $A[i+2j+3][2j]$ is an affine access, but $A[ij+4][j^2]$ and $A[2i^2+1][ij]$ are not. 
@@ -20,4 +12,10 @@ A more practical approach to achieving static disambiguation without a dramatic 
 
 Modulo unrolling, as used in \cite{barua1999maps} provides static disambiguation and memory parallelism for tiled architectures. That is, after unrolling, each array access can be done in parallel because array accesses map to a different memory banks. 
 
-The intuition behind why modulo unrolling is helpful for message aggregation in message passing machines is as follows.  Message aggregation requires knowledge of precisely which elements must be communicated between locales.  Doing so requires a statically disambiguated known locale for every array access, even when that array access refers to a varying address. For example, in a loop $A[i]$ refers to different memory addresses during each loop iteration. Modulo unrolling ensures such a known, predictable locale number for each varying array access. This enables such varying accesses to be characterized and aggregated to be sent in a single message. We explain our method of doing so in Sections \ref{sec:transformation} and \ref{sec:adaptation_in_chapel}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.45]{./Figures/modulo_unrolling.eps}
+\caption{Modulo unrolling example. (a) Original sequential for loop. Array $A$ is distributed using a Cyclic distribution. Each array access maps to a different memory bank on successive loop iterations. (b) Fully unrolled loop. Trivially, each array access maps to a single memory bank because each access only occurs once. This loop dramatically increases the code size for loops traversing through large data sets. (c) Loop transformed using modulo unrolling. The loop is unrolled by a factor equal to the number of memory banks on the architecture. Now each array access is guaranteed to map to a single memory bank for all loop iterations and code size increases only by the loop unroll factor.}
+\label{modulo_unrolling}
+\end{center}
+\end{figure}

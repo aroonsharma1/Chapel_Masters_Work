@@ -1,3 +1,4 @@
+use CyclicDist;
 use CyclicZipOpt;
 use BlockDist;
 use Time;
