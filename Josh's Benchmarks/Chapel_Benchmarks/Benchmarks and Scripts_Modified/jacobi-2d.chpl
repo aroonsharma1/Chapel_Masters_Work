@@ -20,7 +20,7 @@ if dist=='NONE' {
 	dobench(mydist, mydom);
 } else if dist=='CM' {
 	const mydist = mydom dmapped CyclicZipOpt(startIdx=mydom.low);
-	totalcomm2=volume;
+	//totalcomm2=volume;
 	dobench(mydist, mydom);	
 } else if dist=='C' {
 	const mydist = mydom dmapped Cyclic(startIdx=mydom.low);
@@ -106,6 +106,8 @@ proc dobench(mydist, mydom) {
 		}
 	} while (delta > epsilon);
 	
+	
+	
 	if timeit {
 		timer.stop();
 	}
@@ -139,12 +141,12 @@ proc dobench(mydist, mydom) {
 		writeln('message count=', messages);
 	}
 
-	if volume {
+	/*if volume {
 		var total=0;
 		for i in 0..numLocales-1 {
 			total+=total_communication_counts2(i+1);
 		}
 		//writeln('totals count=', total_communication_counts+total_communication_counts2);
 		writeln('message volume=', total);
-	}
+	}*/
 }
