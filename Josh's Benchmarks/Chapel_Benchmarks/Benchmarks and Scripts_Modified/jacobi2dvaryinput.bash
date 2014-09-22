@@ -10,7 +10,7 @@ echo epsilon=$epsilon
 #compile jacobi-2d
 chpl jacobi-2d.chpl --fast -o jacobi-2d
 
-for n in {10..400..10}
+for n in {5..100..1}
 	do
 		echo "Cyclic (C) n=$n"
 		./jacobi-2d -nl $nl --dist=C --n=$n --messages --timeit
