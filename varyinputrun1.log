@@ -1,0 +1,1992 @@
+nohup: ignoring input
+pascal vary input
+nl=8
+blocksize=16
+Cyclic (C) n1=100, n2=103
+took 0.104099 (s)
+message count=33681
+Cyclic with modulo unrolling (CM) n1=100, n2=103
+took 0.090238 (s)
+message count=35937
+Block Cyclic (BC) n1=100, n2=103
+took 0.120284 (s)
+message count=60663
+Block Cyclic with modulo unrolling (BCM) n1=100, n2=103
+took 0.147455 (s)
+message count=63165
+Cyclic (C) n1=110, n2=113
+took 0.11139 (s)
+message count=33908
+Cyclic with modulo unrolling (CM) n1=110, n2=113
+took 0.098913 (s)
+message count=36619
+Block Cyclic (BC) n1=110, n2=113
+took 0.11992 (s)
+message count=60676
+Block Cyclic with modulo unrolling (BCM) n1=110, n2=113
+took 0.146618 (s)
+message count=63165
+Cyclic (C) n1=120, n2=123
+took 0.105355 (s)
+message count=34353
+Cyclic with modulo unrolling (CM) n1=120, n2=123
+took 0.098681 (s)
+message count=37309
+Block Cyclic (BC) n1=120, n2=123
+took 0.124936 (s)
+message count=60813
+Block Cyclic with modulo unrolling (BCM) n1=120, n2=123
+took 0.146509 (s)
+message count=63165
+Cyclic (C) n1=130, n2=133
+took 0.11882 (s)
+message count=34442
+Cyclic with modulo unrolling (CM) n1=130, n2=133
+took 0.100648 (s)
+message count=38007
+Block Cyclic (BC) n1=130, n2=133
+took 0.119061 (s)
+message count=60852
+Block Cyclic with modulo unrolling (BCM) n1=130, n2=133
+took 0.147238 (s)
+message count=63126
+Cyclic (C) n1=140, n2=143
+took 0.157624 (s)
+message count=34523
+Cyclic with modulo unrolling (CM) n1=140, n2=143
+took 0.111046 (s)
+message count=38697
+Block Cyclic (BC) n1=140, n2=143
+took 0.127919 (s)
+message count=60852
+Block Cyclic with modulo unrolling (BCM) n1=140, n2=143
+took 0.14876 (s)
+message count=63126
+Cyclic (C) n1=150, n2=153
+took 0.182789 (s)
+message count=34617
+Cyclic with modulo unrolling (CM) n1=150, n2=153
+took 0.108113 (s)
+message count=39379
+Block Cyclic (BC) n1=150, n2=153
+took 0.119444 (s)
+message count=61041
+Block Cyclic with modulo unrolling (BCM) n1=150, n2=153
+took 0.150013 (s)
+message count=63165
+Cyclic (C) n1=160, n2=163
+took 0.138893 (s)
+message count=34355
+Cyclic with modulo unrolling (CM) n1=160, n2=163
+took 0.115048 (s)
+message count=40069
+Block Cyclic (BC) n1=160, n2=163
+took 0.119658 (s)
+message count=61154
+Block Cyclic with modulo unrolling (BCM) n1=160, n2=163
+took 0.144928 (s)
+message count=63165
+Cyclic (C) n1=170, n2=173
+took 0.227849 (s)
+message count=34409
+Cyclic with modulo unrolling (CM) n1=170, n2=173
+took 0.11518 (s)
+message count=40767
+Block Cyclic (BC) n1=170, n2=173
+took 0.11926 (s)
+message count=61191
+Block Cyclic with modulo unrolling (BCM) n1=170, n2=173
+took 0.149222 (s)
+message count=63165
+Cyclic (C) n1=180, n2=183
+took 0.155215 (s)
+message count=34574
+Cyclic with modulo unrolling (CM) n1=180, n2=183
+took 0.12039 (s)
+message count=41457
+Block Cyclic (BC) n1=180, n2=183
+took 0.124619 (s)
+message count=61341
+Block Cyclic with modulo unrolling (BCM) n1=180, n2=183
+took 0.147471 (s)
+message count=63165
+Cyclic (C) n1=190, n2=193
+took 0.217181 (s)
+message count=34472
+Cyclic with modulo unrolling (CM) n1=190, n2=193
+took 0.12175 (s)
+message count=41692
+Block Cyclic (BC) n1=190, n2=193
+took 0.11802 (s)
+message count=61354
+Block Cyclic with modulo unrolling (BCM) n1=190, n2=193
+took 0.146763 (s)
+message count=63165
+Cyclic (C) n1=200, n2=203
+took 0.172983 (s)
+message count=34770
+Cyclic with modulo unrolling (CM) n1=200, n2=203
+took 0.121056 (s)
+message count=41692
+Block Cyclic (BC) n1=200, n2=203
+took 0.121442 (s)
+message count=61491
+Block Cyclic with modulo unrolling (BCM) n1=200, n2=203
+took 0.148503 (s)
+message count=63165
+folding vary input
+nl=8
+iterations=10
+Cyclic (C) n=50
+took 0.276598 (s)
+message count=120230
+Cyclic with modulo unrolling (CM) n=50
+took 0.286008 (s)
+it is correct? true
+first element is: 25800
+message count=124840
+Cyclic (C) n=100
+took 0.28948 (s)
+message count=125310
+Cyclic with modulo unrolling (CM) n=100
+took 0.324083 (s)
+it is correct? true
+first element is: 50800
+message count=134544
+Cyclic (C) n=150
+took 0.328781 (s)
+message count=130285
+Cyclic with modulo unrolling (CM) n=150
+took 0.368012 (s)
+it is correct? true
+first element is: 75700
+message count=144260
+Cyclic (C) n=200
+took 0.331705 (s)
+message count=135085
+Cyclic with modulo unrolling (CM) n=200
+took 0.404462 (s)
+it is correct? true
+first element is: 100800
+message count=153970
+Cyclic (C) n=250
+took 0.384094 (s)
+message count=139318
+Cyclic with modulo unrolling (CM) n=250
+took 0.426128 (s)
+it is correct? true
+first element is: 125800
+message count=163674
+Cyclic (C) n=300
+took 0.415048 (s)
+message count=142837
+Cyclic with modulo unrolling (CM) n=300
+took 0.465112 (s)
+it is correct? true
+first element is: 143200
+message count=173390
+Cyclic (C) n=350
+took 0.430172 (s)
+message count=146867
+Cyclic with modulo unrolling (CM) n=350
+took 0.479215 (s)
+it is correct? true
+first element is: 175500
+message count=183100
+Cyclic (C) n=400
+took 0.354068 (s)
+message count=139720
+Cyclic with modulo unrolling (CM) n=400
+took 0.489068 (s)
+it is correct? true
+first element is: 185600
+message count=160759
+Cyclic (C) n=450
+took 0.452027 (s)
+message count=152435
+Cyclic with modulo unrolling (CM) n=450
+took 0.499678 (s)
+it is correct? true
+first element is: 210700
+message count=186520
+Cyclic (C) n=500
+took 0.471443 (s)
+message count=155506
+Cyclic with modulo unrolling (CM) n=500
+took 0.477749 (s)
+it is correct? true
+first element is: 250800
+message count=186520
+Cyclic (C) n=550
+took 0.443922 (s)
+message count=159277
+Cyclic with modulo unrolling (CM) n=550
+took 0.481385 (s)
+it is correct? true
+first element is: 264100
+message count=186514
+Cyclic (C) n=600
+took 0.454328 (s)
+message count=162411
+Cyclic with modulo unrolling (CM) n=600
+took 0.48723 (s)
+it is correct? true
+first element is: 270400
+message count=186520
+Cyclic (C) n=650
+took 0.460488 (s)
+message count=165440
+Cyclic with modulo unrolling (CM) n=650
+took 0.490324 (s)
+it is correct? true
+first element is: 281700
+message count=186520
+Cyclic (C) n=700
+took 0.495302 (s)
+message count=169533
+Cyclic with modulo unrolling (CM) n=700
+took 0.483954 (s)
+it is correct? true
+first element is: 298000
+message count=186514
+Cyclic (C) n=750
+took 0.46122 (s)
+message count=172709
+Cyclic with modulo unrolling (CM) n=750
+took 0.487855 (s)
+it is correct? true
+first element is: 319300
+message count=186520
+Cyclic (C) n=800
+took 0.359763 (s)
+message count=164220
+Cyclic with modulo unrolling (CM) n=800
+took 0.487773 (s)
+it is correct? true
+first element is: 345600
+message count=160760
+Cyclic (C) n=850
+took 0.500007 (s)
+message count=179432
+Cyclic with modulo unrolling (CM) n=850
+took 0.480785 (s)
+it is correct? true
+first element is: 376900
+message count=186520
+Cyclic (C) n=900
+took 0.431538 (s)
+message count=182258
+Cyclic with modulo unrolling (CM) n=900
+took 0.50309 (s)
+it is correct? true
+first element is: 413200
+message count=186520
+Cyclic (C) n=950
+took 0.460227 (s)
+message count=185406
+Cyclic with modulo unrolling (CM) n=950
+took 0.484525 (s)
+it is correct? true
+first element is: 454500
+message count=186520
+Cyclic (C) n=1000
+took 0.463995 (s)
+message count=187959
+Cyclic with modulo unrolling (CM) n=1000
+took 0.480871 (s)
+it is correct? true
+first element is: 500800
+message count=186520
+Cyclic (C) n=1050
+took 0.446542 (s)
+message count=192129
+Cyclic with modulo unrolling (CM) n=1050
+took 0.480636 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1100
+took 0.458322 (s)
+message count=195011
+Cyclic with modulo unrolling (CM) n=1100
+took 0.491307 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1150
+took 0.439407 (s)
+message count=197963
+Cyclic with modulo unrolling (CM) n=1150
+took 0.484277 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1200
+took 0.362494 (s)
+message count=188720
+Cyclic with modulo unrolling (CM) n=1200
+took 0.477373 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=1250
+took 0.521997 (s)
+message count=206093
+Cyclic with modulo unrolling (CM) n=1250
+took 0.490937 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1300
+took 0.519891 (s)
+message count=209367
+Cyclic with modulo unrolling (CM) n=1300
+took 0.51753 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1350
+took 0.474501 (s)
+message count=211864
+Cyclic with modulo unrolling (CM) n=1350
+took 0.496456 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1400
+took 0.43355 (s)
+message count=215341
+Cyclic with modulo unrolling (CM) n=1400
+took 0.48253 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1450
+took 0.425913 (s)
+message count=218202
+Cyclic with modulo unrolling (CM) n=1450
+took 0.49423 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1500
+took 0.483519 (s)
+message count=222099
+Cyclic with modulo unrolling (CM) n=1500
+took 0.48328 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1550
+took 0.436092 (s)
+message count=225548
+Cyclic with modulo unrolling (CM) n=1550
+took 0.491875 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1600
+took 0.373966 (s)
+message count=213220
+Cyclic with modulo unrolling (CM) n=1600
+took 0.488833 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=1650
+took 0.464304 (s)
+message count=231438
+Cyclic with modulo unrolling (CM) n=1650
+took 0.490086 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1700
+took 0.501908 (s)
+message count=235643
+Cyclic with modulo unrolling (CM) n=1700
+took 0.510336 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1750
+took 0.479392 (s)
+message count=237678
+Cyclic with modulo unrolling (CM) n=1750
+took 0.483781 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1800
+took 0.579312 (s)
+message count=241295
+Cyclic with modulo unrolling (CM) n=1800
+took 0.493013 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1850
+took 0.453424 (s)
+message count=244828
+Cyclic with modulo unrolling (CM) n=1850
+took 0.483957 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1900
+took 0.498303 (s)
+message count=248340
+Cyclic with modulo unrolling (CM) n=1900
+took 0.49028 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=1950
+took 0.46837 (s)
+message count=252244
+Cyclic with modulo unrolling (CM) n=1950
+took 0.482493 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2000
+took 0.37316 (s)
+message count=237720
+Cyclic with modulo unrolling (CM) n=2000
+took 0.485836 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=2050
+took 0.579528 (s)
+message count=257245
+Cyclic with modulo unrolling (CM) n=2050
+took 0.493052 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2100
+took 0.570883 (s)
+message count=261961
+Cyclic with modulo unrolling (CM) n=2100
+took 0.488978 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2150
+took 0.532313 (s)
+message count=265655
+Cyclic with modulo unrolling (CM) n=2150
+took 0.498115 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2200
+took 0.469563 (s)
+message count=268460
+Cyclic with modulo unrolling (CM) n=2200
+took 0.486175 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2250
+took 0.520379 (s)
+message count=271713
+Cyclic with modulo unrolling (CM) n=2250
+took 0.480239 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2300
+took 0.493984 (s)
+message count=274546
+Cyclic with modulo unrolling (CM) n=2300
+took 0.491648 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2350
+took 0.499414 (s)
+message count=278254
+Cyclic with modulo unrolling (CM) n=2350
+took 0.488737 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2400
+took 0.393733 (s)
+message count=262220
+Cyclic with modulo unrolling (CM) n=2400
+took 0.489666 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=2450
+took 0.523145 (s)
+message count=284998
+Cyclic with modulo unrolling (CM) n=2450
+took 0.493004 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2500
+took 0.59772 (s)
+message count=287936
+Cyclic with modulo unrolling (CM) n=2500
+took 0.49906 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2550
+took 0.572632 (s)
+message count=291511
+Cyclic with modulo unrolling (CM) n=2550
+took 0.48929 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2600
+took 0.473984 (s)
+message count=295142
+Cyclic with modulo unrolling (CM) n=2600
+took 0.475353 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2650
+took 0.527826 (s)
+message count=298311
+Cyclic with modulo unrolling (CM) n=2650
+took 0.491912 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2700
+took 0.634997 (s)
+message count=301375
+Cyclic with modulo unrolling (CM) n=2700
+took 0.509307 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2750
+took 0.525712 (s)
+message count=305027
+Cyclic with modulo unrolling (CM) n=2750
+took 0.489131 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2800
+took 0.401497 (s)
+message count=286720
+Cyclic with modulo unrolling (CM) n=2800
+took 0.496734 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=2850
+took 0.549137 (s)
+message count=310539
+Cyclic with modulo unrolling (CM) n=2850
+took 0.484831 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2900
+took 0.475689 (s)
+message count=314478
+Cyclic with modulo unrolling (CM) n=2900
+took 0.504505 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=2950
+took 0.54556 (s)
+message count=318410
+Cyclic with modulo unrolling (CM) n=2950
+took 0.49495 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3000
+took 0.530465 (s)
+message count=320732
+Cyclic with modulo unrolling (CM) n=3000
+took 0.500419 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3050
+took 0.530485 (s)
+message count=324902
+Cyclic with modulo unrolling (CM) n=3050
+took 0.478076 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3100
+took 0.567229 (s)
+message count=328400
+Cyclic with modulo unrolling (CM) n=3100
+took 0.514243 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3150
+took 0.593231 (s)
+message count=331100
+Cyclic with modulo unrolling (CM) n=3150
+took 0.488896 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3200
+took 0.404099 (s)
+message count=311220
+Cyclic with modulo unrolling (CM) n=3200
+took 0.481799 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=3250
+took 0.481611 (s)
+message count=337914
+Cyclic with modulo unrolling (CM) n=3250
+took 0.485436 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3300
+took 0.498376 (s)
+message count=341405
+Cyclic with modulo unrolling (CM) n=3300
+took 0.509758 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3350
+took 0.510448 (s)
+message count=343895
+Cyclic with modulo unrolling (CM) n=3350
+took 0.507841 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3400
+took 0.488872 (s)
+message count=346924
+Cyclic with modulo unrolling (CM) n=3400
+took 0.487302 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3450
+took 0.531965 (s)
+message count=350814
+Cyclic with modulo unrolling (CM) n=3450
+took 0.491536 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3500
+took 0.547327 (s)
+message count=354221
+Cyclic with modulo unrolling (CM) n=3500
+took 0.488046 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3550
+took 0.582039 (s)
+message count=357726
+Cyclic with modulo unrolling (CM) n=3550
+took 0.496246 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3600
+took 0.423657 (s)
+message count=335720
+Cyclic with modulo unrolling (CM) n=3600
+took 0.481888 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=3650
+took 0.821788 (s)
+message count=364470
+Cyclic with modulo unrolling (CM) n=3650
+took 0.501078 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3700
+took 0.617763 (s)
+message count=367800
+Cyclic with modulo unrolling (CM) n=3700
+took 0.498075 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3750
+took 0.559647 (s)
+message count=370808
+Cyclic with modulo unrolling (CM) n=3750
+took 0.489741 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3800
+took 0.526504 (s)
+message count=374236
+Cyclic with modulo unrolling (CM) n=3800
+took 0.489188 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3850
+took 0.639109 (s)
+message count=377062
+Cyclic with modulo unrolling (CM) n=3850
+took 0.499859 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3900
+took 0.520538 (s)
+message count=381554
+Cyclic with modulo unrolling (CM) n=3900
+took 0.50188 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=3950
+took 1.03759 (s)
+message count=384121
+Cyclic with modulo unrolling (CM) n=3950
+took 0.486687 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4000
+took 0.409987 (s)
+message count=360220
+Cyclic with modulo unrolling (CM) n=4000
+took 0.498751 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=4050
+took 0.54258 (s)
+message count=390564
+Cyclic with modulo unrolling (CM) n=4050
+took 0.480441 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4100
+took 0.881339 (s)
+message count=393852
+Cyclic with modulo unrolling (CM) n=4100
+took 0.487911 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4150
+took 0.558033 (s)
+message count=397889
+Cyclic with modulo unrolling (CM) n=4150
+took 0.4779 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4200
+took 0.644241 (s)
+message count=400736
+Cyclic with modulo unrolling (CM) n=4200
+took 0.490657 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4250
+took 0.591127 (s)
+message count=404619
+Cyclic with modulo unrolling (CM) n=4250
+took 0.488714 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4300
+took 0.626883 (s)
+message count=407361
+Cyclic with modulo unrolling (CM) n=4300
+took 0.483864 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4350
+took 0.82134 (s)
+message count=411118
+Cyclic with modulo unrolling (CM) n=4350
+took 0.518556 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4400
+took 0.428335 (s)
+message count=384720
+Cyclic with modulo unrolling (CM) n=4400
+took 0.482361 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=4450
+took 0.787383 (s)
+message count=418324
+Cyclic with modulo unrolling (CM) n=4450
+took 0.488402 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4500
+took 0.699233 (s)
+message count=420065
+Cyclic with modulo unrolling (CM) n=4500
+took 0.479139 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4550
+took 0.597291 (s)
+message count=423759
+Cyclic with modulo unrolling (CM) n=4550
+took 0.493729 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4600
+took 0.804956 (s)
+message count=426998
+Cyclic with modulo unrolling (CM) n=4600
+took 0.533201 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4650
+took 0.594653 (s)
+message count=430538
+Cyclic with modulo unrolling (CM) n=4650
+took 0.493774 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4700
+took 0.838628 (s)
+message count=433805
+Cyclic with modulo unrolling (CM) n=4700
+took 0.491147 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4750
+took 0.645122 (s)
+message count=437163
+Cyclic with modulo unrolling (CM) n=4750
+took 0.48286 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4800
+took 0.483435 (s)
+message count=409220
+Cyclic with modulo unrolling (CM) n=4800
+took 0.48804 (s)
+it is correct? true
+first element is: 524800
+message count=160760
+Cyclic (C) n=4850
+took 0.635178 (s)
+message count=442801
+Cyclic with modulo unrolling (CM) n=4850
+took 0.487033 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4900
+took 0.653976 (s)
+message count=447125
+Cyclic with modulo unrolling (CM) n=4900
+took 0.489926 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=4950
+took 0.658145 (s)
+message count=450854
+Cyclic with modulo unrolling (CM) n=4950
+took 0.496511 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+Cyclic (C) n=5000
+took 0.889888 (s)
+message count=454121
+Cyclic with modulo unrolling (CM) n=5000
+took 0.489548 (s)
+it is correct? true
+first element is: 524800
+message count=186520
+jacobi2d vary input
+nl=8
+n=
+epsilon=0.05
+Cyclic (C) n=5
+took 0.140044 (s)
+message count=67384
+Cyclic with modulo unrolling (CM) n=5
+took 0.139267 (s)
+message count=68418
+Cyclic (C) n=6
+took 0.148868 (s)
+message count=67978
+Cyclic with modulo unrolling (CM) n=6
+took 0.141834 (s)
+message count=69225
+Cyclic (C) n=7
+took 0.155328 (s)
+message count=68597
+Cyclic with modulo unrolling (CM) n=7
+took 0.152877 (s)
+message count=70029
+Cyclic (C) n=8
+took 0.172842 (s)
+message count=69074
+Cyclic with modulo unrolling (CM) n=8
+took 0.154353 (s)
+message count=70714
+Cyclic (C) n=9
+took 0.176076 (s)
+message count=69736
+Cyclic with modulo unrolling (CM) n=9
+took 0.184106 (s)
+message count=71640
+Cyclic (C) n=10
+took 0.201276 (s)
+message count=70486
+Cyclic with modulo unrolling (CM) n=10
+took 0.178514 (s)
+message count=72450
+Cyclic (C) n=11
+took 0.207332 (s)
+message count=70711
+Cyclic with modulo unrolling (CM) n=11
+took 0.186144 (s)
+message count=73251
+Cyclic (C) n=12
+took 0.221794 (s)
+message count=71214
+Cyclic with modulo unrolling (CM) n=12
+took 0.196162 (s)
+message count=73936
+Cyclic (C) n=13
+took 0.228354 (s)
+message count=72012
+Cyclic with modulo unrolling (CM) n=13
+took 0.239669 (s)
+message count=74862
+Cyclic (C) n=14
+took 0.247336 (s)
+message count=72568
+Cyclic with modulo unrolling (CM) n=14
+took 0.214269 (s)
+message count=75672
+Cyclic (C) n=15
+took 0.229941 (s)
+message count=73289
+Cyclic with modulo unrolling (CM) n=15
+took 0.224545 (s)
+message count=76473
+Cyclic (C) n=16
+took 0.249441 (s)
+message count=73968
+Cyclic with modulo unrolling (CM) n=16
+took 0.217254 (s)
+message count=77158
+Cyclic (C) n=17
+took 0.257041 (s)
+message count=74532
+Cyclic with modulo unrolling (CM) n=17
+took 0.261181 (s)
+message count=78084
+Cyclic (C) n=18
+took 0.272328 (s)
+message count=75214
+Cyclic with modulo unrolling (CM) n=18
+took 0.302685 (s)
+message count=78894
+Cyclic (C) n=19
+took 0.280812 (s)
+message count=75641
+Cyclic with modulo unrolling (CM) n=19
+took 0.282053 (s)
+message count=79695
+Cyclic (C) n=20
+took 0.358957 (s)
+message count=76596
+Cyclic with modulo unrolling (CM) n=20
+took 0.295353 (s)
+message count=80380
+Cyclic (C) n=21
+took 0.335246 (s)
+message count=76996
+Cyclic with modulo unrolling (CM) n=21
+took 0.308091 (s)
+message count=81306
+Cyclic (C) n=22
+took 0.349701 (s)
+message count=78434
+Cyclic with modulo unrolling (CM) n=22
+took 0.321063 (s)
+message count=82116
+Cyclic (C) n=23
+took 0.320485 (s)
+message count=78547
+Cyclic with modulo unrolling (CM) n=23
+took 0.296323 (s)
+message count=82917
+Cyclic (C) n=24
+took 0.379447 (s)
+message count=80308
+Cyclic with modulo unrolling (CM) n=24
+took 0.290706 (s)
+message count=83602
+Cyclic (C) n=25
+took 0.34271 (s)
+message count=80154
+Cyclic with modulo unrolling (CM) n=25
+took 0.317692 (s)
+message count=84528
+Cyclic (C) n=26
+took 0.412042 (s)
+message count=82138
+Cyclic with modulo unrolling (CM) n=26
+took 0.352598 (s)
+message count=85338
+Cyclic (C) n=27
+took 0.439228 (s)
+message count=82017
+Cyclic with modulo unrolling (CM) n=27
+took 0.360179 (s)
+message count=86139
+Cyclic (C) n=28
+took 0.376993 (s)
+message count=83234
+Cyclic with modulo unrolling (CM) n=28
+took 0.364498 (s)
+message count=86824
+Cyclic (C) n=29
+took 0.448058 (s)
+message count=83416
+Cyclic with modulo unrolling (CM) n=29
+took 0.365651 (s)
+message count=87750
+Cyclic (C) n=30
+took 0.476698 (s)
+message count=84616
+Cyclic with modulo unrolling (CM) n=30
+took 0.34574 (s)
+message count=88560
+Cyclic (C) n=31
+took 0.535051 (s)
+message count=85741
+Cyclic with modulo unrolling (CM) n=31
+took 0.384712 (s)
+message count=89361
+Cyclic (C) n=32
+took 0.427625 (s)
+message count=87364
+Cyclic with modulo unrolling (CM) n=32
+took 0.35324 (s)
+message count=90046
+Cyclic (C) n=33
+took 0.38197 (s)
+message count=87092
+Cyclic with modulo unrolling (CM) n=33
+took 0.420323 (s)
+message count=90972
+Cyclic (C) n=34
+took 0.580091 (s)
+message count=88138
+Cyclic with modulo unrolling (CM) n=34
+took 0.439549 (s)
+message count=91782
+Cyclic (C) n=35
+took 0.516654 (s)
+message count=88519
+Cyclic with modulo unrolling (CM) n=35
+took 0.466717 (s)
+message count=92583
+Cyclic (C) n=36
+took 0.450841 (s)
+message count=90288
+Cyclic with modulo unrolling (CM) n=36
+took 0.418991 (s)
+message count=93268
+Cyclic (C) n=37
+took 0.520431 (s)
+message count=92222
+Cyclic with modulo unrolling (CM) n=37
+took 0.43899 (s)
+message count=94194
+Cyclic (C) n=38
+took 0.464887 (s)
+message count=92584
+Cyclic with modulo unrolling (CM) n=38
+took 0.430664 (s)
+message count=95004
+Cyclic (C) n=39
+took 0.516104 (s)
+message count=93591
+Cyclic with modulo unrolling (CM) n=39
+took 0.473385 (s)
+message count=95805
+Cyclic (C) n=40
+took 0.624958 (s)
+message count=94616
+Cyclic with modulo unrolling (CM) n=40
+took 0.46966 (s)
+message count=96490
+Cyclic (C) n=41
+took 0.563983 (s)
+message count=95436
+Cyclic with modulo unrolling (CM) n=41
+took 0.477979 (s)
+message count=97416
+Cyclic (C) n=42
+took 0.548899 (s)
+message count=96054
+Cyclic with modulo unrolling (CM) n=42
+took 0.481415 (s)
+message count=98226
+Cyclic (C) n=43
+took 0.606846 (s)
+message count=97457
+Cyclic with modulo unrolling (CM) n=43
+took 0.43112 (s)
+message count=99024
+Cyclic (C) n=44
+took 0.579695 (s)
+message count=98188
+Cyclic with modulo unrolling (CM) n=44
+took 0.475952 (s)
+message count=99712
+Cyclic (C) n=45
+took 0.709615 (s)
+message count=99534
+Cyclic with modulo unrolling (CM) n=45
+took 0.497919 (s)
+message count=100638
+Cyclic (C) n=46
+took 0.576773 (s)
+message count=101198
+Cyclic with modulo unrolling (CM) n=46
+took 0.459379 (s)
+message count=101448
+Cyclic (C) n=47
+took 0.678669 (s)
+message count=101907
+Cyclic with modulo unrolling (CM) n=47
+took 0.549042 (s)
+message count=102249
+Cyclic (C) n=48
+took 0.710257 (s)
+message count=102608
+Cyclic with modulo unrolling (CM) n=48
+took 0.552148 (s)
+message count=101824
+Cyclic (C) n=49
+took 0.691166 (s)
+message count=104103
+Cyclic with modulo unrolling (CM) n=49
+took 0.573242 (s)
+message count=102249
+Cyclic (C) n=50
+took 0.684707 (s)
+message count=104367
+Cyclic with modulo unrolling (CM) n=50
+took 0.471574 (s)
+message count=102249
+Cyclic (C) n=51
+took 0.54224 (s)
+message count=106415
+Cyclic with modulo unrolling (CM) n=51
+took 0.52048 (s)
+message count=102243
+Cyclic (C) n=52
+took 0.646018 (s)
+message count=108042
+Cyclic with modulo unrolling (CM) n=52
+took 0.643419 (s)
+message count=101944
+Cyclic (C) n=53
+took 0.660847 (s)
+message count=109233
+Cyclic with modulo unrolling (CM) n=53
+took 0.52918 (s)
+message count=102249
+Cyclic (C) n=54
+took 0.726608 (s)
+message count=110663
+Cyclic with modulo unrolling (CM) n=54
+took 0.526824 (s)
+message count=102237
+Cyclic (C) n=55
+took 0.646153 (s)
+message count=112287
+Cyclic with modulo unrolling (CM) n=55
+took 0.485482 (s)
+message count=102009
+Cyclic (C) n=56
+took 0.736025 (s)
+message count=112970
+Cyclic with modulo unrolling (CM) n=56
+took 0.5057 (s)
+message count=102124
+Cyclic (C) n=57
+took 0.719422 (s)
+message count=115327
+Cyclic with modulo unrolling (CM) n=57
+took 0.620943 (s)
+message count=102249
+Cyclic (C) n=58
+took 0.573851 (s)
+message count=114783
+Cyclic with modulo unrolling (CM) n=58
+took 0.513783 (s)
+message count=102249
+Cyclic (C) n=59
+took 0.790543 (s)
+message count=117193
+Cyclic with modulo unrolling (CM) n=59
+took 0.553355 (s)
+message count=102239
+Cyclic (C) n=60
+took 0.563035 (s)
+message count=117312
+Cyclic with modulo unrolling (CM) n=60
+took 0.623415 (s)
+message count=102122
+Cyclic (C) n=61
+took 0.645124 (s)
+message count=120055
+Cyclic with modulo unrolling (CM) n=61
+took 0.543387 (s)
+message count=102249
+Cyclic (C) n=62
+took 0.670113 (s)
+message count=120057
+Cyclic with modulo unrolling (CM) n=62
+took 0.519728 (s)
+message count=102245
+Cyclic (C) n=63
+took 0.669623 (s)
+message count=123103
+Cyclic with modulo unrolling (CM) n=63
+took 0.546982 (s)
+message count=102009
+Cyclic (C) n=64
+took 0.773376 (s)
+message count=124058
+Cyclic with modulo unrolling (CM) n=64
+took 0.555389 (s)
+message count=102124
+Cyclic (C) n=65
+took 0.695267 (s)
+message count=125687
+Cyclic with modulo unrolling (CM) n=65
+took 0.557274 (s)
+message count=102249
+Cyclic (C) n=66
+took 0.641754 (s)
+message count=127305
+Cyclic with modulo unrolling (CM) n=66
+took 0.590638 (s)
+message count=102241
+Cyclic (C) n=67
+took 0.63489 (s)
+message count=128517
+Cyclic with modulo unrolling (CM) n=67
+took 0.628322 (s)
+message count=102249
+Cyclic (C) n=68
+took 0.72926 (s)
+message count=130428
+Cyclic with modulo unrolling (CM) n=68
+took 0.491913 (s)
+message count=102118
+Cyclic (C) n=69
+took 0.624376 (s)
+message count=131423
+Cyclic with modulo unrolling (CM) n=69
+took 0.613552 (s)
+message count=102249
+Cyclic (C) n=70
+took 0.668523 (s)
+message count=133417
+Cyclic with modulo unrolling (CM) n=70
+took 0.526924 (s)
+message count=102228
+Cyclic (C) n=71
+took 0.652612 (s)
+message count=134455
+Cyclic with modulo unrolling (CM) n=71
+took 0.555196 (s)
+message count=102234
+Cyclic (C) n=72
+took 0.626049 (s)
+message count=137392
+Cyclic with modulo unrolling (CM) n=72
+took 0.549224 (s)
+message count=102124
+Cyclic (C) n=73
+took 0.693417 (s)
+message count=139033
+Cyclic with modulo unrolling (CM) n=73
+took 0.550577 (s)
+message count=102249
+Cyclic (C) n=74
+took 0.680513 (s)
+message count=140663
+Cyclic with modulo unrolling (CM) n=74
+took 0.663287 (s)
+message count=102189
+Cyclic (C) n=75
+took 0.728292 (s)
+message count=141687
+Cyclic with modulo unrolling (CM) n=75
+took 0.620284 (s)
+message count=102249
+Cyclic (C) n=76
+took 0.646648 (s)
+message count=144040
+Cyclic with modulo unrolling (CM) n=76
+took 0.581532 (s)
+message count=101764
+Cyclic (C) n=77
+took 0.736127 (s)
+message count=146247
+Cyclic with modulo unrolling (CM) n=77
+took 0.500974 (s)
+message count=102249
+Cyclic (C) n=78
+took 0.654894 (s)
+message count=147553
+Cyclic with modulo unrolling (CM) n=78
+took 0.547893 (s)
+message count=102129
+Cyclic (C) n=79
+took 0.670108 (s)
+message count=150123
+Cyclic with modulo unrolling (CM) n=79
+took 0.545183 (s)
+message count=102249
+Cyclic (C) n=80
+took 0.629784 (s)
+message count=150912
+Cyclic with modulo unrolling (CM) n=80
+took 0.555589 (s)
+message count=102124
+Cyclic (C) n=81
+took 0.672346 (s)
+message count=153545
+Cyclic with modulo unrolling (CM) n=81
+took 0.52096 (s)
+message count=102249
+Cyclic (C) n=82
+took 0.730327 (s)
+message count=155407
+Cyclic with modulo unrolling (CM) n=82
+took 0.549933 (s)
+message count=102249
+Cyclic (C) n=83
+took 0.635531 (s)
+message count=157503
+Cyclic with modulo unrolling (CM) n=83
+took 0.562204 (s)
+message count=102249
+Cyclic (C) n=84
+took 0.745345 (s)
+message count=158748
+Cyclic with modulo unrolling (CM) n=84
+took 0.543464 (s)
+message count=102124
+Cyclic (C) n=85
+took 0.77895 (s)
+message count=161637
+Cyclic with modulo unrolling (CM) n=85
+took 0.595792 (s)
+message count=102219
+Cyclic (C) n=86
+took 0.715927 (s)
+message count=163625
+Cyclic with modulo unrolling (CM) n=86
+took 0.526181 (s)
+message count=102217
+Cyclic (C) n=87
+took 0.576705 (s)
+message count=165207
+Cyclic with modulo unrolling (CM) n=87
+took 0.508936 (s)
+message count=102249
+Cyclic (C) n=88
+took 0.650906 (s)
+message count=167788
+Cyclic with modulo unrolling (CM) n=88
+took 0.553126 (s)
+message count=102124
+Cyclic (C) n=89
+took 0.691998 (s)
+message count=169733
+Cyclic with modulo unrolling (CM) n=89
+took 0.557362 (s)
+message count=102225
+Cyclic (C) n=90
+took 0.687602 (s)
+message count=172467
+Cyclic with modulo unrolling (CM) n=90
+took 0.567283 (s)
+message count=102117
+Cyclic (C) n=91
+took 0.697483 (s)
+message count=172935
+Cyclic with modulo unrolling (CM) n=91
+took 0.480971 (s)
+message count=101849
+Cyclic (C) n=92
+took 0.662759 (s)
+message count=176022
+Cyclic with modulo unrolling (CM) n=92
+took 0.603192 (s)
+message count=101850
+Cyclic (C) n=93
+took 1.04244 (s)
+message count=177673
+Cyclic with modulo unrolling (CM) n=93
+took 0.602788 (s)
+message count=101969
+Cyclic (C) n=94
+took 0.66116 (s)
+message count=180883
+Cyclic with modulo unrolling (CM) n=94
+took 0.586114 (s)
+message count=101985
+Cyclic (C) n=95
+took 0.815802 (s)
+message count=182557
+Cyclic with modulo unrolling (CM) n=95
+took 0.475481 (s)
+message count=101983
+Cyclic (C) n=96
+took 0.766638 (s)
+message count=184690
+Cyclic with modulo unrolling (CM) n=96
+took 0.534614 (s)
+message count=101860
+Cyclic (C) n=97
+took 0.90832 (s)
+message count=188257
+Cyclic with modulo unrolling (CM) n=97
+took 0.492957 (s)
+message count=101985
+Cyclic (C) n=98
+took 0.89895 (s)
+message count=188573
+Cyclic with modulo unrolling (CM) n=98
+took 0.532598 (s)
+message count=101985
+Cyclic (C) n=99
+took 0.810812 (s)
+message count=192633
+Cyclic with modulo unrolling (CM) n=99
+took 0.582142 (s)
+message count=101985
+Cyclic (C) n=100
+took 0.808813 (s)
+message count=194132
+Cyclic with modulo unrolling (CM) n=100
+took 0.577689 (s)
+message count=101560
+mvt vary input
+nl=8
+Cyclic (C) Dim=20
+took 0.623817 seconds
+message count=174299
+Cyclic with modulo unrolling (CM) Dim=20
+took 0.706848 seconds
+message count=177625
+Cyclic (C) Dim=30
+took 1.07926 seconds
+message count=265370
+Cyclic with modulo unrolling (CM) Dim=30
+took 1.25148 seconds
+message count=272538
+Cyclic (C) Dim=40
+took 1.51894 seconds
+message count=362933
+Cyclic with modulo unrolling (CM) Dim=40
+took 1.90168 seconds
+message count=375418
+Cyclic (C) Dim=50
+took 2.05913 seconds
+message count=464031
+Cyclic with modulo unrolling (CM) Dim=50
+took 2.4665 seconds
+message count=479784
+Cyclic (C) Dim=60
+took 2.57704 seconds
+message count=571084
+Cyclic with modulo unrolling (CM) Dim=60
+took 3.01995 seconds
+message count=583700
+Cyclic (C) Dim=70
+took 2.89212 seconds
+message count=681462
+Cyclic with modulo unrolling (CM) Dim=70
+took 3.47035 seconds
+message count=688866
+Cyclic (C) Dim=80
+took 3.28085 seconds
+message count=798688
+Cyclic with modulo unrolling (CM) Dim=80
+took 3.95662 seconds
+message count=798368
+Cyclic (C) Dim=90
+took 3.6695 seconds
+message count=919463
+Cyclic with modulo unrolling (CM) Dim=90
+took 4.42793 seconds
+message count=908170
+Cyclic (C) Dim=100
+took 4.10511 seconds
+message count=1046484
+Cyclic with modulo unrolling (CM) Dim=100
+took 4.8141 seconds
+message count=1024161
+Cyclic (C) Dim=110
+took 4.6228 seconds
+message count=1175906
+Cyclic with modulo unrolling (CM) Dim=110
+took 5.31976 seconds
+message count=1140779
+Cyclic (C) Dim=120
+took 4.94817 seconds
+message count=1313051
+Cyclic with modulo unrolling (CM) Dim=120
+took 5.83805 seconds
+message count=1262316
+Cyclic (C) Dim=130
+took 5.31805 seconds
+message count=1452338
+Cyclic with modulo unrolling (CM) Dim=130
+took 6.33006 seconds
+message count=1383685
+Cyclic (C) Dim=140
+took 5.88018 seconds
+message count=1600832
+Cyclic with modulo unrolling (CM) Dim=140
+took 6.89684 seconds
+message count=1510906
+Cyclic (C) Dim=150
+took 6.32753 seconds
+message count=1749186
+Cyclic with modulo unrolling (CM) Dim=150
+took 7.11655 seconds
+message count=1638262
+Cyclic (C) Dim=160
+took 6.84348 seconds
+message count=1908371
+Cyclic with modulo unrolling (CM) Dim=160
+took 7.846 seconds
+message count=1771540
+Cyclic (C) Dim=170
+took 7.16383 seconds
+message count=2065071
+Cyclic with modulo unrolling (CM) Dim=170
+took 8.2131 seconds
+message count=1904074
+Cyclic (C) Dim=180
+took 7.89351 seconds
+message count=2233666
+Cyclic with modulo unrolling (CM) Dim=180
+took 8.73001 seconds
+message count=2043039
+Cyclic (C) Dim=190
+took 8.21247 seconds
+message count=2401050
+Cyclic with modulo unrolling (CM) Dim=190
+took 9.25043 seconds
+message count=2181818
+Cyclic (C) Dim=200
+took 8.58199 seconds
+message count=2579489
+Cyclic with modulo unrolling (CM) Dim=200
+took 9.71943 seconds
+message count=2326308
+Cyclic (C) Dim=210
+took 8.95369 seconds
+message count=2757998
+Cyclic with modulo unrolling (CM) Dim=210
+took 10.4794 seconds
+message count=2470128
+Cyclic (C) Dim=220
+took 9.70972 seconds
+message count=2945840
+Cyclic with modulo unrolling (CM) Dim=220
+took 10.676 seconds
+message count=2620574
+Cyclic (C) Dim=230
+took 10.0122 seconds
+message count=3133731
+Cyclic with modulo unrolling (CM) Dim=230
+took 11.4249 seconds
+message count=2769835
+Cyclic (C) Dim=240
+took 10.5442 seconds
+message count=3332369
+Cyclic with modulo unrolling (CM) Dim=240
+took 11.8703 seconds
+message count=2926159
+Cyclic (C) Dim=250
+took 11.1266 seconds
+message count=3528711
+Cyclic with modulo unrolling (CM) Dim=250
+took 12.5998 seconds
+message count=3080999
+Cyclic (C) Dim=260
+took 11.4536 seconds
+message count=3737473
+Cyclic with modulo unrolling (CM) Dim=260
+took 13.1366 seconds
+message count=3244245
+Cyclic (C) Dim=270
+took 12.1415 seconds
+message count=3944674
+Cyclic with modulo unrolling (CM) Dim=270
+took 13.6728 seconds
+message count=3404423
+Cyclic (C) Dim=280
+took 12.678 seconds
+message count=4162545
+Cyclic with modulo unrolling (CM) Dim=280
+took 13.9849 seconds
+message count=3572962
+Cyclic (C) Dim=290
+took 13.1898 seconds
+message count=4379926
+Cyclic with modulo unrolling (CM) Dim=290
+took 14.407 seconds
+message count=3739559
+Cyclic (C) Dim=300
+took 13.6221 seconds
+message count=4608817
+Cyclic with modulo unrolling (CM) Dim=300
+took 15.2415 seconds
+message count=3912819
+Cyclic (C) Dim=310
+took 14.155 seconds
+message count=4833641
+Cyclic with modulo unrolling (CM) Dim=310
+took 15.5606 seconds
+message count=4083927
+Cyclic (C) Dim=320
+took 14.8998 seconds
+message count=5073202
+Cyclic with modulo unrolling (CM) Dim=320
+took 16.0288 seconds
+message count=4264707
+Cyclic (C) Dim=330
+took 15.4697 seconds
+message count=5309942
+Cyclic with modulo unrolling (CM) Dim=330
+took 16.5446 seconds
+message count=4441366
+Cyclic (C) Dim=340
+took 16.1388 seconds
+message count=5559011
+Cyclic with modulo unrolling (CM) Dim=340
+took 18.4436 seconds
+message count=4626513
+Cyclic (C) Dim=350
+took 16.7578 seconds
+message count=5803971
+Cyclic with modulo unrolling (CM) Dim=350
+took 17.8833 seconds
+message count=4809897
+Cyclic (C) Dim=360
+took 17.4816 seconds
+message count=6064333
+Cyclic with modulo unrolling (CM) Dim=360
+took 18.1141 seconds
+message count=5001797
+Cyclic (C) Dim=370
+took 17.4066 seconds
+message count=6316246
+Cyclic with modulo unrolling (CM) Dim=370
+took 18.907 seconds
+message count=5188388
+Cyclic (C) Dim=380
+took 18.111 seconds
+message count=6587054
+Cyclic with modulo unrolling (CM) Dim=380
+took 19.3986 seconds
+message count=5387988
+Cyclic (C) Dim=390
+took 18.7799 seconds
+message count=6853284
+Cyclic with modulo unrolling (CM) Dim=390
+took 21.0319 seconds
+message count=5580210
+Cyclic (C) Dim=400
+took 19.3202 seconds
+message count=7130653
+Cyclic with modulo unrolling (CM) Dim=400
+took 20.6315 seconds
+message count=5783938
+fdtd2d vary input
+nl=8
+TMAX=50
+Cyclic (C)
+took 3.31948 seconds
+message count=1444695
+Cyclic with modulo unrolling (CM)
+took 3.27894 seconds
+message count=1484905
+Cyclic (C)
+took 3.55408 seconds
+message count=1497355
+Cyclic with modulo unrolling (CM)
+took 3.42612 seconds
+message count=1554905
+Cyclic (C)
+took 3.82936 seconds
+message count=1555855
+Cyclic with modulo unrolling (CM)
+took 3.8067 seconds
+message count=1624905
+Cyclic (C)
+took 4.21923 seconds
+message count=1631225
+Cyclic with modulo unrolling (CM)
+took 4.0875 seconds
+message count=1694905
+Cyclic (C)
+took 4.38799 seconds
+message count=1697885
+Cyclic with modulo unrolling (CM)
+took 4.36637 seconds
+message count=1764905
+Cyclic (C)
+took 4.4915 seconds
+message count=1745215
+Cyclic with modulo unrolling (CM)
+took 4.70809 seconds
+message count=1834905
+Cyclic (C)
+took 5.02023 seconds
+message count=1825535
+Cyclic with modulo unrolling (CM)
+took 5.05817 seconds
+message count=1904905
+Cyclic (C)
+took 5.21945 seconds
+message count=1907825
+Cyclic with modulo unrolling (CM)
+took 5.14667 seconds
+message count=1974905
+Cyclic (C)
+took 5.51363 seconds
+message count=2000815
+Cyclic with modulo unrolling (CM)
+took 5.29911 seconds
+message count=1999305
+Cyclic (C)
+took 5.7604 seconds
+message count=2113195
+Cyclic with modulo unrolling (CM)
+took 5.23645 seconds
+message count=1999305
+Cyclic (C)
+took 5.90654 seconds
+message count=2228945
+Cyclic with modulo unrolling (CM)
+took 5.26799 seconds
+message count=1999305
+Cyclic (C)
+took 5.84617 seconds
+message count=2330365
+Cyclic with modulo unrolling (CM)
+took 5.26455 seconds
+message count=1999305
+Cyclic (C)
+took 5.75909 seconds
+message count=2465855
+Cyclic with modulo unrolling (CM)
+took 5.57651 seconds
+message count=1999305
+Cyclic (C)
+took 5.84164 seconds
+message count=2619155
+Cyclic with modulo unrolling (CM)
+took 5.28658 seconds
+message count=1999305
+Cyclic (C)
+took 5.87336 seconds
+message count=2759685
+Cyclic with modulo unrolling (CM)
+took 5.30757 seconds
+message count=1999305
+Cyclic (C)
+took 6.34388 seconds
+message count=2940295
+Cyclic with modulo unrolling (CM)
+took 5.28856 seconds
+message count=1999305
+Cyclic (C)
+took 6.14135 seconds
+message count=3103045
+Cyclic with modulo unrolling (CM)
+took 5.22744 seconds
+message count=1999303
+Cyclic (C)
+took 5.9632 seconds
+message count=3289465
+Cyclic with modulo unrolling (CM)
+took 5.26814 seconds
+message count=1999305
+Cyclic (C)
+took 6.09912 seconds
+message count=3485875
+Cyclic with modulo unrolling (CM)
+took 5.31674 seconds
+message count=1999305
+Cyclic (C)
+took 6.4941 seconds
+message count=3697565
+Cyclic with modulo unrolling (CM)
+took 5.25405 seconds
+message count=1999305
+Cyclic (C)
+took 6.20916 seconds
+message count=3912255
+Cyclic with modulo unrolling (CM)
+took 5.2878 seconds
+message count=1999305
+Cyclic (C)
+took 7.11017 seconds
+message count=4123885
+Cyclic with modulo unrolling (CM)
+took 5.29273 seconds
+message count=1999305
+Cyclic (C)
+took 6.44863 seconds
+message count=4356955
+Cyclic with modulo unrolling (CM)
+took 5.35577 seconds
+message count=1999305
+Cyclic (C)
+took 6.25146 seconds
+message count=4594715
+Cyclic with modulo unrolling (CM)
+took 5.26926 seconds
+message count=1999305
+Cyclic (C)
+took 6.97144 seconds
+message count=4855125
+Cyclic with modulo unrolling (CM)
+took 5.28683 seconds
+message count=1999305
+Cyclic (C)
+took 7.08878 seconds
+message count=5141755
+Cyclic with modulo unrolling (CM)
+took 5.30734 seconds
+message count=1999305
+Cyclic (C)
+took 6.90257 seconds
+message count=5389655
+Cyclic with modulo unrolling (CM)
+took 5.29547 seconds
+message count=1999305
+Cyclic (C)
+took 7.65328 seconds
+message count=5680355
+Cyclic with modulo unrolling (CM)
+took 5.27881 seconds
+message count=1999305
+Cyclic (C)
+took 7.58661 seconds
+message count=5977305
+Cyclic with modulo unrolling (CM)
+took 5.27146 seconds
+message count=1999305
+Cyclic (C)
+took 7.85021 seconds
+message count=6291915
+Cyclic with modulo unrolling (CM)
+took 5.23737 seconds
+message count=1999305
+Cyclic (C)
+took 7.90299 seconds
+message count=6595455
+Cyclic with modulo unrolling (CM)
+took 5.24989 seconds
+message count=1999305
+Cyclic (C)
+took 8.1095 seconds
+message count=6920835
+Cyclic with modulo unrolling (CM)
+took 5.35877 seconds
+message count=1999305
+Cyclic (C)
+took 8.21861 seconds
+message count=7249335
+Cyclic with modulo unrolling (CM)
+took 5.32629 seconds
+message count=1999305
+Cyclic (C)
+took 7.87734 seconds
+message count=7557635
+Cyclic with modulo unrolling (CM)
+took 5.2983 seconds
+message count=1999305
+Cyclic (C)
+took 8.32094 seconds
+message count=7923685
+Cyclic with modulo unrolling (CM)
+took 5.32794 seconds
+message count=1999305
+Cyclic (C)
+took 9.11222 seconds
+message count=8316005
+Cyclic with modulo unrolling (CM)
+took 5.28943 seconds
+message count=1999305
+Cyclic (C)
+took 8.22002 seconds
+message count=8668385
+Cyclic with modulo unrolling (CM)
+took 5.31875 seconds
+message count=1999305
+Cyclic (C)
+took 9.07161 seconds
+message count=9068535
+Cyclic with modulo unrolling (CM)
+took 5.36028 seconds
+message count=1999305
+Cyclic (C)
+took 9.13708 seconds
+message count=9465175
+Cyclic with modulo unrolling (CM)
+took 5.36749 seconds
+message count=1999305

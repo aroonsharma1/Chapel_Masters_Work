@@ -1,0 +1,604 @@
+jacobi2d vary input
+nl=8
+n=
+epsilon=0.05
+Cyclic (C) n=101
+took 0.888008 (s)
+message count=196905
+Cyclic with modulo unrolling (CM) n=101
+took 0.587746 (s)
+message count=101985
+Cyclic (C) n=102
+took 0.724139 (s)
+message count=197957
+Cyclic with modulo unrolling (CM) n=102
+took 0.536169 (s)
+message count=101559
+Cyclic (C) n=103
+took 0.710759 (s)
+message count=201593
+Cyclic with modulo unrolling (CM) n=103
+took 0.510729 (s)
+message count=101985
+Cyclic (C) n=104
+took 0.840657 (s)
+message count=204688
+Cyclic with modulo unrolling (CM) n=104
+took 0.535234 (s)
+message count=101842
+Cyclic (C) n=105
+took 0.828573 (s)
+message count=206937
+Cyclic with modulo unrolling (CM) n=105
+took 0.504084 (s)
+message count=101985
+Cyclic (C) n=106
+took 0.809149 (s)
+message count=208945
+Cyclic with modulo unrolling (CM) n=106
+took 0.495163 (s)
+message count=101985
+Cyclic (C) n=107
+took 1.0897 (s)
+message count=211417
+Cyclic with modulo unrolling (CM) n=107
+took 0.568582 (s)
+message count=101979
+Cyclic (C) n=108
+took 0.708632 (s)
+message count=214068
+Cyclic with modulo unrolling (CM) n=108
+took 0.568213 (s)
+message count=101860
+Cyclic (C) n=109
+took 0.668487 (s)
+message count=216583
+Cyclic with modulo unrolling (CM) n=109
+took 0.497794 (s)
+message count=101985
+Cyclic (C) n=110
+took 0.668552 (s)
+message count=218617
+Cyclic with modulo unrolling (CM) n=110
+took 0.539948 (s)
+message count=101985
+Cyclic (C) n=111
+took 0.709482 (s)
+message count=221305
+Cyclic with modulo unrolling (CM) n=111
+took 0.510771 (s)
+message count=101981
+Cyclic (C) n=112
+took 0.726186 (s)
+message count=224182
+Cyclic with modulo unrolling (CM) n=112
+took 0.642875 (s)
+message count=101860
+Cyclic (C) n=113
+took 0.981148 (s)
+message count=227443
+Cyclic with modulo unrolling (CM) n=113
+took 0.568281 (s)
+message count=101983
+Cyclic (C) n=114
+took 0.599112 (s)
+message count=229613
+Cyclic with modulo unrolling (CM) n=114
+took 0.645474 (s)
+message count=101977
+Cyclic (C) n=115
+took 0.88237 (s)
+message count=233387
+Cyclic with modulo unrolling (CM) n=115
+took 0.491233 (s)
+message count=101985
+Cyclic (C) n=116
+took 0.712628 (s)
+message count=234630
+Cyclic with modulo unrolling (CM) n=116
+took 0.54536 (s)
+message count=101860
+Cyclic (C) n=117
+took 0.62843 (s)
+message count=237937
+Cyclic with modulo unrolling (CM) n=117
+took 0.682699 (s)
+message count=101977
+Cyclic (C) n=118
+took 0.699505 (s)
+message count=240083
+Cyclic with modulo unrolling (CM) n=118
+took 0.650003 (s)
+message count=101985
+Cyclic (C) n=119
+took 0.923028 (s)
+message count=243273
+Cyclic with modulo unrolling (CM) n=119
+took 0.5141 (s)
+message count=101985
+Cyclic (C) n=120
+took 0.790117 (s)
+message count=246282
+Cyclic with modulo unrolling (CM) n=120
+took 0.49606 (s)
+message count=101860
+Cyclic (C) n=121
+took 0.909189 (s)
+message count=249975
+Cyclic with modulo unrolling (CM) n=121
+took 0.502464 (s)
+message count=101985
+Cyclic (C) n=122
+took 0.862933 (s)
+message count=252127
+Cyclic with modulo unrolling (CM) n=122
+took 0.441945 (s)
+message count=101985
+Cyclic (C) n=123
+took 0.777688 (s)
+message count=255113
+Cyclic with modulo unrolling (CM) n=123
+took 0.531857 (s)
+message count=101985
+Cyclic (C) n=124
+took 0.702872 (s)
+message count=257518
+Cyclic with modulo unrolling (CM) n=124
+took 0.559844 (s)
+message count=101858
+Cyclic (C) n=125
+took 0.89178 (s)
+message count=262187
+Cyclic with modulo unrolling (CM) n=125
+took 0.611641 (s)
+message count=101985
+Cyclic (C) n=126
+took 0.627105 (s)
+message count=263245
+Cyclic with modulo unrolling (CM) n=126
+took 0.520047 (s)
+message count=101979
+Cyclic (C) n=127
+took 0.775968 (s)
+message count=265607
+Cyclic with modulo unrolling (CM) n=127
+took 0.550935 (s)
+message count=101985
+Cyclic (C) n=128
+took 0.87734 (s)
+message count=270848
+Cyclic with modulo unrolling (CM) n=128
+took 0.478999 (s)
+message count=101860
+Cyclic (C) n=129
+took 0.772027 (s)
+message count=273533
+Cyclic with modulo unrolling (CM) n=129
+took 0.561561 (s)
+message count=101975
+Cyclic (C) n=130
+took 0.719417 (s)
+message count=274947
+Cyclic with modulo unrolling (CM) n=130
+took 0.547755 (s)
+message count=101985
+Cyclic (C) n=131
+took 0.682776 (s)
+message count=278565
+Cyclic with modulo unrolling (CM) n=131
+took 0.510052 (s)
+message count=101985
+Cyclic (C) n=132
+took 0.707247 (s)
+message count=281872
+Cyclic with modulo unrolling (CM) n=132
+took 0.66551 (s)
+message count=101850
+Cyclic (C) n=133
+took 0.876118 (s)
+message count=285733
+Cyclic with modulo unrolling (CM) n=133
+took 0.583232 (s)
+message count=101985
+Cyclic (C) n=134
+took 0.75684 (s)
+message count=289763
+Cyclic with modulo unrolling (CM) n=134
+took 0.541982 (s)
+message count=101985
+Cyclic (C) n=135
+took 0.99913 (s)
+message count=292177
+Cyclic with modulo unrolling (CM) n=135
+took 0.565011 (s)
+message count=101985
+Cyclic (C) n=136
+took 0.883726 (s)
+message count=295800
+Cyclic with modulo unrolling (CM) n=136
+took 0.554251 (s)
+message count=101860
+Cyclic (C) n=137
+took 0.844514 (s)
+message count=298377
+Cyclic with modulo unrolling (CM) n=137
+took 0.584958 (s)
+message count=101985
+Cyclic (C) n=138
+took 0.672719 (s)
+message count=301473
+Cyclic with modulo unrolling (CM) n=138
+took 0.557397 (s)
+message count=101973
+Cyclic (C) n=139
+took 0.765818 (s)
+message count=304553
+Cyclic with modulo unrolling (CM) n=139
+took 0.565312 (s)
+message count=101985
+Cyclic (C) n=140
+took 0.960614 (s)
+message count=309142
+Cyclic with modulo unrolling (CM) n=140
+took 0.546776 (s)
+message count=101740
+Cyclic (C) n=141
+took 0.849394 (s)
+message count=311715
+Cyclic with modulo unrolling (CM) n=141
+took 0.616278 (s)
+message count=101805
+Cyclic (C) n=142
+took 0.954116 (s)
+message count=315017
+Cyclic with modulo unrolling (CM) n=142
+took 0.506495 (s)
+message count=101985
+Cyclic (C) n=143
+took 1.01254 (s)
+message count=319363
+Cyclic with modulo unrolling (CM) n=143
+took 0.516758 (s)
+message count=101985
+Cyclic (C) n=144
+took 0.819421 (s)
+message count=322838
+Cyclic with modulo unrolling (CM) n=144
+took 0.498172 (s)
+message count=101860
+Cyclic (C) n=145
+took 0.869286 (s)
+message count=325777
+Cyclic with modulo unrolling (CM) n=145
+took 0.536006 (s)
+message count=101985
+Cyclic (C) n=146
+took 1.12984 (s)
+message count=328745
+Cyclic with modulo unrolling (CM) n=146
+took 0.545723 (s)
+message count=101985
+Cyclic (C) n=147
+took 0.89639 (s)
+message count=332527
+Cyclic with modulo unrolling (CM) n=147
+took 0.470752 (s)
+message count=101985
+Cyclic (C) n=148
+took 0.858896 (s)
+message count=335248
+Cyclic with modulo unrolling (CM) n=148
+took 0.542766 (s)
+message count=101860
+Cyclic (C) n=149
+took 0.917623 (s)
+message count=339813
+Cyclic with modulo unrolling (CM) n=149
+took 0.635769 (s)
+message count=101685
+Cyclic (C) n=150
+took 0.769589 (s)
+message count=342947
+Cyclic with modulo unrolling (CM) n=150
+took 0.529009 (s)
+message count=101985
+Cyclic (C) n=151
+took 0.836683 (s)
+message count=346635
+Cyclic with modulo unrolling (CM) n=151
+took 0.537155 (s)
+message count=101979
+Cyclic (C) n=152
+took 1.36322 (s)
+message count=350562
+Cyclic with modulo unrolling (CM) n=152
+took 0.5448 (s)
+message count=101860
+Cyclic (C) n=153
+took 0.965134 (s)
+message count=353643
+Cyclic with modulo unrolling (CM) n=153
+took 0.516906 (s)
+message count=101805
+Cyclic (C) n=154
+took 0.936524 (s)
+message count=357443
+Cyclic with modulo unrolling (CM) n=154
+took 0.500798 (s)
+message count=101985
+Cyclic (C) n=155
+took 0.791861 (s)
+message count=361337
+Cyclic with modulo unrolling (CM) n=155
+took 0.52911 (s)
+message count=101985
+Cyclic (C) n=156
+took 0.820592 (s)
+message count=364320
+Cyclic with modulo unrolling (CM) n=156
+took 0.65068 (s)
+message count=101854
+Cyclic (C) n=157
+took 1.05156 (s)
+message count=369017
+Cyclic with modulo unrolling (CM) n=157
+took 0.519526 (s)
+message count=101985
+Cyclic (C) n=158
+took 0.777018 (s)
+message count=372003
+Cyclic with modulo unrolling (CM) n=158
+took 0.610623 (s)
+message count=101971
+Cyclic (C) n=159
+took 1.17648 (s)
+message count=376963
+Cyclic with modulo unrolling (CM) n=159
+took 0.542269 (s)
+message count=101985
+Cyclic (C) n=160
+took 0.850991 (s)
+message count=380482
+Cyclic with modulo unrolling (CM) n=160
+took 0.48556 (s)
+message count=101860
+Cyclic (C) n=161
+took 0.887609 (s)
+message count=384475
+Cyclic with modulo unrolling (CM) n=161
+took 0.543273 (s)
+message count=101985
+Cyclic (C) n=162
+took 0.813382 (s)
+message count=388617
+Cyclic with modulo unrolling (CM) n=162
+took 0.625073 (s)
+message count=101983
+Cyclic (C) n=163
+took 0.839897 (s)
+message count=390353
+Cyclic with modulo unrolling (CM) n=163
+took 0.480753 (s)
+message count=101985
+Cyclic (C) n=164
+took 0.912876 (s)
+message count=395738
+Cyclic with modulo unrolling (CM) n=164
+took 0.631327 (s)
+message count=101860
+Cyclic (C) n=165
+took 1.05853 (s)
+message count=399837
+Cyclic with modulo unrolling (CM) n=165
+took 0.530331 (s)
+message count=101979
+Cyclic (C) n=166
+took 0.776428 (s)
+message count=402895
+Cyclic with modulo unrolling (CM) n=166
+took 0.518919 (s)
+message count=101985
+Cyclic (C) n=167
+took 0.923092 (s)
+message count=407937
+Cyclic with modulo unrolling (CM) n=167
+took 0.682563 (s)
+message count=101985
+Cyclic (C) n=168
+took 0.679737 (s)
+message count=409508
+Cyclic with modulo unrolling (CM) n=168
+took 0.480895 (s)
+message count=101860
+Cyclic (C) n=169
+took 0.762773 (s)
+message count=415003
+Cyclic with modulo unrolling (CM) n=169
+took 0.452409 (s)
+message count=101985
+Cyclic (C) n=170
+took 1.10566 (s)
+message count=419937
+Cyclic with modulo unrolling (CM) n=170
+took 0.516802 (s)
+message count=101985
+Cyclic (C) n=171
+took 0.888398 (s)
+message count=423625
+Cyclic with modulo unrolling (CM) n=171
+took 0.478593 (s)
+message count=101985
+Cyclic (C) n=172
+took 1.07984 (s)
+message count=427312
+Cyclic with modulo unrolling (CM) n=172
+took 0.567925 (s)
+message count=101860
+Cyclic (C) n=173
+took 0.752481 (s)
+message count=431053
+Cyclic with modulo unrolling (CM) n=173
+took 0.533623 (s)
+message count=101805
+Cyclic (C) n=174
+took 0.798174 (s)
+message count=435343
+Cyclic with modulo unrolling (CM) n=174
+took 0.49523 (s)
+message count=101985
+Cyclic (C) n=175
+took 1.119 (s)
+message count=439647
+Cyclic with modulo unrolling (CM) n=175
+took 0.559827 (s)
+message count=101985
+Cyclic (C) n=176
+took 0.851028 (s)
+message count=443320
+Cyclic with modulo unrolling (CM) n=176
+took 0.531925 (s)
+message count=101858
+Cyclic (C) n=177
+took 0.805924 (s)
+message count=448537
+Cyclic with modulo unrolling (CM) n=177
+took 0.586777 (s)
+message count=101985
+Cyclic (C) n=178
+took 0.705244 (s)
+message count=452543
+Cyclic with modulo unrolling (CM) n=178
+took 0.656722 (s)
+message count=101985
+Cyclic (C) n=179
+took 0.73391 (s)
+message count=457223
+Cyclic with modulo unrolling (CM) n=179
+took 0.512661 (s)
+message count=101985
+Cyclic (C) n=180
+took 0.763398 (s)
+message count=460732
+Cyclic with modulo unrolling (CM) n=180
+took 0.512832 (s)
+message count=101620
+Cyclic (C) n=181
+took 1.09205 (s)
+message count=465795
+Cyclic with modulo unrolling (CM) n=181
+took 0.525613 (s)
+message count=101985
+Cyclic (C) n=182
+took 0.961701 (s)
+message count=469597
+Cyclic with modulo unrolling (CM) n=182
+took 0.541744 (s)
+message count=101985
+Cyclic (C) n=183
+took 0.935813 (s)
+message count=475293
+Cyclic with modulo unrolling (CM) n=183
+took 0.619581 (s)
+message count=101977
+Cyclic (C) n=184
+took 0.764772 (s)
+message count=475828
+Cyclic with modulo unrolling (CM) n=184
+took 0.542447 (s)
+message count=101858
+Cyclic (C) n=185
+took 0.901316 (s)
+message count=483027
+Cyclic with modulo unrolling (CM) n=185
+took 0.525698 (s)
+message count=101985
+Cyclic (C) n=186
+took 0.868833 (s)
+message count=486965
+Cyclic with modulo unrolling (CM) n=186
+took 0.561946 (s)
+message count=101985
+Cyclic (C) n=187
+took 1.08987 (s)
+message count=492217
+Cyclic with modulo unrolling (CM) n=187
+took 0.5719 (s)
+message count=101985
+Cyclic (C) n=188
+took 1.00876 (s)
+message count=495938
+Cyclic with modulo unrolling (CM) n=188
+took 0.636454 (s)
+message count=101860
+Cyclic (C) n=189
+took 1.10674 (s)
+message count=501393
+Cyclic with modulo unrolling (CM) n=189
+took 0.515687 (s)
+message count=101985
+Cyclic (C) n=190
+took 1.05802 (s)
+message count=504977
+Cyclic with modulo unrolling (CM) n=190
+took 0.530219 (s)
+message count=101985
+Cyclic (C) n=191
+took 1.02849 (s)
+message count=509465
+Cyclic with modulo unrolling (CM) n=191
+took 0.596535 (s)
+message count=101985
+Cyclic (C) n=192
+took 1.38058 (s)
+message count=515002
+Cyclic with modulo unrolling (CM) n=192
+took 0.582492 (s)
+message count=101552
+Cyclic (C) n=193
+took 0.95477 (s)
+message count=518393
+Cyclic with modulo unrolling (CM) n=193
+took 0.535385 (s)
+message count=101985
+Cyclic (C) n=194
+took 0.940786 (s)
+message count=522543
+Cyclic with modulo unrolling (CM) n=194
+took 0.617547 (s)
+message count=101925
+Cyclic (C) n=195
+took 0.946927 (s)
+message count=527887
+Cyclic with modulo unrolling (CM) n=195
+took 0.580214 (s)
+message count=101985
+Cyclic (C) n=196
+took 0.804075 (s)
+message count=532770
+Cyclic with modulo unrolling (CM) n=196
+took 0.597663 (s)
+message count=101860
+Cyclic (C) n=197
+took 1.25027 (s)
+message count=537497
+Cyclic with modulo unrolling (CM) n=197
+took 0.525766 (s)
+message count=101985
+Cyclic (C) n=198
+took 0.902996 (s)
+message count=542103
+Cyclic with modulo unrolling (CM) n=198
+took 0.516734 (s)
+message count=101979
+Cyclic (C) n=199
+took 0.985415 (s)
+message count=546603
+Cyclic with modulo unrolling (CM) n=199
+took 0.57283 (s)
+message count=101977
+Cyclic (C) n=200
+took 0.977552 (s)
+message count=552332
+Cyclic with modulo unrolling (CM) n=200
+took 0.530692 (s)
+message count=101800

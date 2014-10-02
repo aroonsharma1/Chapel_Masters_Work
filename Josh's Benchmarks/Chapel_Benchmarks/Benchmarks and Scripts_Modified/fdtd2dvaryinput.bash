@@ -9,7 +9,7 @@ echo TMAX=$TMAX
 #compile fdtd-2d
 chpl --fast fdtd-2d.chpl -o fdtd-2d
 
-for n in {10..100..5}
+for n in {10..200..5}
 	do
 		echo "Cyclic (C)"
 		./fdtd-2d -nl $nl --dist=C --M=$n --N=$n --TMAX=$TMAX --messages --timeit

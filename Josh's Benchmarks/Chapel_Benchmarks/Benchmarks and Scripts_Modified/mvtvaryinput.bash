@@ -7,7 +7,7 @@ echo nl=$nl
 #compile mvt
 chpl --fast mvt.chpl -o mvt
 
-for n in {20..400..10}
+for n in {410..800..10}
 	do
 		echo "Cyclic (C) Dim=$n"
 		./mvt -nl $nl --dist=C --Dim=$n --messages --timeit

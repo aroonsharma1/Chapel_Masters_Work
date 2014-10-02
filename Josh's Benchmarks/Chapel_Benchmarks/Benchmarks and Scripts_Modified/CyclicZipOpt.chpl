@@ -874,6 +874,7 @@ iter CyclicZipOptArr.these(param tag: iterKind, followThis, param fast: bool = f
 		bufsize*=nslice(i);
 	  }
 	  
+	  //writeln(bufsize);
   	  /*if ((bufsize < minimumForAggregation) || (bufsize > maximumForAggregation)) {
 	    //writeln("not using aggregation optimization because not enough elements");
 	      for i in myFollowThis {
