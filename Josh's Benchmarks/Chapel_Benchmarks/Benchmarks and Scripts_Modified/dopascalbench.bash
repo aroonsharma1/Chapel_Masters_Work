@@ -1,7 +1,5 @@
 #!/bin/bash
 nl=8
-n1=100000
-n2=100003
 blocksize=16
 
 echo nl=$nl

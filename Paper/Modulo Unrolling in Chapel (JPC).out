@@ -1,0 +1,21 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Chapel's Data Distributions}{}% 2
+\BOOKMARK [1][-]{section.3}{Related Work}{}% 3
+\BOOKMARK [1][-]{section.4}{Background on Modulo Unrolling}{}% 4
+\BOOKMARK [1][-]{section.5}{Intuition Behind Message Aggregation With An Example}{}% 5
+\BOOKMARK [1][-]{section.6}{Message Aggregation Loop Optimization for Parallel Affine Loops}{}% 6
+\BOOKMARK [2][-]{subsection.6.1}{Modulo Unrolling Without Unrolling}{section.6}% 7
+\BOOKMARK [2][-]{subsection.6.2}{Block Cyclic Transformation}{section.6}% 8
+\BOOKMARK [2][-]{subsection.6.3}{Owning Expression Calculation}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.4}{Message Aggregation}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.5}{Loops with Multi-Dimensional Array Accesses}{section.6}% 11
+\BOOKMARK [1][-]{section.7}{Adaptation in Chapel}{}% 12
+\BOOKMARK [2][-]{subsection.7.1}{Chapel Zippered Iteration}{section.7}% 13
+\BOOKMARK [2][-]{subsection.7.2}{Chapel Array Slicing}{section.7}% 14
+\BOOKMARK [2][-]{subsection.7.3}{Implementation}{section.7}% 15
+\BOOKMARK [1][-]{section.8}{Results}{}% 16
+\BOOKMARK [2][-]{subsection.8.1}{Benchmark Suite Evaluation}{section.8}% 17
+\BOOKMARK [2][-]{subsection.8.2}{Strong Scaling Experiment}{section.8}% 18
+\BOOKMARK [2][-]{subsection.8.3}{Weak Scaling Experiment}{section.8}% 19
+\BOOKMARK [2][-]{subsection.8.4}{Block Size Variation Experiment}{section.8}% 20
+\BOOKMARK [1][-]{section.9}{References}{}% 21

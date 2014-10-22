@@ -1,0 +1,92 @@
+\documentclass[review]{elsarticle}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{lineno,hyperref}
+\usepackage{amssymb}
+\newcommand{\tab}{\hspace*{2em}}
+\modulolinenumbers[5]
+
+\journal{Journal of Parallel Computing}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Affine Loop Optimization Based on Modulo Unrolling in Chapel}
+
+%% Group authors per affiliation:
+\author[umd]{Aroon Sharma}
+\ead{asharma4@umd.edu}
+\author[umd]{Darren Smith}
+\ead{darrenks@umd.edu}
+\author[umd]{Joshua Koehler}
+\ead{jskoeh9@umd.edu}
+\author[umd]{Rajeev Barua}
+\ead{barua@umd.edu}
+\author[lts]{Michael Ferguson}
+\ead{mferguson@ltsnet.net}
+\address[umd]{Universtiy of Maryland Department of Electrical and Computer Engineering, College Park, MD}
+\address[lts]{Laboratory for Telecommunication Sciences, College Park, MD}
+
+%% or include affiliations in footnotes:
+%\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
+%\ead[url]{www.elsevier.com}
+
+%\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
+%\cortext[mycorrespondingauthor]{Corresponding author}
+%\ead{support@elsevier.com}
+%\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
+%\address[mysecondaryaddress]{360 Park Avenue South, New York}
+
+
+\input{abstract.tex}
+
+\end{frontmatter}
+
+%\linenumbers
+
+\input{introduction}
+\input{data_distributions}
+\input{relwork}
+\input{modulo_unrolling}
+\input{motivation_for_aggregation}
+\input{transformation}
+\input{adaptation_in_chapel}
+\input{results}
+\bibliographystyle{abbrv}
+\section{References}
+\bibliography{bibliography}
+
+\end{document}

@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Modulo Unrolling in Chapel (Journal).aux
+The style file: abbrv.bst
+Database file #1: bibliography.bib.bib
+Warning--entry type for "distributions" isn't style-file defined
+--line 32 of file bibliography.bib.bib
+Warning--entry type for "polybench" isn't style-file defined
+--line 41 of file bibliography.bib.bib
+Warning--to sort, need author or key in polybench
+Warning--can't use both volume and number fields in barua1999maps
+Warning--empty booktitle in chamberlain2011user
+Warning--empty institution in Gupta91automaticdata
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            627 strings with 8131 characters,
+and the built_in function-call counts, 8699 in all, are:
+= -- 879
+> -- 411
+< -- 10
++ -- 162
+- -- 140
+* -- 601
+:= -- 1371
+add.period$ -- 74
+call.type$ -- 22
+change.case$ -- 134
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 336
+empty$ -- 680
+format.name$ -- 140
+if$ -- 1880
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 20
+newline$ -- 112
+num.names$ -- 42
+pop$ -- 167
+preamble$ -- 1
+purify$ -- 112
+quote$ -- 0
+skip$ -- 246
+stack$ -- 0
+substring$ -- 556
+swap$ -- 103
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 86
+warning$ -- 4
+while$ -- 84
+width$ -- 24
+write$ -- 244
+(There were 6 warnings)

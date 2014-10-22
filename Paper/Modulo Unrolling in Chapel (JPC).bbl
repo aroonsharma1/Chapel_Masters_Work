@@ -1,0 +1,123 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{barua1999maps}
+R.~Barua, W.~Lee, S.~Amarasinghe, A.~Agarwal, Maps: a compiler-managed memory
+  system for raw machines, in: ACM SIGARCH Computer Architecture News, Vol.~27,
+  IEEE Computer Society, 1999, pp. 4--15.
+
+\bibitem{waingold1997baring}
+E.~Waingold, M.~Taylor, D.~Srikrishna, V.~Sarkar, W.~Lee, V.~Lee, J.~Kim,
+  M.~Frank, P.~Finch, R.~Barua, et~al., {B}aring {i}t {a}ll {t}o {s}oftware:
+  {R}aw {m}achines, Computer 30~(9) (1997) 86--93.
+
+\bibitem{Gupta91automaticdata}
+M.~Gupta, P.~Banerjee, Automatic data partitioning on distributed memory
+  multiprocessors, Tech. rep. (1991).
+
+\bibitem{xue1997communication}
+J.~Xue, {C}ommunication-minimal {t}iling {o}f {u}niform {d}ependence {l}oops,
+  in: {L}anguages {a}nd {C}ompilers {f}or {P}arallel {C}omputing, Springer,
+  1997, pp. 330--349.
+
+\bibitem{goumas2006message}
+G.~Goumas, N.~Drosinos, M.~Athanasaki, N.~Koziris, {M}essage-passing {c}ode
+  {g}eneration {f}or {n}on-rectangular {t}iling {t}ransformations, Parallel
+  Computing 32~(10) (2006) 711--732.
+
+\bibitem{distributions}
+S.~D. Sung-Eun~Choi.
+\newblock
+  \href{http://chapel.cray.com/tutorials/DC2010/DC08-DISTRIBUTIONS.pdf}{{C}hapel:
+  {D}istributions and {L}ayouts} [online].
+\newblock \url{http://chapel.cray.com/tutorials/DC2010/DC08-DISTRIBUTIONS.pdf}.
+
+\bibitem{mace1987memory}
+M.~E. Mace, Memory storage patterns in parallel processing, Kluwer Academic
+  Publishers, 1987.
+
+\bibitem{prylli1997fast}
+L.~Prylli, B.~Tourancheau, Fast runtime block cyclic data redistribution on
+  multiprocessors, Journal of Parallel and Distributed Computing 45~(1) (1997)
+  63--72.
+
+\bibitem{walker1996redistribution}
+D.~W. Walker, S.~W. Otto, Redistribution of block-cyclic data distributions
+  using mpi, Concurrency Practice and Experience 8~(9) (1996) 707--728.
+
+\bibitem{callahan1988compiling}
+D.~Callahan, K.~Kennedy, Compiling programs for distributed--memory
+  multiprocessors, The Journal of Supercomputing 2~(2) (1988) 151--169.
+\newblock \href {http://dx.doi.org/10.1007/BF00128175}
+  {\path{doi:10.1007/BF00128175}}.
+
+\bibitem{ramanujam1991compile}
+J.~Ramanujam, P.~Sadayappan, Compile-time techniques for data distribution in
+  distributed memory machines, Parallel and Distributed Systems, IEEE
+  Transactions on 2~(4) (1991) 472--482.
+
+\bibitem{chavarria2005effective}
+D.~Chavarr{\'\i}a-Miranda, J.~Mellor-Crummey, Effective communication
+  coalescing for data-parallel applications, in: Proceedings of the tenth ACM
+  SIGPLAN symposium on Principles and practice of parallel programming, ACM,
+  2005, pp. 14--25.
+
+\bibitem{germain1995automatic}
+C.~Germain, F.~Delaplace, Automatic vectorization of communications for
+  data-parallel programs, in: EURO-PAR'95 Parallel Processing, Springer, 1995,
+  pp. 429--440.
+
+\bibitem{gupta1996compiling}
+S.~K.~S. Gupta, S.~Kaushik, C.-H. Huang, P.~Sadayappan, Compiling array
+  expressions for efficient execution on distributed-memory machines, Journal
+  of Parallel and Distributed Computing 32~(2) (1996) 155--172.
+
+\bibitem{iancu2008performance}
+C.~Iancu, W.~Chen, K.~Yelick, Performance portable optimizations for loops
+  containing communication operations, in: Proceedings of the 22nd annual
+  international conference on Supercomputing, ACM, 2008, pp. 266--276.
+
+\bibitem{wei1998compiling}
+W.-H. Wei, K.-P. Shih, J.-P. Sheu, et~al., Compiling array references with
+  affine functions for data-parallel programs, J. Inf. Sci. Eng. 14~(4) (1998)
+  695--723.
+
+\bibitem{sanz2012global}
+A.~Sanz, R.~Asenjo, J.~L{\'o}pez, R.~Larrosa, A.~Navarro, V.~Litvinov, S.-E.
+  Choi, B.~L. Chamberlain, Global data re-allocation via communication
+  aggregation in chapel, in: Computer Architecture and High Performance
+  Computing (SBAC-PAD), 2012 IEEE 24th International Symposium on, IEEE, 2012,
+  pp. 235--242.
+
+\bibitem{chen2005communication}
+W.-Y. Chen, C.~Iancu, K.~Yelick, {C}ommunication {o}ptimizations for
+  fine-grained upc applications, in: Parallel Architectures and Compilation
+  Techniques, 2005. PACT 2005. 14th International Conference on, IEEE, 2005,
+  pp. 267--278.
+
+\bibitem{barik2011communication}
+R.~Barik, J.~Zhao, D.~Grove, I.~Peshansky, Z.~Budimlic, V.~Sarkar,
+  Communication optimizations for distributed-memory x10 programs, in: Parallel
+  \& Distributed Processing Symposium (IPDPS), 2011 IEEE International, IEEE,
+  2011, pp. 1101--1113.
+
+\bibitem{wu1994static}
+Y.~Wu, J.~R. Larus, Static branch frequency and program profile analysis, in:
+  Proceedings of the 27th annual international symposium on Microarchitecture,
+  ACM, 1994, pp. 1--11.
+
+\bibitem{chamberlain2011user}
+B.~L. Chamberlain, S.-E. Choi, S.~J. Deitz, A.~Navarro, User-defined parallel
+  zippered iterators in chapel, 2011.
+
+\bibitem{polybench}
+\href{http://www.cse.ohio-state.edu/~pouchet/software/polybench/}{{P}olybench/{C}-
+  {T}he {P}olyhedral {B}enchmark {S}uite},
+  \url{http://www.cse.ohio-state.edu/~pouchet/software/polybench/}.
+\newline\urlprefix\url{http://www.cse.ohio-state.edu/~pouchet/software/polybench/}
+
+\end{thebibliography}

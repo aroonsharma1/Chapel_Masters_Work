@@ -349,7 +349,7 @@ iter MyBlockCyclicDom.these(param tag: iterKind) where tag == iterKind.leader {
 	var cyclesize=locDoms.size;
 	var blockcyclesize=blocksize*cyclesize; //same as locDom.myStarts.stride
 	coforall locDom in locDoms do on locDom {
-// 		writeln(locDom.myStarts);
+//		writeln(locDom.myStarts);
 // 		writeln(dist.blocksize(1));
 
 //begin new code
@@ -791,6 +791,7 @@ iter MyBlockCyclicArr.these(param tag: iterKind, followThis) var where tag == it
 		var srcstr=srcStride._value.theData;
 		var cnt=count._value.theData;
 		
+		//writeln(bufsize);
 		//copy remote data to local buffer (todo don't do if not used, need to modify chapel compiler to check)
 		__primitive("chpl_comm_get_strd",
 			__primitive("array_get", dest, buf._value.getDataIndex(1)),

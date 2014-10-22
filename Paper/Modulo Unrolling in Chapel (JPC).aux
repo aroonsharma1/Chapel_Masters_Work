@@ -1,0 +1,166 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\bibstyle{elsarticle-num}
+\emailauthor{asharma4@umd.edu}{Aroon Sharma}
+\emailauthor{darrenks@umd.edu}{Darren Smith}
+\emailauthor{jskoeh9@umd.edu}{Joshua Koehler}
+\emailauthor{barua@umd.edu}{Rajeev Barua}
+\emailauthor{mferguson@ltsnet.net}{Michael Ferguson}
+\citation{barua1999maps}
+\citation{waingold1997baring}
+\Newlabel{umd}{a}
+\Newlabel{lts}{b}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}}
+\newlabel{sec:intro}{{1}{2}{Introduction}{section.1}{}}
+\citation{Gupta91automaticdata,xue1997communication}
+\citation{goumas2006message,xue1997communication}
+\citation{barua1999maps}
+\citation{barua1999maps}
+\citation{distributions}
+\citation{mace1987memory}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Chapel's Data Distributions}{7}{section.2}}
+\newlabel{sec:data_distributions}{{2}{7}{Chapel's Data Distributions}{section.2}{}}
+\citation{prylli1997fast,walker1996redistribution}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Chapel Block distribution.}}{8}{figure.1}}
+\newlabel{block_dist}{{1}{8}{Chapel Block distribution}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Chapel Cyclic distribution.}}{9}{figure.2}}
+\newlabel{cyc_dist}{{2}{9}{Chapel Cyclic distribution}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Chapel Block Cyclic distribution with a 2 x 2 block size parameter.}}{9}{figure.3}}
+\newlabel{block_cyc_dist}{{3}{9}{Chapel Block Cyclic distribution with a 2 x 2 block size parameter}{figure.3}{}}
+\citation{xue1997communication,goumas2006message,callahan1988compiling,ramanujam1991compile}
+\citation{Gupta91automaticdata,chavarria2005effective,germain1995automatic,gupta1996compiling,iancu2008performance,wei1998compiling}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{10}{section.3}}
+\newlabel{sec:relwork}{{3}{10}{Related Work}{section.3}{}}
+\citation{sanz2012global}
+\citation{sanz2012global}
+\citation{sanz2012global}
+\citation{sanz2012global}
+\citation{sanz2012global}
+\citation{sanz2012global}
+\citation{chen2005communication}
+\citation{chen2005communication}
+\citation{barik2011communication}
+\citation{barua1999maps}
+\citation{barua1999maps}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Background on Modulo Unrolling}{13}{section.4}}
+\newlabel{sec:modulo_unrolling}{{4}{13}{Background on Modulo Unrolling}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Modulo unrolling example. (a) Original sequential for loop. Array $A$ is distributed using a Cyclic distribution. Each array access maps to a different memory bank on successive loop iterations. (b) Fully unrolled loop. Trivially, each array access maps to a single memory bank because each access only occurs once. This loop dramatically increases the code size for loops traversing through large data sets. (c) Loop transformed using modulo unrolling. The loop is unrolled by a factor equal to the number of memory banks on the architecture. Now each array access is guaranteed to map to a single memory bank for all loop iterations and code size increases only by the loop unroll factor.}}{14}{figure.4}}
+\newlabel{modulo_unrolling}{{4}{14}{Modulo unrolling example. (a) Original sequential for loop. Array $A$ is distributed using a Cyclic distribution. Each array access maps to a different memory bank on successive loop iterations. (b) Fully unrolled loop. Trivially, each array access maps to a single memory bank because each access only occurs once. This loop dramatically increases the code size for loops traversing through large data sets. (c) Loop transformed using modulo unrolling. The loop is unrolled by a factor equal to the number of memory banks on the architecture. Now each array access is guaranteed to map to a single memory bank for all loop iterations and code size increases only by the loop unroll factor}{figure.4}{}}
+\citation{barua1999maps}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Intuition Behind Message Aggregation With An Example}{15}{section.5}}
+\newlabel{sec:motivation_for_aggregation}{{5}{15}{Intuition Behind Message Aggregation With An Example}{section.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Chapel code for the Jacobi-2D computation over an 8 x 8 two dimensional array. Arrays $A$ and $A_{new}$ are distributed with a Cyclic distribution and their declarations are not shown. During each iteration of the loop, the current array element $A_{new}[i, j]$ gets the average of the four adjacent array elements of $A[i, j]$.}}{16}{figure.5}}
+\newlabel{jacobi_code}{{5}{16}{Chapel code for the Jacobi-2D computation over an 8 x 8 two dimensional array. Arrays $A$ and $A_{new}$ are distributed with a Cyclic distribution and their declarations are not shown. During each iteration of the loop, the current array element $A_{new}[i, j]$ gets the average of the four adjacent array elements of $A[i, j]$}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Illustration of message aggregation for the $A[i, j-1]$ affine array access of the Jacobi-2D relaxation computation with respect to locale 3. The region \textit  {LoopSpace} follows from Figure \ref  {jacobi_code}. The striped squares are the elements of $A$ that have been aggregated. This same procedure occurs on each locale for each affine array access that is deemed to be remote for all iterations of the loop. For the whole 8 x 8 Jacobi-2D calculation, 144 remote gets containing one element each are necessary without aggregation, but only 16 remote gets containing nine elements each are necessary with aggregation.}}{17}{figure.6}}
+\newlabel{aggregation}{{6}{17}{Illustration of message aggregation for the $A[i, j-1]$ affine array access of the Jacobi-2D relaxation computation with respect to locale 3. The region \textit {LoopSpace} follows from Figure \ref {jacobi_code}. The striped squares are the elements of $A$ that have been aggregated. This same procedure occurs on each locale for each affine array access that is deemed to be remote for all iterations of the loop. For the whole 8 x 8 Jacobi-2D calculation, 144 remote gets containing one element each are necessary without aggregation, but only 16 remote gets containing nine elements each are necessary with aggregation}{figure.6}{}}
+\citation{barua1999maps}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Message Aggregation Loop Optimization for Parallel Affine Loops}{19}{section.6}}
+\newlabel{sec:transformation}{{6}{19}{Message Aggregation Loop Optimization for Parallel Affine Loops}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Modulo Unrolling Without Unrolling}{20}{subsection.6.1}}
+\newlabel{subsec:modulo_unrolling_without_unrolling}{{6.1}{20}{Modulo Unrolling Without Unrolling}{subsection.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Steps to transform a parallel affine loop where the data is distributed cyclically or block-cyclically into an equivalent loop that performs message aggregation using modulo unrolling WU. (a) Original distributed parallel loop with two affine array accesses. (b) Loop after Block Cyclic transformation. After this step, the affine array accesses in loops with data distributed block-cyclically will be statically disambiguated. (c) Loop after the owning expression calculation and message aggregation steps. In line 6, remote array elements are communicated to a local buffer before the loop. The affine array access for $A_{2}$ is replaced with an access to the local buffer in line 10. In lines 14-15, elements in the local buffer are written back to the remote locale if they are written to during the loop. (d) Key of symbolic variables used in the transformations in parts a-c. }}{21}{figure.7}}
+\newlabel{transformations}{{7}{21}{Steps to transform a parallel affine loop where the data is distributed cyclically or block-cyclically into an equivalent loop that performs message aggregation using modulo unrolling WU. (a) Original distributed parallel loop with two affine array accesses. (b) Loop after Block Cyclic transformation. After this step, the affine array accesses in loops with data distributed block-cyclically will be statically disambiguated. (c) Loop after the owning expression calculation and message aggregation steps. In line 6, remote array elements are communicated to a local buffer before the loop. The affine array access for $A_{2}$ is replaced with an access to the local buffer in line 10. In lines 14-15, elements in the local buffer are written back to the remote locale if they are written to during the loop. (d) Key of symbolic variables used in the transformations in parts a-c}{figure.7}{}}
+\citation{barua1999maps}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Block Cyclic Transformation}{22}{subsection.6.2}}
+\newlabel{subsec:block_cyclic_transformation}{{6.2}{22}{Block Cyclic Transformation}{subsection.6.2}{}}
+\citation{wu1994static}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Owning Expression Calculation}{23}{subsection.6.3}}
+\newlabel{subsec:owning_expression_calculation}{{6.3}{23}{Owning Expression Calculation}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Message Aggregation}{24}{subsection.6.4}}
+\newlabel{subsec:message_aggregation}{{6.4}{24}{Message Aggregation}{subsection.6.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Loops with Multi-Dimensional Array Accesses}{24}{subsection.6.5}}
+\newlabel{subsec:multi_dimensional}{{6.5}{24}{Loops with Multi-Dimensional Array Accesses}{subsection.6.5}{}}
+\citation{chamberlain2011user}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Adaptation in Chapel}{25}{section.7}}
+\newlabel{sec:adaptation_in_chapel}{{7}{25}{Adaptation in Chapel}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Chapel Zippered Iteration}{25}{subsection.7.1}}
+\newlabel{sec:zippered_iteration}{{7.1}{25}{Chapel Zippered Iteration}{subsection.7.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Chapel Array Slicing}{26}{subsection.7.2}}
+\newlabel{sec:array_slicing}{{7.2}{26}{Chapel Array Slicing}{subsection.7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces (a) Chapel loop written using a single loop induction variable $i$ ranging from 1 to 10. The loop contains two affine array accesses. (b) The same loop written using zippered iterators in Chapel. Instead of a loop induction variable and a range of values to denote the loop bounds, two array slices each containing the 10 elements accessed by the loop in (a) are specified.}}{27}{figure.8}}
+\newlabel{affine_loop}{{8}{27}{(a) Chapel loop written using a single loop induction variable $i$ ranging from 1 to 10. The loop contains two affine array accesses. (b) The same loop written using zippered iterators in Chapel. Instead of a loop induction variable and a range of values to denote the loop bounds, two array slices each containing the 10 elements accessed by the loop in (a) are specified}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces (a) Pseudocode for the unaltered Cyclic distribution follower iterator. The code only handles cases when a chunk of work is either completely local or remote. In the remote case in lines 6-11, remote data elements are accessed one at a time, resulting in multiple messages. (b) Pseudocode for the Cyclic distribution follower iterator that has been modified to perform modulo unrolling WU. Now, the code divides the remote case in (a) into two separate cases: remote from a \textit  {single} locale and remote from possibly multiple locales. If the chunk of work is remote from a single locale, we can perform message aggregation. }}{28}{figure.9}}
+\newlabel{cyclic_muwu_follower}{{9}{28}{(a) Pseudocode for the unaltered Cyclic distribution follower iterator. The code only handles cases when a chunk of work is either completely local or remote. In the remote case in lines 6-11, remote data elements are accessed one at a time, resulting in multiple messages. (b) Pseudocode for the Cyclic distribution follower iterator that has been modified to perform modulo unrolling WU. Now, the code divides the remote case in (a) into two separate cases: remote from a \textit {single} locale and remote from possibly multiple locales. If the chunk of work is remote from a single locale, we can perform message aggregation}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Pseudocode for the Block Cyclic distribution leader iterator that has been modified to perform modulo unrolling WU. Since the leader iterator now splits up the work in a different way than before modification, we do not show the original Block Cyclic leader iterator.}}{29}{figure.10}}
+\newlabel{block_cyc_muwu_leader}{{10}{29}{Pseudocode for the Block Cyclic distribution leader iterator that has been modified to perform modulo unrolling WU. Since the leader iterator now splits up the work in a different way than before modification, we do not show the original Block Cyclic leader iterator}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Implementation}{29}{subsection.7.3}}
+\newlabel{subsec:cyclic_modulo}{{7.3}{29}{Implementation}{subsection.7.3}{}}
+\citation{polybench}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Results}{32}{section.8}}
+\newlabel{sec:results}{{8}{32}{Results}{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Benchmark Suite Evaluation}{32}{subsection.8.1}}
+\newlabel{subsec:benchmark_suite_evaluation}{{8.1}{32}{Benchmark Suite Evaluation}{subsection.8.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Benchmark suite. Benchmarks with no symbol after their name were taken from the Polybench suite of benchmarks and translated to Chapel. Benchmarks with $\dagger $ are taken from the Chapel Trunk test directory. Benchmarks with $\ddagger $ were developed on our own in order to test specific data access patterns. All benchmarks are tested using the Chapel Cyclic distribution. Only \textit  {jacobi1D} and \textit  {pascal} are tested using the Chapel Block Cyclic distribution, with block sizes of 4 and 16 respectively. We also measure the maximum number of elements per follower iterator chunk of work for each benchmark to get a sense of how much aggregation is possible.}}{33}{figure.11}}
+\newlabel{benchmarks}{{11}{33}{Benchmark suite. Benchmarks with no symbol after their name were taken from the Polybench suite of benchmarks and translated to Chapel. Benchmarks with $\dagger $ are taken from the Chapel Trunk test directory. Benchmarks with $\ddagger $ were developed on our own in order to test specific data access patterns. All benchmarks are tested using the Chapel Cyclic distribution. Only \textit {jacobi1D} and \textit {pascal} are tested using the Chapel Block Cyclic distribution, with block sizes of 4 and 16 respectively. We also measure the maximum number of elements per follower iterator chunk of work for each benchmark to get a sense of how much aggregation is possible}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Runtime data collected for our suite of benchmarks. Each measurement is normalized to the benchmark's runtime using the original Chapel Cyclic and Block Cyclic distributions. Measurements below 1 indicate that benchmarks that use modulo unrolling WU with the specified Chapel distribution run faster. The last set of bars reports the geometric means of all sixteen normalized runtimes per distribution. }}{36}{figure.12}}
+\newlabel{runtimes}{{12}{36}{Runtime data collected for our suite of benchmarks. Each measurement is normalized to the benchmark's runtime using the original Chapel Cyclic and Block Cyclic distributions. Measurements below 1 indicate that benchmarks that use modulo unrolling WU with the specified Chapel distribution run faster. The last set of bars reports the geometric means of all sixteen normalized runtimes per distribution}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Message count data collected for our suite of benchmarks. Each measurement is normalized to the benchmark's message count using the original Chapel Cyclic and Block Cyclic distributions. Measurements below 1 indicate that benchmarks that use modulo unrolling WU with the specified Chapel distribution run using fewer messages. The last set of bars reports the geometric means of all sixteen normalized message counts per distribution.}}{37}{figure.13}}
+\newlabel{message_counts}{{13}{37}{Message count data collected for our suite of benchmarks. Each measurement is normalized to the benchmark's message count using the original Chapel Cyclic and Block Cyclic distributions. Measurements below 1 indicate that benchmarks that use modulo unrolling WU with the specified Chapel distribution run using fewer messages. The last set of bars reports the geometric means of all sixteen normalized message counts per distribution}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces \textit  {pascal} strong scaling results. For the Block Cyclic results, the block size parameter was 4.}}{39}{figure.14}}
+\newlabel{pascal_strong_scaling}{{14}{39}{\textit {pascal} strong scaling results. For the Block Cyclic results, the block size parameter was 4}{figure.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Strong Scaling Experiment}{39}{subsection.8.2}}
+\newlabel{subsec:strong_scaling}{{8.2}{39}{Strong Scaling Experiment}{subsection.8.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \textit  {folding} strong scaling results.}}{40}{figure.15}}
+\newlabel{folding_strong_scaling}{{15}{40}{\textit {folding} strong scaling results}{figure.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces \textit  {jacobi2D} strong scaling results.}}{41}{figure.16}}
+\newlabel{jacobi-2d_strong_scaling}{{16}{41}{\textit {jacobi2D} strong scaling results}{figure.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Weak Scaling Experiment}{41}{subsection.8.3}}
+\newlabel{subsec:input_variation}{{8.3}{41}{Weak Scaling Experiment}{subsection.8.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces \textit  {fdtd-2d} strong scaling results.}}{42}{figure.17}}
+\newlabel{fdtd-2d_strong_scaling}{{17}{42}{\textit {fdtd-2d} strong scaling results}{figure.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces \textit  {pascal} weak scaling results. For the Block Cyclic results, the block size parameter is 16.}}{42}{figure.18}}
+\newlabel{pascal_weak_scaling}{{18}{42}{\textit {pascal} weak scaling results. For the Block Cyclic results, the block size parameter is 16}{figure.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Block Size Variation Experiment}{43}{subsection.8.4}}
+\newlabel{subsec:blocksize_variation}{{8.4}{43}{Block Size Variation Experiment}{subsection.8.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces \textit  {folding} weak scaling results.}}{44}{figure.19}}
+\newlabel{folding_weak_scaling}{{19}{44}{\textit {folding} weak scaling results}{figure.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces \textit  {jacobi2D} weak scaling results.}}{44}{figure.20}}
+\newlabel{jacobi-2d_weak_scaling}{{20}{44}{\textit {jacobi2D} weak scaling results}{figure.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces \textit  {fdtd-2d} weak scaling results.}}{44}{figure.21}}
+\newlabel{fdtd-2d_weak_scaling}{{21}{44}{\textit {fdtd-2d} weak scaling results}{figure.21}{}}
+\bibstyle{abbrv}
+\bibdata{bibliography}
+\bibcite{barua1999maps}{{1}{}{{}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces \textit  {folding} block size variation results.}}{45}{figure.22}}
+\newlabel{folding_blocksize_scaling}{{22}{45}{\textit {folding} block size variation results}{figure.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces \textit  {jacobi1D} block size variation results.}}{45}{figure.23}}
+\newlabel{jacobi1D_blocksize_scaling}{{23}{45}{\textit {jacobi1D} block size variation results}{figure.23}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}References}{45}{section.9}}
+\bibcite{waingold1997baring}{{2}{}{{}}{{}}}
+\bibcite{Gupta91automaticdata}{{3}{}{{}}{{}}}
+\bibcite{xue1997communication}{{4}{}{{}}{{}}}
+\bibcite{goumas2006message}{{5}{}{{}}{{}}}
+\bibcite{distributions}{{6}{}{{}}{{}}}
+\bibcite{mace1987memory}{{7}{}{{}}{{}}}
+\bibcite{prylli1997fast}{{8}{}{{}}{{}}}
+\bibcite{walker1996redistribution}{{9}{}{{}}{{}}}
+\bibcite{callahan1988compiling}{{10}{}{{}}{{}}}
+\bibcite{ramanujam1991compile}{{11}{}{{}}{{}}}
+\bibcite{chavarria2005effective}{{12}{}{{}}{{}}}
+\bibcite{germain1995automatic}{{13}{}{{}}{{}}}
+\bibcite{gupta1996compiling}{{14}{}{{}}{{}}}
+\bibcite{iancu2008performance}{{15}{}{{}}{{}}}
+\bibcite{wei1998compiling}{{16}{}{{}}{{}}}
+\bibcite{sanz2012global}{{17}{}{{}}{{}}}
+\bibcite{chen2005communication}{{18}{}{{}}{{}}}
+\bibcite{barik2011communication}{{19}{}{{}}{{}}}
+\bibcite{wu1994static}{{20}{}{{}}{{}}}
+\bibcite{chamberlain2011user}{{21}{}{{}}{{}}}
+\bibcite{polybench}{{22}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers

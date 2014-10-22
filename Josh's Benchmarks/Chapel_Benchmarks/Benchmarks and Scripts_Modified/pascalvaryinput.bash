@@ -9,7 +9,7 @@ echo blocksize=$blocksize
 #compile pascal
 chpl --fast pascal.chpl -o pascal
 
-for n1 in {620..800..10}
+for n1 in {600..10000..100}
 	do
 		n2=$((n1+3))
 		

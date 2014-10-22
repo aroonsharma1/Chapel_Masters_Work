@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Modulo Unrolling in Chapel (JPC).aux
+The style file: elsarticle-num.bst
+Illegal, another \bibstyle command---line 137 of file Modulo Unrolling in Chapel (JPC).aux
+ : \bibstyle
+ :          {abbrv}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 141 of file Modulo Unrolling in Chapel (JPC).aux
+ : \bibdata
+ :         {bibliography.bib}
+I'm skipping whatever remains of this command
+Database file #1: bibliography.bib.bib
+Warning--entry type for "polybench" isn't style-file defined
+--line 41 of file bibliography.bib.bib
+Warning--can't use both volume and number fields in barua1999maps
+Warning--empty institution in Gupta91automaticdata
+Warning--empty booktitle in chamberlain2011user
+Warning--empty pages in chamberlain2011user
+You've used 22 entries,
+            2937 wiz_defined-function locations,
+            800 strings with 9626 characters,
+and the built_in function-call counts, 7615 in all, are:
+= -- 715
+> -- 232
+< -- 10
++ -- 92
+- -- 70
+* -- 495
+:= -- 976
+add.period$ -- 25
+call.type$ -- 22
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 277
+empty$ -- 889
+format.name$ -- 88
+if$ -- 2011
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 20
+newline$ -- 78
+num.names$ -- 21
+pop$ -- 181
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 511
+stack$ -- 0
+substring$ -- 448
+swap$ -- 88
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 63
+width$ -- 24
+write$ -- 193
+(There were 2 error messages)
