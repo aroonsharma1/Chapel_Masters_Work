@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 OCT 2014 22:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  22 OCT 2014 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,89 +525,92 @@ Package pdftex.def Info: ./Figures/message_counts-eps-converted-to.pdf used on
 input line 37.
 (pdftex.def)             Requested size: 345.0pt x 242.23502pt.
  [35] [36 <./Figures/runtimes-eps-converted-to.pdf>] [37 <./Figures/message_cou
-nts-eps-converted-to.pdf>] [38] <./Figures/strong_scaling/pascal.pdf, id=893, 7
-01.7428pt x 289.00633pt>
+nts-eps-converted-to.pdf>] [38] <./Figures/strong_scaling/pascal.pdf, id=893, 6
+96.65034pt x 285.8425pt>
 File: ./Figures/strong_scaling/pascal.pdf Graphic file (type pdf)
 
 <use ./Figures/strong_scaling/pascal.pdf>
 Package pdftex.def Info: ./Figures/strong_scaling/pascal.pdf used on input line
  53.
-(pdftex.def)             Requested size: 345.0pt x 142.08618pt.
- [39 <./Figures/strong_scaling/pascal.pdf>] <./Figures/strong_scaling/folding.p
-df, id=957, 700.57425pt x 292.0786pt>
+(pdftex.def)             Requested size: 345.0pt x 141.56007pt.
+ [39 <./Figures/strong_scaling/pascal.pdf>]
+<./Figures/strong_scaling/folding.pdf, id=957, 702.30472pt x 286.74608pt>
 File: ./Figures/strong_scaling/folding.pdf Graphic file (type pdf)
 
 <use ./Figures/strong_scaling/folding.pdf>
 Package pdftex.def Info: ./Figures/strong_scaling/folding.pdf used on input lin
 e 67.
-(pdftex.def)             Requested size: 345.0pt x 143.83282pt.
+(pdftex.def)             Requested size: 345.0pt x 140.8612pt.
 
-<./Figures/strong_scaling/jacobi-2d.pdf, id=960, 696.94496pt x 284.77553pt>
+<./Figures/strong_scaling/jacobi-2d.pdf, id=960, 702.81718pt x 282.77513pt>
 File: ./Figures/strong_scaling/jacobi-2d.pdf Graphic file (type pdf)
 
 <use ./Figures/strong_scaling/jacobi-2d.pdf>
 Package pdftex.def Info: ./Figures/strong_scaling/jacobi-2d.pdf used on input l
 ine 78.
-(pdftex.def)             Requested size: 345.0pt x 140.96648pt.
+(pdftex.def)             Requested size: 345.0pt x 138.80696pt.
  [40 <./Figures/strong_scaling/folding.pdf>]
-<./Figures/strong_scaling/fdtd2d.pdf, id=1009, 699.84392pt x 283.23566pt>
+<./Figures/strong_scaling/fdtd2d.pdf, id=1009, 691.99863pt x 291.17502pt>
 File: ./Figures/strong_scaling/fdtd2d.pdf Graphic file (type pdf)
 
 <use ./Figures/strong_scaling/fdtd2d.pdf>
 Package pdftex.def Info: ./Figures/strong_scaling/fdtd2d.pdf used on input line
  88.
-(pdftex.def)             Requested size: 345.0pt x 139.62943pt.
+(pdftex.def)             Requested size: 345.0pt x 145.16951pt.
 
-<./Figures/input_variation_exp/pascal.pdf, id=1010, 698.94034pt x 295.87868pt>
+<./Figures/input_variation_exp/pascal.pdf, id=1010, 700.8911pt x 284.62688pt>
 File: ./Figures/input_variation_exp/pascal.pdf Graphic file (type pdf)
 
 <use ./Figures/input_variation_exp/pascal.pdf>
 Package pdftex.def Info: ./Figures/input_variation_exp/pascal.pdf used on input
  line 98.
-(pdftex.def)             Requested size: 345.0pt x 146.04277pt.
+(pdftex.def)             Requested size: 345.0pt x 140.10246pt.
  [41 <./Figures/strong_scaling/jacobi-2d.pdf>] [42 <./Figures/strong_scaling/fd
 td2d.pdf> <./Figures/input_variation_exp/pascal.pdf>]
-<./Figures/input_variation_exp/folding.pdf, id=1149, 703.93365pt x 293.10103pt>
+<./Figures/input_variation_exp/folding.pdf, id=1149, 700.74506pt x 290.37282pt>
 File: ./Figures/input_variation_exp/folding.pdf Graphic file (type pdf)
 <use ./Figures/input_variation_exp/folding.pdf>
 Package pdftex.def Info: ./Figures/input_variation_exp/folding.pdf used on inpu
 t line 110.
-(pdftex.def)             Requested size: 345.0pt x 143.65205pt.
+(pdftex.def)             Requested size: 345.0pt x 142.96182pt.
 
-<./Figures/input_variation_exp/jacobi-2d.pdf, id=1150, 700.35388pt x 284.258pt>
+<./Figures/input_variation_exp/jacobi-2d.pdf, id=1150, 691.24783pt x 284.62688p
+t>
 File: ./Figures/input_variation_exp/jacobi-2d.pdf Graphic file (type pdf)
-<use ./Figures/input_variation_exp/jacobi-2d.pdf>
+ <use ./Figures/input_variation_exp/jacobi-2d.pdf>
 Package pdftex.def Info: ./Figures/input_variation_exp/jacobi-2d.pdf used on in
 put line 118.
-(pdftex.def)             Requested size: 345.0pt x 140.02933pt.
+(pdftex.def)             Requested size: 345.0pt x 142.06119pt.
 
-<./Figures/input_variation_exp/fdtd2d.pdf, id=1151, 698.79674pt x 289.32573pt>
+<./Figures/input_variation_exp/fdtd2d.pdf, id=1151, 699.67305pt x 298.21573pt>
 File: ./Figures/input_variation_exp/fdtd2d.pdf Graphic file (type pdf)
 
 <use ./Figures/input_variation_exp/fdtd2d.pdf>
 Package pdftex.def Info: ./Figures/input_variation_exp/fdtd2d.pdf used on input
  line 126.
-(pdftex.def)             Requested size: 345.0pt x 142.84363pt.
+(pdftex.def)             Requested size: 345.0pt x 147.04616pt.
 
-<./Figures/blocksize_variation_exp/pascal.pdf, id=1152, 702.11154pt x 296.31944
-pt>
+<./Figures/blocksize_variation_exp/pascal.pdf, id=1152, 698.86853pt x 286.1865p
+t>
 File: ./Figures/blocksize_variation_exp/pascal.pdf Graphic file (type pdf)
  <use ./Figures/blocksize_variation_exp/pascal.pdf>
 Package pdftex.def Info: ./Figures/blocksize_variation_exp/pascal.pdf used on i
 nput line 136.
-(pdftex.def)             Requested size: 345.0pt x 145.60472pt.
+(pdftex.def)             Requested size: 345.0pt x 141.28064pt.
  [43] [44 <./Figures/input_variation_exp/folding.pdf> <./Figures/input_variatio
-n_exp/jacobi-2d.pdf> <./Figures/input_variation_exp/fdtd2d.pdf>]
-<./Figures/blocksize_variation_exp/jacobi-1d.pdf, id=1276, 702.18095pt x 296.00
-005pt>
+n_exp/jacobi-2d.pdf>]
+[45 <./Figures/input_variation_exp/fdtd2d.pdf> <./Figures/blocksize_variation_e
+xp/pascal.pdf>]
+<./Figures/blocksize_variation_exp/jacobi-1d.pdf, id=1316, 699.4528pt x 287.352
+54pt>
 File: ./Figures/blocksize_variation_exp/jacobi-1d.pdf Graphic file (type pdf)
  <use ./Figures/blocksize_variation_exp/jacobi-1d.pdf>
 Package pdftex.def Info: ./Figures/blocksize_variation_exp/jacobi-1d.pdf used o
 n input line 148.
-(pdftex.def)             Requested size: 345.0pt x 145.43422pt.
+(pdftex.def)             Requested size: 345.0pt x 141.7335pt.
 )
-(./Modulo Unrolling in Chapel (JPC).bbl [45 <./Figures/blocksize_variation_exp/
-pascal.pdf> <./Figures/blocksize_variation_exp/jacobi-1d.pdf>] [46] [47]
+(./Modulo Unrolling in Chapel (JPC).bbl [46 <./Figures/blocksize_variation_exp/
+jacobi-1d.pdf>] [47]
 Underfull \hbox (badness 3884) in paragraph at lines 119--122
 [][]\OT1/cmr/m/n/10 Polybench/C- The Poly-he-dral Bench-mark Suite[], []$\OT1/c
 mtt/m/n/10 http : / / www . cse .
@@ -633,9 +636,6 @@ not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
  ) 
 Here is how much of TeX's memory you used:
@@ -645,7 +645,7 @@ Here is how much of TeX's memory you used:
  9796 multiletter control sequences out of 15000+600000
  11118 words of font info for 43 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,8n,30p,1683b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,8n,30p,1683b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
@@ -664,7 +664,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2013/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Modulo Unrolling in Chapel (JPC).pdf" (48 pages, 2503210 byt
+Output written on "Modulo Unrolling in Chapel (JPC).pdf" (48 pages, 2526184 byt
 es).
 PDF statistics:
  1460 PDF objects out of 1728 (max. 8388607)
