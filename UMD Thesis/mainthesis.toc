@@ -1,0 +1,22 @@
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ List of Figures}{v}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Chapel's Data Distributions}{8}{chapter.2}
+\contentsline {chapter}{\numberline {3}Related Work}{14}{chapter.3}
+\contentsline {chapter}{\numberline {4}Background on Modulo Unrolling}{18}{chapter.4}
+\contentsline {chapter}{\numberline {5}Intuition Behind Message Aggregation With An Example}{22}{chapter.5}
+\contentsline {chapter}{\numberline {6}Message Aggregation Loop Optimization for Parallel Affine Loops}{28}{chapter.6}
+\contentsline {section}{\numberline {6.1}Modulo Unrolling Without Unrolling}{28}{section.6.1}
+\contentsline {section}{\numberline {6.2}Block Cyclic Transformation}{31}{section.6.2}
+\contentsline {section}{\numberline {6.3}Owning Expression Calculation}{32}{section.6.3}
+\contentsline {section}{\numberline {6.4}Message Aggregation}{33}{section.6.4}
+\contentsline {section}{\numberline {6.5}Loops with Multi-Dimensional Array Accesses}{34}{section.6.5}
+\contentsline {chapter}{\numberline {7}Adaptation in Chapel}{36}{chapter.7}
+\contentsline {section}{\numberline {7.1}Chapel Zippered Iteration}{36}{section.7.1}
+\contentsline {section}{\numberline {7.2}Chapel Array Slicing}{37}{section.7.2}
+\contentsline {section}{\numberline {7.3}Implementation}{42}{section.7.3}
+\contentsline {chapter}{\numberline {8}Results}{46}{chapter.8}
+\contentsline {section}{\numberline {8.1}Benchmark Suite Evaluation}{46}{section.8.1}
+\contentsline {section}{\numberline {8.2}Strong Scaling Experiment}{54}{section.8.2}
+\contentsline {section}{\numberline {8.3}Weak Scaling Experiment}{57}{section.8.3}
+\contentsline {section}{\numberline {8.4}Block Size Variation Experiment}{59}{section.8.4}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ Bibliography}{62}{chapter*.3}

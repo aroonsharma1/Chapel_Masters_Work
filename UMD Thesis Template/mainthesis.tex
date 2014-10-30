@@ -1,0 +1,91 @@
+%This template was prepared by Dorothea F. Brosius of the 
+%Institute for Electronics and Applied Physics, University of Maryland, College Park, MD
+%The template was last updated in March 2013
+%Thesis Main Page used with thesis.sty based on the
+%University of Maryland Electronic Thesis and Dissertation (ETD) Style Guide
+
+\documentclass[12pt]{thesis}  %12pt is larger than 11pt
+%\usepackage[pctex32]{graphics}
+\usepackage{titlesec}
+   \titleformat{\chapter}
+      {\normalfont\large}{Chapter \thechapter:}{1em}{}
+ 
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{lscape}
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage{tabls}
+\usepackage{wrapfig}
+\usepackage{slashbox}
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{subeqn}
+\usepackage{subfigure}
+
+\newcommand{\tbsp}{\rule{0pt}{18pt}} %used to get a vertical distance after \hline
+\renewcommand{\baselinestretch}{2}
+\setlength{\textwidth}{5.9in}
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{-.50in}
+%\setlength{\topmargin}{0in}    %use this setting if the printer makes the the top margin 1/2 inch instead of 1 inch
+\setlength{\oddsidemargin}{.55in}
+\setlength{\parindent}{.4in}
+\pagestyle{empty}
+
+\begin{document}
+
+\include{Abstract} %(must be first, required, non-numbered)
+\include{Titlepage} %(must follow Abstract, required, non-numbered)
+\include{Copyright} %(highly recommended, non-numbered)
+
+%Pages from this point start at lower-case Roman number ii)
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+\include{Preface}  %(if present, start at lower-case Roman number ii)
+\include{Foreword} %(if present, lower-case Roman)
+\include{Dedication} %(if present, lower-case Roman)
+\include{Acknowledgements} %(if present, lower-case Roman)
+
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
+\tableofcontents %(required, lower-case Roman)
+\newpage
+%\listoftables %(if present, lower-case Roman)
+%\newpage
+\listoffigures %(if present, lower-case Roman)
+\newpage
+% LIST OF ABBREVIATIONS
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\include{Abbreviations}
+
+\newpage
+\setlength{\parskip}{0em}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+
+%Pages from this point start at Arabic numeral 1
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%\include{Chapter1}
+%\include{Chapter1-subfigures}
+%\include{supertabular}
+%\include{Chapter2}
+%\include{Chapter3}
+%\include{AppendixA}
+%\include{AppendixB}
+
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
+\include{Bibliography}
+%When using Bibtex, delete the previous line and use the following
+%three lines.  
+%\newpage
+%\bibliographystyle{unsrt} 
+%\bibliography{Galactic,Dottie} %replace "Galactic,Dottie" with the
+%                 file name(s) of your bib file(s)
+
+\end{document}

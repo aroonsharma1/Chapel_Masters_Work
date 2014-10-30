@@ -1,0 +1,31 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Chapel Block distribution}}{9}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Chapel Cyclic distribution}}{10}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Chapel Block Cyclic distribution}}{11}{figure.2.3}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Modulo unrolling example}}{19}{figure.4.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Chapel code for the Jacobi-2D computation}}{23}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Message aggregation applied to the Jacobi-2D computation}}{24}{figure.5.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Series of transformations to perform modulo unrolling WU}}{29}{figure.6.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Chapel parallel affine loop and its equivalent loop written with zippered iterators}}{38}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces The Chapel Cyclic distribution's follower iterator modified to perform modulo unrolling WU}}{40}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces The Chapel Block Cyclic distribution's leader iterator modified to perform modulo unrolling WU}}{41}{figure.7.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Benchmark suite}}{47}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Benchmark suite evaluation: runtime data}}{50}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Benchmark suite evaluation: message count data}}{51}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces \textit {pascal} strong scaling results}}{54}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces \textit {folding} strong scaling results}}{55}{figure.8.5}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces \textit {jacobi2D} strong scaling results}}{56}{figure.8.6}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces \textit {fdtd-2d} strong scaling results}}{57}{figure.8.7}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces \textit {pascal} weak scaling results}}{58}{figure.8.8}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces \textit {folding} weak scaling results}}{59}{figure.8.9}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces \textit {jacobi2D} weak scaling results.}}{60}{figure.8.10}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces \textit {fdtd-2d} weak scaling results}}{60}{figure.8.11}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces \textit {folding} block size variation results}}{61}{figure.8.12}
+\contentsline {figure}{\numberline {8.13}{\ignorespaces \textit {jacobi1D} block size variation results}}{61}{figure.8.13}

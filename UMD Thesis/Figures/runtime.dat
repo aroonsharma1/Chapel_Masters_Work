@@ -1,0 +1,19 @@
+Benchmark		"Cyclic"	"Cyclic with Modulo Unrolling WU"	"Block Cyclic"	"Block Cyclic with Modulo Unrolling WU"
+2mm				1	1.091063566
+cholesky		1	1.088760093
+fw				1	1.011392661
+jacobi-1D		1	0.747877433	1	0.764203376
+jacobi-2D		1	0.43053328
+correlation		1	0.852632285
+covariance		1	0.907963959
+stencil9		1	0.314858473
+fdtd-2D			1	0.101819377
+folding			1	0.454484923
+pascal			1	0.347034679	1	0.29231857
+fdtd-apml		1	1.053346746		
+syrk			1	0.857116851
+#syr2k			1	1.542193095
+lu				1	1.11684091
+mvt				1	0.587555152
+trmm			1	1.109119318
+mean			1	0.649179558	1	0.472642399

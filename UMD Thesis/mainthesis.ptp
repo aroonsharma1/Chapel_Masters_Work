@@ -1,0 +1,64 @@
+# PCTeX Project File, Version 1.1
+	name: mainthesis
+	texformat: latex
+	typesetmode: DVI
+	spellwordlist: american
+mainthesis.tex
+	wndpos: 1 -1 -1 -1 -1 958 0 1916 1065
+	zorder: 1
+	edit: 0
+mainthesis.log
+thesis.cls
+lscape.sty
+indentfirst.sty
+latexsym.sty
+multirow.sty
+tabls.sty
+slashbox.sty
+longtable.sty
+supertabular.sty
+mainthesis.aux
+Abstract.aux
+Titlepage.aux
+Copyright.aux
+Preface.aux
+Foreword.aux
+Dedication.aux
+Acknowledgements.aux
+Abbreviations-supertabular.aux
+Chapter1.aux
+Chapter2.aux
+Chapter3.aux
+AppendixA.aux
+AppendixB.aux
+Bibliography.aux
+Abstract.tex
+Titlepage.tex
+Copyright.tex
+Preface.tex
+Foreword.tex
+Dedication.tex
+Acknowledgements.tex
+mainthesis.toc
+mainthesis.lof
+Abbreviations-supertabular.tex
+Chapter1.tex
+nlsez55phaseornot.eps
+mpc.eps
+Chapter2.tex
+nlsetime.eps
+modestruc21ornot.eps
+modestruc55ornot.eps
+nlsez21cwpulse.eps
+nlsez55cwpulse.eps
+nlsez21phaseornot.eps
+nlsefinal.eps
+nlsespec.eps
+Chapter3.tex
+AppendixA.tex
+AppendixB.tex
+Bibliography.tex
+mainthesis.DVI
+	wndpos: 1 -1 -1 -1 -1 0 0 958 1065
+	zorder: 0
+	view: 15 -2

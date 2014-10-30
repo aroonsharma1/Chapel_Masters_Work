@@ -1,0 +1,6 @@
+# PCTeX Project File, Version 1.1
+	name: supertabular
+	texformat: latex
+	typesetmode: DVI
+	spellwordlist: american
+supertabular.sty

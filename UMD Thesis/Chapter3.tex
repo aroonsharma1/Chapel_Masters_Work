@@ -1,0 +1,50 @@
+%Chapter 3
+
+\renewcommand{\thechapter}{3}
+
+\chapter{Related Work}\label{sec:relwork}
+
+%\section{Related Work}\label{sec:relwork}
+
+Compilation for distributed memory machines has two main steps: loop optimizations and message passing code generation. First, the compiler performs loop transformations and optimizations to uncover parallelism, improve the granularity of parallelism, and improve cache performance. These transformations include loop peeling, loop reversal, and loop interchange. Chapel is an explicitly parallel language, so uncovering parallelism is not needed. Other loop optimizations to improve the granularity of parallelism and improve cache performance are orthogonal to this paper. The second step is message passing code generation, which includes message aggregation.
+
+Message passing code generation in the traditional model is exceedingly complex, and practical robust implementations are hard to find. These methods \cite{xue1997communication,goumas2006message,callahan1988compiling,ramanujam1991compile} require not only footprint calculations for each tile but also the intersection of footprints with data tiles. As described in detail in Chapter \ref{sec:intro}, calculating such intersections is very complex, which explains the complexity and simplifying limitations of many existing methods. Such methods are rarely if ever implemented in production compilers.
+
+The polyhedral method is another branch of compiler optimization that seeks to speed up parallel programs on distributed memory architectures \cite{Gupta91automaticdata,chavarria2005effective,germain1995automatic, gupta1996compiling, iancu2008performance, wei1998compiling}. Its strength is that it can find sequences of transformations in one step, without searching the entire space of transformations. However, the method at its core does not compute information for message passing code generation. Message passing code generation does not fit the polyhedral model, so ad-hoc methods for code generation have been devised to work on the output of the polyhedral model. However they are no better than corresponding methods in the traditional model, and suffer from many of the same difficulties.
+
+\begin{comment}
+This writeup is very confusing. You need to clearly state that the method in [15] only works for aggregate array assignments, and not for general affine loops. [This is alluded to, but you need to reword to make this absolutely clear.
+
+Eg: "goes beyond" is ambigious. Goes beyond in what way?
+\end{comment}
+
+Similar work to take advantage of communication aggregation on distributed arrays has already been done in Chapel. \textit{Whole array assignment} is the process of assigning an entire distributed array to another in one statement, where both arrays are not guaranteed to be distributed in the same way. Like distributed parallel loops in Chapel, whole array assignment suffers from locality checks for every array element, even when the locality of certain elements is known in advance. In \cite{sanz2012global}, aggregation is applied to improve the communication performance of whole array assignments for Chapel's Block and Cyclic distributions. However, \cite{sanz2012global} does not address communication aggregation that is possible across general affine loops. Whole array assignment and affine loops in Chapel are fundamentally related because every whole array assignment can be written in terms of an equivalent affine \textbf{forall} loop. Yet, the contrapositive statement is not true: most affine loops can't be modeled as whole array assignments. Our method for communication aggregation in parallel loops encompasses more complex affine array accesses than those that are found in whole array assignments and addressed in \cite{sanz2012global}. Finally, our work applies to Chapel's Block Cyclic data distribution in addition to Cyclic, whereas the work in \cite{sanz2012global} does not.  
+
+One of the contribution's of \cite{sanz2012global} included two new strided bulk communication primitives for Chapel developers as library calls, \texttt{chpl\_comm\_gets} and \texttt{chpl\_comm\_puts}. They both rely on the GASNet networking layer, a portion of the Chapel runtime.  Our optimization uses these new communication primitives in our implementation directly to perform bulk remote data transfer between locales. The methods in \cite{sanz2012global} are already in the current release of the Chapel compiler. 
+
+Work has been done with the UPC compiler (another PGAS language) by \cite{chen2005communication} to improve on its communication performance. Unlike our work, which takes as its input a distributed parallel affine loop, the work in \cite{chen2005communication} expects to aggregate communication across an entire program. This method targets fine-grained communication and uses techniques such as redundancy elimination, split-phase communication, and communication coalescing (similar to message aggregation) to reduce overall communication. In communication coalescing, small puts and gets throughout the program are combined into larger messages by the compiler to reduce the number of times the per-message startup overhead is incurred. This work's aggregation scheme is only applicable to programs with many small, individual, and independent remote array accesses. This method can't be used to improve communication performance across more coarse-grained structures, such as distributed parallel loops. Another major limitation to this work's aggregation scheme is that only contiguous data can be sent in bulk. To aggregate data across an entire loop in a single message when data is distributed cyclically, which is done in our work, it must be possible to aggregate data elements that are far apart in memory, separated by a fixed stride. In contrast, our method can aggregate data distributed cyclically and block-cyclically.
+
+Another communication optimization targeting the X10 language \cite{barik2011communication} achieves message aggregation in distributed loops by using a technique called \textit{scalar replacement with loop invariant code motion}. Here, the compiler copies \textit{all} remote portions of a block-distributed array to each locale once before the loop. Then, each locale can access its own local copy of the array during each loop iteration. While this method does improve communication performance, it can potentially communicate extraneous remote array portions that the loop body never accesses. For large data sets, this could overwhelm a locale's memory. Modulo unrolling WU communicates only the remote portions of the distributed array that are used during the loop body. 
+
+\begin{comment}
+\cite{callahan1988compiling}
+\cite{chamberlain1998zpl}
+\cite{chamberlain1997factor}
+\cite{chavarria2005effective}
+\cite{davidson1995improving}
+\cite{Dion96compilingaffine}
+\cite{germain1995automatic}
+\cite{Gupta91automaticdata}
+\cite{gupta1996compiling}
+\cite{huang1994speculative}
+\cite{iancu2008performance}
+\cite{li1991data}
+\cite{pouchet2011loop}
+\cite{ramanujam1991compile}
+\cite{shih2000efficient}
+\cite{trifunovic2010graphite}
+\cite{wei1998compiling}
+\cite{chamberlain2011user}
+\cite{bonachea2007proposal}
+\cite{sanz2012global}
+\end{comment}

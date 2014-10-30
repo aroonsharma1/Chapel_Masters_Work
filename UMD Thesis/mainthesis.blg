@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mainthesis.aux
+A level-1 auxiliary file: Abstract.aux
+A level-1 auxiliary file: Titlepage.aux
+A level-1 auxiliary file: Copyright.aux
+A level-1 auxiliary file: Acknowledgements.aux
+A level-1 auxiliary file: Chapter1.aux
+A level-1 auxiliary file: Chapter2.aux
+A level-1 auxiliary file: Chapter3.aux
+A level-1 auxiliary file: Chapter4.aux
+A level-1 auxiliary file: Chapter5.aux
+A level-1 auxiliary file: Chapter6.aux
+A level-1 auxiliary file: Chapter7.aux
+A level-1 auxiliary file: Chapter8.aux
+The style file: unsrt.bst
+Database file #1: bibliography.bib
+Warning--entry type for "distributions" isn't style-file defined
+--line 32 of file bibliography.bib
+Warning--entry type for "polybench" isn't style-file defined
+--line 41 of file bibliography.bib
+Warning--can't use both volume and number fields in barua1999maps
+Warning--empty institution in Gupta91automaticdata
+Warning--empty booktitle in chamberlain2011user
+You've used 22 entries,
+            1791 wiz_defined-function locations,
+            588 strings with 8039 characters,
+and the built_in function-call counts, 6189 in all, are:
+= -- 587
+> -- 250
+< -- 10
++ -- 92
+- -- 70
+* -- 393
+:= -- 901
+add.period$ -- 74
+call.type$ -- 22
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 292
+empty$ -- 611
+format.name$ -- 70
+if$ -- 1447
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 20
+newline$ -- 112
+num.names$ -- 21
+pop$ -- 95
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 159
+stack$ -- 0
+substring$ -- 446
+swap$ -- 103
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 63
+width$ -- 24
+write$ -- 244
+(There were 5 warnings)
