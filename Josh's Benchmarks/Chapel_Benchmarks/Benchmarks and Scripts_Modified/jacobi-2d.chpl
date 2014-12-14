@@ -1,6 +1,6 @@
 use BlockDist;
 use CyclicDist;
-use CyclicZipOpt;
+//use CyclicZipOpt;
 
 use Time;
 use CommDiagnostics;
@@ -18,11 +18,11 @@ const mydom = {0..n,0..n};
 if dist=='NONE' {
 	const mydist = mydom;
 	dobench(mydist, mydom);
-} else if dist=='CM' {
+} /*else if dist=='CM' {
 	const mydist = mydom dmapped CyclicZipOpt(startIdx=mydom.low);
 	//totalcomm2=volume;
 	dobench(mydist, mydom);	
-} else if dist=='C' {
+} */else if dist=='C' {
 	const mydist = mydom dmapped Cyclic(startIdx=mydom.low);
 	dobench(mydist, mydom);	
 } else if dist=='B' {

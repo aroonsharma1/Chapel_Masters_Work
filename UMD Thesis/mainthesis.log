@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 OCT 2014 22:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 NOV 2014 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -401,7 +401,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (45.16553pt too wide) in paragraph at lines 14--25
+Overfull \hbox (15.9561pt too wide) in paragraph at lines 14--25
   [] 
  []
 
@@ -647,13 +647,13 @@ Package pdftex.def Info: ./Figures/cyclic_muwu_follower_after.pdf used on input
  line 43.
 (pdftex.def)             Requested size: 426.39255pt x 259.42744pt.
 
-<./Figures/block_cyc_muwu_leader.pdf, id=793, 633.53381pt x 339.33606pt>
+<./Figures/block_cyc_muwu_leader.pdf, id=793, 627.24818pt x 334.65959pt>
 File: ./Figures/block_cyc_muwu_leader.pdf Graphic file (type pdf)
 
 <use ./Figures/block_cyc_muwu_leader.pdf>
 Package pdftex.def Info: ./Figures/block_cyc_muwu_leader.pdf used on input line
  56.
-(pdftex.def)             Requested size: 426.39255pt x 228.38435pt.
+(pdftex.def)             Requested size: 426.39255pt x 227.50423pt.
  [39] [40 <./Figures/cyclic_muwu_follower_before.pdf> <./Figures/cyclic_muwu_fo
 llower_after.pdf>] [41 <./Figures/block_cyc_muwu_leader.pdf>] [42] [43] [44]) [
 45]
@@ -661,7 +661,7 @@ llower_after.pdf>] [41 <./Figures/block_cyc_muwu_leader.pdf>] [42] [43] [44]) [
 
  (./Chapter8.tex
 Chapter 8.
-<./Figures/Benchmarks.pdf, id=951, 428.5886pt x 296.31512pt>
+<./Figures/Benchmarks.pdf, id=933, 428.5886pt x 296.31512pt>
 File: ./Figures/Benchmarks.pdf Graphic file (type pdf)
 
 <use ./Figures/Benchmarks.pdf>
@@ -682,7 +682,7 @@ verted-to.pdf ./Figures/runtimes.eps>
 (epstopdf)             \includegraphics on input line 36.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/runtimes-eps-converted-to.pdf, id=992, 849.1725pt x 596.2275pt>
+<./Figures/runtimes-eps-converted-to.pdf, id=973, 849.1725pt x 596.2275pt>
 File: ./Figures/runtimes-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figures/runtimes-eps-converted-to.pdf>
@@ -701,7 +701,7 @@ ps-converted-to.pdf ./Figures/message_counts.eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figures/message_counts-eps-converted-to.pdf, id=994, 849.1725pt x 596.2275pt
+<./Figures/message_counts-eps-converted-to.pdf, id=975, 849.1725pt x 596.2275pt
 >
 File: ./Figures/message_counts-eps-converted-to.pdf Graphic file (type pdf)
  <use ./Figures/message_counts-eps-converted-to.pdf>
@@ -709,7 +709,7 @@ Package pdftex.def Info: ./Figures/message_counts-eps-converted-to.pdf used on
 input line 49.
 (pdftex.def)             Requested size: 426.39255pt x 299.38669pt.
  [49] [50 <./Figures/runtimes-eps-converted-to.pdf>] [51 <./Figures/message_cou
-nts-eps-converted-to.pdf>] [52] <./Figures/strong_scaling/pascal.pdf, id=1023, 
+nts-eps-converted-to.pdf>] [52] <./Figures/strong_scaling/pascal.pdf, id=1005, 
 696.65034pt x 285.8425pt>
 File: ./Figures/strong_scaling/pascal.pdf Graphic file (type pdf)
 
@@ -718,7 +718,7 @@ Package pdftex.def Info: ./Figures/strong_scaling/pascal.pdf used on input line
  68.
 (pdftex.def)             Requested size: 426.39255pt x 174.95683pt.
  [53] [54 <./Figures/strong_scaling/pascal.pdf>]
-<./Figures/strong_scaling/folding.pdf, id=1091, 702.30472pt x 286.74608pt>
+<./Figures/strong_scaling/folding.pdf, id=1073, 702.30472pt x 286.74608pt>
 File: ./Figures/strong_scaling/folding.pdf Graphic file (type pdf)
 
 <use ./Figures/strong_scaling/folding.pdf>
@@ -726,7 +726,7 @@ Package pdftex.def Info: ./Figures/strong_scaling/folding.pdf used on input lin
 e 85.
 (pdftex.def)             Requested size: 426.39255pt x 174.09665pt.
 
-<./Figures/strong_scaling/jacobi-2d.pdf, id=1094, 702.81718pt x 282.77513pt>
+<./Figures/strong_scaling/jacobi-2d.pdf, id=1076, 702.81718pt x 282.77513pt>
 File: ./Figures/strong_scaling/jacobi-2d.pdf Graphic file (type pdf)
 
 <use ./Figures/strong_scaling/jacobi-2d.pdf>
@@ -735,7 +735,7 @@ ine 98.
 (pdftex.def)             Requested size: 426.39255pt x 171.55626pt.
  [55 <./Figures/strong_scaling/folding.pdf>] [56 <./Figures/strong_scaling/jaco
 bi-2d.pdf>]
-<./Figures/strong_scaling/fdtd2d.pdf, id=1179, 691.99863pt x 291.17502pt>
+<./Figures/strong_scaling/fdtd2d.pdf, id=1161, 691.99863pt x 291.17502pt>
 File: ./Figures/strong_scaling/fdtd2d.pdf Graphic file (type pdf)
 
 <use ./Figures/strong_scaling/fdtd2d.pdf>
@@ -743,7 +743,7 @@ Package pdftex.def Info: ./Figures/strong_scaling/fdtd2d.pdf used on input line
  111.
 (pdftex.def)             Requested size: 426.39255pt x 179.42033pt.
 
-<./Figures/input_variation_exp/pascal.pdf, id=1180, 700.8911pt x 284.62688pt>
+<./Figures/input_variation_exp/pascal.pdf, id=1162, 700.8911pt x 284.62688pt>
 File: ./Figures/input_variation_exp/pascal.pdf Graphic file (type pdf)
 
 <use ./Figures/input_variation_exp/pascal.pdf>
@@ -752,14 +752,14 @@ Package pdftex.def Info: ./Figures/input_variation_exp/pascal.pdf used on input
 (pdftex.def)             Requested size: 426.39255pt x 173.15742pt.
  [57 <./Figures/strong_scaling/fdtd2d.pdf>] [58 <./Figures/input_variation_exp/
 pascal.pdf>]
-<./Figures/input_variation_exp/folding.pdf, id=1284, 700.74506pt x 290.37282pt>
+<./Figures/input_variation_exp/folding.pdf, id=1265, 700.74506pt x 290.37282pt>
 File: ./Figures/input_variation_exp/folding.pdf Graphic file (type pdf)
 <use ./Figures/input_variation_exp/folding.pdf>
 Package pdftex.def Info: ./Figures/input_variation_exp/folding.pdf used on inpu
 t line 139.
 (pdftex.def)             Requested size: 426.39255pt x 176.69295pt.
 
-<./Figures/input_variation_exp/jacobi-2d.pdf, id=1285, 691.24783pt x 284.62688p
+<./Figures/input_variation_exp/jacobi-2d.pdf, id=1266, 691.24783pt x 284.62688p
 t>
 File: ./Figures/input_variation_exp/jacobi-2d.pdf Graphic file (type pdf)
  <use ./Figures/input_variation_exp/jacobi-2d.pdf>
@@ -767,7 +767,7 @@ Package pdftex.def Info: ./Figures/input_variation_exp/jacobi-2d.pdf used on in
 put line 150.
 (pdftex.def)             Requested size: 426.39255pt x 175.5765pt.
 
-<./Figures/input_variation_exp/fdtd2d.pdf, id=1286, 699.67305pt x 298.21573pt>
+<./Figures/input_variation_exp/fdtd2d.pdf, id=1267, 699.67305pt x 298.21573pt>
 File: ./Figures/input_variation_exp/fdtd2d.pdf Graphic file (type pdf)
 
 <use ./Figures/input_variation_exp/fdtd2d.pdf>
@@ -775,7 +775,7 @@ Package pdftex.def Info: ./Figures/input_variation_exp/fdtd2d.pdf used on input
  line 157.
 (pdftex.def)             Requested size: 426.39255pt x 181.7384pt.
 
-<./Figures/blocksize_variation_exp/pascal.pdf, id=1287, 698.86853pt x 286.1865p
+<./Figures/blocksize_variation_exp/pascal.pdf, id=1268, 698.86853pt x 286.1865p
 t>
 File: ./Figures/blocksize_variation_exp/pascal.pdf Graphic file (type pdf)
  <use ./Figures/blocksize_variation_exp/pascal.pdf>
@@ -784,7 +784,7 @@ nput line 170.
 (pdftex.def)             Requested size: 426.39255pt x 174.61281pt.
  [59 <./Figures/input_variation_exp/folding.pdf>] [60 <./Figures/input_variatio
 n_exp/jacobi-2d.pdf> <./Figures/input_variation_exp/fdtd2d.pdf>]
-<./Figures/blocksize_variation_exp/jacobi-1d.pdf, id=1405, 699.4528pt x 287.352
+<./Figures/blocksize_variation_exp/jacobi-1d.pdf, id=1387, 699.4528pt x 287.352
 54pt>
 File: ./Figures/blocksize_variation_exp/jacobi-1d.pdf Graphic file (type pdf)
  <use ./Figures/blocksize_variation_exp/jacobi-1d.pdf>
@@ -840,10 +840,10 @@ texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mainthesis.pdf (71 pages, 2454783 bytes).
+Output written on mainthesis.pdf (71 pages, 2446498 bytes).
 PDF statistics:
- 1571 PDF objects out of 1728 (max. 8388607)
- 1180 compressed objects within 12 object streams
+ 1553 PDF objects out of 1728 (max. 8388607)
+ 1168 compressed objects within 12 object streams
  139 named destinations out of 1000 (max. 500000)
  297 words of extra memory for PDF output out of 10000 (max. 10000000)
 
